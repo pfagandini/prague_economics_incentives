@@ -3,11 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "prague_economics_incentives"
+  title: "VSE"
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: slides.qmd
+        text: "Course Materials"
       - about.qmd
 
 format:

@@ -1,7 +1,5 @@
 ---
-title: "prague_economics_incentives"
+title: "Economics of Incentives for Policy and Politics"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+In this course we will do an introduction to Game Theory, and we will discuss some applications for policy and political economics.

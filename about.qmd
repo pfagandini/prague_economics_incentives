@@ -1,5 +1,11 @@
 ---
-title: "About"
+title: "About the Instructor"
 ---
 
-About this site
+I am Paulo Fagandini, and I will be the instructor of this course. I have a doctorate in Economics from Nova School of Business and Economics, where I did my dissertation on Applied Microeconomic Theory, working in Contracts, Matching, and Auctions.
+
+After that I did a postdoc in Corporate Finance at Nova Finance Center, where I worked doing empirical research.
+
+Nowadays, I currently teach Mathematics at the doctoral and master level at Nova SBE, and Microeconomics and Statistics at the Polytechnic University of Lisbon. I also teach Economics at the Universidade Europeia, also in Lisbon.
+
+I have published articles in journals like Managerial and Decision Economics, and Computational Economics, chapters on peer reviewed books, and I worked recently as co-editor in a book about agent based models. I have done peer reviews for several scientific publications.

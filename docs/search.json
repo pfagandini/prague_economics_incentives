@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Economics of Incentives for Policy and Politics",
+    "section": "",
+    "text": "In this course we will do an introduction to Game Theory, and we will discuss some applications for policy and political economics."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the Instructor",
+    "section": "",
+    "text": "I am Paulo Fagandini, and I will be the instructor of this course. I have a doctorate in Economics from Nova School of Business and Economics, where I did my dissertation on Applied Microeconomic Theory, working in Contracts, Matching, and Auctions.\nAfter that I did a postdoc in Corporate Finance at Nova Finance Center, where I worked doing empirical research.\nNowadays, I currently teach Mathematics at the doctoral and master level at Nova SBE, and Microeconomics and Statistics at the Polytechnic University of Lisbon. I also teach Economics at the Universidade Europeia, also in Lisbon.\nI have published articles in journals like Managerial and Decision Economics, and Computational Economics, chapters on peer reviewed books, and I worked recently as co-editor in a book about agent based models. I have done peer reviews for several scientific publications."
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Course materials",
+    "section": "",
+    "text": "In this page you can find the course materials, specifically the slide decks I will be using during the lectures."
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Paulo Fagandini\npfagandini@iscal.ipl.pt\n2026\n\n\nThe course has as its main goal to help students understand how incentives shape behavior in organizations of different kinds, and confront them with several situations where the economic theory provides a useful framework to implement solutions to these issues.\nBy the end of the course, it is expected that students will be able to apply basic game-theoretic and contract-theoretic models to analyze strategic situations, and furthermore, to recognize incentive problems in organizations and public policy settings.\n\n\n\n\nIntroduction to Incentives\n\nWhat are incentives?\nIncentives in firms, markets, and politics\nMotivation and overview of the course\n\nAn Introduction to Strategic Thinking (Optional, depends on students background)\n\nIntroduction to game theory\nDominant strategies, Nash equilibrium\nSimple examples from business and politics\n\nIncentives within Firms\n\nMoral hazard and agency problems\nMonitoring and performance-based pay\nFirst and Second Best\nRisk sharing\n\nHidden Information and Screening\n\nAdverse selection and signaling\nIncentives in hiring, insurance, and finance\n\nMechanism Design I\n\nWhat is a mechanism?\nAllocating resources under private information\nIncentive compatibility and truthful revelation\nVoting mechanisms\n\nMechanism Design II: Auctions\n\nClassical Auctions\nThe bidding problem\nThe seller’s problem\nThe Winner’s Curse\n\nIncentives in Monetary Policy\n\nIncentives and Dynamic Inconsistency in Monetary Policy\nApplication of the Barro Gordon model\n\nIncentives in Politics and Fiscal Policy\n\nPolitical agency problems\nThe Dynamic Common Pool and Public Debt\nDynamic Inconsistency in Fiscal Policy\n\n\nThe contents of the course will vary dynamically in case there is need to reinforce the backgrounds of the students.\n\n\n\nStudents shall complete an individual problem set (30%), fill in two Quizzes (10% each), and complete an individual exam (50%).\n\n\n\n\nGibbons, R. Game theory for applied economists. Princeton University Press, 1992.\nOsborne, M. J., et al. An introduction to game theory. New York: Oxford university press, 2004.\nBesanko, David, et al. Economics of strategy. John Wiley & Sons, 2009.\nMilgrom, P. R. (2004). Putting auction theory to work. Cambridge University Press.\nBesley, Timothy, Principled Agents? The Political Economy of Good Government (Oxford, 2007; online edn, Oxford Academic, 3 Oct. 2011).\nHeijdra, B. J. (2017). Foundations of modern macroeconomics. Oxford university press.\nDrazen, A. (2002). Political economy in macroeconomics. Princeton University Press.\nPersson, T., & Tabellini, G. (2002). Political economics: explaining economic policy. MIT press.\nNisan N. Introduction to Mechanism Design (for Computer Scientists). In: Nisan N, Roughgarden T, Tardos E, Vazirani VV, eds. Algorithmic Game Theory. Cambridge University Press; 2007:209-242.\nBarro, R. J., & Gordon, D. B. (1983). Rules, discretion and reputation in a model of monetary policy. Journal of monetary economics, 12(1), 101-121.\nBarro, R. J., & Gordon, D. B. (1983). A positive theory of monetary policy in a natural rate model. Journal of political economy, 91(4), 589-610.\nRobinson, J.A. and Verdier, T. (2013), The Political Economy of Clientelism*. The Scandinavian Journal of Economics, 115: 260-291. https://doi.org/10.1111/sjoe.12010\nAlberto Alesina, Guido Tabellini, A Positive Theory of Fiscal Deficits and Government Debt, The Review of Economic Studies, Volume 57, Issue 3, July 1990, Pages 403–414, https://doi.org/10.2307/2298021"
+  },
+  {
+    "objectID": "syllabus.html#short-bio",
+    "href": "syllabus.html#short-bio",
+    "title": "Syllabus",
+    "section": "",
+    "text": "I am a Business Engineer from the University of Chile, and I hold a PhD in Economics from Nova School of Business and Economics. Currently, I serve as Assistant Professor of Economics (Adjunct) at the Lisbon Accounting & Business School and also at Nova School of Business and Economics, where I teach Microeconomics (BSc), Econometrics (BSc), and Mathematics (MSc and PhD). I am a member of the CEFAGE Research Center.\nMy research focuses mostly on applied economics. Previously I worked on corporate finance and applied microeconomic theory, mainly on auctions, contract theory, and matching. I have published my research in peer reviewed journals like Computational Economics and Managerial and Decision Economics."
+  },
+  {
+    "objectID": "syllabus.html#course-objectives",
+    "href": "syllabus.html#course-objectives",
+    "title": "Syllabus",
+    "section": "",
+    "text": "The course has as its main goal to help students understand how incentives shape behavior in organizations of different kinds, and confront them with several situations where the economic theory provides a useful framework to implement solutions to these issues.\nBy the end of the course, it is expected that students will be able to apply basic game-theoretic and contract-theoretic models to analyze strategic situations, and furthermore, to recognize incentive problems in organizations and public policy settings."
+  },
+  {
+    "objectID": "syllabus.html#contents",
+    "href": "syllabus.html#contents",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Introduction to Incentives\n\nWhat are incentives?\nIncentives in firms, markets, and politics\nMotivation and overview of the course\n\nAn Introduction to Strategic Thinking (Optional, depends on students background)\n\nIntroduction to game theory\nDominant strategies, Nash equilibrium\nSimple examples from business and politics\n\nIncentives within Firms\n\nMoral hazard and agency problems\nMonitoring and performance-based pay\nFirst and Second Best\nRisk sharing\n\nHidden Information and Screening\n\nAdverse selection and signaling\nIncentives in hiring, insurance, and finance\n\nMechanism Design I\n\nWhat is a mechanism?\nAllocating resources under private information\nIncentive compatibility and truthful revelation\nVoting mechanisms\n\nMechanism Design II: Auctions\n\nClassical Auctions\nThe bidding problem\nThe seller’s problem\nThe Winner’s Curse\n\nIncentives in Monetary Policy\n\nIncentives and Dynamic Inconsistency in Monetary Policy\nApplication of the Barro Gordon model\n\nIncentives in Politics and Fiscal Policy\n\nPolitical agency problems\nThe Dynamic Common Pool and Public Debt\nDynamic Inconsistency in Fiscal Policy\n\n\nThe contents of the course will vary dynamically in case there is need to reinforce the backgrounds of the students."
+  },
+  {
+    "objectID": "syllabus.html#assessment",
+    "href": "syllabus.html#assessment",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Students shall complete an individual problem set (30%), fill in two Quizzes (10% each), and complete an individual exam (50%)."
+  },
+  {
+    "objectID": "syllabus.html#bibliography",
+    "href": "syllabus.html#bibliography",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Gibbons, R. Game theory for applied economists. Princeton University Press, 1992.\nOsborne, M. J., et al. An introduction to game theory. New York: Oxford university press, 2004.\nBesanko, David, et al. Economics of strategy. John Wiley & Sons, 2009.\nMilgrom, P. R. (2004). Putting auction theory to work. Cambridge University Press.\nBesley, Timothy, Principled Agents? The Political Economy of Good Government (Oxford, 2007; online edn, Oxford Academic, 3 Oct. 2011).\nHeijdra, B. J. (2017). Foundations of modern macroeconomics. Oxford university press.\nDrazen, A. (2002). Political economy in macroeconomics. Princeton University Press.\nPersson, T., & Tabellini, G. (2002). Political economics: explaining economic policy. MIT press.\nNisan N. Introduction to Mechanism Design (for Computer Scientists). In: Nisan N, Roughgarden T, Tardos E, Vazirani VV, eds. Algorithmic Game Theory. Cambridge University Press; 2007:209-242.\nBarro, R. J., & Gordon, D. B. (1983). Rules, discretion and reputation in a model of monetary policy. Journal of monetary economics, 12(1), 101-121.\nBarro, R. J., & Gordon, D. B. (1983). A positive theory of monetary policy in a natural rate model. Journal of political economy, 91(4), 589-610.\nRobinson, J.A. and Verdier, T. (2013), The Political Economy of Clientelism*. The Scandinavian Journal of Economics, 115: 260-291. https://doi.org/10.1111/sjoe.12010\nAlberto Alesina, Guido Tabellini, A Positive Theory of Fiscal Deficits and Government Debt, The Review of Economic Studies, Volume 57, Issue 3, July 1990, Pages 403–414, https://doi.org/10.2307/2298021"
+  }
+]

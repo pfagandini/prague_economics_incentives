@@ -1,0 +1,92 @@
+---
+title: "Syllabus"
+---
+
+# Economics of Incentives for Policy and Politics
+
+**Paulo Fagandini**  
+pfagandini@iscal.ipl.pt  
+2026
+
+## Course Objectives
+
+The course has as its main goal to help students understand how incentives shape behavior in organizations of different kinds, and confront them with several situations where the economic theory provides a useful framework to implement solutions to these issues.
+
+By the end of the course, it is expected that students will be able to apply basic game-theoretic and contract-theoretic models to analyze strategic situations, and furthermore, to recognize incentive problems in organizations and public policy settings.
+
+## Contents
+
+1. **Introduction to Incentives**
+   - What are incentives?
+   - Incentives in firms, markets, and politics
+   - Motivation and overview of the course
+
+2. **An Introduction to Strategic Thinking** (Optional, depends on students background)
+   - Introduction to game theory
+   - Dominant strategies, Nash equilibrium
+   - Simple examples from business and politics
+
+3. **Incentives within Firms**
+   - Moral hazard and agency problems
+   - Monitoring and performance-based pay
+   - First and Second Best
+   - Risk sharing
+
+4. **Hidden Information and Screening**
+   - Adverse selection and signaling
+   - Incentives in hiring, insurance, and finance
+
+5. **Mechanism Design I**
+   - What is a mechanism?
+   - Allocating resources under private information
+   - Incentive compatibility and truthful revelation
+   - Voting mechanisms
+
+6. **Mechanism Design II: Auctions**
+   - Classical Auctions
+   - The bidding problem
+   - The seller's problem
+   - The Winner's Curse
+
+7. **Incentives in Monetary Policy**
+   - Incentives and Dynamic Inconsistency in Monetary Policy
+   - Application of the Barro Gordon model
+
+8. **Incentives in Politics and Fiscal Policy**
+   - Political agency problems
+   - The Dynamic Common Pool and Public Debt
+   - Dynamic Inconsistency in Fiscal Policy
+
+The contents of the course will vary dynamically in case there is need to reinforce the backgrounds of the students.
+
+## Assessment
+
+Students shall complete an individual problem set (30%), fill in two Quizzes (10% each), and complete an individual exam (50%).
+
+## Bibliography
+
+1. Gibbons, R. Game theory for applied economists. Princeton University Press, 1992.
+
+2. Osborne, M. J., et al. An introduction to game theory. New York: Oxford university press, 2004.
+
+3. Besanko, David, et al. Economics of strategy. John Wiley & Sons, 2009.
+
+4. Milgrom, P. R. (2004). Putting auction theory to work. Cambridge University Press.
+
+5. Besley, Timothy, Principled Agents? The Political Economy of Good Government (Oxford, 2007; online edn, Oxford Academic, 3 Oct. 2011).
+
+6. Heijdra, B. J. (2017). Foundations of modern macroeconomics. Oxford university press.
+
+7. Drazen, A. (2002). Political economy in macroeconomics. Princeton University Press.
+
+8. Persson, T., & Tabellini, G. (2002). Political economics: explaining economic policy. MIT press.
+
+9. Nisan N. Introduction to Mechanism Design (for Computer Scientists). In: Nisan N, Roughgarden T, Tardos E, Vazirani VV, eds. Algorithmic Game Theory. Cambridge University Press; 2007:209-242.
+
+10. Barro, R. J., & Gordon, D. B. (1983). Rules, discretion and reputation in a model of monetary policy. Journal of monetary economics, 12(1), 101-121.
+
+11. Barro, R. J., & Gordon, D. B. (1983). A positive theory of monetary policy in a natural rate model. Journal of political economy, 91(4), 589-610.
+
+12. Robinson, J.A. and Verdier, T. (2013), The Political Economy of Clientelism*. The Scandinavian Journal of Economics, 115: 260-291. https://doi.org/10.1111/sjoe.12010
+
+13. Alberto Alesina, Guido Tabellini, A Positive Theory of Fiscal Deficits and Government Debt, The Review of Economic Studies, Volume 57, Issue 3, July 1990, Pages 403–414, https://doi.org/10.2307/2298021
