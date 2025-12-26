@@ -1,0 +1,154 @@
+---
+title: "Introduction: <br> Incentives Matter"
+author: "Paulo Fagandini"
+institute: "Prague University of Economics and Business <br> Faculty of Informatics and Statistics"
+format: 
+  revealjs:
+    self-contained: false
+    logo: ../images/vse.jpg
+    slide-number: true
+    cross-ref: true
+    incremental: true
+    math: 
+      method: mathjax
+    transition: slide
+    footer: "Economics of Incentives"
+    from: markdown+emoji
+    code-overflow: wrap
+    code-block-font-size: 0.75em
+    progress: true
+editor: source
+execute:
+  enabled: true
+engine: knitr
+
+---
+
+# Introduction
+
+## Contact Info
+
+**Instructor**: Paulo Fagandini  
+:email: : [pfagandini@iscal.ipl.pt](mailto:pfagandini@iscal.ipl.pt)  
+:globe_with_meridians: : [pfagandini.github.io/prague_economics_incentives](pfagandini.github.io/prague_economics_incentives)
+
+## Core Bibliography
+
+:book: The bibliography will be given at the end of each section. Sometimes it will cover a book chapter, and sometimes it will be an academic article.
+
+## Assessment
+
+The course will have 4 assessment activities.
+
+1. 2 Quizzes, worth 10% each.
+2. 1 Problem Set, Individual, worth 30%.
+3. 1 Exam, worth 50%.
+
+## Quizzes
+
+The quizzes will be multiple choice, and will cover the in-classroom lectures and discussion.
+
+These quizzes are closed-book.
+
+## Problem Set
+
+The problem set will be a list of suggested exercises. You can solve these with your colleagues, however you need to deliver your own individual and unique solution.
+
+For the problem set, you are allowed to use LLM tools to help you along the way. However, it is not allowed to use LLMs to produce the final deliverable, this must be your own work.
+
+## Problem Set
+
+Solutions can be delivered using
+
+1. MS Word or equivalent.
+2. LaTeX
+3. Markdown/Quarto
+
+While the last two methods are prefered, there is no bonus or penalty in case you choose to deliver using another software.
+
+## Exam
+
+The exam will consist of two main parts:
+
+1. First half (worth 50% of the Exam grade) of qualitative questions, in the form of "discuss this" or short essays questions. They can refer the mathematical models, but are mostly focused on applications or reasoning on the motivations of the models.
+2. Second half (the other 50% of the Exam grade) of quantitative questions. These will resemble the suggested exercises on the problem set and the models developed in class.
+
+# Incentives in Real Life
+
+## Dynamic Inconsistency
+
+Crypto regulation
+
+[Source 1](https://www.trmlabs.com/reports-and-whitepapers/global-crypto-policy-review-outlook-2025-26)
+[Source 2](https://www.chainalysis.com/blog/2025-crypto-regulatory-round-up/)
+
+## Auctions / Competitive Tender
+
+Governments can use auction theory to reduce cost of material or service sourcing, and the construction of bridges and stuff.
+
+
+## Adverse Selection
+
+Market for lemons in clear energy markets.
+
+# Getting the Playground Ready
+
+## Rules of the Game
+
+For any game we want to model, we will need to define some components:
+
+1. **who** is playing.
+2. **what** are they playing with.
+3. **when** each player gest to play.
+4. **how much** they can gain or lose.
+5. Further, we assume players are equally informed about these **rules**.
+
+## Representation of a game
+
+1. Extensive form
+2. Normal (or Strategic) form
+
+## Extensive form
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
+  \node(0)[solid node,label=above:{$P1$}]{}
+  child{node(1)[solid node, label=above left:{$P2$}]{}
+  child{node[hollow node,label=below:{$(a,b)$}]{} edge from parent node[left]{$C$}}
+  child{node[hollow node,label=below:{$(c,d)$}]{} edge from parent node[right]{$D$}}
+  edge from parent node[left,xshift=-3]{$A$}
+  }
+  child{node(2)[solid node, label=above right:{$P2$}]{}
+  child{node[hollow node,label=below:{$(e,f)$}]{} edge from parent node[left]{$C$}}
+  child{node[hollow node,label=below:{$(g,h)$}]{} edge from parent node[right]{$D$}}
+  edge from parent node[right,xshift=3]{$B$}
+  };
+
+  % \draw[dashed,rounded corners=10]($(1) + (-.2,.25)$)rectangle($(2) +(.2,-.25)$);
+  % \node at ($(1)!.5!(2)$) {$P2$};
+
+\end{tikzpicture}
+
+```
+
+## Action
+
+At every *node*, the player will have to chose an action. In the previous figure, we can see this represented as each branch that originates in every node.  
+
+For example, player 1 (P1), who plays first, has, at that moment, actions $A$ and $B$ available.
+
+## Strategie
+
+Each player has a strategy that dictates an action in each decision node. Say a *plan* that tells the player what to do in every possible situation she finds herself in the game. For $P2$ we would have $\{CC\}$, or $\{CD\}$, or $\{DC\}$, or $\{DD\}$.
+
+## Strategic form

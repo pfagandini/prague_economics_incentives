@@ -3,3 +3,12 @@ title: "Course materials"
 ---
 
 In this page you can find the course materials, specifically the slide decks I will be using during the lectures.
+
+## Slides
+
+1. [Introduction, Motivation](slides/01_intro_motivation.qmd)  
+2. [Game Theory Fundamentals](slides/02_game_theory.qmd)  
+3. [Games with Asymmetric Information](slides/03_games_with_assymetric_info.qmd)
+
+
+## Problem Set

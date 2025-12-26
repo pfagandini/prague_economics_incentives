@@ -61,5 +61,348 @@
     "title": "Syllabus",
     "section": "",
     "text": "Gibbons, R. Game theory for applied economists. Princeton University Press, 1992.\nOsborne, M. J., et al. An introduction to game theory. New York: Oxford university press, 2004.\nBesanko, David, et al. Economics of strategy. John Wiley & Sons, 2009.\nMilgrom, P. R. (2004). Putting auction theory to work. Cambridge University Press.\nBesley, Timothy, Principled Agents? The Political Economy of Good Government (Oxford, 2007; online edn, Oxford Academic, 3 Oct. 2011).\nHeijdra, B. J. (2017). Foundations of modern macroeconomics. Oxford university press.\nDrazen, A. (2002). Political economy in macroeconomics. Princeton University Press.\nPersson, T., & Tabellini, G. (2002). Political economics: explaining economic policy. MIT press.\nNisan N. Introduction to Mechanism Design (for Computer Scientists). In: Nisan N, Roughgarden T, Tardos E, Vazirani VV, eds. Algorithmic Game Theory. Cambridge University Press; 2007:209-242.\nBarro, R. J., & Gordon, D. B. (1983). Rules, discretion and reputation in a model of monetary policy. Journal of monetary economics, 12(1), 101-121.\nBarro, R. J., & Gordon, D. B. (1983). A positive theory of monetary policy in a natural rate model. Journal of political economy, 91(4), 589-610.\nRobinson, J.A. and Verdier, T. (2013), The Political Economy of Clientelism*. The Scandinavian Journal of Economics, 115: 260-291. https://doi.org/10.1111/sjoe.12010\nAlberto Alesina, Guido Tabellini, A Positive Theory of Fiscal Deficits and Government Debt, The Review of Economic Studies, Volume 57, Issue 3, July 1990, Pages 403–414, https://doi.org/10.2307/2298021"
+  },
+  {
+    "objectID": "01_intro.html#introduction-1",
+    "href": "01_intro.html#introduction-1",
+    "title": "Introduction: Incentives",
+    "section": "Introduction",
+    "text": "Introduction\nThe course will have 4 assessment activities.\n\n2 Quizzes, worth 10% each.\n1 Problem Set, Individual, worth 30%.\n1 Exam, worth 50%."
+  },
+  {
+    "objectID": "01_intro.html#incentives-1",
+    "href": "01_intro.html#incentives-1",
+    "title": "Introduction: Incentives",
+    "section": "Incentives",
+    "text": "Incentives"
+  },
+  {
+    "objectID": "01_intro.html#core-bibliography",
+    "href": "01_intro.html#core-bibliography",
+    "title": "Introduction: Incentives",
+    "section": "Core Bibliography",
+    "text": "Core Bibliography\n📖 The bibliography will be given at the end of each section. Sometimes it will cover a book chapter, and sometimes it will be an academic article."
+  },
+  {
+    "objectID": "01_intro.html#assessment",
+    "href": "01_intro.html#assessment",
+    "title": "Introduction: Incentives",
+    "section": "Assessment",
+    "text": "Assessment\nThe course will have 4 assessment activities.\n\n2 Quizzes, worth 10% each.\n1 Problem Set, Individual, worth 30%.\n1 Exam, worth 50%."
+  },
+  {
+    "objectID": "01_intro.html#quizzes",
+    "href": "01_intro.html#quizzes",
+    "title": "Introduction: Incentives",
+    "section": "Quizzes",
+    "text": "Quizzes\nThe quizzes will be multiple choice, and will cover the in-classroom lectures and discussion.\nThese quizzes are closed-book."
+  },
+  {
+    "objectID": "01_intro.html#problem",
+    "href": "01_intro.html#problem",
+    "title": "Introduction: Incentives",
+    "section": "Problem",
+    "text": "Problem\nThe problem set will be a list of suggested exercises. You can solve these with your colleagues, however you need to deliver your own individual and unique solution.\nFor the problem set, you are allowed to use LLM tools to help you along the way. However, it is not allowed to use LLMs to produce the final deliverable, this must be your own work.\nSolutions can be delivered using a Word Processor, LaTeX, or Markdown/Quarto, with the last two prefered. Nevertheless, there is no bonus nor penalty in case you choose to deliver using another software."
+  },
+  {
+    "objectID": "01_intro.html#exam",
+    "href": "01_intro.html#exam",
+    "title": "Introduction: Incentives",
+    "section": "Exam",
+    "text": "Exam\nThe exam will consist of two main parts:\n\nFirst half (worth 50% of the Exam grade) of qualitative questions, in the form of “discuss this” or short essays questions. They can refer the mathematical models, but are mostly focused on applications or reasoning on the motivations of the models.\nSecond half (the other 50% of the Exam grade) of quantitative questions. These will resemble the suggested exercises on the problem set and the models developed in class."
+  },
+  {
+    "objectID": "01_intro.html#problem-set",
+    "href": "01_intro.html#problem-set",
+    "title": "Introduction: Incentives",
+    "section": "Problem Set",
+    "text": "Problem Set\nThe problem set will be a list of suggested exercises. You can solve these with your colleagues, however you need to deliver your own individual and unique solution.\nFor the problem set, you are allowed to use LLM tools to help you along the way. However, it is not allowed to use LLMs to produce the final deliverable, this must be your own work."
+  },
+  {
+    "objectID": "01_intro.html#problem-set-1",
+    "href": "01_intro.html#problem-set-1",
+    "title": "Introduction: Incentives",
+    "section": "Problem Set",
+    "text": "Problem Set\nSolutions can be delivered using\n\nMS Word or equivalent.\nLaTeX\nMarkdown/Quarto\n\nWhile the last two methods are prefered, there is no bonus or penalty in case you choose to deliver using another software."
+  },
+  {
+    "objectID": "01_intro.html#dynamic-inconsisntency",
+    "href": "01_intro.html#dynamic-inconsisntency",
+    "title": "Introduction: Incentives",
+    "section": "Dynamic Inconsisntency",
+    "text": "Dynamic Inconsisntency\nCrypto regulation\nSource 1 Source 2"
+  },
+  {
+    "objectID": "slides/01_intro.html#core-bibliography",
+    "href": "slides/01_intro.html#core-bibliography",
+    "title": "Introduction: Incentives",
+    "section": "Core Bibliography",
+    "text": "Core Bibliography\n📖 The bibliography will be given at the end of each section. Sometimes it will cover a book chapter, and sometimes it will be an academic article."
+  },
+  {
+    "objectID": "slides/01_intro.html#assessment",
+    "href": "slides/01_intro.html#assessment",
+    "title": "Introduction: Incentives",
+    "section": "Assessment",
+    "text": "Assessment\nThe course will have 4 assessment activities.\n\n2 Quizzes, worth 10% each.\n1 Problem Set, Individual, worth 30%.\n1 Exam, worth 50%."
+  },
+  {
+    "objectID": "slides/01_intro.html#quizzes",
+    "href": "slides/01_intro.html#quizzes",
+    "title": "Introduction: Incentives",
+    "section": "Quizzes",
+    "text": "Quizzes\nThe quizzes will be multiple choice, and will cover the in-classroom lectures and discussion.\nThese quizzes are closed-book."
+  },
+  {
+    "objectID": "slides/01_intro.html#problem-set",
+    "href": "slides/01_intro.html#problem-set",
+    "title": "Introduction: Incentives",
+    "section": "Problem Set",
+    "text": "Problem Set\nThe problem set will be a list of suggested exercises. You can solve these with your colleagues, however you need to deliver your own individual and unique solution.\nFor the problem set, you are allowed to use LLM tools to help you along the way. However, it is not allowed to use LLMs to produce the final deliverable, this must be your own work."
+  },
+  {
+    "objectID": "slides/01_intro.html#problem-set-1",
+    "href": "slides/01_intro.html#problem-set-1",
+    "title": "Introduction: Incentives",
+    "section": "Problem Set",
+    "text": "Problem Set\nSolutions can be delivered using\n\nMS Word or equivalent.\nLaTeX\nMarkdown/Quarto\n\nWhile the last two methods are prefered, there is no bonus or penalty in case you choose to deliver using another software."
+  },
+  {
+    "objectID": "slides/01_intro.html#exam",
+    "href": "slides/01_intro.html#exam",
+    "title": "Introduction: Incentives",
+    "section": "Exam",
+    "text": "Exam\nThe exam will consist of two main parts:\n\nFirst half (worth 50% of the Exam grade) of qualitative questions, in the form of “discuss this” or short essays questions. They can refer the mathematical models, but are mostly focused on applications or reasoning on the motivations of the models.\nSecond half (the other 50% of the Exam grade) of quantitative questions. These will resemble the suggested exercises on the problem set and the models developed in class."
+  },
+  {
+    "objectID": "slides/01_intro.html#dynamic-inconsistency",
+    "href": "slides/01_intro.html#dynamic-inconsistency",
+    "title": "Introduction: Incentives",
+    "section": "Dynamic Inconsistency",
+    "text": "Dynamic Inconsistency\nCrypto regulation\nSource 1 Source 2"
+  },
+  {
+    "objectID": "slides/01_intro.html#auctions-competitive-tender",
+    "href": "slides/01_intro.html#auctions-competitive-tender",
+    "title": "Introduction: Incentives",
+    "section": "Auctions / Competitive Tender",
+    "text": "Auctions / Competitive Tender\nGovernments can use auction theory to reduce cost of material or service sourcing, and the construction of bridges and stuff."
+  },
+  {
+    "objectID": "slides/01_intro.html#adverse-selection",
+    "href": "slides/01_intro.html#adverse-selection",
+    "title": "Introduction: Incentives",
+    "section": "Adverse Selection",
+    "text": "Adverse Selection\nMarket for lemons in clear energy markets."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#core-bibliography",
+    "href": "slides/02_game_theory.html#core-bibliography",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Core Bibliography",
+    "text": "Core Bibliography\nThe core of the contents of this chapter takes as reference the book\n📖 Strategies and Games: Theory and Practice by Prajit K. Dutta. 2001 MIT Press."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#assessment",
+    "href": "slides/02_game_theory.html#assessment",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Assessment",
+    "text": "Assessment\nThe course will have 4 assessment activities.\n\n2 Quizzes, worth 10% each.\n1 Problem Set, Individual, worth 30%.\n1 Exam, worth 50%."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#quizzes",
+    "href": "slides/02_game_theory.html#quizzes",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Quizzes",
+    "text": "Quizzes\nThe quizzes will be multiple choice, and will cover the in-classroom lectures and discussion.\nThese quizzes are closed-book."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#problem-set",
+    "href": "slides/02_game_theory.html#problem-set",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Problem Set",
+    "text": "Problem Set\nThe problem set will be a list of suggested exercises. You can solve these with your colleagues, however you need to deliver your own individual and unique solution.\nFor the problem set, you are allowed to use LLM tools to help you along the way. However, it is not allowed to use LLMs to produce the final deliverable, this must be your own work."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#problem-set-1",
+    "href": "slides/02_game_theory.html#problem-set-1",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Problem Set",
+    "text": "Problem Set\nSolutions can be delivered using\n\nMS Word or equivalent.\nLaTeX\nMarkdown/Quarto\n\nWhile the last two methods are prefered, there is no bonus or penalty in case you choose to deliver using another software."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#exam",
+    "href": "slides/02_game_theory.html#exam",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Exam",
+    "text": "Exam\nThe exam will consist of two main parts:\n\nFirst half (worth 50% of the Exam grade) of qualitative questions, in the form of “discuss this” or short essays questions. They can refer the mathematical models, but are mostly focused on applications or reasoning on the motivations of the models.\nSecond half (the other 50% of the Exam grade) of quantitative questions. These will resemble the suggested exercises on the problem set and the models developed in class."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#dynamic-inconsistency",
+    "href": "slides/02_game_theory.html#dynamic-inconsistency",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Dynamic Inconsistency",
+    "text": "Dynamic Inconsistency\nCrypto regulation\nSource 1 Source 2"
+  },
+  {
+    "objectID": "slides/02_game_theory.html#auctions-competitive-tender",
+    "href": "slides/02_game_theory.html#auctions-competitive-tender",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Auctions / Competitive Tender",
+    "text": "Auctions / Competitive Tender\nGovernments can use auction theory to reduce cost of material or service sourcing, and the construction of bridges and stuff."
+  },
+  {
+    "objectID": "slides/02_game_theory.html#adverse-selection",
+    "href": "slides/02_game_theory.html#adverse-selection",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Adverse Selection",
+    "text": "Adverse Selection\nMarket for lemons in clear energy markets."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#core-bibliography",
+    "href": "slides/01_intro_motivation.html#core-bibliography",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Core Bibliography",
+    "text": "Core Bibliography\n📖 The bibliography will be given at the end of each section. Sometimes it will cover a book chapter, and sometimes it will be an academic article."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#assessment",
+    "href": "slides/01_intro_motivation.html#assessment",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Assessment",
+    "text": "Assessment\nThe course will have 4 assessment activities.\n\n2 Quizzes, worth 10% each.\n1 Problem Set, Individual, worth 30%.\n1 Exam, worth 50%."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#quizzes",
+    "href": "slides/01_intro_motivation.html#quizzes",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Quizzes",
+    "text": "Quizzes\nThe quizzes will be multiple choice, and will cover the in-classroom lectures and discussion.\nThese quizzes are closed-book."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#problem-set",
+    "href": "slides/01_intro_motivation.html#problem-set",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Problem Set",
+    "text": "Problem Set\nThe problem set will be a list of suggested exercises. You can solve these with your colleagues, however you need to deliver your own individual and unique solution.\nFor the problem set, you are allowed to use LLM tools to help you along the way. However, it is not allowed to use LLMs to produce the final deliverable, this must be your own work."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#problem-set-1",
+    "href": "slides/01_intro_motivation.html#problem-set-1",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Problem Set",
+    "text": "Problem Set\nSolutions can be delivered using\n\nMS Word or equivalent.\nLaTeX\nMarkdown/Quarto\n\nWhile the last two methods are prefered, there is no bonus or penalty in case you choose to deliver using another software."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#exam",
+    "href": "slides/01_intro_motivation.html#exam",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Exam",
+    "text": "Exam\nThe exam will consist of two main parts:\n\nFirst half (worth 50% of the Exam grade) of qualitative questions, in the form of “discuss this” or short essays questions. They can refer the mathematical models, but are mostly focused on applications or reasoning on the motivations of the models.\nSecond half (the other 50% of the Exam grade) of quantitative questions. These will resemble the suggested exercises on the problem set and the models developed in class."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#dynamic-inconsistency",
+    "href": "slides/01_intro_motivation.html#dynamic-inconsistency",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Dynamic Inconsistency",
+    "text": "Dynamic Inconsistency\nCrypto regulation\nSource 1 Source 2"
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#auctions-competitive-tender",
+    "href": "slides/01_intro_motivation.html#auctions-competitive-tender",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Auctions / Competitive Tender",
+    "text": "Auctions / Competitive Tender\nGovernments can use auction theory to reduce cost of material or service sourcing, and the construction of bridges and stuff."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#adverse-selection",
+    "href": "slides/01_intro_motivation.html#adverse-selection",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Adverse Selection",
+    "text": "Adverse Selection\nMarket for lemons in clear energy markets."
+  },
+  {
+    "objectID": "slides/03_games_with_assymetric_info.html#core-bibliography",
+    "href": "slides/03_games_with_assymetric_info.html#core-bibliography",
+    "title": "Games under  Asymmetric Information",
+    "section": "Core Bibliography",
+    "text": "Core Bibliography\nThe core of the contents of this chapter takes as reference the book\n📖 Strategies and Games: Theory and Practice by Prajit K. Dutta. 2001 MIT Press."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#rules-of-the-game",
+    "href": "slides/01_intro_motivation.html#rules-of-the-game",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Rules of the Game",
+    "text": "Rules of the Game\nFor any game we want to model, we will need to define some components:\n\nwho is playing.\nwhat are they playing with.\nwhen each player gest to play.\nhow much they can gain or lose.\nFurther, we assume players are equally informed about these rules."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#representation-of-a-game",
+    "href": "slides/01_intro_motivation.html#representation-of-a-game",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Representation of a game",
+    "text": "Representation of a game\n\nExtensive form\nNormal (or Strategic) form"
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#extensive-form",
+    "href": "slides/01_intro_motivation.html#extensive-form",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Extensive form",
+    "text": "Extensive form"
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#strategic-form",
+    "href": "slides/01_intro_motivation.html#strategic-form",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Strategic form",
+    "text": "Strategic form"
+  },
+  {
+    "objectID": "slides.html#slides",
+    "href": "slides.html#slides",
+    "title": "Course materials",
+    "section": "Slides",
+    "text": "Slides\n\nIntroduction, Motivation\n\nGame Theory Fundamentals\n\nGames with Asymmetric Information"
+  },
+  {
+    "objectID": "slides.html#problem-set",
+    "href": "slides.html#problem-set",
+    "title": "Course materials",
+    "section": "Problem Set",
+    "text": "Problem Set"
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#contact-info",
+    "href": "slides/01_intro_motivation.html#contact-info",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Contact Info",
+    "text": "Contact Info\nInstructor: Paulo Fagandini\n📧 : pfagandini@iscal.ipl.pt\n🌐 : pfagandini.github.io/prague_economics_incentives"
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#strategies",
+    "href": "slides/01_intro_motivation.html#strategies",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Strategies",
+    "text": "Strategies\nWe should take this opportunity to introduce two key concepts in game theory: Action and Strategy.\nAt every node, the player will have to chose an action. In the previous figure, we can see this represented as each branch that originates in every node.\nFor example, player 1 (P1), who plays first, has, at that moment, actions \\(A\\) and \\(B\\) available."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#actions-and-strategies",
+    "href": "slides/01_intro_motivation.html#actions-and-strategies",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Actions and Strategies",
+    "text": "Actions and Strategies\nActions\nAt every node, the player will have to chose an action. In the previous figure, we can see this represented as each branch that originates in every node.\nFor example, player 1 (P1), who plays first, has, at that moment, actions \\(A\\) and \\(B\\) available.\nStrategies\nEach player has a strategy that dictates an action in each decision node. Say a plan that tells the player what to do in every possible situation she finds herself in the game. For \\(P2\\) we would have \\(\\{CC\\}\\), or \\(\\{CD\\}\\), or \\(\\{DC\\}\\), or \\(\\{DD\\}\\)."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#action",
+    "href": "slides/01_intro_motivation.html#action",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Action",
+    "text": "Action\nAt every node, the player will have to chose an action. In the previous figure, we can see this represented as each branch that originates in every node.\nFor example, player 1 (P1), who plays first, has, at that moment, actions \\(A\\) and \\(B\\) available."
+  },
+  {
+    "objectID": "slides/01_intro_motivation.html#strategie",
+    "href": "slides/01_intro_motivation.html#strategie",
+    "title": "Introduction:  Incentives Matter",
+    "section": "Strategie",
+    "text": "Strategie\nEach player has a strategy that dictates an action in each decision node. Say a plan that tells the player what to do in every possible situation she finds herself in the game. For \\(P2\\) we would have \\(\\{CC\\}\\), or \\(\\{CD\\}\\), or \\(\\{DC\\}\\), or \\(\\{DD\\}\\)."
   }
 ]

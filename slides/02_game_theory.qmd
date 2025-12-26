@@ -1,0 +1,34 @@
+---
+title: "Fundamentals of <br> Game Theory"
+author: "Paulo Fagandini"
+institute: "Prague University of Economics and Business <br> Faculty of Informatics and Statistics"
+format: 
+  revealjs:
+    self-contained: false
+    logo: ../images/vse.jpg
+    slide-number: true
+    cross-ref: true
+    incremental: true
+    math: 
+      method: mathjax
+    transition: slide
+    footer: "Economics of Incentives"
+    from: markdown+emoji
+    code-overflow: wrap
+    code-block-font-size: 0.75em
+    progress: true
+editor: source
+
+---
+
+# Introduction
+
+## Core Bibliography
+
+The core of the contents of this chapter takes as reference the book
+
+:book: *Strategies and Games: Theory and Practice* by Prajit K. Dutta. 2001 MIT Press.
+
+# Strategic Form Games
+
+# Extensive Form Games
