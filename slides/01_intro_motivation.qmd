@@ -4,6 +4,7 @@ author: "Paulo Fagandini"
 institute: "Prague University of Economics and Business <br> Faculty of Informatics and Statistics"
 format: 
   revealjs:
+    keep-tex: false
     self-contained: false
     logo: ../images/vse.jpg
     slide-number: true
@@ -97,10 +98,10 @@ Market for lemons in clear energy markets.
 
 For any game we want to model, we will need to define some components:
 
-1. **who** is playing.
-2. **what** are they playing with.
+1. **who** is playing. *(players)*
+2. **what** are they playing with. *(actions, strategies)*
 3. **when** each player gest to play.
-4. **how much** they can gain or lose.
+4. **how much** they can gain or lose. *(payoffs)*
 5. Further, we assume players are equally informed about these **rules**.
 
 ## Representation of a game
@@ -147,8 +148,38 @@ At every *node*, the player will have to chose an action. In the previous figure
 
 For example, player 1 (P1), who plays first, has, at that moment, actions $A$ and $B$ available.
 
-## Strategie
+## Strategy
 
-Each player has a strategy that dictates an action in each decision node. Say a *plan* that tells the player what to do in every possible situation she finds herself in the game. For $P2$ we would have $\{CC\}$, or $\{CD\}$, or $\{DC\}$, or $\{DD\}$.
+Each player has a **strategy** that dictates an action in each decision node. Say a *plan* that tells the player what to do in every possible situation she finds herself in the game. For $P2$ we would have $(CC)$, or $(CD)$, or $(DC)$, or $(DD)$.
+
+A **strategy profile** will be an ordered pair of strategies for each player, *i.e.*, a vector that contains a strategy for each player. For example here, we could have $(A,(CD))$, which would say that player 1 choses $A$, and player 2 choses strategy $(CD)$.
+
+## Timing
+
+There are two main ways in which a game can be player (or a *turn* can be played).
+
+1. Simoultaneously
+2. Sequentially
+
+. . .
+
+For the second case, the extensive form is the most intuitive way to represent a game. For simoultaneous games, the Strategic form is more adequate. Let's move to this game representation.
 
 ## Strategic form
+
+When using the strategic form, we represent a game with a table, where rows and columns represent strategies for each player. The cells in the table will contain the payoffs. Because convention, we place the first player on the left, with her strategies in rows, and the second player on top, with her strategies represented in the columns.
+
+Payoffs will be represented again as an ordered pair, where the first coordinate contains the payoff for the first player, while the second coordinate contains the payoff for the second player.
+
+## Strategic form
+
+| P1 $\setminus$ P2 | $(CC)$ | $(CD)$ | $(DC)$ | $(DD)$ |
+|--: | --- | --- | --- | --- |
+| $A$ | $(a,b)$ | $(a,b)$ | $(c,d)$ | $(c,d)$ |
+| $B$ | $(e,f)$ | $(g,h)$ | $(e,f)$ | $(g,h)$ |
+
+Clearly, strategic form games, make more sense for 2-player games.
+
+## Representing a game
+
+Not all games are worth representing in either one of these two ways. Some games, specially those with continuous action space (so far we saw discrete action spaces) might make the attempt to represent the game futile. We will study these games in the future, but in these cases, we will also be able to use a utility function to find out which strategy would deal the highest expected utility (payoff) for the player.

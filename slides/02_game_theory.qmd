@@ -21,6 +21,9 @@ editor: source
 
 ---
 
+<div style="font-size: 70%;">
+</div>
+
 # Introduction
 
 ## Core Bibliography
@@ -30,5 +33,157 @@ The core of the contents of this chapter takes as reference the book
 :book: *Strategies and Games: Theory and Practice* by Prajit K. Dutta. 2001 MIT Press.
 
 # Strategic Form Games
+
+## Strategic Form Games
+
+We will focus the utilization of Strategic Form games to model simoultaneous games, and therefore the *timing* of the game becomes unnecessary. We will just need the set of players, their strategies, and the payoffs associated to any strategy profile.
+
+## Strategic Form Games 
+
+1. Let's name our players $P1$ and $P2$
+2. Let $S_i$ be the set of strategies available for player $i$
+3. Say $\pi_i(s_1,s_2)$ be the payoff for player $i$, with $s_1\in S_1$ and $s_2\in S2$.
+
+## Strategic Form Games 
+
+Suppose $S_1=\{U,D\}$ and $S_2=\{L,R\}$, the payoff matrix would be:
+
+| 1$\setminus$ 2 | $L$ | $R$ |
+| --: | :-: | :-: |
+| $U$ | $(\pi_1(U,L),\pi_2(U,L))$ | $(\pi_1(U,R),\pi_2(U,R))$ |
+| $D$ | $(\pi_1(D,L),\pi_2(D,L))$ | $(\pi_1(D,R),\pi_2(D,R))$ |
+
+. . .
+
+:::{.callout-important}
+
+The payoff for each player, depends on the strategy profile, that in each position on the table, is the same.
+
+:::
+
+## Strategic Form Games
+
+What if we have more than 2 players, and strategies?
+
+. . .
+
+1. If we have $N\in\mathbb{N}$ players, we will index them: 1,2, $\dots$, $N$.
+2. Their strategy space is $S_i$.
+3. A strategy profile is an ordered tuple $(s_1,s_2,\dots,s_N)\in S_1\times S_2\times\dots S_N$.
+4. $\pi_i(s_1,\dots,s_N)$ represents the payoff for player $i$, given the strategy profile $(s_1,s_2,\dots,s_N)$.
+
+. . .
+
+We can do better
+
+## Strategic Form Games
+
+Given that the strategies of the other players (other than player $i$) are out player's $i$ control, we will summarize them as $s_{-i}$. So we will write:
+
+$$\pi_i(s_1,\dots,s_N) = \pi_i(s_i,s_{-i}) $$
+
+And $s_{-i}$ represents all chosen $s_j$ when $j\neq i$. We could say *the other's* strategies in the current strategy profile.
+
+## The Prissoner's Dilemma
+
+This is a classical game, and this is a great opportunity to introduce it:
+
+<div style="font-size: 70%;">
+
+Two prissoners, Calvin and Klein, are hauled in for a suspected crime. The $DA$ speaks to each prisoner separately, and tells them that she more or less has the evidence to convict them but they could make her work a little easier (and help themselves) if they confess to the crime. She offers each of them the following deal: "*Confess* to the crime, turn a witness for the State, and implicate the ohter guy, and you will do no time. Of course, your confession will be worth a lot less if the other guy confesses as well. I that case, you both go in for 5 years. If you *do not confess*, however, be aware that we will nail you with the other guy's confession, and then you will do fifteen years. In the event that I cannot get a confession from either of you, I have enough evidence to put you both away for a year."
+
+</div>
+
+<div style="font-size: 40%;">
+
+Prajit K. Dutta's version of this game, in the book *Strategies and Games: Theory and Practice*. MIT Press, 2001.
+
+</div>
+
+## The Prissoner's Dilemma
+
+Note that this would be something like a *reverse payoff* matrix, as as a payoff we are writing down the years in prison, and most likely, the lower the number of years in prison, the better for both prissoners!
+
+| Calvin - Klein | *Confess* | *Not Confess* |
+| --- | :--: | :--: |
+| *Confess* | $(5,5)$ | $(0,15)$ |
+| *Not Confess* | $(15,0)$ | $(1,1)$ |
+
+We can turn this table into something more traditional, assuming that each year in prison, equals a payoff of -1.
+
+## The Prissoner's Dilemma
+
+| Calvin - Klein | *Confess* | *Not Confess* |
+| --- | :--: | :--: |
+| *Confess* | $(-5,-5)$ | $(0,-15)$ |
+| *Not Confess* | $(-15,0)$ | $(-1,-1)$ |
+
+1. Suppose Calvin thinks Klein will *confess*. In that case, Calvin would be much better **confessing**! ($-5 > -15$).
+2. Suppose Calvin thinks Klein will *Not Confess*. In that case, Calvin would also be much better off by **confessing**! ($0 > -1$)
+
+## The Prissoner's Dilemma
+
+Symmetrically, these options are the same for Klein. Note that *confess* is a **dominant** strategy, because independently of what the other decides, *confess* always generates at least as much payoff as any alternative. You cannot improve over the payoff you can get with *confess*, no matter what your counterpart is doing.
+
+## Equivalence in the Extensive form
+
+We said, these are simoultaneous games, but we do not need that both prissoner's actually chose simoultaneously. It is enough that when one decide, the other does not know what the first prisoner's chose.
+
+## Equivalence in the Extensive form
+
+Think on the Rock-Paper-Scissors game. As both players can see each others hands, simultaneity is necessary.
+
+Suppose now that we introduce a referee. One player tells secretely to the referee what her choice is (rock, paper, or scissors). Then the referee asks the other player, separately what is her own choice. Finally the referee can reveal if there is a winner or a draw. The game works just fine, even though one player played first.
+
+The key was that the player that played last, **did not know what the other player played** when she made her decision.
+
+## Equivalence in the Extensive form
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
+
+  \node(0)[solid node,label=above:{$P1$}]{}
+    child{
+      node(1)[solid node, label=above left:{$P2$}]{}
+      child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[left]{$R$}}
+      child{node[hollow node,label=below:{$(0,1)$}]{} edge from parent node[right]{$P$}}
+      child{node[hollow node,label=below:{$(1,0)$}]{} edge from parent node[right]{$S$}}
+      edge from parent node[left,xshift=-3]{$R$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$P2$}]{}
+      child{node[hollow node,label=below:{$(1,0)$}]{} edge from parent node[left]{$R$}}
+      child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[right]{$P$}}
+      child{node[hollow node,label=below:{$(0,1)$}]{} edge from parent node[right]{$S$}}
+      edge from parent node[right,xshift=3]{$P$}
+    }
+    child{
+      node(3)[solid node, label=above right:{$P2$}]{}
+      child{node[hollow node,label=below:{$(0,1)$}]{} edge from parent node[left]{$R$}}
+      child{node[hollow node,label=below:{$(1,0)$}]{} edge from parent node[right]{$P$}}
+      child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[right]{$S$}}
+      edge from parent node[right,xshift=3]{$S$}
+    };
+
+   \draw[dashed,rounded corners=10]($(1) + (-.2,.25)$)rectangle($(3) +(.2,-.25)$);
+   \node at ($(1)!.5!(2)$) {$P2$};
+
+\end{tikzpicture}
+
+```
+
+<div style="font-size: 70%;">
+The dashed *set* represents an information set. This means that all these nodes carry the same information, or that at this point $P2$ does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game.
+</div>
 
 # Extensive Form Games

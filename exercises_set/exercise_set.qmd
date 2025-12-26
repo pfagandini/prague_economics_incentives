@@ -1,10 +1,11 @@
 ---
-title: "Problem Set"
+title: "Exercises Set"
 author: "Paulo Fagandini"
 date: "Jan 19, 2026"
 format:
   pdf:
     documentclass: exam
+    geometry: a4paper
     include-in-header:
       text: |
         \usepackage{tikz}
@@ -12,7 +13,31 @@ format:
 ---
 
 \begin{questions}
-\question Consider the following game:
+\question Suppose, to begin with, there are two matches in one pile and a single match in the other pile. Let us write this configuration as $(2,1)$. Winning is preferred to losing and, hence, the payoff number associated with winning must be higher than the one that corresponds to losing; suppose that these numbers are, respectively, $1$, and $-1$.
+
+\begin{parts}
+
+    \part What is the strategic representation of this game?
+
+    \begin{solution}
+        \begin{center}
+            \begin{tabular}{r|cccc}
+            1 - 2 & $(l,l)$ & $(l,r)$ & $(r,l)$ & $(r,r)$ \\
+            \hline
+            $u$ & $(1,-1)$ & $(1,-1)$ & $(1,-1)$ & $(1,-1)$ \\
+            $m$ & $(-1,1)$ & $(-1,1)$ & $(-1,1)$ & $(-1,1)$ \\
+            $d$ & $(1,-1)$ & $(-1,1)$ & $(1,-1)$ & $(-1,1)$
+            \end{tabular}
+        \end{center}
+    \end{solution}
+
+    \part What is the extensive representation of this game?
+
+    \begin{solution}
+
+    \end{solution}
+
+\end{parts}
 
 \begin{center}
     \begin{tikzpicture}[scale=1.5,font=\footnotesize]
@@ -60,27 +85,6 @@ format:
 
 \end{parts}
 
-\question[15] Suppose two countries can decide to spend more in the \textbf{A}rmy, or more on \textbf{H}ospitals. They would both rather spend little money on arms buildup (and more on hospitals), but realize that if they outspend the other country they will have a tactical superiority, so they could impose geopolitical power on the other country. If they spend the same (large) amount, though, they will be deadlocked - much the same way that they would be deadlocked if they both spent the same, but smaller, amount. Propose payoffs for this situation, assuming symmetric countries (\textit{i.e.} assume they have the same amount of money and population), and model this as a game using the strategic representation. What could be a Nash Equilibrium?
-
-\begin{solution}
-
-    This is a classical prissoner's dilemma. We have the hint that the countries could spend more in the army ($A$), or in hospitals ($H$). You can only enjoy good health if no other country is invading you, and therefore the payoff matrix would look something like this:
-
-    \begin{center}
-        \begin{tabular}{r|cc}
-            $1 - 2$ & $A$ & $H$ \\
-            \hline
-            $A$ & (5,5) & (12,-2) \\
-            $H$ & (-2,12) & (10,10)
-        \end{tabular}
-    \end{center}
-
-Suppose the other country spends more in Hospitals. Then you can invest more in the army, overrun theme easily (cheaply) and keep their hospitals for yourself and have security.
-
-If both spend more in the Army. Then both have security (they know they cannot be invaded), however they will have a weak health system (5,5)
-
-If both spend more in the Health system. Both have great healthcare, and given there are no external risks to their security (the other country also decided to spend more in their healthcare system instead of speding in the army), they can enjoy it.
-
-\end{solution}
-
+\question[15] Consider the following game tree:
+% your tikz code here
 \end{questions}

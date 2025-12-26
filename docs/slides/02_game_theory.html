@@ -141,6 +141,12 @@ Paulo Fagandini
 </div>
 
 </section>
+<section class="slide level2">
+
+<div style="font-size: 70%;">
+
+</div>
+</section>
 <section>
 <section id="introduction" class="title-slide slide level1 center">
 <h1>Introduction</h1>
@@ -150,10 +156,176 @@ Paulo Fagandini
 <h2>Core Bibliography</h2>
 <p>The core of the contents of this chapter takes as reference the book</p>
 <p><span class="emoji" data-emoji="book">📖</span> <em>Strategies and Games: Theory and Practice</em> by Prajit K. Dutta. 2001 MIT Press.</p>
-
-
-
 </section></section>
+<section>
+<section id="strategic-form-games" class="title-slide slide level1 center">
+<h1>Strategic Form Games</h1>
+
+</section>
+<section id="strategic-form-games-1" class="slide level2">
+<h2>Strategic Form Games</h2>
+<p>We will focus the utilization of Strategic Form games to model simoultaneous games, and therefore the <em>timing</em> of the game becomes unnecessary. We will just need the set of players, their strategies, and the payoffs associated to any strategy profile.</p>
+</section>
+<section id="strategic-form-games-2" class="slide level2">
+<h2>Strategic Form Games</h2>
+<ol type="1">
+<li class="fragment">Let’s name our players <span class="math inline">\(P1\)</span> and <span class="math inline">\(P2\)</span></li>
+<li class="fragment">Let <span class="math inline">\(S_i\)</span> be the set of strategies available for player <span class="math inline">\(i\)</span></li>
+<li class="fragment">Say <span class="math inline">\(\pi_i(s_1,s_2)\)</span> be the payoff for player <span class="math inline">\(i\)</span>, with <span class="math inline">\(s_1\in S_1\)</span> and <span class="math inline">\(s_2\in S2\)</span>.</li>
+</ol>
+</section>
+<section id="strategic-form-games-3" class="slide level2">
+<h2>Strategic Form Games</h2>
+<p>Suppose <span class="math inline">\(S_1=\{U,D\}\)</span> and <span class="math inline">\(S_2=\{L,R\}\)</span>, the payoff matrix would be:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">1<span class="math inline">\(\setminus\)</span> 2</th>
+<th style="text-align: center;"><span class="math inline">\(L\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(U\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(U,L),\pi_2(U,L))\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(U,R),\pi_2(U,R))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(D,L),\pi_2(D,L))\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(D,R),\pi_2(D,R))\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>The payoff for each player, depends on the strategy profile, that in each position on the table, is the same.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="strategic-form-games-4" class="slide level2">
+<h2>Strategic Form Games</h2>
+<p>What if we have more than 2 players, and strategies?</p>
+<div class="fragment">
+<ol type="1">
+<li class="fragment">If we have <span class="math inline">\(N\in\mathbb{N}\)</span> players, we will index them: 1,2, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(N\)</span>.</li>
+<li class="fragment">Their strategy space is <span class="math inline">\(S_i\)</span>.</li>
+<li class="fragment">A strategy profile is an ordered tuple <span class="math inline">\((s_1,s_2,\dots,s_N)\in S_1\times S_2\times\dots S_N\)</span>.</li>
+<li class="fragment"><span class="math inline">\(\pi_i(s_1,\dots,s_N)\)</span> represents the payoff for player <span class="math inline">\(i\)</span>, given the strategy profile <span class="math inline">\((s_1,s_2,\dots,s_N)\)</span>.</li>
+</ol>
+</div>
+<div class="fragment">
+<p>We can do better</p>
+</div>
+</section>
+<section id="strategic-form-games-5" class="slide level2">
+<h2>Strategic Form Games</h2>
+<p>Given that the strategies of the other players (other than player <span class="math inline">\(i\)</span>) are out player’s <span class="math inline">\(i\)</span> control, we will summarize them as <span class="math inline">\(s_{-i}\)</span>. So we will write:</p>
+<p><span class="math display">\[\pi_i(s_1,\dots,s_N) = \pi_i(s_i,s_{-i}) \]</span></p>
+<p>And <span class="math inline">\(s_{-i}\)</span> represents all chosen <span class="math inline">\(s_j\)</span> when <span class="math inline">\(j\neq i\)</span>. We could say <em>the other’s</em> strategies in the current strategy profile.</p>
+</section>
+<section id="the-prissoners-dilemma" class="slide level2">
+<h2>The Prissoner’s Dilemma</h2>
+<p>This is a classical game, and this is a great opportunity to introduce it:</p>
+<div style="font-size: 70%;">
+<p>Two prissoners, Calvin and Klein, are hauled in for a suspected crime. The <span class="math inline">\(DA\)</span> speaks to each prisoner separately, and tells them that she more or less has the evidence to convict them but they could make her work a little easier (and help themselves) if they confess to the crime. She offers each of them the following deal: “<em>Confess</em> to the crime, turn a witness for the State, and implicate the ohter guy, and you will do no time. Of course, your confession will be worth a lot less if the other guy confesses as well. I that case, you both go in for 5 years. If you <em>do not confess</em>, however, be aware that we will nail you with the other guy’s confession, and then you will do fifteen years. In the event that I cannot get a confession from either of you, I have enough evidence to put you both away for a year.”</p>
+</div>
+<div style="font-size: 40%;">
+<p>Prajit K. Dutta’s version of this game, in the book <em>Strategies and Games: Theory and Practice</em>. MIT Press, 2001.</p>
+</div>
+</section>
+<section id="the-prissoners-dilemma-1" class="slide level2">
+<h2>The Prissoner’s Dilemma</h2>
+<p>Note that this would be something like a <em>reverse payoff</em> matrix, as as a payoff we are writing down the years in prison, and most likely, the lower the number of years in prison, the better for both prissoners!</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Calvin - Klein</th>
+<th style="text-align: center;"><em>Confess</em></th>
+<th style="text-align: center;"><em>Not Confess</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((5,5)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,15)\)</span></td>
+</tr>
+<tr class="even">
+<td><em>Not Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((15,0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We can turn this table into something more traditional, assuming that each year in prison, equals a payoff of -1.</p>
+</section>
+<section id="the-prissoners-dilemma-2" class="slide level2">
+<h2>The Prissoner’s Dilemma</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Calvin - Klein</th>
+<th style="text-align: center;"><em>Confess</em></th>
+<th style="text-align: center;"><em>Not Confess</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((-5,-5)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,-15)\)</span></td>
+</tr>
+<tr class="even">
+<td><em>Not Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((-15,0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((-1,-1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li class="fragment">Suppose Calvin thinks Klein will <em>confess</em>. In that case, Calvin would be much better <strong>confessing</strong>! (<span class="math inline">\(-5 &gt; -15\)</span>).</li>
+<li class="fragment">Suppose Calvin thinks Klein will <em>Not Confess</em>. In that case, Calvin would also be much better off by <strong>confessing</strong>! (<span class="math inline">\(0 &gt; -1\)</span>)</li>
+</ol>
+</section>
+<section id="the-prissoners-dilemma-3" class="slide level2">
+<h2>The Prissoner’s Dilemma</h2>
+<p>Symmetrically, these options are the same for Klein. Note that <em>confess</em> is a <strong>dominant</strong> strategy, because independently of what the other decides, <em>confess</em> always generates at least as much payoff as any alternative. You cannot improve over the payoff you can get with <em>confess</em>, no matter what your counterpart is doing.</p>
+</section>
+<section id="equivalence-in-the-extensive-form" class="slide level2">
+<h2>Equivalence in the Extensive form</h2>
+<p>We said, these are simoultaneous games, but we do not need that both prissoner’s actually chose simoultaneously. It is enough that when one decide, the other does not know what the first prisoner’s chose.</p>
+</section>
+<section id="equivalence-in-the-extensive-form-1" class="slide level2">
+<h2>Equivalence in the Extensive form</h2>
+<p>Think on the Rock-Paper-Scissors game. As both players can see each others hands, simultaneity is necessary.</p>
+<p>Suppose now that we introduce a referee. One player tells secretely to the referee what her choice is (rock, paper, or scissors). Then the referee asks the other player, separately what is her own choice. Finally the referee can reveal if there is a winner or a draw. The game works just fine, even though one player played first.</p>
+<p>The key was that the player that played last, <strong>did not know what the other player played</strong> when she made her decision.</p>
+</section>
+<section id="equivalence-in-the-extensive-form-2" class="slide level2">
+<h2>Equivalence in the Extensive form</h2>
+
+<img data-src="02_game_theory_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div style="font-size: 70%;">
+<p>The dashed <em>set</em> represents an information set. This means that all these nodes carry the same information, or that at this point <span class="math inline">\(P2\)</span> does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game.</p>
+</div>
+</section></section>
+<section id="extensive-form-games" class="title-slide slide level1 center">
+<h1>Extensive Form Games</h1>
+
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../images/vse.jpg" class="slide-logo"></p>
@@ -370,6 +542,44 @@ Paulo Fagandini
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

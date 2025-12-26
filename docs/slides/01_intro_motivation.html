@@ -220,10 +220,10 @@ Paulo Fagandini
 <h2>Rules of the Game</h2>
 <p>For any game we want to model, we will need to define some components:</p>
 <ol type="1">
-<li class="fragment"><strong>who</strong> is playing.</li>
-<li class="fragment"><strong>what</strong> are they playing with.</li>
+<li class="fragment"><strong>who</strong> is playing. <em>(players)</em></li>
+<li class="fragment"><strong>what</strong> are they playing with. <em>(actions, strategies)</em></li>
 <li class="fragment"><strong>when</strong> each player gest to play.</li>
-<li class="fragment"><strong>how much</strong> they can gain or lose.</li>
+<li class="fragment"><strong>how much</strong> they can gain or lose. <em>(payoffs)</em></li>
 <li class="fragment">Further, we assume players are equally informed about these <strong>rules</strong>.</li>
 </ol>
 </section>
@@ -243,12 +243,61 @@ Paulo Fagandini
 <p>At every <em>node</em>, the player will have to chose an action. In the previous figure, we can see this represented as each branch that originates in every node.</p>
 <p>For example, player 1 (P1), who plays first, has, at that moment, actions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> available.</p>
 </section>
-<section id="strategie" class="slide level2">
-<h2>Strategie</h2>
-<p>Each player has a strategy that dictates an action in each decision node. Say a <em>plan</em> that tells the player what to do in every possible situation she finds herself in the game. For <span class="math inline">\(P2\)</span> we would have <span class="math inline">\(\{CC\}\)</span>, or <span class="math inline">\(\{CD\}\)</span>, or <span class="math inline">\(\{DC\}\)</span>, or <span class="math inline">\(\{DD\}\)</span>.</p>
+<section id="strategy" class="slide level2">
+<h2>Strategy</h2>
+<p>Each player has a <strong>strategy</strong> that dictates an action in each decision node. Say a <em>plan</em> that tells the player what to do in every possible situation she finds herself in the game. For <span class="math inline">\(P2\)</span> we would have <span class="math inline">\((CC)\)</span>, or <span class="math inline">\((CD)\)</span>, or <span class="math inline">\((DC)\)</span>, or <span class="math inline">\((DD)\)</span>.</p>
+<p>A <strong>strategy profile</strong> will be an ordered pair of strategies for each player, <em>i.e.</em>, a vector that contains a strategy for each player. For example here, we could have <span class="math inline">\((A,(CD))\)</span>, which would say that player 1 choses <span class="math inline">\(A\)</span>, and player 2 choses strategy <span class="math inline">\((CD)\)</span>.</p>
+</section>
+<section id="timing" class="slide level2">
+<h2>Timing</h2>
+<p>There are two main ways in which a game can be player (or a <em>turn</em> can be played).</p>
+<ol type="1">
+<li class="fragment">Simoultaneously</li>
+<li class="fragment">Sequentially</li>
+</ol>
+<div class="fragment">
+<p>For the second case, the extensive form is the most intuitive way to represent a game. For simoultaneous games, the Strategic form is more adequate. Let’s move to this game representation.</p>
+</div>
 </section>
 <section id="strategic-form" class="slide level2">
 <h2>Strategic form</h2>
+<p>When using the strategic form, we represent a game with a table, where rows and columns represent strategies for each player. The cells in the table will contain the payoffs. Because convention, we place the first player on the left, with her strategies in rows, and the second player on top, with her strategies represented in the columns.</p>
+<p>Payoffs will be represented again as an ordered pair, where the first coordinate contains the payoff for the first player, while the second coordinate contains the payoff for the second player.</p>
+</section>
+<section id="strategic-form-1" class="slide level2">
+<h2>Strategic form</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1 <span class="math inline">\(\setminus\)</span> P2</th>
+<th><span class="math inline">\((CC)\)</span></th>
+<th><span class="math inline">\((CD)\)</span></th>
+<th><span class="math inline">\((DC)\)</span></th>
+<th><span class="math inline">\((DD)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A\)</span></td>
+<td><span class="math inline">\((a,b)\)</span></td>
+<td><span class="math inline">\((a,b)\)</span></td>
+<td><span class="math inline">\((c,d)\)</span></td>
+<td><span class="math inline">\((c,d)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(B\)</span></td>
+<td><span class="math inline">\((e,f)\)</span></td>
+<td><span class="math inline">\((g,h)\)</span></td>
+<td><span class="math inline">\((e,f)\)</span></td>
+<td><span class="math inline">\((g,h)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Clearly, strategic form games, make more sense for 2-player games.</p>
+</section>
+<section id="representing-a-game" class="slide level2">
+<h2>Representing a game</h2>
+<p>Not all games are worth representing in either one of these two ways. Some games, specially those with continuous action space (so far we saw discrete action spaces) might make the attempt to represent the game futile. We will study these games in the future, but in these cases, we will also be able to use a utility function to find out which strategy would deal the highest expected utility (payoff) for the player.</p>
 
 
 
