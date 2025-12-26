@@ -139,6 +139,16 @@ The key was that the player that played last, **did not know what the other play
 
 ## Equivalence in the Extensive form
 
+This is the Strategic or Normal form to represent this game:
+
+| 1-2 | $R$ | $P$ | $S$ |
+| --: | :--: | :--: | :--: |
+| $R$ | $(0,0)$ | $(0,1)$ | $(1,0)$ |
+| $P$ | $(1,0)$ | $(0,0)$ | $(0,1)$ |
+| $S$ | $(0,1)$ | $(1,0)$ | $(0,0)$ |
+
+## Equivalence in the Extensive form
+
 ```{r, engine='tikz', fig.align='center'}
 
 \usetikzlibrary{calc}
@@ -185,5 +195,11 @@ The key was that the player that played last, **did not know what the other play
 <div style="font-size: 70%;">
 The dashed *set* represents an information set. This means that all these nodes carry the same information, or that at this point $P2$ does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game.
 </div>
+
+## Dominant Strategy Solution
+
+Remember the dominan strategy in the Prissoner's dilemma?
+
+*Confess* was dominant, because no matter
 
 # Extensive Form Games

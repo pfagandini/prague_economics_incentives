@@ -515,6 +515,13 @@
     "href": "slides/02_game_theory.html#equivalence-in-the-extensive-form-2",
     "title": "Fundamentals of  Game Theory",
     "section": "Equivalence in the Extensive form",
+    "text": "Equivalence in the Extensive form\nThis is the Strategic or Normal form to represent this game:\n\n\n\n1-2\n\\(R\\)\n\\(P\\)\n\\(S\\)\n\n\n\n\n\\(R\\)\n\\((0,0)\\)\n\\((0,1)\\)\n\\((1,0)\\)\n\n\n\\(P\\)\n\\((1,0)\\)\n\\((0,0)\\)\n\\((0,1)\\)\n\n\n\\(S\\)\n\\((0,1)\\)\n\\((1,0)\\)\n\\((0,0)\\)"
+  },
+  {
+    "objectID": "slides/02_game_theory.html#equivalence-in-the-extensive-form-3",
+    "href": "slides/02_game_theory.html#equivalence-in-the-extensive-form-3",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Equivalence in the Extensive form",
     "text": "Equivalence in the Extensive form\n\n\nThe dashed set represents an information set. This means that all these nodes carry the same information, or that at this point \\(P2\\) does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game."
   }
 ]
