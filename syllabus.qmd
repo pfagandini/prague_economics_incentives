@@ -65,6 +65,8 @@ Students shall complete an individual problem set (30%), fill in two Quizzes (10
 
 ## Bibliography
 
+1. Dutta, P. K. Strategies and Games. MIT Press, 2001.
+
 1. Gibbons, R. Game theory for applied economists. Princeton University Press, 1992.
 
 2. Osborne, M. J., et al. An introduction to game theory. New York: Oxford university press, 2004.

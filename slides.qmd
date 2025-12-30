@@ -7,8 +7,9 @@ In this page you can find the course materials, specifically the slide decks I w
 ## Slides
 
 1. [Introduction, Motivation](slides/01_intro_motivation.qmd)  
-2. [Game Theory Fundamentals](slides/02_game_theory.qmd)  
-3. [Games with Asymmetric Information](slides/03_games_with_assymetric_info.qmd)
+2. [Game Theory Strategic Form](slides/02_game_theory_strategic_form.qmd)  
+3. [Game Theory Extensive Form](slides/03_game_theory_extensive_form.qmd)  
+4. [Games with Asymmetric Information](slides/04_games_with_assymetric_info.qmd)
 
 
 ## Problem Set

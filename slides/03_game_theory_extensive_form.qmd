@@ -135,7 +135,9 @@ Think on the Rock-Paper-Scissors game. As both players can see each others hands
 
 Suppose now that we introduce a referee. One player tells secretely to the referee what her choice is (rock, paper, or scissors). Then the referee asks the other player, separately what is her own choice. Finally the referee can reveal if there is a winner or a draw. The game works just fine, even though one player played first.
 
-The key was that the player that played last, **did not know what the other player played** when she made her decision.
+## Equivalence in the Extensive form
+
+The key was that the player that played last, **did not know what the other player played** when she made her decision, and also that the first player, **knew that they other player was unaware of her move** by the time she made her decision.
 
 ## Equivalence in the Extensive form
 
@@ -143,9 +145,9 @@ This is the Strategic or Normal form to represent this game:
 
 | 1-2 | $R$ | $P$ | $S$ |
 | --: | :--: | :--: | :--: |
-| $R$ | $(0,0)$ | $(0,1)$ | $(1,0)$ |
-| $P$ | $(1,0)$ | $(0,0)$ | $(0,1)$ |
-| $S$ | $(0,1)$ | $(1,0)$ | $(0,0)$ |
+| $R$ | $(0,0)$ | $(-1,1)$ | $(1,-1)$ |
+| $P$ | $(1,-1)$ | $(0,0)$ | $(-1,1)$ |
+| $S$ | $(-1,1)$ | $(1,-1)$ | $(0,0)$ |
 
 ## Equivalence in the Extensive form
 
@@ -160,27 +162,27 @@ This is the Strategic or Normal form to represent this game:
 
 \begin{tikzpicture}[scale=1.5,font=\footnotesize]
   \tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]
-  \tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]
 
   \node(0)[solid node,label=above:{$P1$}]{}
     child{
       node(1)[solid node, label=above left:{$P2$}]{}
       child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[left]{$R$}}
-      child{node[hollow node,label=below:{$(0,1)$}]{} edge from parent node[right]{$P$}}
-      child{node[hollow node,label=below:{$(1,0)$}]{} edge from parent node[right]{$S$}}
+      child{node[hollow node,label=below:{$(-1,1)$}]{} edge from parent node[right]{$P$}}
+      child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[right]{$S$}}
       edge from parent node[left,xshift=-3]{$R$}
     }
     child{
       node(2)[solid node, label=above right:{$P2$}]{}
-      child{node[hollow node,label=below:{$(1,0)$}]{} edge from parent node[left]{$R$}}
+      child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[left]{$R$}}
       child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[right]{$P$}}
-      child{node[hollow node,label=below:{$(0,1)$}]{} edge from parent node[right]{$S$}}
+      child{node[hollow node,label=below:{$(-1,1)$}]{} edge from parent node[right]{$S$}}
       edge from parent node[right,xshift=3]{$P$}
     }
     child{
       node(3)[solid node, label=above right:{$P2$}]{}
-      child{node[hollow node,label=below:{$(0,1)$}]{} edge from parent node[left]{$R$}}
-      child{node[hollow node,label=below:{$(1,0)$}]{} edge from parent node[right]{$P$}}
+      child{node[hollow node,label=below:{$(-1,1)$}]{} edge from parent node[left]{$R$}}
+      child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[right]{$P$}}
       child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[right]{$S$}}
       edge from parent node[right,xshift=3]{$S$}
     };
@@ -200,6 +202,158 @@ The dashed *set* represents an information set. This means that all these nodes 
 
 Remember the dominan strategy in the Prissoner's dilemma?
 
-*Confess* was dominant, because no matter
+*Confess* was dominant, because no matter what the other player did, *confessing* always yielded the highest payoff.
 
-# Extensive Form Games
+## Dominant Strategy Solution
+
+:::{.callout-note}
+## Strongly Dominant Strategy
+
+A strategy $s_i'$ is said to be **strongly** dominant if $$\pi_i(s_i',s_{-i}) > \pi_i(s_i,s_{-i})\quad \forall s_i\in S_i,\ \forall s_{-i}\in\prod_{j\neq i} S_j$$
+:::
+
+## Dominant Strategy Solution
+
+:::{.callout-note}
+## Weakly Dominant Strategy
+
+A strategy $s_i'$ is said to be **weakly** dominant if $$\pi_i(s_i',s_{-i})\geq \pi_i(s_i,s_{-i})\quad \forall s_i\in S_i,\ \forall s_{-i}\in\prod_{j\neq i} S_j$$ and $$\exists \hat{s}_{-i}\in\prod_{j\neq i} S_j\ s.t.\ \forall s_i \in S_i\setminus\{s_i'\},\ \pi_i(s_i',\hat{s}_{-i})>\pi_i(s_i,\hat{s}_{-i})$$
+
+:::
+
+## Application: Second Price (Sealed Bid) Auctions
+
+Suppose there is an auction, for which $N$ bidders are competing. Each bidder $i$ assigns a value $v_i$ to the object being sold. The auction works like this:
+
+1. Every bidder submit a bid $b_i$ in a sealed envelope.
+2. Once all bids are collected, the auctioneer opens the envelope, and announces the winner.
+3. The winner pays the value of the **second highest bid**, and gets the object. All other bidders walk out without the item, but without paying anything.
+
+## Application: Second Price Auctions
+
+Any single bidder faces the following dilemma:
+
+* If I bid too much, I will win for sure, but I might end up overpaying.
+* If I bid too little, I will lose the auction and walk home empty handed.
+
+## Application: Second Price Auctions
+
+1. If the bidder gets the item, the payoff is $$\pi_i(b_i,b_{-i})=v_i-\max\{b_j\}_{j\neq i}$$
+2. If the bidder loses, the payoff is $$\pi_i(b_i,b_{-j})=0$$
+3. The expected payoff is then $$E\left[\pi_i(b_i,b_{-i})\right]=Pr\left(b_i>b_{-i}\right)\left(v_i-\max\{b_j\}_{j\neq i}\right)$$
+
+## Application: Second Price Auctions
+
+The question is then, what is the value of $b_i$ that maximizes the expected payoff? *i.e.* what is $b_i^*$?
+
+1. Suppose we chose $b_i^*>v_i$.
+2. Suppose we choose $b_i^*<v_i$.
+3. What about then if we choose $b_i^*=v_i$?
+
+. . .
+
+This is the solution proposed by William Vickrey, and these types of auctions are known as Vickrey Auctions.
+
+## Application: Second Price Auctions
+
+These auctions present the bidder with some tradeoffs:
+
+1. Enforces true revelation (bidders reveal their true valuations).
+2. It is very simple and transparent.
+3. Might, under some reasonable assumptions, generate lower prices than other auction formats.
+4. Bidders might skip these auctions if they have reasons to hide their valuations from competitors.
+
+## Application: Second Price Auctions
+
+Why now?
+
+. . .
+
+This auction presents an example of a dominant strategy, we saw that $b_i=v_i$ always provides a higher (or equal) than any other bid, and therefore it is a weakly dominant strategy, whatever the other bidders are doing.
+
+
+## Dominance Solvability
+
+:::{.callout-note}
+
+## Dominated Strategy
+A strategy $s_i^\#\in S_i$ is **dominated** by another strategy $s_i'\in S_i$, if the latter does at least as well as $s_i^\#$ against every strategy of the other players, and against some it does strictly better, such that:
+
+$$\pi_i(s_i',s_{-i})\geq\pi_i(s_i^\#,s_{-i}),\quad \forall s_{-i}\in\prod_{j\neq i}S_j$$ and
+$$\exists \hat{s}_{-i}\in\prod_{j\neq i} S_j,\ s.t.\ \pi_i(s_i',\hat{s}_{-i})>\pi_i(s_i^\#,\hat{s}_{-i})$$
+
+:::
+
+If a strategy is not *dominated*, then it is said to be **undominated**.
+
+## Dominance Solvability
+
+:::{.callout-note}
+## Corollary
+
+If a strategy is **dominated**, it cannot be optimal.
+
+:::
+
+:::{.callout-warning}
+## Undominated vs Dominant strategy
+
+Of course, looking at the definition, a **dominant strategy** is optimal, however, not every game has a dominant strategy for every player!
+
+:::
+
+## Dominance Solvability
+
+How can we solve this problem?
+
+:::{.callout-note}
+## Iterated Elimination of Dominated Strategies
+
+A first approach to start looking for a solution, could be to reduce a game by removing dominated strategies, *i.e.* all the strategies for which there is always a better alternative whatever the other players chose to do.
+
+:::
+
+## Iterated Elimination of Dominated Strategies
+
+Consider the following game
+
+| P1 - P2 | Left | Right |
+| --: | :--: | :--: |
+| Up | (1,1) | (0,1) |
+| Middle | (0,2) | (1,0) |
+| Down | (0,-1) | (0,0) |
+
+
+1. For $P1$ there is no dominant strategy, but there is a *dominated* strategy, *Down*.
+
+## Iterated Elimination of Dominated Strategies
+
+Consider the following game
+
+| P1 - P2 | Left | Right |
+| --: | :--: | :--: |
+| Up | (1,1) | (0,1) |
+| Middle | (0,2) | (1,0) |
+
+
+2. For $P2$ now, *Right* provides payoffs that are lower or equal than *Left*, and therefore it is *dominated*.
+   
+## Iterated Elimination of Dominated Strategies
+
+Consider the following game
+
+| P1 - P2 | Left |
+| --: | :--: |
+| Up | (1,1) |
+| Middle | (0,2) |
+
+
+3. For $P1$ now, *Up* is clearly the best choice, and the solution is therefore $(Up,Left)$. In this case it is said to be reached by *iterated elimination of dominated strategies (IEDS)*. The game itself is said to be *dominance solvable*.
+
+# Bibliography
+
+## Bibliography
+
+These slides took definitions and examples from the book:
+
+Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11 to 18.

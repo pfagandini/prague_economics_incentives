@@ -353,7 +353,7 @@ Paulo Fagandini
 <section id="equivalence-in-the-extensive-form-4" class="slide level2">
 <h2>Equivalence in the Extensive form</h2>
 
-<img data-src="02_game_theory_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div style="font-size: 70%;">
+<img data-src="02_game_theory_strategic_form_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div style="font-size: 70%;">
 <p>The dashed <em>set</em> represents an information set. This means that all these nodes carry the same information, or that at this point <span class="math inline">\(P2\)</span> does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game.</p>
 </div>
 </section>
@@ -595,15 +595,173 @@ Paulo Fagandini
 </tbody>
 </table>
 <ol start="3" type="1">
-<li class="fragment">For <span class="math inline">\(P1\)</span> now, <em>Up</em> is clearly the best choice, and the solution is therefore <span class="math inline">\((Up,Left)\)</span>.</li>
+<li class="fragment">For <span class="math inline">\(P1\)</span> now, <em>Up</em> is clearly the best choice, and the solution is therefore <span class="math inline">\((Up,Left)\)</span>. In this case it is said to be reached by <em>iterated elimination of dominated strategies (IEDS)</em>. The game itself is said to be <em>dominance solvable</em>.</li>
 </ol>
 </section></section>
-<section id="extensive-form-games" class="title-slide slide level1 center">
-<h1>Extensive Form Games</h1>
-
-
+<section>
+<section id="nash-equilibrium" class="title-slide slide level1 center">
+<h1>Nash Equilibrium</h1>
 
 </section>
+<section id="nash-equilibrium-1" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<p>So far we have discussed games in terms of “solutions,” but, what does that mean? What is an equilibrium in this framework?</p>
+</section>
+<section id="nash-equilibrium-2" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<ol type="1">
+<li class="fragment">Suppose you know that strategy <span class="math inline">\(s_i\)</span> is dominated by strategy <span class="math inline">\(s_i'\)</span>. Obviously you would chose <span class="math inline">\(s_i'\)</span> every day of the week.</li>
+<li class="fragment">Now, to chose some strategy <span class="math inline">\(s_i'\)</span>, you might need less than dominance. If you have some clue about what your opponent will do, then you just need to chose your strategy to maximize our payoff given what you expect the other players do, so you do not need to evaluate outcomes in unlikely scenarios.</li>
+</ol>
+</section>
+<section id="nash-equilibrium-3" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Best Response</strong></p>
+</div>
+<div class="callout-content">
+<p>If given a fixed strategy profile <span class="math inline">\(\bar{s}_{-i}\in \prod_{j\neq i}S_j\)</span> from the other players, <span class="math inline">\(s_i'\in S_i\)</span> is the <strong>best response</strong> of player <span class="math inline">\(i\)</span> if <span class="math display">\[\pi_i(s_i',\bar{s}_{-i})\geq \pi_i(s_i,\bar{s}_{-i})\]</span> for any <span class="math inline">\(s_i\in S_i\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Is this enough to have an equilibrium?</p>
+</div>
+</section>
+<section id="nash-equilibrium-4" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<p>No! Every single player needs to be <em>best responding</em>.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nash Equilibrium</strong></p>
+</div>
+<div class="callout-content">
+<p>The strategy profile <span class="math inline">\(s^*=(s_1^*,s_2^*,\dots,s_N^*)\in S_1\times S_2 \times \dots \times S_N\)</span> is a <strong>Nash Equilibrium</strong> if</p>
+<p><span class="math display">\[\pi_i(s_i^*,s_{-i}^*)\geq \pi_i(s_i,s_{-i}^*),\quad \forall s_i\in S_i,\ \forall i\in \{1,\dots,N\}\]</span></p>
+</div>
+</div>
+</div>
+<p>Every <span class="math inline">\(s_k^*\)</span> is itself a best response to <span class="math inline">\(s_{-k}^*\)</span>, and then, nobody has incentives to <strong>unilaterally</strong> change their decision.</p>
+</section>
+<section id="nash-equilibrium-6" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<p>Let’s check the proposed solution we found using IEDS for the game:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1 - P2</th>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Up</td>
+<td style="text-align: center;"><span style="color:red; font-weight:bold;">(1,1)</span></td>
+<td style="text-align: center;">(0,1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Middle</td>
+<td style="text-align: center;">(0,2)</td>
+<td style="text-align: center;">(1,0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Down</td>
+<td style="text-align: center;">(0,-1)</td>
+<td style="text-align: center;">(0,0)</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="math inline">\((Up,Left)\)</span> is indeed a <strong>Nash Equilibrium</strong>, as every player is <em>best responding</em>, or no player can unilaterally profit from deviating from the NE.</p>
+</div>
+</section>
+<section id="nash-equilibrium-7" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>If in a game there is an outcome to IEDS. Then this outcome is a Nash Equilibrium. However, a Nash Equilibrium not always can be reached using IEDS.</p>
+</div>
+</div>
+</div>
+<p>We just saw an example of a IEDS where it was a NE. Let’s check an example where we have a NE that is not IEDS reachable.</p>
+</section>
+<section id="nash-equilibrium-8" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<p>There is classical game known as the Coordination game. Suppose two friends want to meet to catch up. They decide to go to some concert at 19:30.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1-P2</th>
+<th style="text-align: center;">19:30</th>
+<th style="text-align: center;">17:30</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">19:30</td>
+<td style="text-align: center;">(1,1)</td>
+<td style="text-align: center;">(0,0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">17:30</td>
+<td style="text-align: center;">(0,0)</td>
+<td style="text-align: center;">(0,0)</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li class="fragment">What are the NE of this game?</li>
+<li class="fragment">What is the solution using IEDS?</li>
+</ol>
+<aside class="notes">
+<p>Note that <em>(19:30,19:30)</em> and <em>(17:30,17:30)</em> are both NE of this game, however using IEDS you only reach *(1,1)$</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="bibliography" class="title-slide slide level1 center">
+<h1>Bibliography</h1>
+
+</section>
+<section id="bibliography-1" class="slide level2">
+<h2>Bibliography</h2>
+<p>These slides took definitions and examples from the book:</p>
+<p>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 3 to 10.</p>
+
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../images/vse.jpg" class="slide-logo"></p>

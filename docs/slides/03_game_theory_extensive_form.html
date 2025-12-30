@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Paulo Fagandini">
+
+<title>Fundamentals of   Game Theory – VSE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">VSE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../slides.html"> 
+<span class="menu-text">Course Materials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About the Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#core-bibliography" id="toc-core-bibliography" class="nav-link" data-scroll-target="#core-bibliography">Core Bibliography</a></li>
+  </ul></li>
+  <li><a href="#strategic-form-games" id="toc-strategic-form-games" class="nav-link" data-scroll-target="#strategic-form-games">Strategic Form Games</a>
+  <ul class="collapse">
+  <li><a href="#strategic-form-games-1" id="toc-strategic-form-games-1" class="nav-link" data-scroll-target="#strategic-form-games-1">Strategic Form Games</a></li>
+  <li><a href="#strategic-form-games-2" id="toc-strategic-form-games-2" class="nav-link" data-scroll-target="#strategic-form-games-2">Strategic Form Games</a></li>
+  <li><a href="#strategic-form-games-3" id="toc-strategic-form-games-3" class="nav-link" data-scroll-target="#strategic-form-games-3">Strategic Form Games</a></li>
+  <li><a href="#strategic-form-games-4" id="toc-strategic-form-games-4" class="nav-link" data-scroll-target="#strategic-form-games-4">Strategic Form Games</a></li>
+  <li><a href="#strategic-form-games-5" id="toc-strategic-form-games-5" class="nav-link" data-scroll-target="#strategic-form-games-5">Strategic Form Games</a></li>
+  <li><a href="#the-prissoners-dilemma" id="toc-the-prissoners-dilemma" class="nav-link" data-scroll-target="#the-prissoners-dilemma">The Prissoner’s Dilemma</a></li>
+  <li><a href="#the-prissoners-dilemma-1" id="toc-the-prissoners-dilemma-1" class="nav-link" data-scroll-target="#the-prissoners-dilemma-1">The Prissoner’s Dilemma</a></li>
+  <li><a href="#the-prissoners-dilemma-2" id="toc-the-prissoners-dilemma-2" class="nav-link" data-scroll-target="#the-prissoners-dilemma-2">The Prissoner’s Dilemma</a></li>
+  <li><a href="#the-prissoners-dilemma-3" id="toc-the-prissoners-dilemma-3" class="nav-link" data-scroll-target="#the-prissoners-dilemma-3">The Prissoner’s Dilemma</a></li>
+  <li><a href="#equivalence-in-the-extensive-form" id="toc-equivalence-in-the-extensive-form" class="nav-link" data-scroll-target="#equivalence-in-the-extensive-form">Equivalence in the Extensive form</a></li>
+  <li><a href="#equivalence-in-the-extensive-form-1" id="toc-equivalence-in-the-extensive-form-1" class="nav-link" data-scroll-target="#equivalence-in-the-extensive-form-1">Equivalence in the Extensive form</a></li>
+  <li><a href="#equivalence-in-the-extensive-form-2" id="toc-equivalence-in-the-extensive-form-2" class="nav-link" data-scroll-target="#equivalence-in-the-extensive-form-2">Equivalence in the Extensive form</a></li>
+  <li><a href="#equivalence-in-the-extensive-form-3" id="toc-equivalence-in-the-extensive-form-3" class="nav-link" data-scroll-target="#equivalence-in-the-extensive-form-3">Equivalence in the Extensive form</a></li>
+  <li><a href="#equivalence-in-the-extensive-form-4" id="toc-equivalence-in-the-extensive-form-4" class="nav-link" data-scroll-target="#equivalence-in-the-extensive-form-4">Equivalence in the Extensive form</a></li>
+  <li><a href="#dominant-strategy-solution" id="toc-dominant-strategy-solution" class="nav-link" data-scroll-target="#dominant-strategy-solution">Dominant Strategy Solution</a></li>
+  <li><a href="#dominant-strategy-solution-1" id="toc-dominant-strategy-solution-1" class="nav-link" data-scroll-target="#dominant-strategy-solution-1">Dominant Strategy Solution</a></li>
+  <li><a href="#dominant-strategy-solution-2" id="toc-dominant-strategy-solution-2" class="nav-link" data-scroll-target="#dominant-strategy-solution-2">Dominant Strategy Solution</a></li>
+  <li><a href="#application-second-price-sealed-bid-auctions" id="toc-application-second-price-sealed-bid-auctions" class="nav-link" data-scroll-target="#application-second-price-sealed-bid-auctions">Application: Second Price (Sealed Bid) Auctions</a></li>
+  <li><a href="#application-second-price-auctions" id="toc-application-second-price-auctions" class="nav-link" data-scroll-target="#application-second-price-auctions">Application: Second Price Auctions</a></li>
+  <li><a href="#application-second-price-auctions-1" id="toc-application-second-price-auctions-1" class="nav-link" data-scroll-target="#application-second-price-auctions-1">Application: Second Price Auctions</a></li>
+  <li><a href="#application-second-price-auctions-2" id="toc-application-second-price-auctions-2" class="nav-link" data-scroll-target="#application-second-price-auctions-2">Application: Second Price Auctions</a></li>
+  <li><a href="#application-second-price-auctions-3" id="toc-application-second-price-auctions-3" class="nav-link" data-scroll-target="#application-second-price-auctions-3">Application: Second Price Auctions</a></li>
+  <li><a href="#application-second-price-auctions-4" id="toc-application-second-price-auctions-4" class="nav-link" data-scroll-target="#application-second-price-auctions-4">Application: Second Price Auctions</a></li>
+  <li><a href="#dominance-solvability" id="toc-dominance-solvability" class="nav-link" data-scroll-target="#dominance-solvability">Dominance Solvability</a></li>
+  <li><a href="#dominance-solvability-1" id="toc-dominance-solvability-1" class="nav-link" data-scroll-target="#dominance-solvability-1">Dominance Solvability</a></li>
+  <li><a href="#dominance-solvability-2" id="toc-dominance-solvability-2" class="nav-link" data-scroll-target="#dominance-solvability-2">Dominance Solvability</a></li>
+  <li><a href="#iterated-elimination-of-dominated-strategies-1" id="toc-iterated-elimination-of-dominated-strategies-1" class="nav-link" data-scroll-target="#iterated-elimination-of-dominated-strategies-1">Iterated Elimination of Dominated Strategies</a></li>
+  <li><a href="#iterated-elimination-of-dominated-strategies-2" id="toc-iterated-elimination-of-dominated-strategies-2" class="nav-link" data-scroll-target="#iterated-elimination-of-dominated-strategies-2">Iterated Elimination of Dominated Strategies</a></li>
+  <li><a href="#iterated-elimination-of-dominated-strategies-3" id="toc-iterated-elimination-of-dominated-strategies-3" class="nav-link" data-scroll-target="#iterated-elimination-of-dominated-strategies-3">Iterated Elimination of Dominated Strategies</a></li>
+  </ul></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a>
+  <ul class="collapse">
+  <li><a href="#bibliography-1" id="toc-bibliography-1" class="nav-link" data-scroll-target="#bibliography-1">Bibliography</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="03_game_theory_extensive_form.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fundamentals of <br> Game Theory</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Paulo Fagandini </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Prague University of Economics and Business <br> Faculty of Informatics and Statistics
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="font-size: 70%;">
+
+</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="core-bibliography" class="level2">
+<h2 class="anchored" data-anchor-id="core-bibliography">Core Bibliography</h2>
+<p>The core of the contents of this chapter takes as reference the book</p>
+<p>:book: <em>Strategies and Games: Theory and Practice</em> by Prajit K. Dutta. 2001 MIT Press.</p>
+</section>
+</section>
+<section id="strategic-form-games" class="level1">
+<h1>Strategic Form Games</h1>
+<section id="strategic-form-games-1" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-form-games-1">Strategic Form Games</h2>
+<p>We will focus the utilization of Strategic Form games to model simoultaneous games, and therefore the <em>timing</em> of the game becomes unnecessary. We will just need the set of players, their strategies, and the payoffs associated to any strategy profile.</p>
+</section>
+<section id="strategic-form-games-2" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-form-games-2">Strategic Form Games</h2>
+<ol type="1">
+<li>Let’s name our players <span class="math inline">\(P1\)</span> and <span class="math inline">\(P2\)</span></li>
+<li>Let <span class="math inline">\(S_i\)</span> be the set of strategies available for player <span class="math inline">\(i\)</span></li>
+<li>Say <span class="math inline">\(\pi_i(s_1,s_2)\)</span> be the payoff for player <span class="math inline">\(i\)</span>, with <span class="math inline">\(s_1\in S_1\)</span> and <span class="math inline">\(s_2\in S2\)</span>.</li>
+</ol>
+</section>
+<section id="strategic-form-games-3" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-form-games-3">Strategic Form Games</h2>
+<p>Suppose <span class="math inline">\(S_1=\{U,D\}\)</span> and <span class="math inline">\(S_2=\{L,R\}\)</span>, the payoff matrix would be:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">1<span class="math inline">\(\setminus\)</span> 2</th>
+<th style="text-align: center;"><span class="math inline">\(L\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(U\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(U,L),\pi_2(U,L))\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(U,R),\pi_2(U,R))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(D,L),\pi_2(D,L))\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\pi_1(D,R),\pi_2(D,R))\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>. . .</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The payoff for each player, depends on the strategy profile, that in each position on the table, is the same.</p>
+</div>
+</div>
+</section>
+<section id="strategic-form-games-4" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-form-games-4">Strategic Form Games</h2>
+<p>What if we have more than 2 players, and strategies?</p>
+<p>. . .</p>
+<ol type="1">
+<li>If we have <span class="math inline">\(N\in\mathbb{N}\)</span> players, we will index them: 1,2, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(N\)</span>.</li>
+<li>Their strategy space is <span class="math inline">\(S_i\)</span>.</li>
+<li>A strategy profile is an ordered tuple <span class="math inline">\((s_1,s_2,\dots,s_N)\in S_1\times S_2\times\dots S_N\)</span>.</li>
+<li><span class="math inline">\(\pi_i(s_1,\dots,s_N)\)</span> represents the payoff for player <span class="math inline">\(i\)</span>, given the strategy profile <span class="math inline">\((s_1,s_2,\dots,s_N)\)</span>.</li>
+</ol>
+<p>. . .</p>
+<p>We can do better</p>
+</section>
+<section id="strategic-form-games-5" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-form-games-5">Strategic Form Games</h2>
+<p>Given that the strategies of the other players (other than player <span class="math inline">\(i\)</span>) are out player’s <span class="math inline">\(i\)</span> control, we will summarize them as <span class="math inline">\(s_{-i}\)</span>. So we will write:</p>
+<p><span class="math display">\[\pi_i(s_1,\dots,s_N) = \pi_i(s_i,s_{-i}) \]</span></p>
+<p>And <span class="math inline">\(s_{-i}\)</span> represents all chosen <span class="math inline">\(s_j\)</span> when <span class="math inline">\(j\neq i\)</span>. We could say <em>the other’s</em> strategies in the current strategy profile.</p>
+</section>
+<section id="the-prissoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="the-prissoners-dilemma">The Prissoner’s Dilemma</h2>
+<p>This is a classical game, and this is a great opportunity to introduce it:</p>
+<div style="font-size: 70%;">
+<p>Two prissoners, Calvin and Klein, are hauled in for a suspected crime. The <span class="math inline">\(DA\)</span> speaks to each prisoner separately, and tells them that she more or less has the evidence to convict them but they could make her work a little easier (and help themselves) if they confess to the crime. She offers each of them the following deal: “<em>Confess</em> to the crime, turn a witness for the State, and implicate the ohter guy, and you will do no time. Of course, your confession will be worth a lot less if the other guy confesses as well. I that case, you both go in for 5 years. If you <em>do not confess</em>, however, be aware that we will nail you with the other guy’s confession, and then you will do fifteen years. In the event that I cannot get a confession from either of you, I have enough evidence to put you both away for a year.”</p>
+</div>
+<div style="font-size: 40%;">
+<p>Prajit K. Dutta’s version of this game, in the book <em>Strategies and Games: Theory and Practice</em>. MIT Press, 2001.</p>
+</div>
+</section>
+<section id="the-prissoners-dilemma-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-prissoners-dilemma-1">The Prissoner’s Dilemma</h2>
+<p>Note that this would be something like a <em>reverse payoff</em> matrix, as as a payoff we are writing down the years in prison, and most likely, the lower the number of years in prison, the better for both prissoners!</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Calvin - Klein</th>
+<th style="text-align: center;"><em>Confess</em></th>
+<th style="text-align: center;"><em>Not Confess</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((5,5)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,15)\)</span></td>
+</tr>
+<tr class="even">
+<td><em>Not Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((15,0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We can turn this table into something more traditional, assuming that each year in prison, equals a payoff of -1.</p>
+</section>
+<section id="the-prissoners-dilemma-2" class="level2">
+<h2 class="anchored" data-anchor-id="the-prissoners-dilemma-2">The Prissoner’s Dilemma</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Calvin - Klein</th>
+<th style="text-align: center;"><em>Confess</em></th>
+<th style="text-align: center;"><em>Not Confess</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((-5,-5)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,-15)\)</span></td>
+</tr>
+<tr class="even">
+<td><em>Not Confess</em></td>
+<td style="text-align: center;"><span class="math inline">\((-15,0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((-1,-1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Suppose Calvin thinks Klein will <em>confess</em>. In that case, Calvin would be much better <strong>confessing</strong>! (<span class="math inline">\(-5 &gt; -15\)</span>).</li>
+<li>Suppose Calvin thinks Klein will <em>Not Confess</em>. In that case, Calvin would also be much better off by <strong>confessing</strong>! (<span class="math inline">\(0 &gt; -1\)</span>)</li>
+</ol>
+</section>
+<section id="the-prissoners-dilemma-3" class="level2">
+<h2 class="anchored" data-anchor-id="the-prissoners-dilemma-3">The Prissoner’s Dilemma</h2>
+<p>Symmetrically, these options are the same for Klein. Note that <em>confess</em> is a <strong>dominant</strong> strategy, because independently of what the other decides, <em>confess</em> always generates at least as much payoff as any alternative. You cannot improve over the payoff you can get with <em>confess</em>, no matter what your counterpart is doing.</p>
+</section>
+<section id="equivalence-in-the-extensive-form" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-in-the-extensive-form">Equivalence in the Extensive form</h2>
+<p>We said, these are simoultaneous games, but we do not need that both prissoner’s actually chose simoultaneously. It is enough that when one decide, the other does not know what the first prisoner’s chose.</p>
+</section>
+<section id="equivalence-in-the-extensive-form-1" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-in-the-extensive-form-1">Equivalence in the Extensive form</h2>
+<p>Think on the Rock-Paper-Scissors game. As both players can see each others hands, simultaneity is necessary.</p>
+<p>Suppose now that we introduce a referee. One player tells secretely to the referee what her choice is (rock, paper, or scissors). Then the referee asks the other player, separately what is her own choice. Finally the referee can reveal if there is a winner or a draw. The game works just fine, even though one player played first.</p>
+</section>
+<section id="equivalence-in-the-extensive-form-2" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-in-the-extensive-form-2">Equivalence in the Extensive form</h2>
+<p>The key was that the player that played last, <strong>did not know what the other player played</strong> when she made her decision, and also that the first player, <strong>knew that they other player was unaware of her move</strong> by the time she made her decision.</p>
+</section>
+<section id="equivalence-in-the-extensive-form-3" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-in-the-extensive-form-3">Equivalence in the Extensive form</h2>
+<p>This is the Strategic or Normal form to represent this game:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">1-2</th>
+<th style="text-align: center;"><span class="math inline">\(R\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(P\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(R\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((-1,1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,-1)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(P\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((-1,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(S\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((-1,1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,0)\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="equivalence-in-the-extensive-form-4" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-in-the-extensive-form-4">Equivalence in the Extensive form</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{calc}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\tikzset</span>{</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  solid node/.style={circle,draw,inner sep=1.5,fill=black},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  hollow node/.style={circle,draw,inner sep=1.5}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[scale=1.5,font=<span class="fu">\footnotesize</span>]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\tikzstyle</span>{level 1}=[level distance=15mm,sibling distance=35mm]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\tikzstyle</span>{level 2}=[level distance=15mm,sibling distance=10mm]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\node</span>(0)[solid node,label=above:{<span class="ss">$P1$</span>}]{}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    child{</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      node(1)[solid node, label=above left:{<span class="ss">$P2$</span>}]{}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(0,0)$</span>}]{} edge from parent node[left]{<span class="ss">$R$</span>}}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(-1,1)$</span>}]{} edge from parent node[right]{<span class="ss">$P$</span>}}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(1,-1)$</span>}]{} edge from parent node[right]{<span class="ss">$S$</span>}}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      edge from parent node[left,xshift=-3]{<span class="ss">$R$</span>}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    child{</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      node(2)[solid node, label=above right:{<span class="ss">$P2$</span>}]{}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(1,-1)$</span>}]{} edge from parent node[left]{<span class="ss">$R$</span>}}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(0,0)$</span>}]{} edge from parent node[right]{<span class="ss">$P$</span>}}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(-1,1)$</span>}]{} edge from parent node[right]{<span class="ss">$S$</span>}}</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>      edge from parent node[right,xshift=3]{<span class="ss">$P$</span>}</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    child{</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>      node(3)[solid node, label=above right:{<span class="ss">$P2$</span>}]{}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(-1,1)$</span>}]{} edge from parent node[left]{<span class="ss">$R$</span>}}</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(1,-1)$</span>}]{} edge from parent node[right]{<span class="ss">$P$</span>}}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      child{node[hollow node,label=below:{<span class="ss">$(0,0)$</span>}]{} edge from parent node[right]{<span class="ss">$S$</span>}}</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      edge from parent node[right,xshift=3]{<span class="ss">$S$</span>}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    };</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>   <span class="fu">\draw</span>[dashed,rounded corners=10](<span class="ss">$(1) + (-.2,.25)$</span>)rectangle(<span class="ss">$(3) +(.2,-.25)$</span>);</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>   <span class="fu">\node</span> at (<span class="ss">$(1)!.5!(2)$</span>) {<span class="ss">$P2$</span>};</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="03_game_theory_extensive_form_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div style="font-size: 70%;">
+<p>The dashed <em>set</em> represents an information set. This means that all these nodes carry the same information, or that at this point <span class="math inline">\(P2\)</span> does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game.</p>
+</div>
+</section>
+<section id="dominant-strategy-solution" class="level2">
+<h2 class="anchored" data-anchor-id="dominant-strategy-solution">Dominant Strategy Solution</h2>
+<p>Remember the dominan strategy in the Prissoner’s dilemma?</p>
+<p><em>Confess</em> was dominant, because no matter what the other player did, <em>confessing</em> always yielded the highest payoff.</p>
+</section>
+<section id="dominant-strategy-solution-1" class="level2">
+<h2 class="anchored" data-anchor-id="dominant-strategy-solution-1">Dominant Strategy Solution</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Strongly Dominant Strategy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A strategy <span class="math inline">\(s_i'\)</span> is said to be <strong>strongly</strong> dominant if <span class="math display">\[\pi_i(s_i',s_{-i}) &gt; \pi_i(s_i,s_{-i})\quad \forall s_i\in S_i,\ \forall s_{-i}\in\prod_{j\neq i} S_j\]</span></p>
+</div>
+</div>
+</section>
+<section id="dominant-strategy-solution-2" class="level2">
+<h2 class="anchored" data-anchor-id="dominant-strategy-solution-2">Dominant Strategy Solution</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Weakly Dominant Strategy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A strategy <span class="math inline">\(s_i'\)</span> is said to be <strong>weakly</strong> dominant if <span class="math display">\[\pi_i(s_i',s_{-i})\geq \pi_i(s_i,s_{-i})\quad \forall s_i\in S_i,\ \forall s_{-i}\in\prod_{j\neq i} S_j\]</span> and <span class="math display">\[\exists \hat{s}_{-i}\in\prod_{j\neq i} S_j\ s.t.\ \forall s_i \in S_i\setminus\{s_i'\},\ \pi_i(s_i',\hat{s}_{-i})&gt;\pi_i(s_i,\hat{s}_{-i})\]</span></p>
+</div>
+</div>
+</section>
+<section id="application-second-price-sealed-bid-auctions" class="level2">
+<h2 class="anchored" data-anchor-id="application-second-price-sealed-bid-auctions">Application: Second Price (Sealed Bid) Auctions</h2>
+<p>Suppose there is an auction, for which <span class="math inline">\(N\)</span> bidders are competing. Each bidder <span class="math inline">\(i\)</span> assigns a value <span class="math inline">\(v_i\)</span> to the object being sold. The auction works like this:</p>
+<ol type="1">
+<li>Every bidder submit a bid <span class="math inline">\(b_i\)</span> in a sealed envelope.</li>
+<li>Once all bids are collected, the auctioneer opens the envelope, and announces the winner.</li>
+<li>The winner pays the value of the <strong>second highest bid</strong>, and gets the object. All other bidders walk out without the item, but without paying anything.</li>
+</ol>
+</section>
+<section id="application-second-price-auctions" class="level2">
+<h2 class="anchored" data-anchor-id="application-second-price-auctions">Application: Second Price Auctions</h2>
+<p>Any single bidder faces the following dilemma:</p>
+<ul>
+<li>If I bid too much, I will win for sure, but I might end up overpaying.</li>
+<li>If I bid too little, I will lose the auction and walk home empty handed.</li>
+</ul>
+</section>
+<section id="application-second-price-auctions-1" class="level2">
+<h2 class="anchored" data-anchor-id="application-second-price-auctions-1">Application: Second Price Auctions</h2>
+<ol type="1">
+<li>If the bidder gets the item, the payoff is <span class="math display">\[\pi_i(b_i,b_{-i})=v_i-\max\{b_j\}_{j\neq i}\]</span></li>
+<li>If the bidder loses, the payoff is <span class="math display">\[\pi_i(b_i,b_{-j})=0\]</span></li>
+<li>The expected payoff is then <span class="math display">\[E\left[\pi_i(b_i,b_{-i})\right]=Pr\left(b_i&gt;b_{-i}\right)\left(v_i-\max\{b_j\}_{j\neq i}\right)\]</span></li>
+</ol>
+</section>
+<section id="application-second-price-auctions-2" class="level2">
+<h2 class="anchored" data-anchor-id="application-second-price-auctions-2">Application: Second Price Auctions</h2>
+<p>The question is then, what is the value of <span class="math inline">\(b_i\)</span> that maximizes the expected payoff? <em>i.e.</em> what is <span class="math inline">\(b_i^*\)</span>?</p>
+<ol type="1">
+<li>Suppose we chose <span class="math inline">\(b_i^*&gt;v_i\)</span>.</li>
+<li>Suppose we choose <span class="math inline">\(b_i^*&lt;v_i\)</span>.</li>
+<li>What about then if we choose <span class="math inline">\(b_i^*=v_i\)</span>?</li>
+</ol>
+<p>. . .</p>
+<p>This is the solution proposed by William Vickrey, and these types of auctions are known as Vickrey Auctions.</p>
+</section>
+<section id="application-second-price-auctions-3" class="level2">
+<h2 class="anchored" data-anchor-id="application-second-price-auctions-3">Application: Second Price Auctions</h2>
+<p>These auctions present the bidder with some tradeoffs:</p>
+<ol type="1">
+<li>Enforces true revelation (bidders reveal their true valuations).</li>
+<li>It is very simple and transparent.</li>
+<li>Might, under some reasonable assumptions, generate lower prices than other auction formats.</li>
+<li>Bidders might skip these auctions if they have reasons to hide their valuations from competitors.</li>
+</ol>
+</section>
+<section id="application-second-price-auctions-4" class="level2">
+<h2 class="anchored" data-anchor-id="application-second-price-auctions-4">Application: Second Price Auctions</h2>
+<p>Why now?</p>
+<p>. . .</p>
+<p>This auction presents an example of a dominant strategy, we saw that <span class="math inline">\(b_i=v_i\)</span> always provides a higher (or equal) than any other bid, and therefore it is a weakly dominant strategy, whatever the other bidders are doing.</p>
+</section>
+<section id="dominance-solvability" class="level2">
+<h2 class="anchored" data-anchor-id="dominance-solvability">Dominance Solvability</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Dominated Strategy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A strategy <span class="math inline">\(s_i^\#\in S_i\)</span> is <strong>dominated</strong> by another strategy <span class="math inline">\(s_i'\in S_i\)</span>, if the latter does at least as well as <span class="math inline">\(s_i^\#\)</span> against every strategy of the other players, and against some it does strictly better, such that:</p>
+<p><span class="math display">\[\pi_i(s_i',s_{-i})\geq\pi_i(s_i^\#,s_{-i}),\quad \forall s_{-i}\in\prod_{j\neq i}S_j\]</span> and <span class="math display">\[\exists \hat{s}_{-i}\in\prod_{j\neq i} S_j,\ s.t.\ \pi_i(s_i',\hat{s}_{-i})&gt;\pi_i(s_i^\#,\hat{s}_{-i})\]</span></p>
+</div>
+</div>
+<p>If a strategy is not <em>dominated</em>, then it is said to be <strong>undominated</strong>.</p>
+</section>
+<section id="dominance-solvability-1" class="level2">
+<h2 class="anchored" data-anchor-id="dominance-solvability-1">Dominance Solvability</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Corollary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If a strategy is <strong>dominated</strong>, it cannot be optimal.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Undominated vs Dominant strategy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Of course, looking at the definition, a <strong>dominant strategy</strong> is optimal, however, not every game has a dominant strategy for every player!</p>
+</div>
+</div>
+</section>
+<section id="dominance-solvability-2" class="level2">
+<h2 class="anchored" data-anchor-id="dominance-solvability-2">Dominance Solvability</h2>
+<p>How can we solve this problem?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Iterated Elimination of Dominated Strategies
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A first approach to start looking for a solution, could be to reduce a game by removing dominated strategies, <em>i.e.</em> all the strategies for which there is always a better alternative whatever the other players chose to do.</p>
+</div>
+</div>
+</section>
+<section id="iterated-elimination-of-dominated-strategies-1" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-dominated-strategies-1">Iterated Elimination of Dominated Strategies</h2>
+<p>Consider the following game</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1 - P2</th>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Up</td>
+<td style="text-align: center;">(1,1)</td>
+<td style="text-align: center;">(0,1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Middle</td>
+<td style="text-align: center;">(0,2)</td>
+<td style="text-align: center;">(1,0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Down</td>
+<td style="text-align: center;">(0,-1)</td>
+<td style="text-align: center;">(0,0)</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>For <span class="math inline">\(P1\)</span> there is no dominant strategy, but there is a <em>dominated</em> strategy, <em>Down</em>.</li>
+</ol>
+</section>
+<section id="iterated-elimination-of-dominated-strategies-2" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-dominated-strategies-2">Iterated Elimination of Dominated Strategies</h2>
+<p>Consider the following game</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1 - P2</th>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Up</td>
+<td style="text-align: center;">(1,1)</td>
+<td style="text-align: center;">(0,1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Middle</td>
+<td style="text-align: center;">(0,2)</td>
+<td style="text-align: center;">(1,0)</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li>For <span class="math inline">\(P2\)</span> now, <em>Right</em> provides payoffs that are lower or equal than <em>Left</em>, and therefore it is <em>dominated</em>.</li>
+</ol>
+</section>
+<section id="iterated-elimination-of-dominated-strategies-3" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-dominated-strategies-3">Iterated Elimination of Dominated Strategies</h2>
+<p>Consider the following game</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1 - P2</th>
+<th style="text-align: center;">Left</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Up</td>
+<td style="text-align: center;">(1,1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Middle</td>
+<td style="text-align: center;">(0,2)</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li>For <span class="math inline">\(P1\)</span> now, <em>Up</em> is clearly the best choice, and the solution is therefore <span class="math inline">\((Up,Left)\)</span>. In this case it is said to be reached by <em>iterated elimination of dominated strategies (IEDS)</em>. The game itself is said to be <em>dominance solvable</em>.</li>
+</ol>
+</section>
+</section>
+<section id="bibliography" class="level1">
+<h1>Bibliography</h1>
+<section id="bibliography-1" class="level2">
+<h2 class="anchored" data-anchor-id="bibliography-1">Bibliography</h2>
+<p>These slides took definitions and examples from the book:</p>
+<p>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11 to 18.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

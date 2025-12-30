@@ -28,3 +28,11 @@ editor: source
 The core of the contents of this chapter takes as reference the book
 
 :book: *Strategies and Games: Theory and Practice* by Prajit K. Dutta. 2001 MIT Press.
+
+# Bibliography
+
+## Bibliography
+
+These slides took definitions and examples from the book:
+
+Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.
