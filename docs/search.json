@@ -872,28 +872,28 @@
     "href": "slides/02_game_theory_strategic_form.html#strategic-form-games-1",
     "title": "Fundamentals of  Game Theory",
     "section": "Strategic Form Games",
-    "text": "Strategic Form Games\nWe will focus the utilization of Strategic Form games to model simoultaneous games, and therefore the timing of the game becomes unnecessary. We will just need the set of players, their strategies, and the payoffs associated to any strategy profile."
+    "text": "Strategic Form Games\n\nLet’s name our players \\(P1\\) and \\(P2\\)\nLet \\(S_i\\) be the set of strategies available for player \\(i\\)\nSay \\(\\pi_i(s_1,s_2)\\) be the payoff for player \\(i\\), with \\(s_1\\in S_1\\) and \\(s_2\\in S2\\)."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-2",
     "href": "slides/02_game_theory_strategic_form.html#strategic-form-games-2",
     "title": "Fundamentals of  Game Theory",
     "section": "Strategic Form Games",
-    "text": "Strategic Form Games\n\nLet’s name our players \\(P1\\) and \\(P2\\)\nLet \\(S_i\\) be the set of strategies available for player \\(i\\)\nSay \\(\\pi_i(s_1,s_2)\\) be the payoff for player \\(i\\), with \\(s_1\\in S_1\\) and \\(s_2\\in S2\\)."
+    "text": "Strategic Form Games\nSuppose \\(S_1=\\{U,D\\}\\) and \\(S_2=\\{L,R\\}\\), the payoff matrix would be:\n\n\n\n1\\(\\setminus\\) 2\n\\(L\\)\n\\(R\\)\n\n\n\n\n\\(U\\)\n\\((\\pi_1(U,L),\\pi_2(U,L))\\)\n\\((\\pi_1(U,R),\\pi_2(U,R))\\)\n\n\n\\(D\\)\n\\((\\pi_1(D,L),\\pi_2(D,L))\\)\n\\((\\pi_1(D,R),\\pi_2(D,R))\\)\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nThe payoff for each player, depends on the strategy profile, that in each position on the table, is the same."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-3",
     "href": "slides/02_game_theory_strategic_form.html#strategic-form-games-3",
     "title": "Fundamentals of  Game Theory",
     "section": "Strategic Form Games",
-    "text": "Strategic Form Games\nSuppose \\(S_1=\\{U,D\\}\\) and \\(S_2=\\{L,R\\}\\), the payoff matrix would be:\n\n\n\n1\\(\\setminus\\) 2\n\\(L\\)\n\\(R\\)\n\n\n\n\n\\(U\\)\n\\((\\pi_1(U,L),\\pi_2(U,L))\\)\n\\((\\pi_1(U,R),\\pi_2(U,R))\\)\n\n\n\\(D\\)\n\\((\\pi_1(D,L),\\pi_2(D,L))\\)\n\\((\\pi_1(D,R),\\pi_2(D,R))\\)\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nThe payoff for each player, depends on the strategy profile, that in each position on the table, is the same."
+    "text": "Strategic Form Games\nWhat if we have more than 2 players, and strategies?\n\n\nIf we have \\(N\\in\\mathbb{N}\\) players, we will index them: 1,2, \\(\\dots\\), \\(N\\).\nTheir strategy space is \\(S_i\\).\nA strategy profile is an ordered tuple \\((s_1,s_2,\\dots,s_N)\\in S_1\\times S_2\\times\\dots S_N\\).\n\\(\\pi_i(s_1,\\dots,s_N)\\) represents the payoff for player \\(i\\), given the strategy profile \\((s_1,s_2,\\dots,s_N)\\).\n\n\n\nWe can do better"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-4",
     "href": "slides/02_game_theory_strategic_form.html#strategic-form-games-4",
     "title": "Fundamentals of  Game Theory",
     "section": "Strategic Form Games",
-    "text": "Strategic Form Games\nWhat if we have more than 2 players, and strategies?\n\n\nIf we have \\(N\\in\\mathbb{N}\\) players, we will index them: 1,2, \\(\\dots\\), \\(N\\).\nTheir strategy space is \\(S_i\\).\nA strategy profile is an ordered tuple \\((s_1,s_2,\\dots,s_N)\\in S_1\\times S_2\\times\\dots S_N\\).\n\\(\\pi_i(s_1,\\dots,s_N)\\) represents the payoff for player \\(i\\), given the strategy profile \\((s_1,s_2,\\dots,s_N)\\).\n\n\n\nWe can do better"
+    "text": "Strategic Form Games\nGiven that the strategies of the other players (other than player \\(i\\)) are out player’s \\(i\\) control, we will summarize them as \\(s_{-i}\\). So we will write:\n\\[\\pi_i(s_1,\\dots,s_N) = \\pi_i(s_i,s_{-i}) \\]\nAnd \\(s_{-i}\\) represents all chosen \\(s_j\\) when \\(j\\neq i\\). We could say the other’s strategies in the current strategy profile."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-5",
@@ -1033,14 +1033,14 @@
     "href": "slides/02_game_theory_strategic_form.html#dominance-solvability",
     "title": "Fundamentals of  Game Theory",
     "section": "Dominance Solvability",
-    "text": "Dominance Solvability\n\n\n\n\n\n\nDominated Strategy\n\n\nA strategy \\(s_i^\\#\\in S_i\\) is dominated by another strategy \\(s_i'\\in S_i\\), if the latter does at least as well as \\(s_i^\\#\\) against every strategy of the other players, and against some it does strictly better, such that:\n\\[\\pi_i(s_i',s_{-i})\\geq\\pi_i(s_i^\\#,s_{-i}),\\quad \\forall s_{-i}\\in\\prod_{j\\neq i}S_j\\] and \\[\\exists \\hat{s}_{-i}\\in\\prod_{j\\neq i} S_j,\\ s.t.\\ \\pi_i(s_i',\\hat{s}_{-i})&gt;\\pi_i(s_i^\\#,\\hat{s}_{-i})\\]\n\n\n\nIf a strategy is not dominated, then it is said to be undominated."
+    "text": "Dominance Solvability\n\n\n\n\n\n\nCorollary\n\n\nIf a strategy is dominated, it cannot be optimal.\n\n\n\n\n\n\n\n\n\nUndominated vs Dominant strategy\n\n\nOf course, looking at the definition, a dominant strategy is optimal, however, not every game has a dominant strategy for every player!"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominance-solvability-1",
     "href": "slides/02_game_theory_strategic_form.html#dominance-solvability-1",
     "title": "Fundamentals of  Game Theory",
     "section": "Dominance Solvability",
-    "text": "Dominance Solvability\n\n\n\n\n\n\nCorollary\n\n\nIf a strategy is dominated, it cannot be optimal.\n\n\n\n\n\n\n\n\n\nUndominated vs Dominant strategy\n\n\nOf course, looking at the definition, a dominant strategy is optimal, however, not every game has a dominant strategy for every player!"
+    "text": "Dominance Solvability\nHow can we solve this problem?\n\n\n\n\n\n\nIterated Elimination of Dominated Strategies\n\n\nA first approach to start looking for a solution, could be to reduce a game by removing dominated strategies, i.e. all the strategies for which there is always a better alternative whatever the other players chose to do."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominance-solvability-2",
@@ -1075,7 +1075,7 @@
     "href": "slides/02_game_theory_strategic_form.html#bibliography-1",
     "title": "Fundamentals of  Game Theory",
     "section": "Bibliography",
-    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 3 to 10."
+    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 3-5 and 6-8. The expected payoff for \\(P1\\) is:"
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#bibliography-1",
@@ -1089,21 +1089,21 @@
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-1",
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\nSo far we have discussed games in terms of “solutions,” but, what does that mean? What is an equilibrium in this framework?"
+    "text": "Nash Equilibrium\n\nSuppose you know that strategy \\(s_i\\) is dominated by strategy \\(s_i'\\). Obviously you would chose \\(s_i'\\) every day of the week.\nNow, to chose some strategy \\(s_i'\\), you might need less than dominance. If you have some clue about what your opponent will do, then you just need to chose your strategy to maximize our payoff given what you expect the other players do, so you do not need to evaluate outcomes in unlikely scenarios."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-2",
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-2",
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\n\nSuppose you know that strategy \\(s_i\\) is dominated by strategy \\(s_i'\\). Obviously you would chose \\(s_i'\\) every day of the week.\nNow, to chose some strategy \\(s_i'\\), you might need less than dominance. If you have some clue about what your opponent will do, then you just need to chose your strategy to maximize our payoff given what you expect the other players do, so you do not need to evaluate outcomes in unlikely scenarios."
+    "text": "Nash Equilibrium\n\n\n\n\n\n\nBest Response\n\n\nIf given a fixed strategy profile \\(\\bar{s}_{-i}\\in \\prod_{j\\neq i}S_j\\) from the other players, \\(s_i'\\in S_i\\) is the best response of player \\(i\\) if \\[\\pi_i(s_i',\\bar{s}_{-i})\\geq \\pi_i(s_i,\\bar{s}_{-i})\\] for any \\(s_i\\in S_i\\).\n\n\n\n\nIs this enough to have an equilibrium?"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-3",
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-3",
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\n\n\n\n\n\n\nBest Response\n\n\nIf given a fixed strategy profile \\(\\bar{s}_{-i}\\in \\prod_{j\\neq i}S_j\\) from the other players, \\(s_i'\\in S_i\\) is the best response of player \\(i\\) if \\[\\pi_i(s_i',\\bar{s}_{-i})\\geq \\pi_i(s_i,\\bar{s}_{-i})\\] for any \\(s_i\\in S_i\\).\n\n\n\n\nIs this enough to have an equilibrium?"
+    "text": "Nash Equilibrium\nNo! Every single player needs to be best responding.\n\n\n\n\n\n\nNash Equilibrium\n\n\nThe strategy profile \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\in S_1\\times S_2 \\times \\dots \\times S_N\\) is a Nash Equilibrium if\n\\[\\pi_i(s_i^*,s_{-i}^*)\\geq \\pi_i(s_i,s_{-i}^*),\\quad \\forall s_i\\in S_i,\\ \\forall i\\in \\{1,\\dots,N\\}\\]\n\n\n\nEvery \\(s_k^*\\) is itself a best response to \\(s_{-k}^*\\), and then, nobody has incentives to unilaterally change their decision."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-4",
@@ -1117,21 +1117,21 @@
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-5",
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\nThe strategy vector \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\in S_1\\times S_2 \\times \\dots \\times S_N\\) is a Nash Equilibrium if\n\\[\\pi_i(s_i^*,s_{-i}^*)\\geq \\pi_i(s_i,s_{-i}^*),\\quad s_i\\in S_i\\]"
+    "text": "Nash Equilibrium\nLet’s check the proposed solution we found using IEDS for the game:\n\n\n\n\n\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(1,1)\n(0,1)\n\n\nMiddle\n(0,2)\n(1,0)\n\n\nDown\n(0,-1)\n(0,0)\n\n\n\n\n\\((Up,Left)\\) is indeed a Nash Equilibrium, as every player is best responding, or no player can unilaterally profit from deviating from the NE."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-6",
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-6",
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\nLet’s check the proposed solution we found using IEDS for the game:\n\n\n\n\n\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(1,1)\n(0,1)\n\n\nMiddle\n(0,2)\n(1,0)\n\n\nDown\n(0,-1)\n(0,0)\n\n\n\n\n\\((Up,Left)\\) is indeed a Nash Equilibrium, as every player is best responding, or no player can unilaterally profit from deviating from the NE."
+    "text": "Nash Equilibrium\n\n\n\n\n\n\nProposition\n\n\nIf in a game there is an outcome to IEDS. Then this outcome is a Nash Equilibrium. However, a Nash Equilibrium not always can be reached using IEDS.\n\n\n\nWe just saw an example of a IEDS where it was a NE. Let’s check an example where we have a NE that is not IEDS reachable."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-7",
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-7",
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\n\n\n\n\n\n\nProposition\n\n\nIf in a game there is an outcome to IEDS. Then this outcome is a Nash Equilibrium. However, a Nash Equilibrium not always can be reached using IEDS.\n\n\n\nWe just saw an example of a IEDS where it was a NE. Let’s check an example where we have a NE that is not IEDS reachable."
+    "text": "Nash Equilibrium\nThere is classical game known as the Coordination game. Suppose two friends want to meet to catch up. They decide to go to some concert at 19:30.\n\n\n\nP1-P2\n19:30\n17:30\n\n\n\n\n19:30\n(1,1)\n(0,0)\n\n\n17:30\n(0,0)\n(0,0)\n\n\n\n\nWhat are the NE of this game?\nWhat is the solution using IEDS?\n\n\nNote that (19:30,19:30) and (17:30,17:30) are both NE of this game, however using IEDS you only reach *(1,1)$"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-8",
@@ -1139,5 +1139,334 @@
     "title": "Fundamentals of  Game Theory",
     "section": "Nash Equilibrium",
     "text": "Nash Equilibrium\nThere is classical game known as the Coordination game. Suppose two friends want to meet to catch up. They decide to go to some concert at 19:30.\n\n\n\nP1-P2\n19:30\n17:30\n\n\n\n\n19:30\n(1,1)\n(0,0)\n\n\n17:30\n(0,0)\n(0,0)\n\n\n\n\nWhat are the NE of this game?\nWhat is the solution using IEDS?\n\n\nNote that (19:30,19:30) and (17:30,17:30) are both NE of this game, however using IEDS you only reach *(1,1)$"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games",
+    "href": "slides/02_game_theory_strategic_form.html#strategic-form-games",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Strategic Form Games",
+    "text": "Strategic Form Games\nWe will focus the utilization of Strategic Form games to model simoultaneous games, and therefore the timing of the game becomes unnecessary. We will just need the set of players, their strategies, and the payoffs associated to any strategy profile."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium",
+    "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Nash Equilibrium",
+    "text": "Nash Equilibrium\nSo far we have discussed games in terms of “solutions,” but, what does that mean? What is an equilibrium in this framework?"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\n\n\n\n“That which is common to the greatest number has the least care bestowed upon it. Everyone thinks chiefly of his own, hardly at all of the common interest.”\n— Aristotle, Politics, II.3\n\n\n\n\n\nMade with Gemini"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-1",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-1",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nEven though this problem has been thought by thinkers since many millenia, it was formalize much more recently.\n\nThe commons were lands shared in the center of 16th Century England villages, where, among other things, people could take their cattle pasture.\nIn modern times we can find an example in International Waters, or the Athmosphere."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-2",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-2",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nThey have two core features:\n\nAccess to (almost) everybody\nResource depletability (finite)\n\n\nThis indeed has the same core as the classical externality problem, this is what we will study."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-3",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-3",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\n\n\n\n\n\n\nIntuition\n\n\nSuppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.\n\nIf you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.\nGiven the cost is spread among many agents, you will overpollute, as well as any other factory in the area.\nOverall there will be a larger pollution level than the optimal for the local population."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#intuition",
+    "href": "slides/02_game_theory_strategic_form.html#intuition",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Intuition",
+    "text": "Intuition\nSuppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.\n\nIf you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.\nGiven the cost is spread among many agents, you will overpollute, as well as any other factory in the area.\nOverall there will be a larger pollution level than the optimal for the local population."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-4",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-4",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nLet’s introduce a model to study this problem:\n\nAssume there are only two periods \\(t=0,1\\).\nPlayer \\(i\\) in period \\(t\\) consumes \\(c_i^t\\) with \\(i=1,2\\).\nCommon property resource of size \\(y^0&gt;0\\).\n\\(y^1=y^0-\\sum_{i\\in\\{1,2\\}} c_i^0\\).\nIf they try to consume more than \\(y^t\\), in a single period, then each gets \\(\\frac{y^t}{2}\\), and \\(y^{t+1}=0\\).\nAgents drive utility \\(u(c)\\) from consuming, with \\(u'(c)&gt;0\\) and \\(u''(c)&lt;0\\), for example \\(u(c)=\\ln(c)\\)."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-5",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-5",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nTo solve this, we will use a technique that we will revisit in the future with more detailed, which is known Backward Induction. This means we will solve the problem starting from the end:\n\nIf there is no \\(t=2\\), then consumers will try to consume as much as they can in \\(t=1\\), and therefore \\(c_1=c_2=\\frac{y^1}{2}\\).\nNote that \\(y^1=y^0-c_1^0-c_2^0\\), and therefore \\(c_i=\\frac{y^0-c_1^0-c_2^0}{2}\\) with \\(i=1,2\\).\n\n\nNote that \\(c_1^1\\) and \\(c_2^2\\) are equal and depend on \\(c_1^0\\) and \\(c_2^0\\), and actually these are the only relevant variables. Let’s drop the supra-index for time."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-6",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-6",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nLet’s solve for consumer 1 (the problem is symmetric). Let’s take \\(\\bar{c}_2\\) as “some” value for \\(c_2\\).\n\\[\\max_{c_1} \\ln(c_1)+\\ln\\left(\\frac{y-c_1-\\bar{c}_2}{2}\\right)\\]\nFrom where deriving first order conditions we obtain:\n\\[\\frac{1}{c_1}-\\frac{1}{y-c_1-\\bar{c}_2}=0\\quad\\Rightarrow\\quad c_1=\\frac{y-\\bar{c}_2}{2}\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-7",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-7",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nWhat we have here is, that if player 2 choses to consume \\(\\bar{c}_2\\) in the first period, then player 1 will chose to consume \\(\\frac{y-\\bar{c}_2}{2}\\). Because the problem is symmetric, if we repeat the exercise, but now from the point of view of player 2, we will get \\[c_2=\\frac{y-\\bar{c}_1}{2}\\]\nThese are the best response functions of players 1 and 2. We know that both players should be best responding at the same time in a Nash Equilibrium."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-8",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-8",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nWe get the following system of equations:\n\\[c_1^*=\\frac{y-c_2^*}{2} \\quad \\text{and} \\quad c_2^*=\\frac{y-c_1^*}{2}\\]\nFor example\n\\[c_1^*=\\frac{y-\\frac{y-c_1^*}{2}}{2}=\\frac{y}{4}+\\frac{c_1^*}{4}\\ \\Rightarrow\\ c_1^*=\\frac{y}{3}\\]\nBy symmetry, \\(c_2^*=\\frac{y}{3}\\)."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-9",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-9",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nWhat we have then, is that both consumers will consume \\(\\frac{y}{3}\\) in the first period and \\(\\frac{y}{6}\\) in the second period. Their lifetime utility will be \\(\\ln \\left(\\frac{y}{3}\\right)+\\ln\\left(\\frac{y}{6}\\right)=\\ln\\left(\\frac{y^2}{18}\\right)\\). This is a Nash Equilibrium, because both players are best-responding."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-10",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-10",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nIs this socially optimal?\n\n\n\n\n\n\nSocial Optimum\n\n\nA pattern of consumption, \\((\\hat{c}_1,\\hat{c}_2)\\) is socially optimal if it maximizes the sum of the two player’s utility, that is, if it solves the following problem:\n\\[\\max_{c_1,c_2} \\ln (c_1) + \\ln (c_2) + 2 \\ln \\left(\\frac{y-(c_1+c_2)}{2}\\right)\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-11",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-11",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nThis leads to the first order conditions:\n\\[\\frac{1}{c_1^*}-\\frac{2}{y-c_1^*-c_2^*}=0\\quad\\text{and}\\quad\\frac{1}{c_2^*}-\\frac{2}{y-c_1^*-c_2^*}=0\\]\nAnd solutions \\(c_1^*=c_2^*=c^*\\), and replacing in either equation, we obtain \\(c^*=\\frac{y}{4}\\). Lifetime utility is \\[2\\ln \\left(\\frac{y}{4}\\right)=\\ln\\left(\\frac{y^2}{16}\\right)&gt;\\ln\\left(\\frac{y^2}{18}\\right)\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-12",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-12",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nWe can see the The tragedy of the Commons in action, the Nash Equilibrium leads to overconsumption in the first period and therefore to a lower level of lifetime utility.\nNote:\n\nIf player 1, for example, would try to cut consumption in the first period to “save” for the future,\nplayer 2 would consume now half more (look at the BRF),\nand in the second period, consumer 1 would have to split the savings (just half of his consumption reduction) with player 2."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-13",
+    "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-13",
+    "title": "Fundamentals of  Game Theory",
+    "section": "The tragedy of the Commons",
+    "text": "The tragedy of the Commons\nGraphical representation:"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-1",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-1",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\nConsider the game of Rock-Paper-Scissors. You have three possible strategies: {✊, ✋, ✌️}. So far we have considered that a strategy for you, would be to pick either of those options. You would think à priori that you have only 3 options, however, there are other options."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-2",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-2",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\nWhat about if you would randomize your choice? For example, you could say that you will not play ✋ but you could play ✊ or ✌️. To decide which will be your choice, you will toss a coin 🪙.\n\nIf you see head, you will chose ✊, and\nif you see tails you will choose ✌️.\n\n\nNow you see, instead of having only three options, you have 4!"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-3",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-3",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\nReally you won an infinity of new possiblities, as any randomization would yield a new strategies. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-4",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-4",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\n\n\n\n\n\n\nDefinition\n\n\nA strategy \\(s^j\\) is called a pure strategy, if, it contains a specific, concrete, and unambiguous, action for every decision node the agent might encounter along the game.\n\n\n\n\n\n\n\n\n\nDefinition\n\n\nSuppose a player has \\(M\\) pure strategies \\(s^1, s^2,\\dots, s^M\\). A mixed strategy for this player is a probability distribution over his pure strategies; that is, it is a probability vector \\((p^1, p^2,\\dots, p^M)\\), with \\(p^k\\geq 0\\), \\(k=1,\\dots,M\\), and \\(\\sum_{k=1}^M p^k=1\\)."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-5",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-5",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\nYou could say that any pure strategy is a mixed strategy that concentrates the probability over a single strategy.\nThe pure strategy ✌️ is the same as the mixed strategy \\(\\{0,0,1\\}\\) over the pure strategies (✊,✋,✌️).\n\nA reasonable question is, and then, how do we evaluate the payoffs?"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-6",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-6",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\nWe use the expected payoffs. Consider the following game:\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(3,1)\n(0,0)\n\n\nDown\n(0,0)\n(1,3)\n\n\n\nWhat Happens if \\(P1\\) randomizes \\(\\frac{2}{3}\\) for Up, and \\(P2\\) plays for sure \\(Left\\)?\n\nFor Player 1: \\(E[\\pi_1] = \\frac{2}{3} 3 + \\frac{1}{3} 0 = 2\\)\nFor Player 2: \\(E[\\pi_2] = \\frac{2}{3} 1 + \\frac{1}{3} 0 = \\frac{2}{3}\\)"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-7",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-7",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(3,1)\n(0,0)\n\n\nDown\n(0,0)\n(1,3)\n\n\n\nWhat if both players randomize? Suppose \\(P1\\) repeats her strategy, and \\(P2\\) now randomizes with 50% on each alternative.\n\nFor Player 1: \\(E[\\pi_1]= \\frac{2}{3}\\frac{1}{2}3 + \\frac{2}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}1 = \\frac{7}{6}\\)\nFor Player 2: \\(E[\\pi_2]= \\frac{2}{3}\\frac{1}{2}1 + \\frac{2}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}3 = \\frac{5}{6}\\)"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-8",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-8",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\n\n\n\n\n\n\nDefinition\n\n\nSuppose that player \\(i\\) plays a mixed strategy \\((p^1,p^2,\\dots,p^M)\\). Suppose that the other players play the pure strategy \\(s_{-i}^\\#\\). Then the expected payoff to player \\(i\\) is equal to \\[E[\\pi_i]= \\sum_{k=1}^M p^k \\pi_i(s^k,s_{-i}^\\#)\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-9",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-9",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\n\n\n\n\n\n\nProposition\n\n\n\nA mixed strategy \\((p^1,\\dots,p^M)\\) is a best response to \\(s_{-i}^#\\) if and only if each of the pure strategies in its support is itself a bset response to \\(s_{-i}^#\\).\nIn that case, any mixed strategy over the same support (strategies with positive probability), is a best response as well.\n\n\n\n\nNote that if this is not the case, then you could drop the worse strategies and the expected payoff would increase!"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-10",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-10",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\n\n\n\n\n\n\nFact\n\n\nA mixed strategy can dominate some pure strategies.\n\n\n\n\n\n\nP1-P2\nL\n\\(M_1\\)\n\\(M_2\\)\nR\n\n\n\n\nU\n(1,0)\n(4,2)\n(2,4)\n(3,1)\n\n\nM\n(2,4)\n(2,0)\n(2,2)\n(2,1)\n\n\nD\n(4,2)\n(1,4)\n(2,0)\n(3,1)\n\n\n\n\nNo dominant strategy in pure strategies\nSuppose \\(P1\\) plays \\(\\left(\\frac{1}{2},0,\\frac{1}{2}\\right)\\)."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-11",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-11",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies (CH8)",
+    "text": "Mixed Strategies (CH8)\nExpected payoffs for \\(P1\\) are:\n\\[[2.5, 2.5, 2, 3]\\]\nWith this strategy, \\(P1\\) can ensure an expected payoff of \\(2\\) or more. This mixed strategy weakly dominates the pure strategy \\(M\\).\n\nDoes this change something on a solution in dominant straegy?"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\nConsider the game of Rock-Paper-Scissors. You have three possible strategies: {✊, ✋, ✌️}. So far we have considered that a strategy for you, would be to pick either of those options. You would think à priori that you have only 3 options, however, there are other options."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-1",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-1",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\nWhat about if you would randomize your choice? For example, you could say that you will not play ✋ but you could play ✊ or ✌️. To decide which will be your choice, you will toss a coin 🪙.\n\nIf you see head, you will chose ✊, and\nif you see tails you will choose ✌️.\n\n\nNow you see, instead of having only three options, you have 4!"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-2",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-2",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\nReally you won an infinity of new possiblities, as any randomization would yield a new strategies. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-3",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-3",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\n\n\n\n\n\n\nDefinition\n\n\nA strategy \\(s^j\\) is called a pure strategy, if, it contains a specific, concrete, and unambiguous, action for every decision node the agent might encounter along the game.\n\n\n\n\n\n\n\n\n\nDefinition\n\n\nSuppose a player has \\(M\\) pure strategies \\(s^1, s^2,\\dots, s^M\\). A mixed strategy for this player is a probability distribution over his pure strategies; that is, it is a probability vector \\((p^1, p^2,\\dots, p^M)\\), with \\(p^k\\geq 0\\), \\(k=1,\\dots,M\\), and \\(\\sum_{k=1}^M p^k=1\\)."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-4",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-4",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\nYou could say that any pure strategy is a mixed strategy that concentrates the probability over a single strategy.\nThe pure strategy ✌️ is the same as the mixed strategy \\(\\{0,0,1\\}\\) over the pure strategies (✊,✋,✌️).\n\nA reasonable question is, and then, how do we evaluate the payoffs?"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-5",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-5",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\nWe use the expected payoffs. Consider the following game:\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(3,1)\n(0,0)\n\n\nDown\n(0,0)\n(1,3)\n\n\n\nWhat Happens if \\(P1\\) randomizes \\(\\frac{2}{3}\\) for Up, and \\(P2\\) plays for sure \\(Left\\)?\n\nFor Player 1: \\(E[\\pi_1] = \\frac{2}{3} 3 + \\frac{1}{3} 0 = 2\\)\nFor Player 2: \\(E[\\pi_2] = \\frac{2}{3} 1 + \\frac{1}{3} 0 = \\frac{2}{3}\\)"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-6",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-6",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(3,1)\n(0,0)\n\n\nDown\n(0,0)\n(1,3)\n\n\n\nWhat if both players randomize? Suppose \\(P1\\) repeats her strategy, and \\(P2\\) now randomizes with 50% on each alternative.\n\nFor Player 1: \\(E[\\pi_1]= \\frac{2}{3}\\frac{1}{2}3 + \\frac{2}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}1 = \\frac{7}{6}\\)\nFor Player 2: \\(E[\\pi_2]= \\frac{2}{3}\\frac{1}{2}1 + \\frac{2}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}0 + \\frac{1}{3}\\frac{1}{2}3 = \\frac{5}{6}\\)"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-7",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-7",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\n\n\n\n\n\n\nDefinition\n\n\nSuppose that player \\(i\\) plays a mixed strategy \\((p^1,p^2,\\dots,p^M)\\). Suppose that the other players play the pure strategy \\(s_{-i}^\\#\\). Then the expected payoff to player \\(i\\) is equal to \\[E[\\pi_i]= \\sum_{k=1}^M p^k \\pi_i(s^k,s_{-i}^\\#)\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-8",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-8",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\n\n\n\n\n\n\nProposition\n\n\n\nA mixed strategy \\((p^1,\\dots,p^M)\\) is a best response to \\(s_{-i}^\\#\\) if and only if each of the pure strategies in its support is itself a bset response to \\(s_{-i}^\\#\\).\nIn that case, any mixed strategy over the same support (strategies with positive probability), is a best response as well.\n\n\n\n\nNote that if this is not the case, then you could drop the worse strategies and the expected payoff would increase!"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-9",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-9",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\n\n\n\n\n\n\nFact\n\n\nA mixed strategy can dominate some pure strategies.\n\n\n\n\n\n\nP1-P2\nL\n\\(M_1\\)\n\\(M_2\\)\nR\n\n\n\n\nU\n(1,0)\n(4,2)\n(2,4)\n(3,1)\n\n\nM\n(2,4)\n(2,0)\n(2,2)\n(2,1)\n\n\nD\n(4,2)\n(1,4)\n(2,0)\n(3,1)\n\n\n\n\nNo dominant strategy in pure strategies\nSuppose \\(P1\\) plays \\(\\left(\\frac{1}{2},0,\\frac{1}{2}\\right)\\)."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-10",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-10",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies",
+    "text": "Mixed Strategies\nExpected payoffs for \\(P1\\) are:\n\\[[2.5, 2.5, 2, 3]\\]\nWith this strategy, \\(P1\\) can ensure an expected payoff of \\(2\\) or more. This mixed strategy weakly dominates the pure strategy \\(M\\).\n\nDoes this change something on a solution in dominant strategy?"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nWithout mixed strategies, there might be no NE, recall the game {✊, ✋, ✌️}. In every strategy profile, there are incentives for unilateral deviations!\n\n\n\nP1-P2\n✊\n✋\n✌️\n\n\n\n\n✊\n(0,0)\n(-1,1)\n(1,-1)\n\n\n✋\n(1,-1)\n(0,0)\n(-1,1)\n\n\n✌️\n(-1,1)\n(1,-1)\n(0,0)"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-1",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-1",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nWe know that if we would like to find a NE, we need that every player is best-responding, i.e., given the move of the other player, there is no way to improve.\nThis can only happen if any pure strategy in the support of the player, has the same expected payoff. If this is not the case, then the player has incentive to deviate to put a higher weight into the strategies with higher payoffs to increase her expected payoff."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-2",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-2",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nLet’s consider a simpler game, to ease the computations. Suppose two friends attemp some penalty kicks, and let’s assume that there are only two options, Left or Right.\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nLeft\n(-1,1)\n(1,-1)\n\n\nRight\n(1, -1)\n(-1, 1)\n\n\n\nIn this game \\(P2\\) is the goalkeeper. We can see that this game has no NE in pure strategies as at least one player has always incentives to deviate."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-3",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-3",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nSuppose \\(P2\\) will choose \\(L\\) with probability \\(q\\) and \\(R\\) with probability \\((1-q)\\).\n\nWhat is the expected payoff for \\(P1\\)?\n\n\n\\[E[\\pi_1|Left]=-1\\times q + 1 \\times (1-q) = 1-2q\\] \\[E[\\pi_1|Right]=1\\times q - 1 \\times (1-q) = -1+2q\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-4",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-4",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nIf one is larger than the other, then \\(P1\\) would surely choose that one, so in order to randomize as well, both must be equal:\n\\[1-2q=-1+2q\\ \\Rightarrow\\ q=\\frac{1}{2}\\]\n\nNow, if \\(P2\\) is randomizing, it must be true that the expected payoff of each pure strategy is also the same for her:"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-5",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-5",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nSuppose \\(P1\\) chooses Left with probability \\(p\\), and Right with probability \\(1-p\\):\n\\[E[\\pi_2|Left]=1\\times p - 1 \\times (1-p) = -1+2p\\] \\[E[\\pi_2|Right]=-1\\times p + 1 \\times (1-p) = 1-2p\\]\nAnd then, for \\(P2\\) randomize her decision, both must be equal, and so:\n\\[-1+2p=1-2p\\quad\\Rightarrow\\quad p=\\frac{1}{2}\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-6",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-6",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\nThe Nash Equilibrium in Mixed Strategies in this case is \\(\\left((L,p=\\frac{1}{2}),(L,q=\\frac{1}{2})\\right)\\).\n\n\n\n\n\n\nTheorem (Nash)\n\n\nIn a game where mixed strategies are allowed, then every game with a finite number of players in which each player can choose from finitely many pure strategies has at least one Nash equilibrium, which might be in mixed or pure strategies."
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-7",
+    "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-7",
+    "title": "Fundamentals of  Game Theory",
+    "section": "Mixed Strategies and NE",
+    "text": "Mixed Strategies and NE\n\n\n\n\n\n\nNash Equilibrium in Mixed Strategies"
   }
 ]

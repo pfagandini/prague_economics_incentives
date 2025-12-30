@@ -83,4 +83,100 @@ If both spend more in the Health system. Both have great healthcare, and given t
 
 \end{solution}
 
+\question Consider the situation of the Tragedy of the Commons, with the same variables, dynamics and constraints [Chapter 7, Strategies and Games: Theory and Practice, Prajit K. Dutta, MIT Press 2001]. Consider the case where, instead of 2 consumers, there are $N\in\mathbb{N}$ consumers.
+
+\begin{parts}
+
+    \part[5] Find the best response for consumer $1$. [Hint: Note you can use symmetry \textbf{after} doing the derivatives.]
+    \begin{solution}
+        The optimization problem for consumer 1 is:
+
+        \begin{align*}
+            \max_{c_1} \ln \left(c_1\right) + \ln \left(\frac{y-c_1-\sum_{j>1}c_j}{N}\right)
+        \end{align*}
+
+        Taking derivatives and equalizing to zero we get:
+
+        \begin{align*}
+            \frac{1}{c_1} - \frac{1}{y-c_1-\sum_{j>1}c_j}=0\\
+            c_1 = y-c_1-\sum_{j>1}c_j\\
+            c_1 = \frac{y-\sum_{j>1}c_j}{2}
+        \end{align*}
+
+        Now, by symmetry, we have $c_1=c_i$ $\forall i=1,\dots,N$.
+
+        \begin{align*}
+            c_1 = \frac{y-\sum_{j>1}c_1}{2}\\
+            (N+1) c_1 = y \\
+            c_1 = \frac{y}{N+1}
+        \end{align*}
+
+    \end{solution}
+
+    \part[5] Find the Nash Equilibrium, and show that as $N\rightarrow\infty$ then $y^1\rightarrow 0$.[Remember that $y^1$ is what is left for the "future"]
+    \begin{solution}
+        Directly from the previous question, we have 
+        
+        $$c_1 = \frac{y}{N+1}\quad \Rightarrow \quad y^1= y-\frac{N}{N+1}y=\frac{y}{N+1}$$
+        
+        $$\frac{y}{N+1}\underset{N\rightarrow\infty}{\rightarrow}0$$
+    \end{solution}
+
+    \part[5] Find the total utility under this Nash Equilibrium. [Hint: Remember to use symmetry]
+    \begin{solution}
+        $c_i = \frac{y}{N+1}$ and $c_i^1=\frac{y}{N(N+1)}$, and then total utility is:
+
+        \begin{align*}
+            TU_{NE} = N \ln \left(\frac{y}{N+1}\right)+N \ln \left(\frac{y}{N(N+1)}\right) = N \ln \left(\frac{y^2}{N(N+1)^2}\right)
+        \end{align*}
+    \end{solution}
+
+    \part[5] Find the Socially Optimal consumption for each consumer.
+    \begin{solution}
+        \begin{align*}
+            \max_{c_i} \ln (c_i) + \sum_{j\neq i} \ln (c_j) + N \ln \left(\frac{y-c_i - \sum_{j\neq i}c_j}{N}\right)
+        \end{align*}
+
+        From the First Order Condition we obtain:
+
+        \begin{align*}
+            \frac{1}{c_i}-\frac{N}{\left(y-c_i-\sum_{j\neq i}c_j\right)}=0
+        \end{align*}
+        Now using symmetry, $c_i=c_j$ $\forall j=1,\dots,N$:
+        \begin{align*}
+            y-Nc_i=Nc_i\\
+            c_i = \frac{y}{2N}
+        \end{align*}
+
+        In the future we already know that we will be able to consume an equal share of what is left:
+
+        \begin{align*}
+            c_i^1=\frac{y-N\frac{y}{2N}}{N}=\frac{y}{2N}
+        \end{align*}
+
+        Which was expected from the exercise for 2 consumers.
+
+    \end{solution}
+
+    \part[5] Find the total utility under the Social Optimum:
+    \begin{solution}
+
+        Total utility is:
+        \begin{align*}
+            TU_{SO} = N \ln \left(\frac{y}{2N}\right) + N \ln \left(\frac{y}{2N}\right) = N\ln \left(\frac{y^2}{4N^2}\right)
+        \end{align*}
+
+    \end{solution}
+
+    \part[5] Show that total utility under the Nash Equilibrium diverges from the total utility under the socially optimum as $N\rightarrow\infty$.
+    \begin{solution}
+        \begin{align*}
+            TU_{SO}-TU_{NE}&= N\ln \left(\frac{y^2}{4N^2}\right)-N \ln \left(\frac{y^2}{N(N+1)^2}\right)\\
+                        &= N \left(\ln \left(\frac{y^2}{4N^2}\right)-\ln \left(\frac{y^2}{N(N+1)^2}\right)\right)\\
+                        &= N \ln \left(\frac{(N+1)^2}{4N}\right)\underset{N\rightarrow\infty}{\rightarrow}\infty
+        \end{align*}
+    \end{solution}
+
+\end{parts}
+
 \end{questions}

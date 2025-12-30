@@ -32,7 +32,7 @@ The core of the contents of this chapter takes as reference the book
 
 :book: *Strategies and Games: Theory and Practice* by Prajit K. Dutta. 2001 MIT Press.
 
-# Strategic Form Games
+# Strategic Form Games (CH3)
 
 ## Strategic Form Games
 
@@ -272,7 +272,7 @@ Why now?
 This auction presents an example of a dominant strategy, we saw that $b_i=v_i$ always provides a higher (or equal) than any other bid, and therefore it is a weakly dominant strategy, whatever the other bidders are doing.
 
 
-## Dominance Solvability
+# Dominance Solvability (CH 4)
 
 :::{.callout-note}
 
@@ -350,7 +350,7 @@ Consider the following game
 
 3. For $P1$ now, *Up* is clearly the best choice, and the solution is therefore $(Up,Left)$. In this case it is said to be reached by *iterated elimination of dominated strategies (IEDS)*. The game itself is said to be *dominance solvable*.
 
-# Nash Equilibrium
+# Nash Equilibrium (CH5)
 
 ## Nash Equilibrium
 
@@ -433,10 +433,372 @@ Note that *(19:30,19:30)* and *(17:30,17:30)* are both NE of this game, however 
 
 :::
 
+# Application: The Tragedy of the Commons (CH7)
+
+## The tragedy of the Commons
+
+:::{.columns}
+
+:::{.column}
+
+> “That which is common to the greatest number has the least care bestowed upon it.
+> Everyone thinks chiefly of his own, hardly at all of the common interest.”  
+> — Aristotle, *Politics*, II.3
+
+:::
+
+:::{.column}
+
+![Made with Gemini](../images/aristotle.png){width=70%}
+
+:::
+
+:::
+
+## The tragedy of the Commons
+
+Even though this problem has been thought by thinkers since many millenia, it was formalize much more recently.
+
+1. The commons were lands shared in the center of 16th Century England villages, where, among other things, people could take their cattle pasture.
+2. In modern times we can find an example in International Waters, or the Athmosphere.
+
+## The tragedy of the Commons
+
+They have two core features:
+
+1. Access to (almost) everybody
+2. Resource depletability (finite)
+
+. . .
+
+This indeed has the same core as the classical externality problem, this is what we will study.
+
+## The tragedy of the Commons
+
+:::{.callout-tip}
+## Intuition
+
+Suppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.
+
+1. If you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.
+2. Given the cost is spread among many agents, you will *over*pollute, as well as any other factory in the area.
+3. Overall there will be a larger pollution level than the optimal for the local population.
+
+:::
+
+## The tragedy of the Commons
+
+Let's introduce a model to study this problem:
+
+1. Assume there are only two periods $t=0,1$.
+2. Player $i$ in period $t$ consumes $c_i^t$ with $i=1,2$.
+3. Common property resource of size $y^0>0$.
+4. $y^1=y^0-\sum_{i\in\{1,2\}} c_i^0$.
+5. If they try to consume more than $y^t$, in a single period, then each gets $\frac{y^t}{2}$, and $y^{t+1}=0$.
+6. Agents drive utility $u(c)$ from consuming, with $u'(c)>0$ and $u''(c)<0$, for example $u(c)=\ln(c)$.
+
+## The tragedy of the Commons
+
+To solve this, we will use a technique that we will revisit in the future with more detailed, which is known **Backward Induction**. This means we will solve the problem starting from the end:
+
+1. If there is no $t=2$, then consumers will try to consume as much as they can in $t=1$, and therefore $c_1=c_2=\frac{y^1}{2}$.
+2. Note that $y^1=y^0-c_1^0-c_2^0$, and therefore $c_i=\frac{y^0-c_1^0-c_2^0}{2}$ with $i=1,2$.
+
+. . .
+
+Note that $c_1^1$ and $c_2^2$ are equal and depend on $c_1^0$ and $c_2^0$, and actually these are the only relevant variables. Let's drop the supra-index for time.
+
+## The tragedy of the Commons
+
+Let's solve for consumer 1 (the problem is symmetric). Let's take $\bar{c}_2$ as "some" value for $c_2$.
+
+$$\max_{c_1} \ln(c_1)+\ln\left(\frac{y-c_1-\bar{c}_2}{2}\right)$$
+
+From where deriving first order conditions we obtain:
+
+$$\frac{1}{c_1}-\frac{1}{y-c_1-\bar{c}_2}=0\quad\Rightarrow\quad c_1=\frac{y-\bar{c}_2}{2}$$
+
+## The tragedy of the Commons
+
+What we have here is, that if player 2 choses to consume $\bar{c}_2$ in the first period, then player 1 will chose to consume $\frac{y-\bar{c}_2}{2}$. Because the problem is symmetric, if we repeat the exercise, but now from the point of view of player 2, we will get $$c_2=\frac{y-\bar{c}_1}{2}$$
+
+These are the *best response* functions of players 1 and 2. We know that both players should be best responding at the same time in a Nash Equilibrium.
+
+## The tragedy of the Commons
+
+We get the following system of equations:
+
+$$c_1^*=\frac{y-c_2^*}{2} \quad \text{and} \quad c_2^*=\frac{y-c_1^*}{2}$$
+
+For example
+
+$$c_1^*=\frac{y-\frac{y-c_1^*}{2}}{2}=\frac{y}{4}+\frac{c_1^*}{4}\ \Rightarrow\ c_1^*=\frac{y}{3}$$
+
+By symmetry, $c_2^*=\frac{y}{3}$.
+
+## The tragedy of the Commons
+
+What we have then, is that both consumers will consume $\frac{y}{3}$ in the first period and $\frac{y}{6}$ in the second period. Their lifetime utility will be $\ln \left(\frac{y}{3}\right)+\ln\left(\frac{y}{6}\right)=\ln\left(\frac{y^2}{18}\right)$. This is a Nash Equilibrium, because both players are best-responding.
+
+## The tragedy of the Commons
+
+Is this socially optimal?
+
+:::{.callout-note}
+
+## Social Optimum
+
+A pattern of consumption, $(\hat{c}_1,\hat{c}_2)$ is socially optimal if it maximizes the sum of the two player's utility, that is, if it solves the following problem:
+
+$$\max_{c_1,c_2} \ln (c_1) + \ln (c_2) + 2 \ln \left(\frac{y-(c_1+c_2)}{2}\right)$$
+
+:::
+
+## The tragedy of the Commons
+
+This leads to the first order conditions:
+
+$$\frac{1}{c_1^*}-\frac{2}{y-c_1^*-c_2^*}=0\quad\text{and}\quad\frac{1}{c_2^*}-\frac{2}{y-c_1^*-c_2^*}=0$$
+
+And solutions $c_1^*=c_2^*=c^*$, and replacing in either equation, we obtain $c^*=\frac{y}{4}$. Lifetime utility is $$2\ln \left(\frac{y}{4}\right)=\ln\left(\frac{y^2}{16}\right)>\ln\left(\frac{y^2}{18}\right)$$
+
+## The tragedy of the Commons
+
+We can see the The tragedy of the Commons in action, the Nash Equilibrium leads to overconsumption in the first period and therefore to a lower level of lifetime utility.
+
+Note:
+
+1. If player 1, for example, would try to cut consumption in the first period to "save" for the future,
+2. player 2 would consume now half more (look at the BRF),
+3. and in the second period, consumer 1 would have to split the savings (just half of his consumption reduction) with player 2.
+
+## The tragedy of the Commons
+
+Graphical representation:
+
+```{r, engine='tikz', fig.align='center'}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+
+  \draw[<->] (0,4)node[left]{$c_2$} -- (0,0) -- (4,0)node[below]{$c_1$};
+
+  \draw[red] (0,3)node[left]{$y$} -- (0.5,2)node[above right]{$c_1(c_2)$} -- (1.5,0)node[below]{$\frac{y}{2}$};
+  \draw[blue] (0,1.5)node[left]{$\frac{y}{2}$} -- (2,0.5)node[above right]{$c_2(c_1)$} -- (3,0)node[below]{$y$};
+
+  \node at ({3/3}, {3/3}) [circle, fill=black, inner sep=1.5pt, label=above right:{N.E.}] {};
+  \draw[dashed] (0,1)node[left]{$\frac{y}{3}$} -- (1,1) -- (1,0)node[below]{$\frac{y}{3}$};
+
+\end{tikzpicture}
+
+```
+
+# Mixed Strategies (CH8)
+
+## Mixed Strategies 
+
+Consider the game of Rock-Paper-Scissors. You have three possible strategies: {:fist:, :raised_hand:, :v:}. So far we have considered that a strategy for you, would be to pick either of those options. You would think *à priori* that you have only 3 options, however, there are other options.
+
+## Mixed Strategies 
+
+What about if you would randomize your choice? For example, you could say that you will not play :raised_hand: but you could play :fist: or :v:. To decide which will be your choice, you will toss a coin :coin:. 
+
+1. If you see head, you will chose :fist:, and
+2. if you see tails you will choose :v:.
+
+. . .
+
+Now you see, instead of having only three options, you have 4!
+
+## Mixed Strategies 
+
+Really you won an infinity of new possiblities, as any randomization would yield a new strategies. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions.
+
+## Mixed Strategies 
+
+:::{.callout-note}
+
+## Definition
+
+A strategy $s^j$ is called a **pure strategy**, if, it contains a specific, concrete, and unambiguous, action for every decision node the agent might encounter along the game.
+
+:::
+
+:::{.callout-note}
+
+## Definition
+
+Suppose a player has $M$ *pure* strategies $s^1, s^2,\dots, s^M$. A **mixed strategy** for this player is a probability distribution over his pure strategies; that is, it is a probability vector $(p^1, p^2,\dots, p^M)$, with $p^k\geq 0$, $k=1,\dots,M$, and $\sum_{k=1}^M p^k=1$.
+
+:::
+
+## Mixed Strategies 
+
+You could say that any pure strategy is a mixed strategy that concentrates the probability over a single strategy.
+
+The pure strategy :v: is the same as the mixed strategy $\{0,0,1\}$ over the pure strategies (:fist:,:raised_hand:,:v:).
+
+. . .
+
+A reasonable question is, and then, how do we evaluate the payoffs?
+
+## Mixed Strategies 
+
+We use the expected payoffs. Consider the following game:
+
+| P1 - P2 | Left | Right |
+| --: | :--: | :--: |
+|Up | (3,1) | (0,0) |
+|Down | (0,0) | (1,3) |
+
+What Happens if $P1$ randomizes $\frac{2}{3}$ for Up, and $P2$ plays for sure $Left$?
+
+1. For Player 1: $E[\pi_1] = \frac{2}{3} 3 + \frac{1}{3} 0 = 2$
+2. For Player 2: $E[\pi_2] = \frac{2}{3} 1 + \frac{1}{3} 0 = \frac{2}{3}$
+
+## Mixed Strategies 
+
+| P1 - P2 | Left | Right |
+| --: | :--: | :--: |
+| Up | (3,1) | (0,0) |
+| Down | (0,0) | (1,3) |
+
+What if both players randomize? Suppose $P1$ repeats her strategy, and $P2$ now randomizes with 50% on each alternative.
+
+1. For Player 1: $E[\pi_1]= \frac{2}{3}\frac{1}{2}3 + \frac{2}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}1 = \frac{7}{6}$
+2. For Player 2: $E[\pi_2]= \frac{2}{3}\frac{1}{2}1 + \frac{2}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}3 = \frac{5}{6}$
+
+## Mixed Strategies 
+
+:::{.callout-note}
+
+## Definition
+
+Suppose that  player $i$ plays a mixed strategy $(p^1,p^2,\dots,p^M)$. Suppose that the other players play the pure strategy $s_{-i}^\#$. Then the expected payoff to player $i$ is equal to $$E[\pi_i]= \sum_{k=1}^M p^k \pi_i(s^k,s_{-i}^\#)$$
+
+:::
+
+## Mixed Strategies 
+
+:::{.callout-important}
+
+## Proposition
+
+1. A mixed strategy $(p^1,\dots,p^M)$ is a *best response* to $s_{-i}^\#$ if and only if each of the pure strategies in its support is itself a bset response to $s_{-i}^\#$.
+2. In that case, any mixed strategy over the same support (strategies with positive probability), is a best response as well.
+
+:::
+
+Note that if this is not the case, then you could drop the worse strategies and the expected payoff would increase!
+
+## Mixed Strategies 
+
+:::{.callout-important}
+
+## Fact
+
+A mixed strategy can dominate some pure strategies.
+
+:::
+
+| P1-P2 | L | $M_1$ | $M_2$ | R |
+| --: | :--: |:--: |:--: |:--: |
+|U | (1,0) | (4,2) | (2,4) | (3,1) |
+|M | (2,4) | (2,0) | (2,2) | (2,1) |
+|D | (4,2) | (1,4) | (2,0) | (3,1) |
+
+1. No dominant strategy in *pure strategies*
+2. Suppose $P1$ plays $\left(\frac{1}{2},0,\frac{1}{2}\right)$.
+   
+## Mixed Strategies 
+
+Expected payoffs for $P1$ are:
+
+$$[2.5, 2.5, 2, 3]$$
+
+With this strategy, $P1$ can ensure an expected payoff of $2$ or more. This mixed strategy weakly dominates the pure strategy $M$.
+
+. . .
+
+Does this change something on a solution in **dominant strategy**?
+
+## Mixed Strategies and NE
+
+Without mixed strategies, there might be no NE, recall the game {:fist:, :raised_hand:, :v:}. In every strategy profile, there are incentives for unilateral deviations!
+
+| P1-P2 | :fist: | :raised_hand: | :v: |
+| --: | :--: |:--: |:--: |
+|:fist: | (0,0) | (-1,1) | (1,-1) |
+|:raised_hand: | (1,-1) | (0,0) | (-1,1) |
+|:v: | (-1,1) | (1,-1) | (0,0) |
+
+## Mixed Strategies and NE
+
+We know that if we would like to find a NE, we need that every player is best-responding, *i.e.*, given the move of the other player, there is no way to improve.
+
+This can only happen if any *pure strategy* in the support of the player, has the same expected payoff. If this is not the case, then the player has incentive to deviate to put a higher weight into the strategies with higher payoffs to increase her expected payoff.
+
+## Mixed Strategies and NE
+
+Let's consider a simpler game, to ease the computations. Suppose two friends attemp some penalty kicks, and let's assume that there are only two options, Left or Right.
+
+| P1 - P2 | Left | Right |
+| --: | :--: | :--: |
+| Left | (-1,1) | (1,-1) |
+| Right| (1, -1) | (-1, 1)
+
+In this game $P2$ is the goalkeeper. We can see that this game has no NE in *pure strategies* as at least one player has always incentives to deviate.
+
+## Mixed Strategies and NE
+
+Suppose $P2$ will choose $L$ with probability $q$ and $R$ with probability $(1-q)$.
+
+. . .
+
+What is the expected payoff for $P1$?
+
+. . .
+
+$$E[\pi_1|Left]=-1\times q + 1 \times (1-q) = 1-2q$$
+$$E[\pi_1|Right]=1\times q - 1 \times (1-q) = -1+2q$$
+
+## Mixed Strategies and NE
+
+If one is larger than the other, then $P1$ would surely choose that one, so in order to randomize as well, both must be equal:
+
+$$1-2q=-1+2q\ \Rightarrow\ q=\frac{1}{2}$$
+
+. . .
+
+Now, if $P2$ is randomizing, it must be true that the expected payoff of each pure strategy is also the same for her:
+
+## Mixed Strategies and NE
+
+Suppose $P1$ chooses *Left* with probability $p$, and *Right* with probability $1-p$:
+
+$$E[\pi_2|Left]=1\times p - 1 \times (1-p) = -1+2p$$
+$$E[\pi_2|Right]=-1\times p + 1 \times (1-p) = 1-2p$$
+
+And then, for $P2$ randomize her decision, both must be equal, and so:
+
+$$-1+2p=1-2p\quad\Rightarrow\quad p=\frac{1}{2}$$
+
+## Mixed Strategies and NE
+
+The Nash Equilibrium in Mixed Strategies in this case is $\left((L,p=\frac{1}{2}),(L,q=\frac{1}{2})\right)$.
+
+:::{.callout-note}
+
+## Theorem (Nash)
+
+In a game where mixed strategies are allowed, then every game with a finite number of players in which each player can choose from finitely many pure strategies has at least one Nash equilibrium, which might be in mixed or pure strategies.
+
+:::
+
 # Bibliography
 
 ## Bibliography
 
 These slides took definitions and examples from the book:
 
-Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 3-5, and 6-10.
+Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 3-5 and 6-8. The expected payoff for $P1$ is:
+
