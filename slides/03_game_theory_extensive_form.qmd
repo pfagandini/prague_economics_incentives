@@ -20,10 +20,10 @@ format:
 editor: source
 
 ---
-<!-- 
+
 <div style="font-size: 70%;">
 </div>
--->
+
 
 # Backward Induction
 
@@ -109,10 +109,758 @@ A **chance node** is a node that represents several random possibilities.
 
 :::
 
+For example, the payoffs of the players can depend on:
+
+1. Is it raining or not
+2. Is there traffic or not
+3. etc
+
+. . .
+
+Some or all players might be aware of this randomness or not.
+
+## Perfect Information Games
+
+:::{.callout-note}
+
+## Definition
+
+A **perfect information game** is a game in which there is no information set (with more than one node).
+
+:::
+
+:::{.callout-important}
+
+## Corollary
+
+A perfect information game cannot have any simoultaneous moves.
+
+:::
+
+## Perfect Information Games
+
+The Entry Game
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{node[hollow node,label=below:{$(-2,-1)$}]{} edge from parent node[left]{$Tough$}}
+      child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[right]{$Accommodate$}}
+      edge from parent node[right,xshift=3]{$Enter$}
+    };
+
+\end{tikzpicture}
+
+```
+
+## Perfect Information Games
+
+| P1-P2 | Tough | Accommodate |
+| --: | :--: | :--: |
+|Enter | (-2,-1) | (1,2) |
+|Out | (0,5) | (0,5) |
+
+. . .
+
+**NE**: 
+* $(Enter, Accommodate)$
+* $(Out, Tough)$
+
+## Perfect Information Games
+
+The Entry Game II
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]
+  \tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{
+        node(3)[solid node, label=above left:{$Coke$}]{}
+        child{
+          node[hollow node,label=below:{$(-2,-1)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(-3,1)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[left]{$Tough$}
+      }
+      child{
+        node(4)[solid node, label=above right:{$Coke$}]{}
+        child{
+          node[hollow node,label=below:{$(0,-3)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(1,2)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[right]{$Accommodate$}
+      }
+      edge from parent node[right,xshift=3]{$Enter$}
+    };
+
+\end{tikzpicture}
+
+```
+
+## Perfect Information Games
+
+:::{.columns}
+
+:::{.column width="65%"}
+
+| P1-P2 | $T$ | $A$ |
+| --: | :--: | :--: |
+|$(E,TT)$ | (-2,-1) | (0,-3) |
+|$(E,TA)$ | (-2,-1) | (1,2) |
+|$(E,AT)$ | (-3,1) | (0,-3) |
+|$(E,AA)$ | (-3,1) | (1,2) |
+|$(O,TT)$ | (0,5) | (0,5) |
+|$(O,TA)$ | (0,5) | (0,5) |
+|$(O,AT)$ | (0,5) | (0,5) |
+|$(O,AA)$ | (0,5) | (0,5) |
+
+:::
+
+::: {.column width="5%"}
+:::
+
+:::{.column width="30%"}
+
+**NE**:
+
+* $((E,TA),A)$
+* $((E,AA),A)$
+* $((O,TT),T)$, $((O,TA),T)$, $((O,AT),T)$, $((O,AA),T)$
+
+:::
+
+:::
+
+## Backward Induction
+
+Only one of these NEs is credible.
+
+Start from the terminal nodes to verify which choice is rational for the last player, and then remove those branches, turning the last decision node into a terminal node with the rationally expceted payoff. Repeat until the first node, that is the **sequentially rational** Nash Equilibrium.
+
+## Backward Induction
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{node[hollow node,label=below:{$(-2,-1)$}]{} edge from parent node[left]{$Tough$}}
+      child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[red, right]{$Accommodate$}}
+      edge from parent node[red, right,xshift=3]{$Enter$}
+    };
+
+\end{tikzpicture}
+
+```
+
+## Backward Induction
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]
+  \tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{
+        node(3)[solid node, label=above left:{$Coke$}]{}
+        child{
+          node[hollow node,label=below:{$(-2,-1)$}]{}
+          edge from parent node[red, left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(-3,1)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[left]{$Tough$}
+      }
+      child{
+        node(4)[solid node, label=above right:{$Coke$}]{}
+        child{
+          node[hollow node,label=below:{$(0,-3)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(1,2)$}]{}
+          edge from parent node[red, right]{$Accommodate$}  
+        }
+        edge from parent node[red, right]{$Accommodate$}
+      }
+      edge from parent node[red, right,xshift=3]{$Enter$}
+    };
+
+\end{tikzpicture}
+
+```
+
+## The Power of Commitment
+
+The Power of Commitment was widely studied by Thomas Schelling, and it is **extremely** important in a wide variety of context, specially public policy. We will see some examples shortly.
+
+In general, having more alternatives is, at least, weakly better. From the strategic point of view, though, this is not always true. You might optimally remove some alternatives to modify the game you and the other players are playing.
+
+## The Power of Commitment
+
+![Ulysses and the Sirens, by John William Waterhouse](../images/ulysses-and-the-sirens.jpg)
+
+## The Power of Commitment
+
+What if Pepsi could commit to play "tough" in case Coke enters?
+
+For example, suppose Pepsi includes a clause in the C-level executives' contract saying that if Coke has more than 10% of market share, they will be fired without any compensation.
+
+## The Power of Commitment
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{node[hollow node,label=below:{$(-2,-1)$}]{} edge from parent node[left]{$Tough$}}
+      child{node[hollow node,draw=lightgray,label=below:{\textcolor{lightgray}{$(1,2)$}}]{} edge from parent node[right,text=lightgray]{$Accommodate$} [draw=lightgray]}
+      edge from parent node[right,xshift=3]{$Enter$}
+    };
+\end{tikzpicture}
+
+```
+
+## The Power of Commitment
+
+Now the game's Nash Equilibrium is $(Out,Tough)$ with payoffs $(0,5)$.
+
+. . .
+
+This clause, that was free for Pepsi, increased their payoffs from 2 to 5!
+
+## Backward Induction
+
+:::{.callout}
+
+## Kuhn's (and Zermelo's) Theorem
+
+Every game of perfect information with a finite number of nodes has a solution to backward induction. Indeed, if for every player it is the case that no two payoffs are the same, then there is a unique solution to backward induction.
+
+:::
+
+<div style="font-size: 70%;">
+
+The proof is very simple, and it is, by coincidence, a proof by induction:^[Detailed explanation see Dutta's book, section 11.4]
+
+1. Show that for $n=1$, where $n$ is the number of "steps" of the game, the game is solved by finding the best alternative for the playing player. 
+2. Show that, if the game is solvable by backward induction for the $n-1$ stages, it can also be solved for the $n^{th}$ stage as well, by using again a best-response by the last playing player.
+
+</div>
+
 # Subgame Perfect Equilibrium
+
+## Motivation
+
+:::{.callout-note}
+
+## Definition
+
+A game without *perfect information* is called a game with **imperfect information**. This is, games where at least once, a player does not know exactly the full set of actions taken before her turn.
+
+:::
+
+<div style="font-size: 80%;">
+
+We know that sequential games can have many NEs, but some of them might be not credible or reasonable.
+
+Determining this, but in particular for games with imperfect information, is the motivation behind the definition of Subgame Perfect (Nash) Equilibria, SPNE henceforward.
+
+</div>
+
+## Motivation
+
+Entry Game III
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]
+  \tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{
+        node(3)[solid node, label=above left:{}]{}
+        child{
+          node[hollow node,label=below:{$(-2,-1)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(-3,1)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[left]{$Tough$}
+      }
+      child{
+        node(4)[solid node, label=above right:{}]{}
+        child{
+          node[hollow node,label=below:{$(0,-3)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(1,2)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[right]{$Accommodate$}
+      }
+      edge from parent node[right,xshift=3]{$Enter$}
+    };
+
+   \draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);
+   \node at ($(3)!.5!(4)$) {$Coke$};
+
+\end{tikzpicture}
+
+```
+
+## Motivation
+
+|Coke-Pepsi | $T$ | $A$ |
+|--: | :--: | :--:|
+|$(ET)$ | (-2,-1) | (0,-3) |
+|$(EA)$ | (-3,1) | (1,2)* |
+|$(OT)$ | (0,5)* | (0,5) |
+|$(OA)$ | (0,5)* |(0,5) | 
+
+But are all these NEs credible? NO :x:
+
+## Motivation
+
+To be credible, the actions taken in the equilibrium strategy profiles, must remain rational after previous moves.
+
+Suppose Coke plays enter, now the game is:
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=30mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=20mm]
+
+  \node(2)[solid node, label=above right:{$Pepsi$}]{}
+    child{
+      node(3)[solid node, label=above left:{}]{}
+      child{
+        node[hollow node,label=below:{$(-2,-1)$}]{}
+        edge from parent node[left]{$Tough$}  
+      }
+      child{
+        node[hollow node,label=below:{$(-3,1)$}]{}
+        edge from parent node[right]{$Accommodate$}  
+      }
+      edge from parent node[left]{$Tough$}
+    }
+    child{
+      node(4)[solid node, label=above right:{}]{}
+      child{
+        node[hollow node,label=below:{$(0,-3)$}]{}
+        edge from parent node[left]{$Tough$}  
+      }
+      child{
+        node[hollow node,label=below:{$(1,2)$}]{}
+        edge from parent node[right]{$Accommodate$}  
+      }
+      edge from parent node[right]{$Accommodate$}
+    };
+  
+
+   \draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);
+   \node at ($(3)!.5!(4)$) {$Coke$};
+
+\end{tikzpicture}
+
+```
+
+## Motivation
+
+This is a simoultaneous game, and then it is more convenient to study it with the strategic form. I will keep the order of the players in the same way as the original way in order to avoid confusion with the order of the payoffs:
+
+| Coke-Pepsi | $T$ | $A$ |
+| --: | :--: | :--: |
+| $T$ | (-2,1) | (0,-3) |
+| $A$ | (-3,1) | (1,2) | 
+
+And we see that the NEs in **this game** are $(T,T)$ and $(A,A)$.
+
+## Motivation
+
+As a consequence, only NEs that considered this result can be credible NEs. We can rule out $((OA),T)$.
+
+There might be more NEs, we have not looked for NEs in Mixed Strategies.
+
+## Subgames
+
+:::{.callout-note}
+
+## Definition
+
+A **subgame** is a part of the extensive form; it is a collection of nodes and branches that satisfies three properties:
+1. It starts at a single decision node.
+2. It contains every successor to this node.
+3. If it contains any part of an information set, the it contains all the nodes in that information set.
+
+:::
+
+## Subgames
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc,fit,shapes.geometric}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5},
+  subgame/.style={draw=blue,dotted,thick,rounded corners,inner sep=3mm}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]
+  \tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{
+        node(3)[solid node, label=above left:{$Coke$}]{}
+        child{
+          node(5)[hollow node,label=below:{$(-2,-1)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node(6)[hollow node,label=below:{$(-3,1)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[left]{$Tough$}
+      }
+      child{
+        node(4)[solid node, label=above right:{$Coke$}]{}
+        child{
+          node(7)[hollow node,label=below:{$(0,-3)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node(8)[hollow node,label=below:{$(1,2)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[right]{$Accommodate$}
+      }
+      edge from parent node[right,xshift=3]{$Enter$}
+    };
+
+\end{tikzpicture}
+
+```
+
+## Subgames
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc,fit,shapes.geometric}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5},
+  subgame/.style={draw=blue,dotted,thick,rounded corners,inner sep=3mm}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]
+  \tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Coke$}]{}
+    child{
+      node(1)[hollow node, label=below:{$(0,5)$}]{}
+      edge from parent node[left,xshift=-3]{$Out$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Pepsi$}]{}
+      child{
+        node(3)[solid node, label=above left:{}]{}
+        child{
+          node[hollow node,label=below:{$(-2,-1)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(-3,1)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[left]{$Tough$}
+      }
+      child{
+        node(4)[solid node, label=above right:{}]{}
+        child{
+          node[hollow node,label=below:{$(0,-3)$}]{}
+          edge from parent node[left]{$Tough$}  
+        }
+        child{
+          node[hollow node,label=below:{$(1,2)$}]{}
+          edge from parent node[right]{$Accommodate$}  
+        }
+        edge from parent node[right]{$Accommodate$}
+      }
+      edge from parent node[right,xshift=3]{$Enter$}
+    };
+
+   \draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);
+   \node at ($(3)!.5!(4)$) {$Coke$};
+
+\end{tikzpicture}
+
+```
+
+## Subgame Perfect Equilibrium SPNE
+
+:::{.callout-note}
+
+## Definition
+
+The strategy profile $(s_1,s_2)$ is a **Subgame Perfect Nash Equilibrium (SPNE)** if, for every subgame $g$, ($s_1(g),s_2(g)$) is itself a Nash Equilibrium of the subgame $g$.
+
+:::
+
+:::{.callout-important}
+
+## Proposition
+
+In a game of perfect information, the subgame perfect equilibria are precisely the backward induction solutions. Hence, whenever the backward induction solution is unique, there is a single subgame perfect equilibrium.^[If you are interested in the proof, look at section 13.3 of Dutta's book.]
+
+:::
+
+## Example
+
+In the context of the World War I, there were some spontaneous periods of truce in the trenches between the Allies (:uk:, :fr:, :us:, :ru:) and the Central Powers (:de:, :austria:-:hungary:,:tr:)
+
+Supose that there are two possible levels of preparedness for the soldiers: *high* (H) or *low* (L). Regardless of the level of preparedness each side has available two options on what it can do, *fight* (f), or *accommodate* (a). 
+
+## Example
+
+<div style="font-size: 70%;">
+
+For example, if the level of preparedness is:
+
+:::{.nonincremental}
+
+* *high*, then the strategic form (sub)game is as follows:
+  
+|C-A| f | a |
+|--:|:--:|:--:|
+|f | $\left(-\frac{1}{2},-\frac{1}{2}\right)$ | $(1,-1)$ |
+|a | $(-1,1)$ | $(0,0)$|
+
+* *low*, then the strategic form (sub)game is as follows:
+  
+|C-A| f | a |
+|--:|:--:|:--:|
+|f | $\left(-\frac{3}{4},-\frac{1}{4}\right)$ | $(0,0)$ |
+|a | $(-2,2)$ | $(1,3)$|
+ 
+:::
+
+</div>
+
+## Example 
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc,fit,shapes.geometric}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=40mm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=20mm]
+  \tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]
+
+  \node(0)[solid node,label=above:{$Central$}]{}
+    child{
+      node(1)[solid node, label=above left:{$Allied$}]{}
+      child{
+        node(5)[solid node, label=above left:{}]{}
+        child{
+          node[hollow node,label=below:{$(1,3)$}]{}
+          edge from parent node[left]{$a$}  
+        }
+        child{
+          node[hollow node,label=below:{$(0,0)$}]{}
+          edge from parent node[right]{$f$}  
+        }
+        edge from parent node[left]{$a$}
+      }
+      child{
+        node(6)[solid node, label=above right:{}]{}
+        child{
+          node[hollow node,label=below:{$(-2,2)$}]{}
+          edge from parent node[left]{$a$}  
+        }
+        child{
+          node[hollow node,label=below:{$\left(-\frac{3}{4},-\frac{1}{4}\right)$}]{}
+          edge from parent node[right]{$f$}  
+        }
+        edge from parent node[right]{$f$}
+      }
+      edge from parent node[left,xshift=-3]{$L$}
+    }
+    child{
+      node(2)[solid node, label=above right:{$Allied$}]{}
+      child{
+        node(3)[solid node, label=above left:{}]{}
+        child{
+          node[hollow node,label=below:{$(0,0)$}]{}
+          edge from parent node[left]{$a$}  
+        }
+        child{
+          node[hollow node,label=below:{$(1,-1)$}]{}
+          edge from parent node[right]{$f$}  
+        }
+        edge from parent node[left]{$a$}
+      }
+      child{
+        node(4)[solid node, label=above right:{}]{}
+        child{
+          node[hollow node,label=below:{$(-1,1)$}]{}
+          edge from parent node[left]{$a$}  
+        }
+        child{
+          node[hollow node,label=below:{$\left(-\frac{1}{2},-\frac{1}{2}\right)$}]{}
+          edge from parent node[right]{$f$}  
+        }
+        edge from parent node[right]{$f$}
+      }
+      edge from parent node[right,xshift=3]{$H$}
+    };
+
+   \draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);
+   \node at ($(3)!.5!(4)$) {$Central$};
+
+   \draw[dashed,rounded corners=10]($(5) + (-.2,.25)$)rectangle($(6) +(.2,-.25)$);
+   \node at ($(5)!.5!(6)$) {$Central$};
+
+\end{tikzpicture}
+
+```
+
+The SPNE is $((L,af),af)$
+
+
+# Finitely Repeated Games
 
 # Infinitely Repeated Games
 
+# Application to the Tragedy of the Commons
 
 # Bibliography
 
@@ -120,4 +868,4 @@ A **chance node** is a node that represents several random possibilities.
 
 These slides took definitions and examples from the book:
 
-Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11 to 18.
+Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11, 13-15, 18.

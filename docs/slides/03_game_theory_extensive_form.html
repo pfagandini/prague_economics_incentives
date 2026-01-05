@@ -143,10 +143,9 @@ Paulo Fagandini
 </section>
 <section class="slide level2">
 
-<!-- 
 <div style="font-size: 70%;">
+
 </div>
--->
 </section>
 <section>
 <section id="backward-induction" class="title-slide slide level1 center">
@@ -265,14 +264,437 @@ Paulo Fagandini
 </div>
 </div>
 </div>
-</section></section>
+<p>For example, the payoffs of the players can depend on:</p>
+<ol type="1">
+<li class="fragment">Is it raining or not</li>
+<li class="fragment">Is there traffic or not</li>
+<li class="fragment">etc</li>
+</ol>
+<div class="fragment">
+<p>Some or all players might be aware of this randomness or not.</p>
+</div>
+</section>
+<section id="perfect-information-games" class="slide level2">
+<h2>Perfect Information Games</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>perfect information game</strong> is a game in which there is no information set (with more than one node).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Corollary</strong></p>
+</div>
+<div class="callout-content">
+<p>A perfect information game cannot have any simoultaneous moves.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="perfect-information-games-1" class="slide level2">
+<h2>Perfect Information Games</h2>
+<p>The Entry Game</p>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="perfect-information-games-2" class="slide level2">
+<h2>Perfect Information Games</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1-P2</th>
+<th style="text-align: center;">Tough</th>
+<th style="text-align: center;">Accommodate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Enter</td>
+<td style="text-align: center;">(-2,-1)</td>
+<td style="text-align: center;">(1,2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Out</td>
+<td style="text-align: center;">(0,5)</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>NE</strong>: * <span class="math inline">\((Enter, Accommodate)\)</span> * <span class="math inline">\((Out, Tough)\)</span></p>
+</div>
+</section>
+<section id="perfect-information-games-3" class="slide level2">
+<h2>Perfect Information Games</h2>
+<p>The Entry Game II</p>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="perfect-information-games-4" class="slide level2">
+<h2>Perfect Information Games</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">P1-P2</th>
+<th style="text-align: center;"><span class="math inline">\(T\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\((E,TT)\)</span></td>
+<td style="text-align: center;">(-2,-1)</td>
+<td style="text-align: center;">(0,-3)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\((E,TA)\)</span></td>
+<td style="text-align: center;">(-2,-1)</td>
+<td style="text-align: center;">(1,2)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\((E,AT)\)</span></td>
+<td style="text-align: center;">(-3,1)</td>
+<td style="text-align: center;">(0,-3)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\((E,AA)\)</span></td>
+<td style="text-align: center;">(-3,1)</td>
+<td style="text-align: center;">(1,2)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\((O,TT)\)</span></td>
+<td style="text-align: center;">(0,5)</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\((O,TA)\)</span></td>
+<td style="text-align: center;">(0,5)</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\((O,AT)\)</span></td>
+<td style="text-align: center;">(0,5)</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\((O,AA)\)</span></td>
+<td style="text-align: center;">(0,5)</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<p><strong>NE</strong>:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(((E,TA),A)\)</span></li>
+<li class="fragment"><span class="math inline">\(((E,AA),A)\)</span></li>
+<li class="fragment"><span class="math inline">\(((O,TT),T)\)</span>, <span class="math inline">\(((O,TA),T)\)</span>, <span class="math inline">\(((O,AT),T)\)</span>, <span class="math inline">\(((O,AA),T)\)</span></li>
+</ul>
+</div></div>
+</section>
+<section id="backward-induction-1" class="slide level2">
+<h2>Backward Induction</h2>
+<p>Only one of these NEs is credible.</p>
+<p>Start from the terminal nodes to verify which choice is rational for the last player, and then remove those branches, turning the last decision node into a terminal node with the rationally expceted payoff. Repeat until the first node, that is the <strong>sequentially rational</strong> Nash Equilibrium.</p>
+</section>
+<section id="backward-induction-2" class="slide level2">
+<h2>Backward Induction</h2>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="backward-induction-3" class="slide level2">
+<h2>Backward Induction</h2>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="the-power-of-commitment" class="slide level2">
+<h2>The Power of Commitment</h2>
+<p>The Power of Commitment was widely studied by Thomas Schelling, and it is <strong>extremely</strong> important in a wide variety of context, specially public policy. We will see some examples shortly.</p>
+<p>In general, having more alternatives is, at least, weakly better. From the strategic point of view, though, this is not always true. You might optimally remove some alternatives to modify the game you and the other players are playing.</p>
+</section>
+<section id="the-power-of-commitment-1" class="slide level2">
+<h2>The Power of Commitment</h2>
+
+<img data-src="../images/ulysses-and-the-sirens.jpg" class="r-stretch quarto-figure-center"><p class="caption">Ulysses and the Sirens, by John William Waterhouse</p></section>
+<section id="the-power-of-commitment-2" class="slide level2">
+<h2>The Power of Commitment</h2>
+<p>What if Pepsi could commit to play “tough” in case Coke enters?</p>
+<p>For example, suppose Pepsi includes a clause in the C-level executives’ contract saying that if Coke has more than 10% of market share, they will be fired without any compensation.</p>
+</section>
+<section id="the-power-of-commitment-3" class="slide level2">
+<h2>The Power of Commitment</h2>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="the-power-of-commitment-4" class="slide level2">
+<h2>The Power of Commitment</h2>
+<p>Now the game’s Nash Equilibrium is <span class="math inline">\((Out,Tough)\)</span> with payoffs <span class="math inline">\((0,5)\)</span>.</p>
+<div class="fragment">
+<p>This clause, that was free for Pepsi, increased their payoffs from 2 to 5!</p>
+</div>
+</section>
+<section id="backward-induction-4" class="slide level2">
+<h2>Backward Induction</h2>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Kuhn’s (and Zermelo’s) Theorem</strong></p>
+</div>
+<div class="callout-content">
+<p>Every game of perfect information with a finite number of nodes has a solution to backward induction. Indeed, if for every player it is the case that no two payoffs are the same, then there is a unique solution to backward induction.</p>
+</div>
+</div>
+</div>
+<div style="font-size: 70%;">
+<p>The proof is very simple, and it is, by coincidence, a proof by induction:<sup>1</sup></p>
+<ol type="1">
+<li class="fragment">Show that for <span class="math inline">\(n=1\)</span>, where <span class="math inline">\(n\)</span> is the number of “steps” of the game, the game is solved by finding the best alternative for the playing player.</li>
+<li class="fragment">Show that, if the game is solvable by backward induction for the <span class="math inline">\(n-1\)</span> stages, it can also be solved for the <span class="math inline">\(n^{th}\)</span> stage as well, by using again a best-response by the last playing player.</li>
+</ol>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Detailed explanation see Dutta’s book, section 11.4</p></li></ol></aside></section></section>
+<section>
 <section id="subgame-perfect-equilibrium" class="title-slide slide level1 center">
 <h1>Subgame Perfect Equilibrium</h1>
+
+</section>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A game without <em>perfect information</em> is called a game with <strong>imperfect information</strong>. This is, games where at least once, a player does not know exactly the full set of actions taken before her turn.</p>
+</div>
+</div>
+</div>
+<div style="font-size: 80%;">
+<p>We know that sequential games can have many NEs, but some of them might be not credible or reasonable.</p>
+<p>Determining this, but in particular for games with imperfect information, is the motivation behind the definition of Subgame Perfect (Nash) Equilibria, SPNE henceforward.</p>
+</div>
+</section>
+<section id="motivation-1" class="slide level2">
+<h2>Motivation</h2>
+<p>Entry Game III</p>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="motivation-2" class="slide level2">
+<h2>Motivation</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Coke-Pepsi</th>
+<th style="text-align: center;"><span class="math inline">\(T\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\((ET)\)</span></td>
+<td style="text-align: center;">(-2,-1)</td>
+<td style="text-align: center;">(0,-3)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\((EA)\)</span></td>
+<td style="text-align: center;">(-3,1)</td>
+<td style="text-align: center;">(1,2)*</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\((OT)\)</span></td>
+<td style="text-align: center;">(0,5)*</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\((OA)\)</span></td>
+<td style="text-align: center;">(0,5)*</td>
+<td style="text-align: center;">(0,5)</td>
+</tr>
+</tbody>
+</table>
+<p>But are all these NEs credible? NO <span class="emoji" data-emoji="x">❌</span></p>
+</section>
+<section id="motivation-3" class="slide level2">
+<h2>Motivation</h2>
+<p>To be credible, the actions taken in the equilibrium strategy profiles, must remain rational after previous moves.</p>
+<p>Suppose Coke plays enter, now the game is:</p>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="motivation-4" class="slide level2">
+<h2>Motivation</h2>
+<p>This is a simoultaneous game, and then it is more convenient to study it with the strategic form. I will keep the order of the players in the same way as the original way in order to avoid confusion with the order of the payoffs:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Coke-Pepsi</th>
+<th style="text-align: center;"><span class="math inline">\(T\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(T\)</span></td>
+<td style="text-align: center;">(-2,1)</td>
+<td style="text-align: center;">(0,-3)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">(-3,1)</td>
+<td style="text-align: center;">(1,2)</td>
+</tr>
+</tbody>
+</table>
+<p>And we see that the NEs in <strong>this game</strong> are <span class="math inline">\((T,T)\)</span> and <span class="math inline">\((A,A)\)</span>.</p>
+</section>
+<section id="motivation-5" class="slide level2">
+<h2>Motivation</h2>
+<p>As a consequence, only NEs that considered this result can be credible NEs. We can rule out <span class="math inline">\(((OA),T)\)</span>.</p>
+<p>There might be more NEs, we have not looked for NEs in Mixed Strategies.</p>
+</section>
+<section id="subgames" class="slide level2">
+<h2>Subgames</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>subgame</strong> is a part of the extensive form; it is a collection of nodes and branches that satisfies three properties: 1. It starts at a single decision node. 2. It contains every successor to this node. 3. If it contains any part of an information set, the it contains all the nodes in that information set.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="subgames-1" class="slide level2">
+<h2>Subgames</h2>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="subgames-2" class="slide level2">
+<h2>Subgames</h2>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="subgame-perfect-equilibrium-spne" class="slide level2">
+<h2>Subgame Perfect Equilibrium SPNE</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>The strategy profile <span class="math inline">\((s_1,s_2)\)</span> is a <strong>Subgame Perfect Nash Equilibrium (SPNE)</strong> if, for every subgame <span class="math inline">\(g\)</span>, (<span class="math inline">\(s_1(g),s_2(g)\)</span>) is itself a Nash Equilibrium of the subgame <span class="math inline">\(g\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>In a game of perfect information, the subgame perfect equilibria are precisely the backward induction solutions. Hence, whenever the backward induction solution is unique, there is a single subgame perfect equilibrium.<sup>1</sup></p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>If you are interested in the proof, look at section 13.3 of Dutta’s book.</p></li></ol></aside></section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>In the context of the World War I, there were some spontaneous periods of truce in the trenches between the Allies (<span class="emoji" data-emoji="uk">🇬🇧</span>, <span class="emoji" data-emoji="fr">🇫🇷</span>, <span class="emoji" data-emoji="us">🇺🇸</span>, <span class="emoji" data-emoji="ru">🇷🇺</span>) and the Central Powers (<span class="emoji" data-emoji="de">🇩🇪</span>, <span class="emoji" data-emoji="austria">🇦🇹</span>-<span class="emoji" data-emoji="hungary">🇭🇺</span>,<span class="emoji" data-emoji="tr">🇹🇷</span>)</p>
+<p>Supose that there are two possible levels of preparedness for the soldiers: <em>high</em> (H) or <em>low</em> (L). Regardless of the level of preparedness each side has available two options on what it can do, <em>fight</em> (f), or <em>accommodate</em> (a).</p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<div style="font-size: 70%;">
+<p>For example, if the level of preparedness is:</p>
+<ul>
+<li><em>high</em>, then the strategic form (sub)game is as follows:</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">C-A</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">a</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">f</td>
+<td style="text-align: center;"><span class="math inline">\(\left(-\frac{1}{2},-\frac{1}{2}\right)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,-1)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">a</td>
+<td style="text-align: center;"><span class="math inline">\((-1,1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,0)\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>low</em>, then the strategic form (sub)game is as follows:</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">C-A</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">a</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">f</td>
+<td style="text-align: center;"><span class="math inline">\(\left(-\frac{3}{4},-\frac{1}{4}\right)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0,0)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">a</td>
+<td style="text-align: center;"><span class="math inline">\((-2,2)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1,3)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>The SPNE is <span class="math inline">\(((L,af),af)\)</span></p>
+</section></section>
+<section id="finitely-repeated-games" class="title-slide slide level1 center">
+<h1>Finitely Repeated Games</h1>
 
 </section>
 
 <section id="infinitely-repeated-games" class="title-slide slide level1 center">
 <h1>Infinitely Repeated Games</h1>
+
+</section>
+
+<section id="application-to-the-tragedy-of-the-commons" class="title-slide slide level1 center">
+<h1>Application to the Tragedy of the Commons</h1>
 
 </section>
 
@@ -284,11 +706,12 @@ Paulo Fagandini
 <section id="bibliography-1" class="slide level2">
 <h2>Bibliography</h2>
 <p>These slides took definitions and examples from the book:</p>
-<p>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11 to 18.</p>
+<p>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11, 13-15, 18.</p>
 
 
 
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../images/vse.jpg" class="slide-logo"></p>
@@ -505,6 +928,44 @@ Paulo Fagandini
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

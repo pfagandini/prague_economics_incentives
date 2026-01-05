@@ -851,7 +851,7 @@
     "href": "slides/03_game_theory_extensive_form.html#bibliography-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Bibliography",
-    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11 to 18."
+    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 11, 13-15, 18."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#core-bibliography",
@@ -1509,6 +1509,195 @@
     "href": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-5",
     "title": "Fundamentals of  Game Theory II",
     "section": "Extensive Representation of a Game",
-    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nDefinition\n\n\nA chance node is a node that represents several random possibilities."
+    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nDefinition\n\n\nA chance node is a node that represents several random possibilities.\n\n\n\nFor example, the payoffs of the players can depend on:\n\nIs it raining or not\nIs there traffic or not\netc\n\n\nSome or all players might be aware of this randomness or not."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games",
+    "href": "slides/03_game_theory_extensive_form.html#perfect-information-games",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Perfect Information Games",
+    "text": "Perfect Information Games\n\n\n\n\n\n\nDefinition\n\n\nA perfect information game is a game in which there is no information set (with more than one node).\n\n\n\n\n\n\n\n\n\nCorollary\n\n\nA perfect information game cannot have any simoultaneous moves."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-1",
+    "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Perfect Information Games",
+    "text": "Perfect Information Games\nThe Entry Game"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-2",
+    "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Perfect Information Games",
+    "text": "Perfect Information Games\n\n\n\nP1-P2\nTough\nAccommodate\n\n\n\n\nEnter\n(-2,-1)\n(1,2)\n\n\nOut\n(0,5)\n(0,5)\n\n\n\n\nNE: * \\((Enter, Accommodate)\\) * \\((Out, Tough)\\)"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-3",
+    "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Perfect Information Games",
+    "text": "Perfect Information Games\nThe Entry Game II"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-4",
+    "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Perfect Information Games",
+    "text": "Perfect Information Games\n\n\n\n\n\nP1-P2\n\\(T\\)\n\\(A\\)\n\n\n\n\n\\((E,TT)\\)\n(-2,-1)\n(0,-3)\n\n\n\\((E,TA)\\)\n(-2,-1)\n(1,2)\n\n\n\\((E,AT)\\)\n(-3,1)\n(0,-3)\n\n\n\\((E,AA)\\)\n(-3,1)\n(1,2)\n\n\n\\((O,TT)\\)\n(0,5)\n(0,5)\n\n\n\\((O,TA)\\)\n(0,5)\n(0,5)\n\n\n\\((O,AT)\\)\n(0,5)\n(0,5)\n\n\n\\((O,AA)\\)\n(0,5)\n(0,5)\n\n\n\n\n\n\nNE:\n\n\\(((E,TA),A)\\)\n\\(((E,AA),A)\\)\n\\(((O,TT),T)\\), \\(((O,TA),T)\\), \\(((O,AT),T)\\), \\(((O,AA),T)\\)"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#backward-induction-1",
+    "href": "slides/03_game_theory_extensive_form.html#backward-induction-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Backward Induction",
+    "text": "Backward Induction\nOnly one of these NEs is credible.\nStart from the terminal nodes to verify which choice is rational for the last player, and then remove those branches, turning the last decision node into a terminal node with the rationally expceted payoff. Repeat until the first node, that is the sequentially rational Nash Equilibrium."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#backward-induction-2",
+    "href": "slides/03_game_theory_extensive_form.html#backward-induction-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Backward Induction",
+    "text": "Backward Induction"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#backward-induction-3",
+    "href": "slides/03_game_theory_extensive_form.html#backward-induction-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Backward Induction",
+    "text": "Backward Induction"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment",
+    "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Power of Commitment",
+    "text": "The Power of Commitment\nThe Power of Commitment was widely studied by Thomas Schelling, and it is extremely important in a wide variety of context, specially public policy. We will see some examples shortly.\nIn general, having more alternatives is, at least, weakly better. From the strategic point of view, though, this is not always true. You might optimally remove some alternatives to modify the game you and the other players are playing."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-1",
+    "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Power of Commitment",
+    "text": "The Power of Commitment\n\nUlysses and the Sirens, by John William Waterhouse"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-2",
+    "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Power of Commitment",
+    "text": "The Power of Commitment\nWhat if Pepsi could commit to play “tough” in case Coke enters?\nFor example, suppose Pepsi includes a clause in the C-level executives’ contract saying that if Coke has more than 10% of market share, they will be fired without any compensation."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-3",
+    "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Power of Commitment",
+    "text": "The Power of Commitment"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-4",
+    "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Power of Commitment",
+    "text": "The Power of Commitment\nNow the game’s Nash Equilibrium is \\((Out,Tough)\\) with payoffs \\((0,5)\\).\n\nThis clause, that was free for Pepsi, increased their payoffs from 2 to 5!"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#backward-induction-4",
+    "href": "slides/03_game_theory_extensive_form.html#backward-induction-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Backward Induction",
+    "text": "Backward Induction\n\n\n\nKuhn’s (and Zermelo’s) Theorem\n\n\nEvery game of perfect information with a finite number of nodes has a solution to backward induction. Indeed, if for every player it is the case that no two payoffs are the same, then there is a unique solution to backward induction.\n\n\n\n\nThe proof is very simple, and it is, by coincidence, a proof by induction:1\n\nShow that for \\(n=1\\), where \\(n\\) is the number of “steps” of the game, the game is solved by finding the best alternative for the playing player.\nShow that, if the game is solvable by backward induction for the \\(n-1\\) stages, it can also be solved for the \\(n^{th}\\) stage as well, by using again a best-response by the last playing player.\n\n\nDetailed explanation see Dutta’s book, section 11.4"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#motivation",
+    "href": "slides/03_game_theory_extensive_form.html#motivation",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Motivation",
+    "text": "Motivation\n\n\n\n\n\n\nDefinition\n\n\nA game without perfect information is called a game with imperfect information. This is, games where at least once, a player does not know exactly the full set of actions taken before her turn.\n\n\n\n\nWe know that sequential games can have many NEs, but some of them might be not credible or reasonable.\nDetermining this, but in particular for games with imperfect information, is the motivation behind the definition of Subgame Perfect (Nash) Equilibria, SPNE henceforward."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#motivation-1",
+    "href": "slides/03_game_theory_extensive_form.html#motivation-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Motivation",
+    "text": "Motivation\nEntry Game III"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#motivation-2",
+    "href": "slides/03_game_theory_extensive_form.html#motivation-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Motivation",
+    "text": "Motivation\n\n\n\nCoke-Pepsi\n\\(T\\)\n\\(A\\)\n\n\n\n\n\\((ET)\\)\n(-2,-1)\n(0,-3)\n\n\n\\((EA)\\)\n(-3,1)\n(1,2)*\n\n\n\\((OT)\\)\n(0,5)*\n(0,5)\n\n\n\\((OA)\\)\n(0,5)*\n(0,5)\n\n\n\nBut are all these NEs credible? NO ❌"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#motivation-3",
+    "href": "slides/03_game_theory_extensive_form.html#motivation-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Motivation",
+    "text": "Motivation\nTo be credible, the actions taken in the equilibrium strategy profiles, must remain rational after previous moves.\nSuppose Coke plays enter, now the game is:"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#motivation-4",
+    "href": "slides/03_game_theory_extensive_form.html#motivation-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Motivation",
+    "text": "Motivation\nThis is a simoultaneous game, and then it is more convenient to study it with the strategic form. I will keep the order of the players in the same way as the original way in order to avoid confusion with the order of the payoffs:\n\n\n\nCoke-Pepsi\n\\(T\\)\n\\(A\\)\n\n\n\n\n\\(T\\)\n(-2,1)\n(0,-3)\n\n\n\\(A\\)\n(-3,1)\n(1,2)\n\n\n\nAnd we see that the NEs in this game are \\((T,T)\\) and \\((A,A)\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#motivation-5",
+    "href": "slides/03_game_theory_extensive_form.html#motivation-5",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Motivation",
+    "text": "Motivation\nAs a consequence, only NEs that considered this result can be credible NEs. We can rule out \\(((OA),T)\\).\nThere might be more NEs, we have not looked for NEs in Mixed Strategies."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#subgames",
+    "href": "slides/03_game_theory_extensive_form.html#subgames",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Subgames",
+    "text": "Subgames\n\n\n\n\n\n\nDefinition\n\n\nA subgame is a part of the extensive form; it is a collection of nodes and branches that satisfies three properties: 1. It starts at a single decision node. 2. It contains every successor to this node. 3. If it contains any part of an information set, the it contains all the nodes in that information set."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#subgames-1",
+    "href": "slides/03_game_theory_extensive_form.html#subgames-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Subgames",
+    "text": "Subgames"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#subgames-2",
+    "href": "slides/03_game_theory_extensive_form.html#subgames-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Subgames",
+    "text": "Subgames"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#subgame-perfect-equilibrium-spne",
+    "href": "slides/03_game_theory_extensive_form.html#subgame-perfect-equilibrium-spne",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Subgame Perfect Equilibrium SPNE",
+    "text": "Subgame Perfect Equilibrium SPNE\n\n\n\n\n\n\nDefinition\n\n\nThe strategy profile \\((s_1,s_2)\\) is a Subgame Perfect Nash Equilibrium (SPNE) if, for every subgame \\(g\\), (\\(s_1(g),s_2(g)\\)) is itself a Nash Equilibrium of the subgame \\(g\\).\n\n\n\n\n\n\n\n\n\nProposition\n\n\nIn a game of perfect information, the subgame perfect equilibria are precisely the backward induction solutions. Hence, whenever the backward induction solution is unique, there is a single subgame perfect equilibrium.1\n\n\n\nIf you are interested in the proof, look at section 13.3 of Dutta’s book."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#example",
+    "href": "slides/03_game_theory_extensive_form.html#example",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Example",
+    "text": "Example\nIn the context of the World War I, there were some spontaneous periods of truce in the trenches between the Allies (🇬🇧, 🇫🇷, 🇺🇸, 🇷🇺) and the Central Powers (🇩🇪, 🇦🇹-🇭🇺,🇹🇷)\nSupose that there are two possible levels of preparedness for the soldiers: high (H) or low (L). Regardless of the level of preparedness each side has available two options on what it can do, fight (f), or accommodate (a)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#example-1",
+    "href": "slides/03_game_theory_extensive_form.html#example-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Example",
+    "text": "Example\n\nFor example, if the level of preparedness is:\n\nhigh, then the strategic form (sub)game is as follows:\n\n\n\n\nC-A\nf\na\n\n\n\n\nf\n\\(\\left(-\\frac{1}{2},-\\frac{1}{2}\\right)\\)\n\\((1,-1)\\)\n\n\na\n\\((-1,1)\\)\n\\((0,0)\\)\n\n\n\n\nlow, then the strategic form (sub)game is as follows:\n\n\n\n\nC-A\nf\na\n\n\n\n\nf\n\\(\\left(-\\frac{3}{4},-\\frac{1}{4}\\right)\\)\n\\((0,0)\\)\n\n\na\n\\((-2,2)\\)\n\\((1,3)\\)"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#example-2",
+    "href": "slides/03_game_theory_extensive_form.html#example-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Example",
+    "text": "Example\n\nThe SPNE is \\(((L,af),af)\\)"
   }
 ]
