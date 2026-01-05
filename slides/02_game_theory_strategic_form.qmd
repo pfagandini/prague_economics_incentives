@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of <br> Game Theory"
+title: "Fundamentals of <br> Game Theory I"
 author: "Paulo Fagandini"
 institute: "Prague University of Economics and Business <br> Faculty of Informatics and Statistics"
 format: 
