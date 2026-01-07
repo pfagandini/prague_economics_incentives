@@ -1789,6 +1789,48 @@
     "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-7",
     "title": "Fundamentals of  Game Theory II",
     "section": "Finitely Repeated Games",
-    "text": "Finitely Repeated Games\n\nIn this situation, in the last stage, \\((pc,pc)\\) is possible, and it could be a prefereable equilibrium for both players.\nA player could decide which \\(NE\\) to play in the last stage, conditional on what she observed in the previous stage: play \\(pc\\) if \\(nc\\) was observed in the previous stage (the cooperative behavior), and play \\(c\\) if \\(c\\) or \\(pc\\) was observed (the non-cooperative behavior).\nNote that by playing \\(c\\) in the first stage, and expecting \\(nc\\), a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs."
+    "text": "Finitely Repeated Games\n\n\nIn this situation, in the last stage, \\((pc,pc)\\) is possible, and it could be a prefereable equilibrium for both players.\nA player could decide which \\(NE\\) to play in the last stage, conditional on what she observed in the previous stage: play \\(pc\\) if \\(nc\\) was observed in the previous stage (the cooperative behavior), and play \\(c\\) if \\(c\\) or \\(pc\\) was observed (the non-cooperative behavior).\nNote that by playing \\(c\\) in the first stage, and expecting \\(nc\\), a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-1",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\n\nWe have disregarded something so far, the discount factor \\(\\delta\\in(0,1)\\).\nIt is reasonable to assume, as we often do in economics and finance, that agents are impatient, or that they value more 1 today, than 1 tomorrow.\nFor finitely repeated games this is not that serious, as payoffs (lifetime payoffs) remain finite. This is no longer the case with infinitely repeated games."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-2",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\nLet’s put some shape on the lifetime payoffs of player \\(i\\). Let \\(\\pi_{it}\\) be the payoff of player \\(i\\) at stage \\(t\\), and \\(\\delta\\) the discount factor. The lifetime payoff, in an infinitely repeated game (i.e. when \\(T\\rightarrow\\infty\\)) is:\n\\[\\pi_{i0}+\\delta\\pi_{i1}+\\delta^2\\pi_{i2}+\\dots=\\sum_{t=0}^\\infty \\delta^t\\pi_{it}\\]\nIt is trivial to show that if \\(|\\pi_{it}|&lt;\\infty\\) \\(\\forall t\\), then this sum is finite."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-3",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\n\n\n\n\n\n\nFact\n\n\nWhen the stage-game payoffs are constant, say \\(\\pi\\), then the lifetime payoffs are given by \\(\\frac{\\pi}{1-\\delta}\\). This is easily shown using the fact that \\(0&lt;\\delta&lt;1\\), and the geometric series."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-4",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\nLet’s go back to the original Prisoner’s dilemma.\n\n\n\n1-2\n\\(c\\)\n\\(nc\\)\n\n\n\n\n\\(c\\)\n(-5,-5)\n(0,-15)\n\n\n\\(nc\\)\n(-15,0)\n(-1,-1)\n\n\n\nWhere the NE was clearly \\((c,c)\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-5",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-5",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\nSuppose now that the following strategy is played:\n\nPlay \\(nc\\) and observe the outcome.\nPlay \\(c\\) forever if previously \\(c\\) was observed.\n\nCan this be a SPNE?"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-6",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-6",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\nSuppose the other player plays \\(nc\\):\n\nIf you play \\(nc\\), the next period \\(nc\\) will be played, and so on.\nIf you play \\(c\\), you get benefits today, but in every future iteration you are stuck in \\((c,c)\\)."
   }
 ]

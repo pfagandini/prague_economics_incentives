@@ -826,17 +826,92 @@ Paulo Fagandini
 </section>
 <section id="finitely-repeated-games-7" class="slide level2">
 <h2>Finitely Repeated Games</h2>
+<div style="font-size: 90%;">
 <ul>
 <li class="fragment">In this situation, in the last stage, <span class="math inline">\((pc,pc)\)</span> is possible, and it could be a prefereable equilibrium for both players.</li>
 <li class="fragment">A player could decide which <span class="math inline">\(NE\)</span> to play in the last stage, conditional on what she observed in the previous stage: play <span class="math inline">\(pc\)</span> if <span class="math inline">\(nc\)</span> was observed in the previous stage (the cooperative behavior), and play <span class="math inline">\(c\)</span> if <span class="math inline">\(c\)</span> or <span class="math inline">\(pc\)</span> was observed (the non-cooperative behavior).</li>
 <li class="fragment">Note that by playing <span class="math inline">\(c\)</span> in the first stage, and expecting <span class="math inline">\(nc\)</span>, a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs.</li>
 </ul>
+</div>
 </section></section>
+<section>
 <section id="infinitely-repeated-games" class="title-slide slide level1 center">
 <h1>Infinitely Repeated Games</h1>
 
 </section>
-
+<section id="infinitely-repeated-games-1" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<ul>
+<li class="fragment">We have disregarded something so far, the discount factor <span class="math inline">\(\delta\in(0,1)\)</span>.</li>
+<li class="fragment">It is reasonable to assume, as we often do in economics and finance, that agents are impatient, or that they value more 1 today, than 1 tomorrow.</li>
+<li class="fragment">For finitely repeated games this is not that serious, as payoffs (lifetime payoffs) remain finite. This is no longer the case with infinitely repeated games.</li>
+</ul>
+</section>
+<section id="infinitely-repeated-games-2" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<p>Let’s put some shape on the lifetime payoffs of player <span class="math inline">\(i\)</span>. Let <span class="math inline">\(\pi_{it}\)</span> be the payoff of player <span class="math inline">\(i\)</span> at stage <span class="math inline">\(t\)</span>, and <span class="math inline">\(\delta\)</span> the discount factor. The lifetime payoff, in an infinitely repeated game (<em>i.e.</em> when <span class="math inline">\(T\rightarrow\infty\)</span>) is:</p>
+<p><span class="math display">\[\pi_{i0}+\delta\pi_{i1}+\delta^2\pi_{i2}+\dots=\sum_{t=0}^\infty \delta^t\pi_{it}\]</span></p>
+<p>It is trivial to show that if <span class="math inline">\(|\pi_{it}|&lt;\infty\)</span> <span class="math inline">\(\forall t\)</span>, then this sum is finite.</p>
+</section>
+<section id="infinitely-repeated-games-3" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Fact</strong></p>
+</div>
+<div class="callout-content">
+<p>When the stage-game payoffs are constant, say <span class="math inline">\(\pi\)</span>, then the lifetime payoffs are given by <span class="math inline">\(\frac{\pi}{1-\delta}\)</span>. This is easily shown using the fact that <span class="math inline">\(0&lt;\delta&lt;1\)</span>, and the geometric series.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="infinitely-repeated-games-4" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<p>Let’s go back to the original Prisoner’s dilemma.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">1-2</th>
+<th style="text-align: center;"><span class="math inline">\(c\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(nc\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;">(-5,-5)</td>
+<td style="text-align: center;">(0,-15)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(nc\)</span></td>
+<td style="text-align: center;">(-15,0)</td>
+<td style="text-align: center;">(-1,-1)</td>
+</tr>
+</tbody>
+</table>
+<p>Where the NE was clearly <span class="math inline">\((c,c)\)</span>.</p>
+</section>
+<section id="infinitely-repeated-games-5" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<p>Suppose now that the following strategy is played:</p>
+<ol type="1">
+<li class="fragment">Play <span class="math inline">\(nc\)</span> and observe the outcome.</li>
+<li class="fragment">Play <span class="math inline">\(c\)</span> forever if previously <span class="math inline">\(c\)</span> was observed.</li>
+</ol>
+<p>Can this be a SPNE?</p>
+</section>
+<section id="infinitely-repeated-games-6" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<p>Suppose the other player plays <span class="math inline">\(nc\)</span>:</p>
+<ol type="1">
+<li class="fragment">If you play <span class="math inline">\(nc\)</span>, the next period <span class="math inline">\(nc\)</span> will be played, and so on.</li>
+<li class="fragment">If you play <span class="math inline">\(c\)</span>, you get benefits today, but in every future iteration you are stuck in <span class="math inline">\((c,c)\)</span>.</li>
+</ol>
+</section></section>
 <section id="application-to-the-tragedy-of-the-commons" class="title-slide slide level1 center">
 <h1>Application to the Tragedy of the Commons</h1>
 

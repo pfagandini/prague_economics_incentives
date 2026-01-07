@@ -1101,11 +1101,70 @@ Here we have two NE $(c,c)$ and $(pc,pc)$.
 
 ## Finitely Repeated Games
 
+<div style="font-size: 90%;">
+
 * In this situation, in the last stage, $(pc,pc)$ is possible, and it could be a prefereable equilibrium for both players.
 * A player could decide which $NE$ to play in the last stage, conditional on what she observed in the previous stage: play $pc$ if $nc$ was observed in the previous stage (the cooperative behavior), and play $c$ if $c$ or $pc$ was observed (the non-cooperative behavior).
 * Note that by playing $c$ in the first stage, and expecting $nc$, a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs.
 
+</div>
+
 # Infinitely Repeated Games
+
+## Infinitely Repeated Games
+
+* We have disregarded something so far, the discount factor $\delta\in(0,1)$.
+* It is reasonable to assume, as we often do in economics and finance, that agents are impatient, or that they value more 1 today, than 1 tomorrow.
+* For finitely repeated games this is not that serious, as payoffs (lifetime payoffs) remain finite. This is no longer the case with infinitely repeated games.
+
+## Infinitely Repeated Games
+
+Let's put some shape on the lifetime payoffs of player $i$. Let $\pi_{it}$ be the payoff of player $i$ at stage $t$, and $\delta$ the discount factor. The lifetime payoff, in an infinitely repeated game (*i.e.* when $T\rightarrow\infty$) is:
+
+$$\pi_{i0}+\delta\pi_{i1}+\delta^2\pi_{i2}+\dots=\sum_{t=0}^\infty \delta^t\pi_{it}$$
+
+It is trivial to show that if $|\pi_{it}|<\infty$ $\forall t$, then this sum is finite.
+
+## Infinitely Repeated Games
+
+:::{.callout-note}
+
+## Fact
+
+When the stage-game payoffs are constant, say $\pi$, then the lifetime payoffs are given by $\frac{\pi}{1-\delta}$. This is easily shown using the fact that $0<\delta<1$, and the geometric series.
+
+:::
+
+## Infinitely Repeated Games
+
+Let's go back to the original Prisoner's dilemma.
+
+|1-2| $c$ | $nc$ |
+|--: | :--: | :--: |
+| $c$ | (-5,-5) | (0,-15) |
+| $nc$ | (-15,0) | (-1,-1) |
+
+Where the NE was clearly $(c,c)$.
+
+## Infinitely Repeated Games
+
+Suppose now that the following strategy is played:
+
+:::{.nonincremental}
+
+1. Play $nc$ and observe the outcome.
+2. Play $c$ forever if previously $c$ was observed.
+
+:::
+
+Can this be a SPNE?
+
+## Infinitely Repeated Games
+
+Suppose the other player plays $nc$:
+
+1. If you play $nc$, the next period $nc$ will be played, and so on.
+2. If you play $c$, you get benefits today, but in every future iteration you are stuck in $(c,c)$.
 
 # Application to the Tragedy of the Commons
 
