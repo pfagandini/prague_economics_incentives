@@ -858,6 +858,253 @@ The SPNE is $((L,af),af)$
 
 # Finitely Repeated Games
 
+## Finitely Repeated Games
+
+Many times, players will interact more than once, *i.e.* the game will be played repeatedly. There are important consequences if the game is played a finite number of times, or infinite many times that we will discuss now. The most important issue at hand is that repeated games might have very different outcomes to the case the game is played just once.
+
+The key here is that if a player believes a bad behavior today could cause some future punishment from the other side (or vice-versa), *i.e.* the prospect of **reciprocity**.
+
+## Repeated Prisoner's Dilemma
+
+* Consider the payoff's of the Calvin and Klein's game we reviewed a while ago.
+* Suppose that the final payoffs are just the sum of the payoffs of each game (no discount).
+* Suppose players know the outcome of the first game after they have to play again.
+
+## Repeated Prisoner's Dilemma
+
+```{r, engine='tikz', fig.align='center'}
+
+\usetikzlibrary{calc,fit,shapes.geometric}
+
+\tikzset{
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+\begin{tikzpicture}[scale=1.5,font=\tiny]
+  \tikzstyle{level 1}=[level distance=10mm,sibling distance=40mm]
+  \tikzstyle{level 2}=[level distance=10mm,sibling distance=20mm]
+  \tikzstyle{level 3}=[level distance=10mm,sibling distance=10mm]
+  \tikzstyle{level 4}=[level distance=10mm,sibling distance=5mm]
+
+  \node(0)[solid node,label=above:{$1$}]{}
+    child{
+      node(1)[solid node, label=above left:{}]{}
+      child{
+        node()[solid node, label=above left:{1}]{}
+        child{
+          node(3)[solid node,label=above left:{}]{}
+          child{
+            node[hollow node,label=below:{$(0,0)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(7,-2)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[left]{$c$}  
+        }
+        child{
+          node(4)[solid node,label=above right:{}]{}
+          child{
+            node[hollow node,label=below:{$(-2,7)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(5,5)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[right]{$nc$}  
+        }
+        edge from parent node[left]{$c$}
+      }
+      child{
+        node()[solid node, label=above right:{1}]{}
+        child{
+          node(5)[solid node,label=above left:{}]{}
+          child{
+            node[hollow node,label=below:{$(7,-2)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(14,-4)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[left]{$c$}  
+        }
+        child{
+          node(6)[solid node,label=above right:{}]{}
+          child{
+            node[hollow node,label=below:{$(5,5)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(12,3)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[right]{$nc$}  
+        }
+        edge from parent node[right]{$nc$}
+      }
+      edge from parent node[left,xshift=-3]{$c$}
+    }
+    child{
+      node(2)[solid node, label=above right:{}]{}
+      child{
+        node()[solid node, label=above left:{$1$}]{}
+        child{
+          node(7)[solid node,label=above left:{}]{}
+          child{
+            node[hollow node,label=below:{$(-2,7)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(5,5)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[left]{$c$}  
+        }
+        child{
+          node(8)[solid node,label=above right:{}]{}
+          child{
+            node[hollow node,label=below:{$(-4,14)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(3,12)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[right]{$nc$}  
+        }
+        edge from parent node[left]{$c$}
+      }
+      child{
+        node()[solid node, label=above right:{$1$}]{}
+        child{
+          node(9)[solid node,label=above left:{}]{}
+          child{
+            node[hollow node,label=below:{$(5,5)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(12,3)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[left]{$c$}  
+        }
+        child{
+          node(10)[solid node,label=above right:{}]{}
+          child{
+            node[hollow node,label=below:{$(3,12)$}]{}
+            edge from parent node[left]{$c$}  
+          }
+          child{
+            node[hollow node,label=below:{$(10,10)$}]{}
+            edge from parent node[right]{$nc$}  
+          }
+          edge from parent node[right]{$nc$}  
+        }
+        edge from parent node[right]{$nc$}
+      }
+      edge from parent node[right,xshift=3]{$nc$}
+    };
+
+   \draw[dashed,rounded corners=10]($(1) + (-.2,.25)$)rectangle($(2) +(.2,-.25)$);
+   \node at ($(1)!.5!(2)$) {$2$};
+
+    \foreach \i [evaluate=\i as \nexti using int(\i+1)] in {3, 5, 7, 9} {
+        \draw[dashed, rounded corners=10] ($(\i) + (-.2, .25)$) rectangle ($(\nexti) + (.2, -.25)$);
+        \node at ($(\i)!0.5!(\nexti)$) {$2$};
+    }
+
+
+\end{tikzpicture}
+
+```
+
+## Repeated Games
+
+:::{.callout-note .nonincremental}
+
+## Definition
+
+A **repeated game** is defined by a *stage game* $G$ and the number of its repetitions, say $T$. The stage game $G$ is a game in strategic form: $G=\{S_i,\pi_i ; i=1,\dots,N\}$ where $S_i$ is player $i's$ set of strategies and $\pi_i$ is his payoff function [and it depends on $(s_1,s_2,\dots,N)$].
+
+* If $T<\infty$, the game is called finitely repeated game,
+* If $T=\infty$, the game is called infinitely repeated game.
+
+:::
+
+## Examples
+
+<div style="font-size: 70%;">
+
+1. **The "Lame Duck" Period in Politics:** Elected officials might cooperate at the beginning of their term to gain favor and pass legislation with the support for future bills. If there is no re-election, in the latest months the officials might try to pass controversial bills and pardons.
+2. **Military Occupations and withdrawal date:** Locals that have to decide to support occupying force or insurgents, the value of supporting occupying forces vanishes at the departure date.
+3. **Short-term Humanitarian Interventions:** Local contractors provide service for payment for NGOs.
+
+</div>
+
+## Finitely Repeated Games
+
+By looking at the Repeated Prissoner's dilemma, how can we *solve this problem*?
+
+## Finitely Repeated Games
+
+This is clearly equivalent to a game with several steps, and it is solved in the same way, backward induction.
+
+1. In the last *stage* the game is played no more, so both agents play this *game* as a single shot game.
+2. This will determine the payoffs for the previous *stage*, which then will be equivalent to a *last stage* again.
+3. Repeating this, players can forecast the whole path of the game, and play accordingly.
+
+## Finitely Repeated Games
+
+:::{.callout-important}
+
+## Corollary
+
+In any finitely repeated game, one SPNE of the repeated game is for players to play a one-stage NE over and over again.
+
+:::
+
+. . .
+
+:::{.callout-note}
+
+## Proposition
+
+Consider a finitely repeated game $(G,T)$ with $G=\{S_i,\pi_i ; i=1,\dots,N\}$. Suppose the stage game $G$ has exactly one NE, say $s^*=(s_1^*,s_2^*,\dots,s_N^*)$. Then the repeated game has a unique SPNE. In this equilibrium, player $i$ plays $s_i^*$ at every one of the $T$ stages, regardless of what might have been played, by her or any of the others, in any previous stage.
+
+:::
+
+## Finitely Repeated Games
+
+Proof
+
+1. In the last stage, surely $s^*$ will be played, as is the $NE$ for a single NE of the game.
+2. In the stage before, the payoffs are determined, as in the next stage, whatever is decided, $s^*$ will be played in the next stage, so this will be traeted as an independent stage, and then $s^*$ will be played as well.
+3. Iterate, and you find that $s^*$ is played in every stage of the game.
+
+## Finitely Repeated Games
+
+This might be different if in a stage, there is more than a single $NE$.
+
+Consider the Modified Prisonner's Dilemma:
+
+|1-2 | $c$ | $nc$ | $pc$ |
+| --: | :--: | :--: | :--: |
+| $c$ | (0,0) | (7,-2) | (3,-1) |
+| $nc$ | (-2,7) | (5,5) | (0,6) |
+| $pc$ | (-1,3) | (6,0) | (3,3) |
+
+Here we have two NE $(c,c)$ and $(pc,pc)$.
+
+## Finitely Repeated Games
+
+* In this situation, in the last stage, $(pc,pc)$ is possible, and it could be a prefereable equilibrium for both players.
+* A player could decide which $NE$ to play in the last stage, conditional on what she observed in the previous stage: play $pc$ if $nc$ was observed in the previous stage (the cooperative behavior), and play $c$ if $c$ or $pc$ was observed (the non-cooperative behavior).
+* Note that by playing $c$ in the first stage, and expecting $nc$, a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs.
+
 # Infinitely Repeated Games
 
 # Application to the Tragedy of the Commons

@@ -683,11 +683,155 @@ Paulo Fagandini
 
 <img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>The SPNE is <span class="math inline">\(((L,af),af)\)</span></p>
 </section></section>
+<section>
 <section id="finitely-repeated-games" class="title-slide slide level1 center">
 <h1>Finitely Repeated Games</h1>
 
 </section>
+<section id="finitely-repeated-games-1" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<p>Many times, players will interact more than once, <em>i.e.</em> the game will be played repeatedly. There are important consequences if the game is played a finite number of times, or infinite many times that we will discuss now. The most important issue at hand is that repeated games might have very different outcomes to the case the game is played just once.</p>
+<p>The key here is that if a player believes a bad behavior today could cause some future punishment from the other side (or vice-versa), <em>i.e.</em> the prospect of <strong>reciprocity</strong>.</p>
+</section>
+<section id="repeated-prisoners-dilemma" class="slide level2">
+<h2>Repeated Prisoner’s Dilemma</h2>
+<ul>
+<li class="fragment">Consider the payoff’s of the Calvin and Klein’s game we reviewed a while ago.</li>
+<li class="fragment">Suppose that the final payoffs are just the sum of the payoffs of each game (no discount).</li>
+<li class="fragment">Suppose players know the outcome of the first game after they have to play again.</li>
+</ul>
+</section>
+<section id="repeated-prisoners-dilemma-1" class="slide level2">
+<h2>Repeated Prisoner’s Dilemma</h2>
 
+<img data-src="03_game_theory_extensive_form_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="repeated-games" class="slide level2">
+<h2>Repeated Games</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>repeated game</strong> is defined by a <em>stage game</em> <span class="math inline">\(G\)</span> and the number of its repetitions, say <span class="math inline">\(T\)</span>. The stage game <span class="math inline">\(G\)</span> is a game in strategic form: <span class="math inline">\(G=\{S_i,\pi_i ; i=1,\dots,N\}\)</span> where <span class="math inline">\(S_i\)</span> is player <span class="math inline">\(i's\)</span> set of strategies and <span class="math inline">\(\pi_i\)</span> is his payoff function [and it depends on <span class="math inline">\((s_1,s_2,\dots,N)\)</span>].</p>
+<ul>
+<li>If <span class="math inline">\(T&lt;\infty\)</span>, the game is called finitely repeated game,</li>
+<li>If <span class="math inline">\(T=\infty\)</span>, the game is called infinitely repeated game.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<div style="font-size: 70%;">
+<ol type="1">
+<li class="fragment"><strong>The “Lame Duck” Period in Politics:</strong> Elected officials might cooperate at the beginning of their term to gain favor and pass legislation with the support for future bills. If there is no re-election, in the latest months the officials might try to pass controversial bills and pardons.</li>
+<li class="fragment"><strong>Military Occupations and withdrawal date:</strong> Locals that have to decide to support occupying force or insurgents, the value of supporting occupying forces vanishes at the departure date.</li>
+<li class="fragment"><strong>Short-term Humanitarian Interventions:</strong> Local contractors provide service for payment for NGOs.</li>
+</ol>
+</div>
+</section>
+<section id="finitely-repeated-games-2" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<p>By looking at the Repeated Prissoner’s dilemma, how can we <em>solve this problem</em>?</p>
+</section>
+<section id="finitely-repeated-games-3" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<p>This is clearly equivalent to a game with several steps, and it is solved in the same way, backward induction.</p>
+<ol type="1">
+<li class="fragment">In the last <em>stage</em> the game is played no more, so both agents play this <em>game</em> as a single shot game.</li>
+<li class="fragment">This will determine the payoffs for the previous <em>stage</em>, which then will be equivalent to a <em>last stage</em> again.</li>
+<li class="fragment">Repeating this, players can forecast the whole path of the game, and play accordingly.</li>
+</ol>
+</section>
+<section id="finitely-repeated-games-4" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Corollary</strong></p>
+</div>
+<div class="callout-content">
+<p>In any finitely repeated game, one SPNE of the repeated game is for players to play a one-stage NE over and over again.</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>Consider a finitely repeated game <span class="math inline">\((G,T)\)</span> with <span class="math inline">\(G=\{S_i,\pi_i ; i=1,\dots,N\}\)</span>. Suppose the stage game <span class="math inline">\(G\)</span> has exactly one NE, say <span class="math inline">\(s^*=(s_1^*,s_2^*,\dots,s_N^*)\)</span>. Then the repeated game has a unique SPNE. In this equilibrium, player <span class="math inline">\(i\)</span> plays <span class="math inline">\(s_i^*\)</span> at every one of the <span class="math inline">\(T\)</span> stages, regardless of what might have been played, by her or any of the others, in any previous stage.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="finitely-repeated-games-5" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<p>Proof</p>
+<ol type="1">
+<li class="fragment">In the last stage, surely <span class="math inline">\(s^*\)</span> will be played, as is the <span class="math inline">\(NE\)</span> for a single NE of the game.</li>
+<li class="fragment">In the stage before, the payoffs are determined, as in the next stage, whatever is decided, <span class="math inline">\(s^*\)</span> will be played in the next stage, so this will be traeted as an independent stage, and then <span class="math inline">\(s^*\)</span> will be played as well.</li>
+<li class="fragment">Iterate, and you find that <span class="math inline">\(s^*\)</span> is played in every stage of the game.</li>
+</ol>
+</section>
+<section id="finitely-repeated-games-6" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<p>This might be different if in a stage, there is more than a single <span class="math inline">\(NE\)</span>.</p>
+<p>Consider the Modified Prisonner’s Dilemma:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">1-2</th>
+<th style="text-align: center;"><span class="math inline">\(c\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(nc\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(pc\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;">(0,0)</td>
+<td style="text-align: center;">(7,-2)</td>
+<td style="text-align: center;">(3,-1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(nc\)</span></td>
+<td style="text-align: center;">(-2,7)</td>
+<td style="text-align: center;">(5,5)</td>
+<td style="text-align: center;">(0,6)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(pc\)</span></td>
+<td style="text-align: center;">(-1,3)</td>
+<td style="text-align: center;">(6,0)</td>
+<td style="text-align: center;">(3,3)</td>
+</tr>
+</tbody>
+</table>
+<p>Here we have two NE <span class="math inline">\((c,c)\)</span> and <span class="math inline">\((pc,pc)\)</span>.</p>
+</section>
+<section id="finitely-repeated-games-7" class="slide level2">
+<h2>Finitely Repeated Games</h2>
+<ul>
+<li class="fragment">In this situation, in the last stage, <span class="math inline">\((pc,pc)\)</span> is possible, and it could be a prefereable equilibrium for both players.</li>
+<li class="fragment">A player could decide which <span class="math inline">\(NE\)</span> to play in the last stage, conditional on what she observed in the previous stage: play <span class="math inline">\(pc\)</span> if <span class="math inline">\(nc\)</span> was observed in the previous stage (the cooperative behavior), and play <span class="math inline">\(c\)</span> if <span class="math inline">\(c\)</span> or <span class="math inline">\(pc\)</span> was observed (the non-cooperative behavior).</li>
+<li class="fragment">Note that by playing <span class="math inline">\(c\)</span> in the first stage, and expecting <span class="math inline">\(nc\)</span>, a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs.</li>
+</ul>
+</section></section>
 <section id="infinitely-repeated-games" class="title-slide slide level1 center">
 <h1>Infinitely Repeated Games</h1>
 

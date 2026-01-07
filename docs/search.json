@@ -1699,5 +1699,96 @@
     "title": "Fundamentals of  Game Theory II",
     "section": "Example",
     "text": "Example\n\nThe SPNE is \\(((L,af),af)\\)"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-1",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\nMany times, players will interact more than once, i.e. the game will be played repeatedly. There are important consequences if the game is played a finite number of times, or infinite many times that we will discuss now. The most important issue at hand is that repeated games might have very different outcomes to the case the game is played just once.\nThe key here is that if a player believes a bad behavior today could cause some future punishment from the other side (or vice-versa), i.e. the prospect of reciprocity."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#repeated-prissoners-dilemma",
+    "href": "slides/03_game_theory_extensive_form.html#repeated-prissoners-dilemma",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Repeated Prissoner’s Dilemma",
+    "text": "Repeated Prissoner’s Dilemma\n\nConsider the payoff’s of the Calvin and Klein’s game we reviewed a while ago.\nSuppose that the final payoffs are just the sum of the payoffs of each game (no discount).\nSuppose players know the outcome of the first game after they have to play again."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#repeated-prissoners-dilemma-1",
+    "href": "slides/03_game_theory_extensive_form.html#repeated-prissoners-dilemma-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Repeated Prissoner’s Dilemma",
+    "text": "Repeated Prissoner’s Dilemma"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#repeated-prisoners-dilemma",
+    "href": "slides/03_game_theory_extensive_form.html#repeated-prisoners-dilemma",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Repeated Prisoner’s Dilemma",
+    "text": "Repeated Prisoner’s Dilemma\n\nConsider the payoff’s of the Calvin and Klein’s game we reviewed a while ago.\nSuppose that the final payoffs are just the sum of the payoffs of each game (no discount).\nSuppose players know the outcome of the first game after they have to play again."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#repeated-prisoners-dilemma-1",
+    "href": "slides/03_game_theory_extensive_form.html#repeated-prisoners-dilemma-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Repeated Prisoner’s Dilemma",
+    "text": "Repeated Prisoner’s Dilemma"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-2",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\nBy looking at the Repeated Prissoner’s dilemma, how can we solve this problem?"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#repeated-games",
+    "href": "slides/03_game_theory_extensive_form.html#repeated-games",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Repeated Games",
+    "text": "Repeated Games\n\n\n\n\n\n\nDefinition\n\n\nA repeated game is defined by a stage game \\(G\\) and the number of its repetitions, say \\(T\\). The stage game \\(G\\) is a game in strategic form: \\(G=\\{S_i,\\pi_i ; i=1,\\dots,N\\}\\) where \\(S_i\\) is player \\(i's\\) set of strategies and \\(\\pi_i\\) is his payoff function [and it depends on \\((s_1,s_2,\\dots,N)\\)].\n\nIf \\(T&lt;\\infty\\), the game is called finitely repeated game,\nIf \\(T=\\infty\\), the game is called infinitely repeated game."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#examples",
+    "href": "slides/03_game_theory_extensive_form.html#examples",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Examples",
+    "text": "Examples\n\n\nThe “Lame Duck” Period in Politics: Elected officials might cooperate at the beginning of their term to gain favor and pass legislation with the support for future bills. If there is no re-election, in the latest months the officials might try to pass controversial bills and pardons.\nMilitary Occupations and withdrawal date: Locals that have to decide to support occupying force or insurgents, the value of supporting occupying forces vanishes at the departure date.\nShort-term Humanitarian Interventions: Local contractors provide service for payment for NGOs."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-3",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\nThis is clearly equivalent to a game with several steps, and it is solved in the same way, backward induction.\n\nIn the last stage the game is played no more, so both agents play this game as a single shot game.\nThis will determine the payoffs for the previous stage, which then will be equivalent to a last stage again.\nRepeating this, players can forecast the whole path of the game, and play accordingly."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-4",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\n\n\n\n\n\n\nCorollary\n\n\nIn any finitely repeated game, one SPNE of the repeated game is for players to play a one-stage NE over and over again.\n\n\n\n\n\n\n\n\n\n\nProposition\n\n\nConsider a finitely repeated game \\((G,T)\\) with \\(G=\\{S_i,\\pi_i ; i=1,\\dots,N\\}\\). Suppose the stage game \\(G\\) has exactly one NE, say \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\). Then the repeated game has a unique SPNE. In this equilibrium, player \\(i\\) plays \\(s_i^*\\) at every one of the \\(T\\) stages, regardless of what might have been played, by her or any of the others, in any previous stage."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-5",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-5",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\nProof\n\nIn the last stage, surely \\(s^*\\) will be played, as is the \\(NE\\) for a single NE of the game.\nIn the stage before, the payoffs are determined, as in the next stage, whatever is decided, \\(s^*\\) will be played in the next stage, so this will be traeted as an independent stage, and then \\(s^*\\) will be played as well.\nIterate, and you find that \\(s^*\\) is played in every stage of the game."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-6",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-6",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\nThis might be different if in a stage, there is more than a single \\(NE\\).\nConsider the Modified Prisonner’s Dilemma:\n\n\n\n1-2\n\\(c\\)\n\\(nc\\)\n\\(pc\\)\n\n\n\n\n\\(c\\)\n(0,0)\n(7,-2)\n(3,-1)\n\n\n\\(nc\\)\n(-2,7)\n(5,5)\n(0,6)\n\n\n\\(pc\\)\n(-1,3)\n(6,0)\n(3,3)\n\n\n\nHere we have two NE \\((c,c)\\) and \\((pc,pc)\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-7",
+    "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-7",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Finitely Repeated Games",
+    "text": "Finitely Repeated Games\n\nIn this situation, in the last stage, \\((pc,pc)\\) is possible, and it could be a prefereable equilibrium for both players.\nA player could decide which \\(NE\\) to play in the last stage, conditional on what she observed in the previous stage: play \\(pc\\) if \\(nc\\) was observed in the previous stage (the cooperative behavior), and play \\(c\\) if \\(c\\) or \\(pc\\) was observed (the non-cooperative behavior).\nNote that by playing \\(c\\) in the first stage, and expecting \\(nc\\), a player could get a higher payoff, however she can anticipates a punishment, and would trade-off short term gains for future lower payoffs."
   }
 ]
