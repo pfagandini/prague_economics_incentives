@@ -1144,7 +1144,7 @@ Let's go back to the original Prisoner's dilemma.
 | $c$ | (-5,-5) | (0,-15) |
 | $nc$ | (-15,0) | (-1,-1) |
 
-Where the NE was clearly $(c,c)$.
+Where the NE was clearly $(c,c)$. Consider $\delta=0.9$.
 
 ## Infinitely Repeated Games
 
@@ -1163,8 +1163,29 @@ Can this be a SPNE?
 
 Suppose the other player plays $nc$:
 
-1. If you play $nc$, the next period $nc$ will be played, and so on.
-2. If you play $c$, you get benefits today, but in every future iteration you are stuck in $(c,c)$.
+1. If you play $nc$, the next period $nc$ will be played, and so on. Your lifetime (future) payoff is $$\Pi_{nc}=-1-\frac{0.9}{1-0.9}=-10$$
+
+## Infinitely Repeated Games
+
+Suppose the other player plays $nc$:
+
+2. If you play $c$, you get benefits today, but in every future iteration you are stuck in $(c,c)$. Your lifetime (future) payoff is $$\Pi_c = 0 - \frac{15\times 0.9}{1-0.9}=-135$$
+
+. . . 
+
+Clearly it compensates to be good!
+
+## Infinitely Repeated Games
+
+Can we find $\delta$ such that the crime pays off?
+
+$$\Pi_{nc}=-1-\frac{\delta}{1-\delta}\leq 0-\frac{15\delta}{1-\delta}=\Pi_c$$
+
+$$-1\leq\frac{-14\delta}{1-\delta}\ \Rightarrow\ 1-\delta \geq 14\delta\ \Rightarrow\ \delta\leq \frac{1}{15}$$
+
+In order to *betray* my colleague, I need to really care little about the future!
+
+
 
 # Application to the Tragedy of the Commons
 

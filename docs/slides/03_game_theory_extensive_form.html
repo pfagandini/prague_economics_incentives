@@ -893,14 +893,14 @@ Paulo Fagandini
 </tr>
 </tbody>
 </table>
-<p>Where the NE was clearly <span class="math inline">\((c,c)\)</span>.</p>
+<p>Where the NE was clearly <span class="math inline">\((c,c)\)</span>. Consider <span class="math inline">\(\delta=0.9\)</span>.</p>
 </section>
 <section id="infinitely-repeated-games-5" class="slide level2">
 <h2>Infinitely Repeated Games</h2>
 <p>Suppose now that the following strategy is played:</p>
 <ol type="1">
-<li class="fragment">Play <span class="math inline">\(nc\)</span> and observe the outcome.</li>
-<li class="fragment">Play <span class="math inline">\(c\)</span> forever if previously <span class="math inline">\(c\)</span> was observed.</li>
+<li>Play <span class="math inline">\(nc\)</span> and observe the outcome.</li>
+<li>Play <span class="math inline">\(c\)</span> forever if previously <span class="math inline">\(c\)</span> was observed.</li>
 </ol>
 <p>Can this be a SPNE?</p>
 </section>
@@ -908,9 +908,25 @@ Paulo Fagandini
 <h2>Infinitely Repeated Games</h2>
 <p>Suppose the other player plays <span class="math inline">\(nc\)</span>:</p>
 <ol type="1">
-<li class="fragment">If you play <span class="math inline">\(nc\)</span>, the next period <span class="math inline">\(nc\)</span> will be played, and so on.</li>
-<li class="fragment">If you play <span class="math inline">\(c\)</span>, you get benefits today, but in every future iteration you are stuck in <span class="math inline">\((c,c)\)</span>.</li>
+<li class="fragment">If you play <span class="math inline">\(nc\)</span>, the next period <span class="math inline">\(nc\)</span> will be played, and so on. Your lifetime (future) payoff is <span class="math display">\[\Pi_{nc}=-1-\frac{0.9}{1-0.9}=-10\]</span></li>
 </ol>
+</section>
+<section id="infinitely-repeated-games-7" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<p>Suppose the other player plays <span class="math inline">\(nc\)</span>:</p>
+<ol start="2" type="1">
+<li class="fragment">If you play <span class="math inline">\(c\)</span>, you get benefits today, but in every future iteration you are stuck in <span class="math inline">\((c,c)\)</span>. Your lifetime (future) payoff is <span class="math display">\[\Pi_c = 0 - \frac{15\times 0.9}{1-0.9}=-135\]</span></li>
+</ol>
+<div class="fragment">
+<p>Clearly it compensates to be good!</p>
+</div>
+</section>
+<section id="infinitely-repeated-games-8" class="slide level2">
+<h2>Infinitely Repeated Games</h2>
+<p>Can we find <span class="math inline">\(\delta\)</span> such that the crime pays off?</p>
+<p><span class="math display">\[\Pi_{nc}=-1-\frac{\delta}{1-\delta}\leq 0-\frac{15\delta}{1-\delta}=\Pi_c\]</span></p>
+<p><span class="math display">\[-1\leq\frac{-14\delta}{1-\delta}\ \Rightarrow\ 1-\delta \geq 14\delta\ \Rightarrow\ \delta\leq \frac{1}{15}\]</span></p>
+<p>In order to <em>betray</em> my colleague, I need to really care little about the future!</p>
 </section></section>
 <section id="application-to-the-tragedy-of-the-commons" class="title-slide slide level1 center">
 <h1>Application to the Tragedy of the Commons</h1>

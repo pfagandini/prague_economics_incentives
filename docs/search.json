@@ -1817,7 +1817,7 @@
     "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-4",
     "title": "Fundamentals of  Game Theory II",
     "section": "Infinitely Repeated Games",
-    "text": "Infinitely Repeated Games\nLet’s go back to the original Prisoner’s dilemma.\n\n\n\n1-2\n\\(c\\)\n\\(nc\\)\n\n\n\n\n\\(c\\)\n(-5,-5)\n(0,-15)\n\n\n\\(nc\\)\n(-15,0)\n(-1,-1)\n\n\n\nWhere the NE was clearly \\((c,c)\\)."
+    "text": "Infinitely Repeated Games\nLet’s go back to the original Prisoner’s dilemma.\n\n\n\n1-2\n\\(c\\)\n\\(nc\\)\n\n\n\n\n\\(c\\)\n(-5,-5)\n(0,-15)\n\n\n\\(nc\\)\n(-15,0)\n(-1,-1)\n\n\n\nWhere the NE was clearly \\((c,c)\\). Consider \\(\\delta=0.9\\)."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-5",
@@ -1831,6 +1831,20 @@
     "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-6",
     "title": "Fundamentals of  Game Theory II",
     "section": "Infinitely Repeated Games",
-    "text": "Infinitely Repeated Games\nSuppose the other player plays \\(nc\\):\n\nIf you play \\(nc\\), the next period \\(nc\\) will be played, and so on.\nIf you play \\(c\\), you get benefits today, but in every future iteration you are stuck in \\((c,c)\\)."
+    "text": "Infinitely Repeated Games\nSuppose the other player plays \\(nc\\):\n\nIf you play \\(nc\\), the next period \\(nc\\) will be played, and so on. Your lifetime (future) payoff is \\[\\Pi_{nc}=-1-\\frac{0.9}{1-0.9}=-10\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-7",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-7",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\nSuppose the other player plays \\(nc\\):\n\nIf you play \\(c\\), you get benefits today, but in every future iteration you are stuck in \\((c,c)\\). Your lifetime (future) payoff is \\[\\Pi_c = 0 - \\frac{15\\times 0.9}{1-0.9}=-135\\]\n\n\nClearly it compensates to be good!"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-8",
+    "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-8",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Infinitely Repeated Games",
+    "text": "Infinitely Repeated Games\nCan we find \\(\\delta\\) such that the crime pays off?\n\\[\\Pi_{nc}=-1-\\frac{\\delta}{1-\\delta}\\leq 0-\\frac{15\\delta}{1-\\delta}=\\Pi_c\\]\n\\[-1\\leq\\frac{-14\\delta}{1-\\delta}\\ \\Rightarrow\\ 1-\\delta \\geq 14\\delta\\ \\Rightarrow\\ \\delta\\leq \\frac{1}{15}\\]\nIn order to betray my colleague, I need to really care little about the future!"
   }
 ]
