@@ -21,13 +21,179 @@ editor: source
 
 ---
 
-# Introduction
+<div style="font-size: 70%;">
+</div>
 
-## Core Bibliography
+# Moral Hazard and Incentives Theory
 
-The core of the contents of this chapter takes as reference the book
+## Moral Hazard
 
-:book: *Strategies and Games: Theory and Practice* by Prajit K. Dutta. 2001 MIT Press.
+:::{.callout-note}
+
+## Definition
+
+**Moral Hazard** is a term that refers to the situation when an person acts when she does not bear the full (good or bad) consequences of her acts.
+
+:::
+
+For example if you own a :car:, and if you crash it, you will have to pay all the costs with fixing it :wrench:.
+
+Now, if you have insurance, these costs pass along to the insurer. It is expected that you would drive less carefully than without insurance.
+
+## Moral Hazard
+
+The true cause of the problem is that the Insurance Company cannot know, at every moment, how are you driving. Of course there are some things that are present in the contract:
+
+1. They will not pay if you were speeding.
+2. They will not pay if you were driving under the influence of drugs.
+3. etc.
+
+But there are a plethora of irresponsible behavior that the company cannot monitor.
+
+## Moral Hazard
+
+In this case, the person who has to *act* and has *private information* on his actions, is known as the **agent**, while who is bearing the consequences of the actions of the agent is called the **principal**.
+
+At the core this is a problem of missaligned incentives: what is good for the agent, might not be necessarily good for the principal.
+
+## Moral Hazard
+
+What to do then?
+
+Principals have to design schemes that *incentive* the agent to behave more in line with the Principal's goals. Of course, these incentives are costly.
+
+## A Principal-Agent model
+
+The most simple way to model the Pricipal-Agent model (intuitive and transparent way) is by modelling the relationship between employer (Principal) and employee (Agent).
+
+Suppose the Principal hires the Agent to perform some task. 
+
+## A Principal-Agent model
+Let:
+
+1. both agent and principal be risk neutral: $u_a(w)=w$, and $u_p(\pi)=\pi$.
+2. the outcome be $x\in\{0,\xi\}$.
+3. effort be chosen as $e\in[0,1]$, and $Pr(x=\xi|e)=e$.
+4. the wage have fixed $a$ pay and bonus $b$, paid in case $x=\xi$.
+5. Let $c(e)=\frac{e^2}{2}$ be the cost of effort.
+
+## A Principal-Agent model
+
+The maximization problem of the principal is given by:
+
+$$
+\begin{aligned}
+  \max_{e,a,b}\quad &-a+e(\xi-b)\\
+  s.t.\quad &a+eb-c(e)\geq\bar{u}\\
+  &e\in\arg\max_{\hat{e}}\{a+\hat{e}b-c(\hat{e})\}\\
+  &a\geq -w
+\end{aligned}
+$$
+
+Let's assume, further, than $\omega = 0$, *i.e.* we will not allow negative fixed wage (or transfers from the agent to the principal). This is know as limited liability or cash constraint.
+
+## A Principal-Agent model
+
+Grossman and Hart (1983) show that under some conditions (satisfied in this model and in most of the simple versions of this model) the problem can be solved in two stages:
+
+1. Solve the problem for the agent, taking everything external to the agent as a parameter.
+2. Solve the problem of the principal, substituting the solution of the agent as a function of the principal's variables.
+
+This is how we will proceed.
+
+## A Principal-Agent model
+
+Given $a$ and $b$, the agent will maximize her utility, so computing the FOC we get:
+
+$$b-c'=0\quad\Rightarrow\quad b=e^*$$
+
+So the agent will choose optimally $e=b$.
+
+## A Principal-Agent model
+
+The problem for the principal is now:
+
+$$
+\begin{aligned}
+  \max_{a,e}\quad &-a+e(\xi-e)\\
+  s.t.\quad &a+e^2-\frac{e^2}{2}\geq\bar{u}\\
+  &a\geq 0
+\end{aligned}
+$$
+
+Now, if $e^*=0$, the agent will accept to participate if and only if $a\geq \bar{u}$. For simplicity assume $\bar{u}=0$.
+
+## A Principal-Agent model
+
+$$
+\begin{aligned}
+  \max_{a,e}\quad &-a+e(\xi-e)\\
+  s.t.\quad &a+\frac{e^2}{2}\geq0\\
+  &a\geq 0
+\end{aligned}
+$$
+
+Which constraint is irrelevant now?
+
+. . .
+
+The Participation Constraint, as $\frac{e^2}{2}\geq 0$. Then the optimal is $a=0$. Now what is the optimal level of effort?
+
+## A Principal-Agent model
+
+$$
+\begin{aligned}
+  \max_{e}\quad &e(\xi-e)\\
+\end{aligned}
+$$
+
+And from there $e^*=\frac{\xi}{2}$. Note that this makes $b=\frac{\xi}{2}$. So the expected payoffs are:
+
+1. $E[u_a]=0+\left(\frac{\xi}{2}\right)^2-\frac{\xi^2}{8}=\frac{\xi^2}{8}$
+2. $E[u_p]=-0+\frac{\xi}{2}\left(\xi-\frac{\xi}{2}\right)=\frac{\xi^2}{4}$
+
+## A Principal-Agent model
+
+What if the Principal could observe effort?
+
+Then the Incentive Compatibility is unnecessary, and the principal needs just to compensate effort (non probabilistically)
+
+$$
+\begin{aligned}
+  \max_{e}\quad &e\xi-c(e)\\
+\end{aligned}
+$$
+
+Which has solution $e^*=\xi$, $a=0$, and $b=c(\xi)=\frac{\xi^2}{2}$. The expected utility of the agent is $0$, and the expected profit for the principal is $\frac{\xi^2}{2}$.
+
+## A Principal-Agent model
+
+Some notes:
+
+* With information asymmetry, the agent can *extract information rents* from the principal, at the cost of a worse outcome overall.
+* Without information asymmetry, the principal can extrat the whole surplus, which is larger than the case with information asymmetries.
+  
+## A Principal-Agent model
+
+In general,
+
+1. Incentivizing hard work is **costly**.
+2. The higher the profits, the larger the bonus.
+3. The principal is almost always worse off in the presence of moral hazard, while the agent might be better off.
+
+# Games with Incomplete Information
+
+## Incomplete Information
+
+A game with incomplete information is a game where a player does not know some relevant characteristic of some of the other players, for example their available options, beliefs, payoffs, etc.
+
+# Mechanism Design, the Revelation Principle, and Sales to an Unknown Buyer
+
+# Auctions
+
+# Signaling Games and The Lemons Problem
+
+
 
 # Bibliography
 
@@ -36,3 +202,5 @@ The core of the contents of this chapter takes as reference the book
 These slides took definitions and examples from the book:
 
 Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.
+
+The Moral Hazard example was taken from *Wealth and the Principal-Agent Matching*, by P. Fagandini (2022), Managerial and Decision Economics.

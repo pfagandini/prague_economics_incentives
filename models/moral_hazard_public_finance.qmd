@@ -1,0 +1,62 @@
+---
+out-dir: docs
+title: Moral Hazard in Public Finance
+---
+
+## The Model
+
+This model is taken almost literaly from *Principled Agents? The Political Economy of Good Government* from Timothy Besley, Chapter 4.
+
+There are two periods. In each period $t$, the government must decide on three things. The level of *valuable* public spending $G_t$, the value of public spending devoted to private ends $s_t$, and the level of taxation $x_t$. Let $x_t\in[0,X]$ so taxation level is bounded.
+
+In each period, the unit cost of providing a public good is $\theta_t$, determined randomly by nature. The cost of the public good is *i.i.d*, represented by $\theta\in\{L,H\}$ with $L<H$ and $Pr(\theta_t=H)=q$.
+
+For now, assume that Government Budget is balanced (nor deficit allowed, nor surplus). The budget constraint each period is:
+
+$$x_t=\theta_t G_t+ s_t$$
+
+Welfare of the voter is defined as $W(G,x)=G-\mu C(x)$, where $C(\cdot)$ is increasing and strictly convex function, and $\mu$ is a scalar that weights the cost of public funds.
+
+### Optimal Policy
+
+What would be the optimal levels of taxing and spending for a benevolent government (*i.e.* that only cares about voter's welfare)? This of course means $s_t=0$ $t=1,2$. Let's define
+
+$$G_{\theta}^*(\mu)=\arg \max \{G-\mu C(\theta G)\}$$
+
+And let $x_{\theta}^*=\theta G_{\theta}^*$ with $W^g(\theta,\mu)$ being the level of voter welfare at these optimal levels. Finally, let
+
+$$E[W^g(\mu)]=q W^g(H,\mu)+(1-q)W^g(L,\mu)$$
+
+Note that $C(\cdot)$ being strictly convex, implies that the government is optimally larger when the cost of public goods is lower, and therefore $x_L^*>x_H^*$
+
+:::{.callout-tip}
+
+## Side note
+
+Note that the first order condition on $G-\mu C(\theta G)$ leads to
+
+$$\frac{1}{\mu}=\frac{\partial C}{\partial G}(\theta G) \times \theta$$
+
+To preserve the equality, a lower value of $\theta$ requires a larger value of the derivative. This derivative is increasing (strict convexity of $C$ ensures this), and note that $\theta$ inside the argument is also smaller, and therefore $G$ must increase to compensate. This will require a larger government, but this compensation shall be large enough to compensate the decrease in $\theta$ inside the argument, and also the decrease in the $\theta$ multiplying outside of the derivative! Then the argument inside must be larger than in case we have a larger value of $\theta$.
+
+:::
+
+We further assume that $X>x_L^*$. Further, from teh welfare function, it is clear that lower levels of $\mu$ are better, and moreover, $G^*_\theta$ is also increasing for lower values of $\mu$. The less costly is to fund the public goods, the more public goods are better for the voters.
+
+## Politics
+
+Consider two time periods, $t=1,2$. Between periods there is an election, where the voters might decide between the incumbent and a challenger.
+
+The cost shock $\theta$, and the amount of rent diverted for private purposes, $s$, is privately observed by the polititian. On the other hand, $G$ and $x$ are observable by voters. Voters can **discipline** the polititian with their vote. If they want to punish the incumbent, they vote for the challenger, and they can reward the incumbent by renewing the mandate. They will punish/reward the incumbent to make them behave closer to what voters would like, to minimize rent diversion.
+
+We consider a game where voters can announce (and commit to) an incentive based re-election rule prior to the incumbent's first period policy being chosen. Let the re-election rule used by voters be denoted by a function $\sigma(G,x)$. Then for fixed $G$, the incumbent's rent extraction problem is to choose rent diversion in Periods 1 and 2 denoted by $(s_1,s_2)$ to maximize $s_1+\beta\sigma(G,\theta G+s_1)s_2$.
+
+In period 2, there are no re-election incentives to restraint rentseeking, and every polititian will choose $s_2=X$. In period 1, the incumbent can be rewarded for reducing his/her rent-seeking. Voters reason as follows: since incumbents can always extract $X$ today and forego re-election, then they must be offered an incentive to prevent them from doing so. Since all they care about are rents, they are indifferent between all packages which yield them $X$. Hence, consider the threshold level of rent $\hat{s}(\sigma)$, whcih satisfies:
+
+$$\hat{s}(\sigma)+\sigma\beta X=X$$
+
+As long as the level of *permissible* rent satisfies this, the incumbent will choose $\hat{s}(\sigma)$ adn get re-elected with probability $\sigma$. However, since the level of Period 1 rent-seeking that satisfies this incentive constraint is decreasing in $\sigma$, ti is best for voters to set $\sigma=1$. In the languange of the P-A literature, wemay therefore think of the condition $s_1\geq (1-\beta)X$ as the **participation constraint** that must be satisfied to ensure that the incumbent produces the level of public spending desired by voters for each cost level $\theta=L,H$.
+
+The pure Moral Hazard model is consistent with a term limit effect in polititians' choices of the kind found by Besley and Case (1995b). However, given the choice in reality between a challenger who can serve an extra term in office and an incumbent who will be a lame duck, the model cannot explain why the voters would ever prefer a lame duck.
+
+The model predicts that rent taking is lower by $\beta X$ when polititians face re-election incentives. The more patient are polititians, the larger the rent improvement for voters. The level of public spending is higher in the first period than the second and the level of taxation is $X$ in Period 2 and less than $X$ in Period 1.

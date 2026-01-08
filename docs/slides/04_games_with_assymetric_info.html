@@ -141,16 +141,190 @@ Paulo Fagandini
 </div>
 
 </section>
+<section class="slide level2">
+
+<div style="font-size: 70%;">
+
+</div>
+</section>
 <section>
-<section id="introduction" class="title-slide slide level1 center">
-<h1>Introduction</h1>
+<section id="moral-hazard-and-incentives-theory" class="title-slide slide level1 center">
+<h1>Moral Hazard and Incentives Theory</h1>
 
 </section>
-<section id="core-bibliography" class="slide level2">
-<h2>Core Bibliography</h2>
-<p>The core of the contents of this chapter takes as reference the book</p>
-<p><span class="emoji" data-emoji="book">📖</span> <em>Strategies and Games: Theory and Practice</em> by Prajit K. Dutta. 2001 MIT Press.</p>
+<section id="moral-hazard" class="slide level2">
+<h2>Moral Hazard</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Moral Hazard</strong> is a term that refers to the situation when an person acts when she does not bear the full (good or bad) consequences of her acts.</p>
+</div>
+</div>
+</div>
+<p>For example if you own a <span class="emoji" data-emoji="car">🚗</span>, and if you crash it, you will have to pay all the costs with fixing it <span class="emoji" data-emoji="wrench">🔧</span>.</p>
+<p>Now, if you have insurance, these costs pass along to the insurer. It is expected that you would drive less carefully than without insurance.</p>
+</section>
+<section id="moral-hazard-1" class="slide level2">
+<h2>Moral Hazard</h2>
+<p>The true cause of the problem is that the Insurance Company cannot know, at every moment, how are you driving. Of course there are some things that are present in the contract:</p>
+<ol type="1">
+<li class="fragment">They will not pay if you were speeding.</li>
+<li class="fragment">They will not pay if you were driving under the influence of drugs.</li>
+<li class="fragment">etc.</li>
+</ol>
+<p>But there are a plethora of irresponsible behavior that the company cannot monitor.</p>
+</section>
+<section id="moral-hazard-2" class="slide level2">
+<h2>Moral Hazard</h2>
+<p>In this case, the person who has to <em>act</em> and has <em>private information</em> on his actions, is known as the <strong>agent</strong>, while who is bearing the consequences of the actions of the agent is called the <strong>principal</strong>.</p>
+<p>At the core this is a problem of missaligned incentives: what is good for the agent, might not be necessarily good for the principal.</p>
+</section>
+<section id="moral-hazard-3" class="slide level2">
+<h2>Moral Hazard</h2>
+<p>What to do then?</p>
+<p>Principals have to design schemes that <em>incentive</em> the agent to behave more in line with the Principal’s goals. Of course, these incentives are costly.</p>
+</section>
+<section id="a-principal-agent-model" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>The most simple way to model the Pricipal-Agent model (intuitive and transparent way) is by modelling the relationship between employer (Principal) and employee (Agent).</p>
+<p>Suppose the Principal hires the Agent to perform some task.</p>
+</section>
+<section id="a-principal-agent-model-1" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>Let:</p>
+<ol type="1">
+<li class="fragment">both agent and principal be risk neutral: <span class="math inline">\(u_a(w)=w\)</span>, and <span class="math inline">\(u_p(\pi)=\pi\)</span>.</li>
+<li class="fragment">the outcome be <span class="math inline">\(x\in\{0,\xi\}\)</span>.</li>
+<li class="fragment">effort be chosen as <span class="math inline">\(e\in[0,1]\)</span>, and <span class="math inline">\(Pr(x=\xi|e)=e\)</span>.</li>
+<li class="fragment">the wage have fixed <span class="math inline">\(a\)</span> pay and bonus <span class="math inline">\(b\)</span>, paid in case <span class="math inline">\(x=\xi\)</span>.</li>
+<li class="fragment">Let <span class="math inline">\(c(e)=\frac{e^2}{2}\)</span> be the cost of effort.</li>
+</ol>
+</section>
+<section id="a-principal-agent-model-2" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>The maximization problem of the principal is given by:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{e,a,b}\quad &amp;-a+e(\xi-b)\\
+  s.t.\quad &amp;a+eb-c(e)\geq\bar{u}\\
+  &amp;e\in\arg\max_{\hat{e}}\{a+\hat{e}b-c(\hat{e})\}\\
+  &amp;a\geq -w
+\end{aligned}
+\]</span></p>
+<p>Let’s assume, further, than <span class="math inline">\(\omega = 0\)</span>, <em>i.e.</em> we will not allow negative fixed wage (or transfers from the agent to the principal). This is know as limited liability or cash constraint.</p>
+</section>
+<section id="a-principal-agent-model-3" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>Grossman and Hart (1983) show that under some conditions (satisfied in this model and in most of the simple versions of this model) the problem can be solved in two stages:</p>
+<ol type="1">
+<li class="fragment">Solve the problem for the agent, taking everything external to the agent as a parameter.</li>
+<li class="fragment">Solve the problem of the principal, substituting the solution of the agent as a function of the principal’s variables.</li>
+</ol>
+<p>This is how we will proceed.</p>
+</section>
+<section id="a-principal-agent-model-4" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>Given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, the agent will maximize her utility, so computing the FOC we get:</p>
+<p><span class="math display">\[b-c'=0\quad\Rightarrow\quad b=e^*\]</span></p>
+<p>So the agent will choose optimally <span class="math inline">\(e=b\)</span>.</p>
+</section>
+<section id="a-principal-agent-model-5" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>The problem for the principal is now:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{a,e}\quad &amp;-a+e(\xi-e)\\
+  s.t.\quad &amp;a+e^2-\frac{e^2}{2}\geq\bar{u}\\
+  &amp;a\geq 0
+\end{aligned}
+\]</span></p>
+<p>Now, if <span class="math inline">\(e^*=0\)</span>, the agent will accept to participate if and only if <span class="math inline">\(a\geq \bar{u}\)</span>. For simplicity assume <span class="math inline">\(\bar{u}=0\)</span>.</p>
+</section>
+<section id="a-principal-agent-model-6" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{a,e}\quad &amp;-a+e(\xi-e)\\
+  s.t.\quad &amp;a+\frac{e^2}{2}\geq0\\
+  &amp;a\geq 0
+\end{aligned}
+\]</span></p>
+<p>Which constraint is irrelevant now?</p>
+<div class="fragment">
+<p>The Participation Constraint, as <span class="math inline">\(\frac{e^2}{2}\geq 0\)</span>. Then the optimal is <span class="math inline">\(a=0\)</span>. Now what is the optimal level of effort?</p>
+</div>
+</section>
+<section id="a-principal-agent-model-7" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{e}\quad &amp;e(\xi-e)\\
+\end{aligned}
+\]</span></p>
+<p>And from there <span class="math inline">\(e^*=\frac{\xi}{2}\)</span>. Note that this makes <span class="math inline">\(b=\frac{\xi}{2}\)</span>. So the expected payoffs are:</p>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(E[u_a]=0+\left(\frac{\xi}{2}\right)^2-\frac{\xi^2}{8}=\frac{\xi^2}{8}\)</span></li>
+<li class="fragment"><span class="math inline">\(E[u_p]=-0+\frac{\xi}{2}\left(\xi-\frac{\xi}{2}\right)=\frac{\xi^2}{4}\)</span></li>
+</ol>
+</section>
+<section id="a-principal-agent-model-8" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>What if the Principal could observe effort?</p>
+<p>Then the Incentive Compatibility is unnecessary, and the principal needs just to compensate effort (non probabilistically)</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{e}\quad &amp;e\xi-c(e)\\
+\end{aligned}
+\]</span></p>
+<p>Which has solution <span class="math inline">\(e^*=\xi\)</span>, <span class="math inline">\(a=0\)</span>, and <span class="math inline">\(b=c(\xi)=\frac{\xi^2}{2}\)</span>. The expected utility of the agent is <span class="math inline">\(0\)</span>, and the expected profit for the principal is <span class="math inline">\(\frac{\xi^2}{2}\)</span>.</p>
+</section>
+<section id="a-principal-agent-model-9" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>Some notes:</p>
+<ul>
+<li class="fragment">With information asymmetry, the agent can <em>extract information rents</em> from the principal, at the cost of a worse outcome overall.</li>
+<li class="fragment">Without information asymmetry, the principal can extrat the whole surplus, which is larger than the case with information asymmetries.</li>
+</ul>
+</section>
+<section id="a-principal-agent-model-10" class="slide level2">
+<h2>A Principal-Agent model</h2>
+<p>In general,</p>
+<ol type="1">
+<li class="fragment">Incentivizing hard work is <strong>costly</strong>.</li>
+<li class="fragment">The higher the profits, the larger the bonus.</li>
+<li class="fragment">The principal is almost always worse off in the presence of moral hazard, while the agent might be better off.</li>
+</ol>
 </section></section>
+<section>
+<section id="games-with-incomplete-information" class="title-slide slide level1 center">
+<h1>Games with Incomplete Information</h1>
+
+</section>
+<section id="incomplete-information" class="slide level2">
+<h2>Incomplete Information</h2>
+<p>A game with incomplete information is a game where a player does not know some relevant characteristic of some of the other players, for example their available options, beliefs, payoffs, etc.</p>
+</section></section>
+<section id="mechanism-design-the-revelation-principle-and-sales-to-an-unknown-buyer" class="title-slide slide level1 center">
+<h1>Mechanism Design, the Revelation Principle, and Sales to an Unknown Buyer</h1>
+
+</section>
+
+<section id="auctions" class="title-slide slide level1 center">
+<h1>Auctions</h1>
+
+</section>
+
+<section id="signaling-games-and-the-lemons-problem" class="title-slide slide level1 center">
+<h1>Signaling Games and The Lemons Problem</h1>
+
+</section>
+
 <section>
 <section id="bibliography" class="title-slide slide level1 center">
 <h1>Bibliography</h1>
@@ -160,6 +334,7 @@ Paulo Fagandini
 <h2>Bibliography</h2>
 <p>These slides took definitions and examples from the book:</p>
 <p>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.</p>
+<p>The Moral Hazard example was taken from <em>Wealth and the Principal-Agent Matching</em>, by P. Fagandini (2022), Managerial and Decision Economics.</p>
 
 
 

@@ -1082,7 +1082,7 @@
     "href": "slides/04_games_with_assymetric_info.html#bibliography-1",
     "title": "Games under  Asymmetric Information",
     "section": "Bibliography",
-    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24."
+    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.\nThe Moral Hazard example was taken from Wealth and the Principal-Agent Matching, by P. Fagandini (2022), Managerial and Decision Economics."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-1",
@@ -2112,5 +2112,187 @@
     "title": "Fundamentals of  Game Theory II",
     "section": "The Commons Problem",
     "text": "The Commons Problem\nIndeed, let \\(\\delta=0.8\\)\n\n\n\n\n\n\n\n\n\n\nConsumption Rate\nSteady Output\nPerpetual Consumption\n\n\n\n\nSocial Optimum\n\\(\\frac{1-\\frac{\\delta}{2}}{2}=0.3\\)\n\\(40\\)\n\\(12\\)\n\n\nNon Coop Eq\n\\(\\frac{1-\\frac{\\delta}{2}}{2-\\frac{\\delta}{2}}=0.375\\)\n\\(25\\)\n\\(9.375\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#moral-hazard",
+    "href": "slides/04_games_with_assymetric_info.html#moral-hazard",
+    "title": "Games under  Asymmetric Information",
+    "section": "Moral Hazard",
+    "text": "Moral Hazard\n\n\n\n\n\n\nDefinition\n\n\nMoral Hazard is a term that refers to the situation when an person acts when she does not bear the full (good or bad) consequences of her acts.\n\n\n\nFor example if you own a 🚗, and if you crash it, you will have to pay all the costs with fixing it 🔧.\nNow, if you have insurance, these costs pass along to the insurer. It is expected that you would drive less carefully than without insurance."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#moral-hazard-1",
+    "href": "slides/04_games_with_assymetric_info.html#moral-hazard-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Moral Hazard",
+    "text": "Moral Hazard\nThe true cause of the problem is that the Insurance Company cannot know, at every moment, how are you driving. Of course there are some things that are present in the contract:\n\nThey will not pay if you were speeding.\nThey will not pay if you were driving under the influence of drugs.\netc.\n\nBut there are a plethora of irresponsible behavior that the company cannot monitor."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#moral-hazard-2",
+    "href": "slides/04_games_with_assymetric_info.html#moral-hazard-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Moral Hazard",
+    "text": "Moral Hazard\nIn this case, the person who has to act and has private information on his actions, is known as the agent, while who is bearing the consequences of the actions of the agent is called the principal.\nAt the core this is a problem of missaligned incentives: what is good for the agent, might not be necessarily good for the principal."
+  },
+  {
+    "objectID": "models/moral_hazard_public_finance.html",
+    "href": "models/moral_hazard_public_finance.html",
+    "title": "Moral Hazard in Public Finance",
+    "section": "",
+    "text": "This model is taken almost literaly from Principled Agents? The Political Economy of Good Government from Timothy Besley, Chapter 4.\nThere are two periods. In each period \\(t\\), the government must decide on three things. The level of valuable public spending \\(G_t\\), the value of public spending devoted to private ends \\(s_t\\), and the level of taxation \\(x_t\\). Let \\(x_t\\in[0,X]\\) so taxation level is bounded.\nIn each period, the unit cost of providing a public good is \\(\\theta_t\\), determined randomly by nature. The cost of the public good is i.i.d, represented by \\(\\theta\\in\\{L,H\\}\\) with \\(L&lt;H\\) and \\(Pr(\\theta_t=H)=q\\).\nFor now, assume that Government Budget is balanced (nor deficit allowed, nor surplus). The budget constraint each period is:\n\\[x_t=\\theta_t G_t+ s_t\\]\nWelfare of the voter is defined as \\(W(G,x)=G-\\mu C(x)\\), where \\(C(\\cdot)\\) is increasing and strictly convex function, and \\(\\mu\\) is a scalar that weights the cost of public funds.\n\n\nWhat would be the optimal levels of taxing and spending for a benevolent government (i.e. that only cares about voter’s welfare)? This of course means \\(s_t=0\\) \\(t=1,2\\). Let’s define\n\\[G_{\\theta}^*(\\mu)=\\arg \\max \\{G-\\mu C(\\theta G)\\}\\]\nAnd let \\(x_{\\theta}^*=\\theta G_{\\theta}^*\\) with \\(W^g(\\theta,\\mu)\\) being the level of voter welfare at these optimal levels. Finally, let\n\\[E[W^g(\\mu)]=q W^g(H,\\mu)+(1-q)W^g(L,\\mu)\\]\nNote that \\(C(\\cdot)\\) being strictly convex, implies that the government is optimally larger when the cost of public goods is lower, and therefore \\(x_L^*&gt;x_H^*\\)\n\n\n\n\n\n\nTipSide note\n\n\n\nNote that the first order condition on \\(G-\\mu C(\\theta G)\\) leads to\n\\[\\frac{1}{\\mu}=\\frac{\\partial C}{\\partial G}(\\theta G) \\times \\theta\\]\nTo preserve the equality, a lower value of \\(\\theta\\) requires a larger value of the derivative. This derivative is increasing (strict convexity of \\(C\\) ensures this), and note that \\(\\theta\\) inside the argument is also smaller, and therefore \\(G\\) must increase to compensate. This will require a larger government, but this compensation shall be large enough to compensate the decrease in \\(\\theta\\) inside the argument, and also the decrease in the \\(\\theta\\) multiplying outside of the derivative! Then the argument inside must be larger than in case we have a larger value of \\(\\theta\\).\n\n\nWe further assume that \\(X&gt;x_L^*\\). Further, from teh welfare function, it is clear that lower levels of \\(\\mu\\) are better, and moreover, \\(G^*_\\theta\\) is also increasing for lower values of \\(\\mu\\). The less costly is to fund the public goods, the more public goods are better for the voters."
+  },
+  {
+    "objectID": "models/moral_hazard_public_finance.html#the-model",
+    "href": "models/moral_hazard_public_finance.html#the-model",
+    "title": "Moral Hazard in Public Finance",
+    "section": "",
+    "text": "This model is taken almost literaly from Principled Agents? The Political Economy of Good Government from Timothy Besley, Chapter 4.\nThere are two periods. In each period \\(t\\), the government must decide on three things. The level of valuable public spending \\(G_t\\), the value of public spending devoted to private ends \\(s_t\\), and the level of taxation \\(x_t\\). Let \\(x_t\\in[0,X]\\) so taxation level is bounded.\nIn each period, the unit cost of providing a public good is \\(\\theta_t\\), determined randomly by nature. The cost of the public good is i.i.d, represented by \\(\\theta\\in\\{L,H\\}\\) with \\(L&lt;H\\) and \\(Pr(\\theta_t=H)=q\\).\nFor now, assume that Government Budget is balanced (nor deficit allowed, nor surplus). The budget constraint each period is:\n\\[x_t=\\theta_t G_t+ s_t\\]\nWelfare of the voter is defined as \\(W(G,x)=G-\\mu C(x)\\), where \\(C(\\cdot)\\) is increasing and strictly convex function, and \\(\\mu\\) is a scalar that weights the cost of public funds.\n\n\nWhat would be the optimal levels of taxing and spending for a benevolent government (i.e. that only cares about voter’s welfare)? This of course means \\(s_t=0\\) \\(t=1,2\\). Let’s define\n\\[G_{\\theta}^*(\\mu)=\\arg \\max \\{G-\\mu C(\\theta G)\\}\\]\nAnd let \\(x_{\\theta}^*=\\theta G_{\\theta}^*\\) with \\(W^g(\\theta,\\mu)\\) being the level of voter welfare at these optimal levels. Finally, let\n\\[E[W^g(\\mu)]=q W^g(H,\\mu)+(1-q)W^g(L,\\mu)\\]\nNote that \\(C(\\cdot)\\) being strictly convex, implies that the government is optimally larger when the cost of public goods is lower, and therefore \\(x_L^*&gt;x_H^*\\)\n\n\n\n\n\n\nTipSide note\n\n\n\nNote that the first order condition on \\(G-\\mu C(\\theta G)\\) leads to\n\\[\\frac{1}{\\mu}=\\frac{\\partial C}{\\partial G}(\\theta G) \\times \\theta\\]\nTo preserve the equality, a lower value of \\(\\theta\\) requires a larger value of the derivative. This derivative is increasing (strict convexity of \\(C\\) ensures this), and note that \\(\\theta\\) inside the argument is also smaller, and therefore \\(G\\) must increase to compensate. This will require a larger government, but this compensation shall be large enough to compensate the decrease in \\(\\theta\\) inside the argument, and also the decrease in the \\(\\theta\\) multiplying outside of the derivative! Then the argument inside must be larger than in case we have a larger value of \\(\\theta\\).\n\n\nWe further assume that \\(X&gt;x_L^*\\). Further, from teh welfare function, it is clear that lower levels of \\(\\mu\\) are better, and moreover, \\(G^*_\\theta\\) is also increasing for lower values of \\(\\mu\\). The less costly is to fund the public goods, the more public goods are better for the voters."
+  },
+  {
+    "objectID": "models/moral_hazard_public_finance.html#politics",
+    "href": "models/moral_hazard_public_finance.html#politics",
+    "title": "Moral Hazard in Public Finance",
+    "section": "Politics",
+    "text": "Politics\nConsider two time periods, \\(t=1,2\\). Between periods there is an election, where the voters might decide between the incumbent and a challenger.\nThe cost shock \\(\\theta\\), and the amount of rent diverted for private purposes, \\(s\\), is privately observed by the polititian. On the other hand, \\(G\\) and \\(x\\) are observable by voters. Voters can discipline the polititian with their vote. If they want to punish the incumbent, they vote for the challenger, and they can reward the incumbent by renewing the mandate. They will punish/reward the incumbent to make them behave closer to what voters would like, to minimize rent diversion.\nWe consider a game where voters can announce (and commit to) an incentive based re-election rule prior to the incumbent’s first period policy being chosen. Let the re-election rule used by voters be denoted by a function \\(\\sigma(G,x)\\). Then for fixed \\(G\\), the incumbent’s rent extraction problem is to choose rent diversion in Periods 1 and 2 denoted by \\((s_1,s_2)\\) to maximize \\(s_1+\\beta\\sigma(G,\\theta G+s_1)s_2\\).\nIn period 2, there are no re-election incentives to restraint rentseeking, and every polititian will choose \\(s_2=X\\). In period 1, the incumbent can be rewarded for reducing his/her rent-seeking. Voters reason as follows: since incumbents can always extract \\(X\\) today and forego re-election, then they must be offered an incentive to prevent them from doing so. Since all they care about are rents, they are indifferent between all packages which yield them \\(X\\). Hence, consider the threshold level of rent \\(\\hat{s}(\\sigma)\\), whcih satisfies:\n\\[\\hat{s}(\\sigma)+\\sigma\\beta X=X\\]\nAs long as the level of permissible rent satisfies this, the incumbent will choose \\(\\hat{s}(\\sigma)\\) adn get re-elected with probability \\(\\sigma\\). However, since the level of Period 1 rent-seeking that satisfies this incentive constraint is decreasing in \\(\\sigma\\), ti is best for voters to set \\(\\sigma=1\\). In the languange of the P-A literature, wemay therefore think of the condition \\(s_1\\geq (1-\\beta)X\\) as the participation constraint that must be satisfied to ensure that the incumbent produces the level of public spending desired by voters for each cost level \\(\\theta=L,H\\).\nThe pure Moral Hazard model is consistent with a term limit effect in polititians’ choices of the kind found by Besley and Case (1995b). However, given the choice in reality between a challenger who can serve an extra term in office and an incumbent who will be a lame duck, the model cannot explain why the voters would ever prefer a lame duck.\nThe model predicts that rent taking is lower by \\(\\beta X\\) when polititians face re-election incentives. The more patient are polititians, the larger the rent improvement for voters. The level of public spending is higher in the first period than the second and the level of taxation is \\(X\\) in Period 2 and less than \\(X\\) in Period 1."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#moral-hazard-3",
+    "href": "slides/04_games_with_assymetric_info.html#moral-hazard-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Moral Hazard",
+    "text": "Moral Hazard\nWhat to do then?\nPrincipals have to design schemes that incentive the agent to behave more in line with the Principal’s goals. Of course, these incentives are costly."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nThe most simple way to model the Pricipal-Agent model (intuitive and transparent way) is by modelling the relationship between employer (Principal) and employee (Agent).\nSuppose the Principal hires the Agent to perform some task."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-1",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nLet:\n\nboth agent and principal be risk neutral: \\(u_a(w)=w\\), and \\(u_p(\\pi)=\\pi\\).\nthe outcome be \\(x\\in\\{0,\\xi\\}\\).\neffort be chosen as \\(e\\in[0,1]\\), and \\(Pr(x=\\xi|e)=e\\).\nthe wage have fixed \\(a\\) pay and bonus \\(b\\), paid in case \\(x=\\xi\\).\nLet \\(c(e)=\\frac{e^2}{2}\\) be the cost of effort."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-2",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nThe maximization problem of the principal is given by:\n\\[\n\\begin{aligned}\n  \\max_{e,a,b}\\quad &-a+e(\\xi-b)\\\\\n  s.t.\\quad &a+eb-c(e)\\geq\\bar{u}\\\\\n  &e\\in\\arg\\max_{\\hat{e}}\\{a+\\hat{e}b-c(\\hat{e})\\}\\\\\n  &a\\geq -w\n\\end{aligned}\n\\]\nLet’s assume, further, than \\(\\omega = 0\\), i.e. we will not allow negative fixed wage (or transfers from the agent to the principal). This is know as limited liability or cash constraint."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-3",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nGrossman and Hart (1983) show that under some conditions (satisfied in this model and in most of the simple versions of this model) the problem can be solved in two stages:\n\nSolve the problem for the agent, taking everything external to the agent as a parameter.\nSolve the problem of the principal, substituting the solution of the agent as a function of the principal’s variables.\n\nThis is how we will proceed."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-4",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nGiven \\(a\\) and \\(b\\), the agent will maximize her utility, so computing the FOC we get:\n\\[b-c'=0\\quad\\Rightarrow\\quad b=e^*\\]\nSo the agent will choose optimally \\(e=b\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-5",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-5",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nThe problem for the principal is now:\n\\[\n\\begin{aligned}\n  \\max_{a,e}\\quad &-a+e(\\xi-e)\\\\\n  s.t.\\quad &a+e^2-\\frac{e^2}{2}\\geq\\bar{u}\\\\\n  &a\\geq 0\n\\end{aligned}\n\\]\nNow, if \\(e^*=0\\), the agent will accept to participate if and only if \\(a\\geq \\bar{u}\\). For simplicity assume \\(\\bar{u}=0\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-6",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-6",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\n\\[\n\\begin{aligned}\n  \\max_{a,e}\\quad &-a+e(\\xi-e)\\\\\n  s.t.\\quad &a+\\frac{e^2}{2}\\geq0\\\\\n  &a\\geq 0\n\\end{aligned}\n\\]\nWhich constraint is irrelevant now?\n\nThe Participation Constraint, as \\(\\frac{e^2}{2}\\geq 0\\). Then the optimal is \\(a=0\\). Now what is the optimal level of effort?"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-7",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-7",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\n\\[\n\\begin{aligned}\n  \\max_{e}\\quad &e(\\xi-e)\\\\\n\\end{aligned}\n\\]\nAnd from there \\(e^*=\\frac{\\xi}{2}\\). Note that this makes \\(b=\\frac{\\xi}{2}\\). So the expected payoffs are:\n\n\\(E[u_a]=0+\\left(\\frac{\\xi}{2}\\right)^2-\\frac{\\xi^2}{8}=\\frac{\\xi^2}{8}\\)\n\\(E[u_p]=-0+\\frac{\\xi}{2}\\left(\\xi-\\frac{\\xi}{2}\\right)=\\frac{\\xi^2}{4}\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-8",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-8",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nWhat if the Principal could observe effort?\nThen the Incentive Compatibility is unnecessary, and the principal needs just to compensate effort (non probabilistically)\n\\[\n\\begin{aligned}\n  \\max_{e}\\quad &e\\xi-c(e)\\\\\n\\end{aligned}\n\\]\nWhich has solution \\(e^*=\\xi\\), \\(a=0\\), and \\(b=c(\\xi)=\\frac{\\xi^2}{2}\\). The expected utility of the agent is \\(0\\), and the expected profit for the principal is \\(\\frac{\\xi^2}{2}\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-9",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-9",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nSome notes:\n\nWith information asymmetry, the agent can extract information rents from the principal, at the cost of a worse outcome overall.\nWithout information asymmetry, the principal can extrat the whole surplus, which is larger than the case with information asymmetries."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-10",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-10",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nIn general,\n\nIncentivizing hard work is costly.\nThe higher the profits, the larger the bonus.\nThe principal is almost always worse off in the presence of moral hazard, while the agent might be better off."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-11",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-11",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nThe expected payoffs are now:\n\n\n\\(E[u|e_h]=0.6 u(g-f)+0.3 u(m-f)+0.1 u(b-f)-d_h\\)\n\\(E[u|e_l]=0.1 u(g-f)+0.3 u(m-f)+0.6 u(b-f)-d_l\\)\n\n\n\nWhich one is better is no longer obvious. One has lower costs, the other has higher expected rewards."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-12",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-12",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\n\nIn the first case, the Principal bears all the risk (fixed wage, whatever happens).\nIn the second case, the Agent bears all the risk (fixed \\(f\\), whatever happens).\n\n\nThe most common scenario is an intermediate situation, a base wage plus a bonus that depends on the outcome."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-13",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-13",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nWhat is sure, is that the agent will choose \\(e_h\\) over \\(e_l\\) only if it is convenient to her, i.e. the expected utility of that choice is larger than the expected utility of the alternative.\n\n\\[\n\\begin{aligned}\n  E[u|e_h] &\\geq E[u|e_l]\\\\\n  0.6 u(w_g)+0.1 u(w_b)-d_h &\\geq 0.1 u(w_g)+0.6 u(w_b)-d_l\\\\\n  \\frac{1}{2}\\left[u(w_g)-u(w_b)\\right] &\\geq d_h-d_l\n\\end{aligned}\\]\n\nBefore continuing, let’s think on the case without Moral Hazard (without hidden information), to have as a benchmark."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-14",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-14",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nSuppose effort is observable, then the Principal could offer compensation based on effort instead of the outcome, \\(w_H\\) when \\(e_H\\) is observed, and \\(w_L\\) when \\(e_L\\) is observed. To incentivize high effort it would be enough that:\n\\[u(w_H)-d_H\\geq u(w_L)-d_L\\]\nBut, is incetivizing high effort convenient for the Principal?"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-15",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-15",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nConditional on effort the principal gets:\n\nFor \\(e_H\\), the profits are \\(0.6g+0.3m+0.1b-w_H\\)\nFor \\(e_L\\), the profits are \\(0.1g+0.3m+0.6b-w_L\\)\n\n\nIt is easy to check that \\(e_H\\) is convenient for the principal if and only if\n\\[\\frac{1}{2}[g-b]\\geq W_H-W_L\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-16",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-16",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nMore generically, the principal needs to solve:\n\n\\[\n\\begin{aligned}\n  \\max_{e, w}\\quad &E[\\pi|e]\\\\\n  s.t.\\quad E[u|e]&\\geq \\bar{u} \\\\\n            e &\\in \\arg \\max_{\\hat{e}} E[u|\\hat{e}]\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-17",
+    "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-17",
+    "title": "Games under  Asymmetric Information",
+    "section": "A Principal-Agent model",
+    "text": "A Principal-Agent model\nAn Example:\nLet \\(u(w)=2\\sqrt{w}\\), \\(d_H=10\\), \\(d_L=0\\), and profits levels are \\(g=200\\), \\(m=100\\), \\(b=50\\).\nWe have for the agent then:\n\n\\(E[u|e_h]=1.2\\sqrt{w_g}+0.6 \\sqrt{w_m}+0.2\\sqrt{w_b}-10\\)\n\\(E[u|e_l]=0.2 \\sqrt{w_g}+0.6 \\sqrt{w_m}+1.2\\sqrt{w_b}-0\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#incomplete-information",
+    "href": "slides/04_games_with_assymetric_info.html#incomplete-information",
+    "title": "Games under  Asymmetric Information",
+    "section": "Incomplete Information",
+    "text": "Incomplete Information\nA game with incomplete information is a game where a player does not know some relevant characteristic of some of the other players, for example their available options, beliefs, payoffs, etc."
   }
 ]
