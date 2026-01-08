@@ -1846,5 +1846,271 @@
     "title": "Fundamentals of  Game Theory II",
     "section": "Infinitely Repeated Games",
     "text": "Infinitely Repeated Games\nCan we find \\(\\delta\\) such that the crime pays off?\n\\[\\Pi_{nc}=-1-\\frac{\\delta}{1-\\delta}\\leq 0-\\frac{15\\delta}{1-\\delta}=\\Pi_c\\]\n\\[-1\\leq\\frac{-14\\delta}{1-\\delta}\\ \\Rightarrow\\ 1-\\delta \\geq 14\\delta\\ \\Rightarrow\\ \\delta\\leq \\frac{1}{15}\\]\nIn order to betray my colleague, I need to really care little about the future!"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#dynamic-games",
+    "href": "slides/03_game_theory_extensive_form.html#dynamic-games",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Dynamic Games",
+    "text": "Dynamic Games\nWhile repeated games are also a dynamic game, they have a particular shortcoming: The same stage is repeated over and over, that is:\n\nPlayers are the same\nStrategies are the same\nPayoffs are the same\nEverything is the same!"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#dynamic-games-1",
+    "href": "slides/03_game_theory_extensive_form.html#dynamic-games-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "Dynamic Games",
+    "text": "Dynamic Games\nDynamic Games allow us to introduce slight modifications to the game that is played every time, and thus, we can model more realistic situations."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\nThe game environment at period \\(t\\) is the size of the resource stock in that period, \\(y_t\\geq 0\\).\nThe resource can be accessed by any of (w.l.g.) 2 players.\nLet \\(c_{it}\\geq 0\\) denote player’s \\(i\\) consumption at period \\(t\\). Let \\(C_t=c_{1t}+c_{2t}\\).\nPlayer \\(i\\)’ instantaneous utility function is \\(u_i(c_{it})\\), with \\(u_i'&gt;0\\) and \\(u_i''&lt;0\\). Moreover, let \\(u_i(c_{it})=\\ln (c_{it})\\)"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-1",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-1",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\nNote again, that for every \\(t\\), it must hold that \\(C_t\\leq y_t\\)\nLet savings be defined as \\(S_t=y_t-C_t\\).\nAssume the savings have a return, through a production function, \\(y_{t+1}=10\\times\\sqrt{S_t}\\)\nAssume further that everyone shares the same discount factor \\(0&lt;\\delta&lt;1\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-2",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-2",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nWe will try to answer some important questions with this model:\n\nHow does \\(y_t\\) evolve over time?\nIs there a level for \\(y_t\\) that can be sustained?\nWhat is the socially optimal sustainable \\(y\\)?\nDoes strategic interaction lead to overextraction of the resource?"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-3",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-3",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nLet’s look first for a social optimum. For now, let’s assume there are two periods only, and we will start by solving for the last period (note the lack of time index).\n\\[ \\max _{c_1+c_2\\leq y} \\ln (c_1) + \\ln (c2) \\]\nBut given this is the last period, it only make sense that we use all resources, and then \\(c_1+c_2=y\\), or \\(c_1=y-c_2\\), that we can substitute back."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-4",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-4",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\\[ \\max _{c_1} \\ln (c_1) + \\ln (y-c_1)\\]\nWhich leads to the FOC \\[\\frac{1}{c_1^*}-\\frac{1}{y-c_1^*}=0\\ \\Leftrightarrow\\ c_1^*=\\frac{y}{2}\\]\nOf course, \\(c_2^*=c_1^*=\\frac{y}{2}\\). An expected result given the concavity of the utility function."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-5",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-5",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nThe (socially optimal) utility for each player in the last stage is then \\[V^1(y)=\\ln \\left(\\frac{y}{2}\\right)=\\ln (y) - \\ln (2)\\]\nNow, we need to solve the problem in the first period:\n\\[\\max_{c_1+c_2\\leq y} \\ln (c_1) + \\ln (c_2) + 2\\delta V\\left(10\\times\\sqrt{y-c_1-c_2}\\right)\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-6",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-6",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nLet’s focus in the second part:\n\n\\[\n\\begin{aligned}\n  V^1\\left(10\\times\\sqrt{y-c_1-c_2}\\right)=\\ln \\left(10\\times\\sqrt{y-c_1-c_2}\\right) - \\ln (2)\n\\end{aligned}  \n\\] and \\[\n\\ln \\left(10\\times \\sqrt{y-c_1-c_1}\\right)= \\ln (10) + \\frac{1}{2} \\ln (y - c_1 - c_2)\n\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-7",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-7",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\n\\[\nV^1\\left(10\\times\\sqrt{y-c_1-c_2}\\right) = \\frac{1}{2} \\ln (y - c_1 - c_2) + \\ln (5)\n\\]\n\nNote that \\(\\ln (5)\\) is a constant, and then in the maximization problem it is irrelevant. Thus, our maximization problem is equivalent to:\n\\[\\max_{c_1+c_2\\leq y} \\ln (c_1) + \\ln (c_2) + \\delta \\ln\\left(y-c_1-c_2\\right)\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-8",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-8",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nThe FOCs are:\n\\[\n\\begin{aligned}\n  \\frac{1}{c_1}&=\\frac{\\delta}{y-c_1-c_2}\\\\\n  \\frac{1}{c_2}&=\\frac{\\delta}{y-c_1-c_2}\n\\end{aligned}\n\\]\nFrom where we obtain that \\(c_1^*=c_2^*\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-9",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-9",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nFrom there we substitute \\(c\\) in either to get:\n\\[\n\\begin{aligned}\n  \\frac{1}{c}&=\\frac{\\delta}{y-2c}\\\\\n  y-2c &= \\delta c\\\\\n  c&=\\frac{y}{2+\\delta}\n\\end{aligned}\n\\]\nNote that a smaller share of the available resources is being consumed: \\(\\frac{1}{2}&gt;\\frac{1}{2+\\delta}\\). There is optimally some investment, and this investment is larger, the larger agents value the future (the larger \\(\\delta\\))."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-10",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-10",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nNow, we can substitute back into the lifetime utility to obtain the each consumer’s socially optimal lifetime utility. Noting that \\(\\delta\\) is a constant, it can be shown (with some algebra) that:\n\\[\n\\begin{aligned}\n  V^2(y) = \\left(1+\\frac{\\delta}{2}\\right) \\ln (y) + K_0\n\\end{aligned}\n\\]\nWith \\(K_0=-\\ln (2+\\delta) + \\delta \\ln (5) + \\frac{\\delta}{2} \\ln \\left(\\frac{\\delta}{2+\\delta}\\right)\\) a constant."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-11",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-11",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nBut what about more than two periods?\nIn the first period now, the problem is:\n\\[\n\\max_{c_1+c_2\\leq y} \\ln (c_1) + \\ln (c_2) + 2\\delta V^2\\left[10\\sqrt{y-c_1-c_2}\\right]\n\\] or \\[\n\\max_{c_1+c_2\\leq y} \\ln (c_1) + \\ln (c_2) + \\delta\\left(1+\\frac{\\delta}{2}\\right)\\ln (y-c_1-c_2)\n\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-12",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-12",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nThe FOCs are:\n\\[\n\\begin{aligned}\n  \\frac{1}{c_1}&=\\left(1+\\frac{\\delta}{2}\\right)\\frac{\\delta}{y-c_1-c2}\\\\\n  \\frac{1}{c_2}&=\\left(1+\\frac{\\delta}{2}\\right)\\frac{\\delta}{y-c_1-c2}\n\\end{aligned}\n\\]\nAgain, with the consequence of \\(c_1=c_2=c\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-13",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-13",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nSubstituting in either:\n\\[\n\\begin{aligned}\n  \\frac{1}{c}&=\\left(1+\\frac{\\delta}{2}\\right)\\frac{\\delta}{y-2c}\\\\\n  2y-4c&= (2+\\delta)\\delta c \\\\\n  c &= \\frac{2y}{\\delta(2+\\delta)+4} = \\frac{2y}{4+2\\delta+\\delta^2}\\\\\n  &= \\frac{y}{2(1+\\frac{\\delta}{2}+\\frac{\\delta^2}{4})}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-14",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-14",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nThe socially optimal utility for each player is:\n\\[\n\\begin{aligned}\n  V^3(y)=\\left(1+\\frac{\\delta}{2}+\\frac{\\delta^2}{4}\\right) \\ln (y) + K_1\n\\end{aligned}\n\\]\nWith \\(K_1\\) a constant, in a simmilar fashion as we described \\(K_0\\) for \\(V^2(y)\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-15",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-15",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nLet’s wrap this up:\n\n\n\nPeriods remaining\n\\(c^*\\) as a fraction of \\(y\\)\n\n\n\n\n1\n\\(\\frac{1}{2}\\)\n\n\n2\n\\(\\frac{1}{2\\left(1+\\frac{\\delta}{2}\\right)}\\)\n\n\n3\n\\(\\frac{1}{2(1+\\frac{\\delta}{2}+\\frac{\\delta^2}{4})}\\)\n\n\n\n\nWhat is the pattern?"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-16",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-16",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nFor \\(T\\) periods remaining, we would have:\n\n\n\n\n\n\n\nPeriods remaining\n\\(c^*\\) as a fraction of \\(y\\)\n\n\n\n\n\\(T\\)\n\\(\\frac{1}{2\\left(1+\\frac{\\delta}{2}+\\frac{\\delta^2}{4}+\\dots+\\left(\\frac{\\delta}{2}\\right)^{T-1}\\right)}\\)\n\n\n\nOr \\(\\frac{1}{2\\left(\\sum_{t=0}^{T-1} \\left(\\frac{\\delta}{2}\\right)^{t}\\right)}\\), but remember that \\(\\delta\\in(0,1)\\), then this sum is the geommetric series."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-17",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-17",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\n\n\n\n\n\n\nPeriods remaining\n\\(c^*\\) as a fraction of \\(y\\)\n\n\n\n\n\\(T\\)\n\\(\\frac{1}{2\\left(\\frac{1-\\left(\\frac{\\delta}{2}\\right)^T}{1-\\frac{\\delta}{2}}\\right)}\\)\n\n\n\nAnd if \\(T\\rightarrow\\infty\\), we get that at every period, consumers will consume:\n\\[c(y)=\\left(1-\\frac{\\delta}{2}\\right) \\frac{y}{2}\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-18",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-18",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nWith a simmilar trick, it can be shown that the optimal lifetime (individual) utility is:\n\\[V(y)=\\frac{1}{1-\\frac{\\delta}{2}} \\ln (y) + K\\]\nWith \\(K\\) some constant, found in a simmilar fashion to \\(K_0\\) and \\(K_1\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-19",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-19",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nIs there a stable output level?\n\n\\[C(y) = 2 c(y) = \\left(1-\\frac{\\delta}{2}\\right) y\\ \\Rightarrow\\ S(y)=\\frac{\\delta}{2}y\\]\nWhich in turns imply that:\n\\[ y_{t+1}= 10\\times\\sqrt{\\frac{\\delta}{2}y_t} \\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-20",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-20",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nIf output is stable, then \\(y_t=y_{t+1}\\)\n\\[ y= 10\\times\\sqrt{\\frac{\\delta}{2}y}\\ \\Rightarrow\\ y = 50\\delta\\]\nSo for example if \\(\\delta=0.8\\), then output is stable when it reaches \\(y=40\\). Then, it stays forever at that level. Individual consumption is therefore 12 units forever for each."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-21",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-21",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nOf course, this equilibrium does not use any game theory, a Social Optimum is imposed by a Benevolent Dictator. Let’s study the non-cooperative game now.\n\nWe need to solve by backward induction, and we can save some work, as the last stage will be equal,1 both try to consume everything, and end up splitting \\(y\\).\n\nin the sense of a share of whatever is available."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-22",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-22",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nFor the previous period, things are different. Each agent will solve individually their own maximization problem:\n\\[\\max_{c_1\\leq y-c_2} \\ln (c_1) + \\delta W^1\\left[10\\sqrt{y-c_1-c_2}\\right]\\]\nIn this case \\(W^1\\) plays the same role \\(V^1\\) played in the SO. Moreover, they conincide for the last period, as already stated. This will not be the case for the other periods, that that’s why we use \\(W\\) instead of \\(V\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-23",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-23",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nRemember again, that \\[W^1(y)=\\frac{1}{2} \\ln (y - c_1 - c_2) + \\ln (5)\\] And therefore the maximization problem is equivalent to:\n\\[\\max_{c_1\\leq y-c_2} \\ln (c_1) + \\frac{\\delta}{2} \\ln \\left(y-c_1-c_2\\right)\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-24",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-24",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nThat yields FOC:\n\\[\\begin{aligned}\n  \\frac{1}{c_1}&=\\frac{\\delta/2}{y-c_1-c_2}\\\\\n  y-c_1-c_2&=\\frac{\\delta c_1}{2}\\\\\n  c_1&= \\frac{2(y-c_2)}{2+\\delta}\n\\end{aligned}\\]\nBy symmetry \\(2\\)’s best response is \\(c_2=\\frac{2(y-c_1)}{2+\\delta}\\)"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-25",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-25",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nSubstituting one into the other:\n\n\\[\\begin{aligned}\n  c_1 &= \\frac{2\\left(y-\\frac{2(y-c_1)}{2+\\delta}\\right)}{2+\\delta}\\\\\n  (2+\\delta)c_1&=2y-\\frac{4y}{2+\\delta}+\\frac{4c_1}{2+\\delta}\\\\\n  \\left[(2+\\delta)^2-4\\right]c_1&=2\\delta y\\\\\n  c_1 &= \\frac{2\\delta}{(2+\\delta)^2-4}y=\\frac{y}{2+\\frac{\\delta}{2}}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-26",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-26",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nBy symmetry we have that \\(c_1=c_2=\\frac{y}{2+\\frac{\\delta}{2}}=\\frac{y}{2\\left(1+\\frac{\\delta}{4}\\right)}\\).\nThese consumptions are already larger than the situation we observed in the social optimum: \\(c=\\frac{y}{2\\left(1+\\frac{\\delta}{2}\\right)}\\).\nReplace in the utility function and we obtain:\n\\[W^2(y)=\\left(1+\\frac{\\delta}{2}\\right) \\ln (y) + C_1 \\]\nWhere \\(C_1\\) is a constant found in the same fashion as \\(K_1\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-27",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-27",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nNow, in the same way as we did for the SO, we replace for a third period, and get the following maximization problem:\n\\[\\begin{align}\n  \\max_{c_1\\leq y-c_2} \\ln (c_1) + \\frac{\\delta}{2}\\left(1+\\frac{\\delta}{2}\\right) \\ln (y-c_1-c_2)\n\\end{align}\\] with FOC \\[\\frac{1}{c_1}=\\frac{\\frac{\\delta}{2}\\left(1+\\frac{\\delta}{2}\\right)}{y-c_1-c_2}\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-28",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-28",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nFor now, let \\(\\psi = \\frac{\\delta}{2}\\left(1+\\frac{\\delta}{2}\\right)\\):\n\\[\n\\begin{aligned}\n  y-c_1-c_2 &= c_1 \\psi \\\\\n  c_1 &= \\frac{y-c_2}{1+\\psi}\n\\end{aligned}\n\\]\nBy symmetry \\(c_2=\\frac{y-c_1}{1+\\psi}\\)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-29",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-29",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\\[\n\\begin{aligned}\n  c_1 &= \\frac{y-\\frac{y-c_1}{1+\\psi}}{1+\\psi}\\\\\n  (1+\\psi)^2c_1 &= y(1+\\psi)-y+c_1\\\\\n  c_1 &= \\frac{y \\psi}{(1+\\psi)^2-1}=\\frac{y}{2+\\psi}\\\\\n  c_1 &= \\frac{y}{2+\\frac{\\delta}{2}\\left(1+\\frac{\\delta}{2}\\right)}=\\frac{y}{2+\\frac{\\delta}{2}+\\left(\\frac{\\delta}{2}\\right)^2}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-30",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-30",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nNote now that, if we generalize this for \\(T\\), the denominator becomes:\n\\[\n\\begin{aligned}\n  2+\\frac{\\delta}{2}+\\left(\\frac{\\delta}{2}\\right)^2+\\dots+\\left(\\frac{\\delta}{2}\\right)^{T-1}&=\\\\\n  1 + \\underbrace{1 +\\frac{\\delta}{2}+\\left(\\frac{\\delta}{2}\\right)^2+\\dots+\\left(\\frac{\\delta}{2}\\right)^{T-1}}_{\\text{geometric series}}&=\\\\\n  1+\\frac{1-\\left(\\frac{\\delta}{2}\\right)^T}{1-\\frac{\\delta}{2}}=\\frac{2-\\frac{\\delta}{2}-\\left(\\frac{\\delta}{2}\\right)^T}{1-\\frac{\\delta}{2}}&=\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-31",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-31",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nAnd as \\(T\\rightarrow\\infty\\):\n\\[\\frac{2-\\frac{\\delta}{2}-\\left(\\frac{\\delta}{2}\\right)^T}{1-\\frac{\\delta}{2}}\\rightarrow \\frac{2-\\frac{\\delta}{2}}{1-\\frac{\\delta}{2}}\\]\nAnd \\[c_1=\\frac{1-\\frac{\\delta}{2}}{2-\\frac{\\delta}{2}}y&gt;\\underbrace{\\frac{1-\\frac{\\delta}{2}}{2} y}_{\\text{Social Optimum}}\\]"
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-32",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-32",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nSo consumption seems to be larger… how can this be?\n\nThe consumption share of output is larger, but output need not be the same! Indeed most likely it will be lower. What we showed is that both consumers will overconsume.\nLet’s check the steady state for the output in this case."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-33",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-33",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nRemember, if \\(y\\) is a steady state, it means that \\(y_{t+1}=y_t\\). For that we have that:\n\\[y=10\\times\\sqrt{y-c_1-c_2}=10\\times\\sqrt{y-\\frac{2-\\delta}{2-\\frac{\\delta}{2}}y}\\] must be true."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-34",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-34",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\n\\[\n\\begin{aligned}\n  y^2&=100y\\left(\\frac{\\delta/2}{2-\\delta/2}\\right)\\\\\n  y&= 50\\frac{\\delta}{2-\\frac{\\delta}{2}}\n\\end{aligned}\n\\]\nAgain if \\(\\delta=0.8\\) we have that \\(y=25\\). We can see that both players will overconsume and achieve a much lower steady state (and therefore consumption)."
+  },
+  {
+    "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-35",
+    "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-35",
+    "title": "Fundamentals of  Game Theory II",
+    "section": "The Commons Problem",
+    "text": "The Commons Problem\nIndeed, let \\(\\delta=0.8\\)\n\n\n\n\n\n\n\n\n\n\nConsumption Rate\nSteady Output\nPerpetual Consumption\n\n\n\n\nSocial Optimum\n\\(\\frac{1-\\frac{\\delta}{2}}{2}=0.3\\)\n\\(40\\)\n\\(12\\)\n\n\nNon Coop Eq\n\\(\\frac{1-\\frac{\\delta}{2}}{2-\\frac{\\delta}{2}}=0.375\\)\n\\(25\\)\n\\(9.375\\)"
   }
 ]

@@ -1185,9 +1185,402 @@ $$-1\leq\frac{-14\delta}{1-\delta}\ \Rightarrow\ 1-\delta \geq 14\delta\ \Righta
 
 In order to *betray* my colleague, I need to really care little about the future!
 
+# Dynamic Games and an Application to the Tragedy of the Commons
+
+## Dynamic Games
+
+While repeated games are also a dynamic game, they have a particular shortcoming: The **same** stage is repeated over and over, that is:
+
+1. Players are the same
+2. Strategies are the same
+3. Payoffs are the same
+4. Everything is the same!
 
 
-# Application to the Tragedy of the Commons
+## Dynamic Games
+
+Dynamic Games allow us to introduce slight modifications to the game that is played every time, and thus, we can model more realistic situations.
+
+## The Commons Problem
+
+* The game environment at period $t$ is the size of the *resource stock* in that period, $y_t\geq 0$.
+* The resource can be accessed by any of (w.l.g.) 2 players.
+* Let $c_{it}\geq 0$ denote player's $i$ consumption at period $t$. Let $C_t=c_{1t}+c_{2t}$.
+* Player $i$' instantaneous utility function is $u_i(c_{it})$, with $u_i'>0$ and $u_i''<0$. Moreover, let $u_i(c_{it})=\ln (c_{it})$
+
+## The Commons Problem
+
+* Note again, that for every $t$, it must hold that $C_t\leq y_t$
+* Let savings be defined as $S_t=y_t-C_t$. 
+* Assume the savings have a return, through a production function, $y_{t+1}=10\times\sqrt{S_t}$
+* Assume further that everyone shares the same discount factor $0<\delta<1$.
+
+## The Commons Problem
+
+We will try to answer some important questions with this model:
+
+1. How does $y_t$ evolve over time?
+2. Is there a level for $y_t$ that can be sustained?
+3. What is the socially optimal sustainable $y$?
+4. Does strategic interaction lead to overextraction of the resource?
+
+## The Commons Problem
+
+Let's look first for a social optimum. For now, let's assume there are two periods only, and we will start by solving for the last period (note the lack of time index).
+
+$$ \max _{c_1+c_2\leq y} \ln (c_1) + \ln (c2) $$
+
+But given this is the last period, it only make sense that we use all resources, and then $c_1+c_2=y$, or $c_1=y-c_2$, that we can substitute back.
+
+## The Commons Problem
+
+$$ \max _{c_1} \ln (c_1) + \ln (y-c_1)$$
+
+Which leads to the FOC 
+$$\frac{1}{c_1^*}-\frac{1}{y-c_1^*}=0\ \Leftrightarrow\ c_1^*=\frac{y}{2}$$
+
+Of course, $c_2^*=c_1^*=\frac{y}{2}$. An expected result given the concavity of the utility function.
+
+## The Commons Problem
+
+The (socially optimal) utility for each player in the last stage is then $$V^1(y)=\ln \left(\frac{y}{2}\right)=\ln (y) - \ln (2)$$
+
+Now, we need to solve the problem in the first period:
+
+$$\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + 2\delta V\left(10\times\sqrt{y-c_1-c_2}\right)$$
+
+## The Commons Problem
+
+Let's focus in the second part:
+
+<div style="font-size: 80%;">
+
+$$
+\begin{aligned}
+  V^1\left(10\times\sqrt{y-c_1-c_2}\right)=\ln \left(10\times\sqrt{y-c_1-c_2}\right) - \ln (2)
+\end{aligned}  
+$$
+and
+$$
+\ln \left(10\times \sqrt{y-c_1-c_1}\right)= \ln (10) + \frac{1}{2} \ln (y - c_1 - c_2)
+$$
+
+</div>
+
+## The Commons Problem
+
+<div style="font-size: 80%;">
+$$
+V^1\left(10\times\sqrt{y-c_1-c_2}\right) = \frac{1}{2} \ln (y - c_1 - c_2) + \ln (5)
+$$
+
+</div>
+
+Note that $\ln (5)$ is a constant, and then in the maximization problem it is irrelevant. Thus, our maximization problem is equivalent to:
+
+$$\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + \delta \ln\left(y-c_1-c_2\right)$$
+
+## The Commons Problem
+
+The FOCs are:
+
+$$
+\begin{aligned}
+  \frac{1}{c_1}&=\frac{\delta}{y-c_1-c_2}\\
+  \frac{1}{c_2}&=\frac{\delta}{y-c_1-c_2}
+\end{aligned}
+$$
+
+From where we obtain that $c_1^*=c_2^*$.
+
+## The Commons Problem
+
+From there we substitute $c$ in either to get:
+
+$$
+\begin{aligned}
+  \frac{1}{c}&=\frac{\delta}{y-2c}\\
+  y-2c &= \delta c\\
+  c&=\frac{y}{2+\delta}
+\end{aligned}
+$$
+
+Note that a smaller share of the available resources is being consumed: $\frac{1}{2}>\frac{1}{2+\delta}$. There is optimally some investment, and this investment is larger, the larger agents value the future (the larger $\delta$).
+
+## The Commons Problem
+
+Now, we can substitute back into the lifetime utility to obtain the each consumer's socially optimal lifetime utility. Noting that $\delta$ is a constant, it can be shown (with some algebra) that:
+
+$$
+\begin{aligned}
+  V^2(y) = \left(1+\frac{\delta}{2}\right) \ln (y) + K_0
+\end{aligned}
+$$
+
+With $K_0=-\ln (2+\delta) + \delta \ln (5) + \frac{\delta}{2} \ln \left(\frac{\delta}{2+\delta}\right)$ a constant.
+
+## The Commons Problem
+
+But what about more than two periods?
+
+In the first period now, the problem is:
+
+$$
+\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + 2\delta V^2\left[10\sqrt{y-c_1-c_2}\right]
+$$
+or
+$$
+\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + \delta\left(1+\frac{\delta}{2}\right)\ln (y-c_1-c_2)
+$$
+
+## The Commons Problem
+
+The FOCs are:
+
+$$
+\begin{aligned}
+  \frac{1}{c_1}&=\left(1+\frac{\delta}{2}\right)\frac{\delta}{y-c_1-c2}\\
+  \frac{1}{c_2}&=\left(1+\frac{\delta}{2}\right)\frac{\delta}{y-c_1-c2}
+\end{aligned}
+$$
+
+Again, with the consequence of $c_1=c_2=c$.
+
+## The Commons Problem
+
+Substituting in either:
+
+$$
+\begin{aligned}
+  \frac{1}{c}&=\left(1+\frac{\delta}{2}\right)\frac{\delta}{y-2c}\\
+  2y-4c&= (2+\delta)\delta c \\
+  c &= \frac{2y}{\delta(2+\delta)+4} = \frac{2y}{4+2\delta+\delta^2}\\
+  &= \frac{y}{2(1+\frac{\delta}{2}+\frac{\delta^2}{4})}
+\end{aligned}
+$$
+
+## The Commons Problem
+
+The socially optimal utility for each player is:
+
+$$
+\begin{aligned}
+  V^3(y)=\left(1+\frac{\delta}{2}+\frac{\delta^2}{4}\right) \ln (y) + K_1
+\end{aligned}
+$$
+
+With $K_1$ a constant, in a simmilar fashion as we described $K_0$ for $V^2(y)$.
+
+## The Commons Problem
+
+Let's wrap this up:
+
+| Periods remaining | $c^*$ as a fraction of $y$ |
+| :--: | :--: |
+| 1 | $\frac{1}{2}$ |
+| 2 | $\frac{1}{2\left(1+\frac{\delta}{2}\right)}$ |
+| 3 | $\frac{1}{2(1+\frac{\delta}{2}+\frac{\delta^2}{4})}$ |
+
+. . .
+
+What is the pattern?
+
+## The Commons Problem
+
+For $T$ periods remaining, we would have:
+
+| Periods remaining | $c^*$ as a fraction of $y$ |
+| :--: | :--: |
+| $T$ | $\frac{1}{2\left(1+\frac{\delta}{2}+\frac{\delta^2}{4}+\dots+\left(\frac{\delta}{2}\right)^{T-1}\right)}$ |
+
+Or $\frac{1}{2\left(\sum_{t=0}^{T-1} \left(\frac{\delta}{2}\right)^{t}\right)}$, but remember that $\delta\in(0,1)$, then this sum is the geommetric series.
+
+## The Commons Problem
+
+| Periods remaining | $c^*$ as a fraction of $y$ |
+| :--: | :--: |
+| $T$ | $\frac{1}{2\left(\frac{1-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}\right)}$ |
+
+And if $T\rightarrow\infty$, we get that at every period, consumers will consume:
+
+$$c(y)=\left(1-\frac{\delta}{2}\right) \frac{y}{2}$$
+
+## The Commons Problem
+
+With a simmilar trick, it can be shown that the optimal lifetime (individual) utility is:
+
+$$V(y)=\frac{1}{1-\frac{\delta}{2}} \ln (y) + K$$
+
+With $K$ some constant, found in a simmilar fashion to $K_0$ and $K_1$.
+
+## The Commons Problem
+
+Is there a stable output level?
+
+. . .
+
+$$C(y) = 2 c(y) = \left(1-\frac{\delta}{2}\right) y\ \Rightarrow\ S(y)=\frac{\delta}{2}y$$
+
+Which in turns imply that:
+
+$$ y_{t+1}= 10\times\sqrt{\frac{\delta}{2}y_t} $$
+
+## The Commons Problem
+
+If output is stable, then $y_t=y_{t+1}$
+
+$$ y= 10\times\sqrt{\frac{\delta}{2}y}\ \Rightarrow\ y = 50\delta$$
+
+So for example if $\delta=0.8$, then output is stable when it reaches $y=40$. Then, it stays forever at that level. Individual consumption is therefore 12 units forever for each.
+
+## The Commons Problem
+
+Of course, this equilibrium does not use any game theory, a Social Optimum is imposed by a Benevolent Dictator. Let's study the *non-cooperative* game now.
+
+. . .
+
+We need to solve by backward induction, and we can save some work, as the last stage will be equal,^[in the sense of a share of whatever is available.] both try to consume everything, and end up splitting $y$.
+
+## The Commons Problem
+
+For the previous period, things are different. Each agent will solve individually their own maximization problem:
+
+$$\max_{c_1\leq y-c_2} \ln (c_1) + \delta W^1\left[10\sqrt{y-c_1-c_2}\right]$$
+
+In this case $W^1$ plays the same role $V^1$ played in the SO. Moreover, they conincide for the last period, as already stated. This will not be the case for the other periods, that that's why we use $W$ instead of $V$.
+
+## The Commons Problem
+
+Remember again, that $$W^1(y)=\frac{1}{2} \ln (y - c_1 - c_2) + \ln (5)$$ And therefore the maximization problem is equivalent to:
+
+$$\max_{c_1\leq y-c_2} \ln (c_1) + \frac{\delta}{2} \ln \left(y-c_1-c_2\right)$$
+
+## The Commons Problem
+
+That yields FOC:
+
+$$\begin{aligned}
+  \frac{1}{c_1}&=\frac{\delta/2}{y-c_1-c_2}\\
+  y-c_1-c_2&=\frac{\delta c_1}{2}\\
+  c_1&= \frac{2(y-c_2)}{2+\delta}
+\end{aligned}$$
+
+By symmetry $2$'s best response is $c_2=\frac{2(y-c_1)}{2+\delta}$
+
+## The Commons Problem
+
+Substituting one into the other:
+
+<div style="font-size: 80%;">
+
+$$\begin{aligned}
+  c_1 &= \frac{2\left(y-\frac{2(y-c_1)}{2+\delta}\right)}{2+\delta}\\
+  (2+\delta)c_1&=2y-\frac{4y}{2+\delta}+\frac{4c_1}{2+\delta}\\
+  \left[(2+\delta)^2-4\right]c_1&=2\delta y\\
+  c_1 &= \frac{2\delta}{(2+\delta)^2-4}y=\frac{y}{2+\frac{\delta}{2}}
+\end{aligned}$$
+
+</div>
+
+## The Commons Problem
+
+By symmetry we have that $c_1=c_2=\frac{y}{2+\frac{\delta}{2}}=\frac{y}{2\left(1+\frac{\delta}{4}\right)}$.
+
+These consumptions are already larger than the situation we observed in the social optimum: $c=\frac{y}{2\left(1+\frac{\delta}{2}\right)}$.
+
+Replace in the utility function and we obtain:
+
+$$W^2(y)=\left(1+\frac{\delta}{2}\right) \ln (y) + C_1 $$
+
+Where $C_1$ is a constant found in the same fashion as $K_1$.
+
+## The Commons Problem
+
+Now, in the same way as we did for the SO, we replace for a third period, and get the following maximization problem:
+
+$$\begin{align}
+  \max_{c_1\leq y-c_2} \ln (c_1) + \frac{\delta}{2}\left(1+\frac{\delta}{2}\right) \ln (y-c_1-c_2)
+\end{align}$$ with FOC $$\frac{1}{c_1}=\frac{\frac{\delta}{2}\left(1+\frac{\delta}{2}\right)}{y-c_1-c_2}$$
+
+## The Commons Problem
+
+For now, let $\psi = \frac{\delta}{2}\left(1+\frac{\delta}{2}\right)$:
+
+$$
+\begin{aligned}
+  y-c_1-c_2 &= c_1 \psi \\
+  c_1 &= \frac{y-c_2}{1+\psi}
+\end{aligned}
+$$
+
+By symmetry $c_2=\frac{y-c_1}{1+\psi}$.
+
+## The Commons Problem
+
+$$
+\begin{aligned}
+  c_1 &= \frac{y-\frac{y-c_1}{1+\psi}}{1+\psi}\\
+  (1+\psi)^2c_1 &= y(1+\psi)-y+c_1\\
+  c_1 &= \frac{y \psi}{(1+\psi)^2-1}=\frac{y}{2+\psi}\\
+  c_1 &= \frac{y}{2+\frac{\delta}{2}\left(1+\frac{\delta}{2}\right)}=\frac{y}{2+\frac{\delta}{2}+\left(\frac{\delta}{2}\right)^2}
+\end{aligned}
+$$
+
+## The Commons Problem
+
+Note now that, if we generalize this for $T$, the denominator becomes:
+
+$$
+\begin{aligned}
+  2+\frac{\delta}{2}+\left(\frac{\delta}{2}\right)^2+\dots+\left(\frac{\delta}{2}\right)^{T-1}&=\\
+  1 + \underbrace{1 +\frac{\delta}{2}+\left(\frac{\delta}{2}\right)^2+\dots+\left(\frac{\delta}{2}\right)^{T-1}}_{\text{geometric series}}&=\\
+  1+\frac{1-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}=\frac{2-\frac{\delta}{2}-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}&=
+\end{aligned}
+$$
+
+## The Commons Problem
+
+And as $T\rightarrow\infty$:
+
+$$\frac{2-\frac{\delta}{2}-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}\rightarrow \frac{2-\frac{\delta}{2}}{1-\frac{\delta}{2}}$$
+
+And $$c_1=\frac{1-\frac{\delta}{2}}{2-\frac{\delta}{2}}y>\underbrace{\frac{1-\frac{\delta}{2}}{2} y}_{\text{Social Optimum}}$$
+
+## The Commons Problem
+
+So consumption seems to be larger... how can this be?
+
+. . .
+
+The consumption share of output is larger, but output need not be the same! Indeed most likely it will be lower. What we showed is that both consumers will **over**consume.
+
+Let's check the steady state for the output in this case.
+
+## The Commons Problem
+
+Remember, if $y$ is a steady state, it means that $y_{t+1}=y_t$. For that we have that:
+
+$$y=10\times\sqrt{y-c_1-c_2}=10\times\sqrt{y-\frac{2-\delta}{2-\frac{\delta}{2}}y}$$ must be true.
+
+## The Commons Problem
+
+$$
+\begin{aligned}
+  y^2&=100y\left(\frac{\delta/2}{2-\delta/2}\right)\\
+  y&= 50\frac{\delta}{2-\frac{\delta}{2}}
+\end{aligned}
+$$
+
+Again if $\delta=0.8$ we have that $y=25$. We can see that both players will overconsume and achieve a much lower steady state (and therefore consumption).
+
+## The Commons Problem
+
+Indeed, let $\delta=0.8$
+
+|  | Consumption Rate | Steady Output | Perpetual Consumption |
+| :--: | :--: | :--: | :--: |
+| Social Optimum | $\frac{1-\frac{\delta}{2}}{2}=0.3$ | $40$ | $12$ |
+| Non Coop Eq | $\frac{1-\frac{\delta}{2}}{2-\frac{\delta}{2}}=0.375$ | $25$ | $9.375$ |
 
 # Bibliography
 

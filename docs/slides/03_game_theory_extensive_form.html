@@ -928,11 +928,417 @@ Paulo Fagandini
 <p><span class="math display">\[-1\leq\frac{-14\delta}{1-\delta}\ \Rightarrow\ 1-\delta \geq 14\delta\ \Rightarrow\ \delta\leq \frac{1}{15}\]</span></p>
 <p>In order to <em>betray</em> my colleague, I need to really care little about the future!</p>
 </section></section>
-<section id="application-to-the-tragedy-of-the-commons" class="title-slide slide level1 center">
-<h1>Application to the Tragedy of the Commons</h1>
+<section>
+<section id="dynamic-games-and-an-application-to-the-tragedy-of-the-commons" class="title-slide slide level1 center">
+<h1>Dynamic Games and an Application to the Tragedy of the Commons</h1>
 
 </section>
-
+<section id="dynamic-games" class="slide level2">
+<h2>Dynamic Games</h2>
+<p>While repeated games are also a dynamic game, they have a particular shortcoming: The <strong>same</strong> stage is repeated over and over, that is:</p>
+<ol type="1">
+<li class="fragment">Players are the same</li>
+<li class="fragment">Strategies are the same</li>
+<li class="fragment">Payoffs are the same</li>
+<li class="fragment">Everything is the same!</li>
+</ol>
+</section>
+<section id="dynamic-games-1" class="slide level2">
+<h2>Dynamic Games</h2>
+<p>Dynamic Games allow us to introduce slight modifications to the game that is played every time, and thus, we can model more realistic situations.</p>
+</section>
+<section id="the-commons-problem" class="slide level2">
+<h2>The Commons Problem</h2>
+<ul>
+<li class="fragment">The game environment at period <span class="math inline">\(t\)</span> is the size of the <em>resource stock</em> in that period, <span class="math inline">\(y_t\geq 0\)</span>.</li>
+<li class="fragment">The resource can be accessed by any of (w.l.g.) 2 players.</li>
+<li class="fragment">Let <span class="math inline">\(c_{it}\geq 0\)</span> denote player’s <span class="math inline">\(i\)</span> consumption at period <span class="math inline">\(t\)</span>. Let <span class="math inline">\(C_t=c_{1t}+c_{2t}\)</span>.</li>
+<li class="fragment">Player <span class="math inline">\(i\)</span>’ instantaneous utility function is <span class="math inline">\(u_i(c_{it})\)</span>, with <span class="math inline">\(u_i'&gt;0\)</span> and <span class="math inline">\(u_i''&lt;0\)</span>. Moreover, let <span class="math inline">\(u_i(c_{it})=\ln (c_{it})\)</span></li>
+</ul>
+</section>
+<section id="the-commons-problem-1" class="slide level2">
+<h2>The Commons Problem</h2>
+<ul>
+<li class="fragment">Note again, that for every <span class="math inline">\(t\)</span>, it must hold that <span class="math inline">\(C_t\leq y_t\)</span></li>
+<li class="fragment">Let savings be defined as <span class="math inline">\(S_t=y_t-C_t\)</span>.</li>
+<li class="fragment">Assume the savings have a return, through a production function, <span class="math inline">\(y_{t+1}=10\times\sqrt{S_t}\)</span></li>
+<li class="fragment">Assume further that everyone shares the same discount factor <span class="math inline">\(0&lt;\delta&lt;1\)</span>.</li>
+</ul>
+</section>
+<section id="the-commons-problem-2" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>We will try to answer some important questions with this model:</p>
+<ol type="1">
+<li class="fragment">How does <span class="math inline">\(y_t\)</span> evolve over time?</li>
+<li class="fragment">Is there a level for <span class="math inline">\(y_t\)</span> that can be sustained?</li>
+<li class="fragment">What is the socially optimal sustainable <span class="math inline">\(y\)</span>?</li>
+<li class="fragment">Does strategic interaction lead to overextraction of the resource?</li>
+</ol>
+</section>
+<section id="the-commons-problem-3" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Let’s look first for a social optimum. For now, let’s assume there are two periods only, and we will start by solving for the last period (note the lack of time index).</p>
+<p><span class="math display">\[ \max _{c_1+c_2\leq y} \ln (c_1) + \ln (c2) \]</span></p>
+<p>But given this is the last period, it only make sense that we use all resources, and then <span class="math inline">\(c_1+c_2=y\)</span>, or <span class="math inline">\(c_1=y-c_2\)</span>, that we can substitute back.</p>
+</section>
+<section id="the-commons-problem-4" class="slide level2">
+<h2>The Commons Problem</h2>
+<p><span class="math display">\[ \max _{c_1} \ln (c_1) + \ln (y-c_1)\]</span></p>
+<p>Which leads to the FOC <span class="math display">\[\frac{1}{c_1^*}-\frac{1}{y-c_1^*}=0\ \Leftrightarrow\ c_1^*=\frac{y}{2}\]</span></p>
+<p>Of course, <span class="math inline">\(c_2^*=c_1^*=\frac{y}{2}\)</span>. An expected result given the concavity of the utility function.</p>
+</section>
+<section id="the-commons-problem-5" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>The (socially optimal) utility for each player in the last stage is then <span class="math display">\[V^1(y)=\ln \left(\frac{y}{2}\right)=\ln (y) - \ln (2)\]</span></p>
+<p>Now, we need to solve the problem in the first period:</p>
+<p><span class="math display">\[\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + 2\delta V\left(10\times\sqrt{y-c_1-c_2}\right)\]</span></p>
+</section>
+<section id="the-commons-problem-6" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Let’s focus in the second part:</p>
+<div style="font-size: 80%;">
+<p><span class="math display">\[
+\begin{aligned}
+  V^1\left(10\times\sqrt{y-c_1-c_2}\right)=\ln \left(10\times\sqrt{y-c_1-c_2}\right) - \ln (2)
+\end{aligned}  
+\]</span> and <span class="math display">\[
+\ln \left(10\times \sqrt{y-c_1-c_1}\right)= \ln (10) + \frac{1}{2} \ln (y - c_1 - c_2)
+\]</span></p>
+</div>
+</section>
+<section id="the-commons-problem-7" class="slide level2">
+<h2>The Commons Problem</h2>
+<div style="font-size: 80%;">
+<p><span class="math display">\[
+V^1\left(10\times\sqrt{y-c_1-c_2}\right) = \frac{1}{2} \ln (y - c_1 - c_2) + \ln (5)
+\]</span></p>
+</div>
+<p>Note that <span class="math inline">\(\ln (5)\)</span> is a constant, and then in the maximization problem it is irrelevant. Thus, our maximization problem is equivalent to:</p>
+<p><span class="math display">\[\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + \delta \ln\left(y-c_1-c_2\right)\]</span></p>
+</section>
+<section id="the-commons-problem-8" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>The FOCs are:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \frac{1}{c_1}&amp;=\frac{\delta}{y-c_1-c_2}\\
+  \frac{1}{c_2}&amp;=\frac{\delta}{y-c_1-c_2}
+\end{aligned}
+\]</span></p>
+<p>From where we obtain that <span class="math inline">\(c_1^*=c_2^*\)</span>.</p>
+</section>
+<section id="the-commons-problem-9" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>From there we substitute <span class="math inline">\(c\)</span> in either to get:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \frac{1}{c}&amp;=\frac{\delta}{y-2c}\\
+  y-2c &amp;= \delta c\\
+  c&amp;=\frac{y}{2+\delta}
+\end{aligned}
+\]</span></p>
+<p>Note that a smaller share of the available resources is being consumed: <span class="math inline">\(\frac{1}{2}&gt;\frac{1}{2+\delta}\)</span>. There is optimally some investment, and this investment is larger, the larger agents value the future (the larger <span class="math inline">\(\delta\)</span>).</p>
+</section>
+<section id="the-commons-problem-10" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Now, we can substitute back into the lifetime utility to obtain the each consumer’s socially optimal lifetime utility. Noting that <span class="math inline">\(\delta\)</span> is a constant, it can be shown (with some algebra) that:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  V^2(y) = \left(1+\frac{\delta}{2}\right) \ln (y) + K_0
+\end{aligned}
+\]</span></p>
+<p>With <span class="math inline">\(K_0=-\ln (2+\delta) + \delta \ln (5) + \frac{\delta}{2} \ln \left(\frac{\delta}{2+\delta}\right)\)</span> a constant.</p>
+</section>
+<section id="the-commons-problem-11" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>But what about more than two periods?</p>
+<p>In the first period now, the problem is:</p>
+<p><span class="math display">\[
+\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + 2\delta V^2\left[10\sqrt{y-c_1-c_2}\right]
+\]</span> or <span class="math display">\[
+\max_{c_1+c_2\leq y} \ln (c_1) + \ln (c_2) + \delta\left(1+\frac{\delta}{2}\right)\ln (y-c_1-c_2)
+\]</span></p>
+</section>
+<section id="the-commons-problem-12" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>The FOCs are:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \frac{1}{c_1}&amp;=\left(1+\frac{\delta}{2}\right)\frac{\delta}{y-c_1-c2}\\
+  \frac{1}{c_2}&amp;=\left(1+\frac{\delta}{2}\right)\frac{\delta}{y-c_1-c2}
+\end{aligned}
+\]</span></p>
+<p>Again, with the consequence of <span class="math inline">\(c_1=c_2=c\)</span>.</p>
+</section>
+<section id="the-commons-problem-13" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Substituting in either:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \frac{1}{c}&amp;=\left(1+\frac{\delta}{2}\right)\frac{\delta}{y-2c}\\
+  2y-4c&amp;= (2+\delta)\delta c \\
+  c &amp;= \frac{2y}{\delta(2+\delta)+4} = \frac{2y}{4+2\delta+\delta^2}\\
+  &amp;= \frac{y}{2(1+\frac{\delta}{2}+\frac{\delta^2}{4})}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="the-commons-problem-14" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>The socially optimal utility for each player is:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  V^3(y)=\left(1+\frac{\delta}{2}+\frac{\delta^2}{4}\right) \ln (y) + K_1
+\end{aligned}
+\]</span></p>
+<p>With <span class="math inline">\(K_1\)</span> a constant, in a simmilar fashion as we described <span class="math inline">\(K_0\)</span> for <span class="math inline">\(V^2(y)\)</span>.</p>
+</section>
+<section id="the-commons-problem-15" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Let’s wrap this up:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Periods remaining</th>
+<th style="text-align: center;"><span class="math inline">\(c^*\)</span> as a fraction of <span class="math inline">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\left(1+\frac{\delta}{2}\right)}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2(1+\frac{\delta}{2}+\frac{\delta^2}{4})}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>What is the pattern?</p>
+</div>
+</section>
+<section id="the-commons-problem-16" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>For <span class="math inline">\(T\)</span> periods remaining, we would have:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Periods remaining</th>
+<th style="text-align: center;"><span class="math inline">\(c^*\)</span> as a fraction of <span class="math inline">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(T\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\left(1+\frac{\delta}{2}+\frac{\delta^2}{4}+\dots+\left(\frac{\delta}{2}\right)^{T-1}\right)}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Or <span class="math inline">\(\frac{1}{2\left(\sum_{t=0}^{T-1} \left(\frac{\delta}{2}\right)^{t}\right)}\)</span>, but remember that <span class="math inline">\(\delta\in(0,1)\)</span>, then this sum is the geommetric series.</p>
+</section>
+<section id="the-commons-problem-17" class="slide level2">
+<h2>The Commons Problem</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Periods remaining</th>
+<th style="text-align: center;"><span class="math inline">\(c^*\)</span> as a fraction of <span class="math inline">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(T\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\left(\frac{1-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}\right)}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>And if <span class="math inline">\(T\rightarrow\infty\)</span>, we get that at every period, consumers will consume:</p>
+<p><span class="math display">\[c(y)=\left(1-\frac{\delta}{2}\right) \frac{y}{2}\]</span></p>
+</section>
+<section id="the-commons-problem-18" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>With a simmilar trick, it can be shown that the optimal lifetime (individual) utility is:</p>
+<p><span class="math display">\[V(y)=\frac{1}{1-\frac{\delta}{2}} \ln (y) + K\]</span></p>
+<p>With <span class="math inline">\(K\)</span> some constant, found in a simmilar fashion to <span class="math inline">\(K_0\)</span> and <span class="math inline">\(K_1\)</span>.</p>
+</section>
+<section id="the-commons-problem-19" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Is there a stable output level?</p>
+<div class="fragment">
+<p><span class="math display">\[C(y) = 2 c(y) = \left(1-\frac{\delta}{2}\right) y\ \Rightarrow\ S(y)=\frac{\delta}{2}y\]</span></p>
+<p>Which in turns imply that:</p>
+<p><span class="math display">\[ y_{t+1}= 10\times\sqrt{\frac{\delta}{2}y_t} \]</span></p>
+</div>
+</section>
+<section id="the-commons-problem-20" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>If output is stable, then <span class="math inline">\(y_t=y_{t+1}\)</span></p>
+<p><span class="math display">\[ y= 10\times\sqrt{\frac{\delta}{2}y}\ \Rightarrow\ y = 50\delta\]</span></p>
+<p>So for example if <span class="math inline">\(\delta=0.8\)</span>, then output is stable when it reaches <span class="math inline">\(y=40\)</span>. Then, it stays forever at that level. Individual consumption is therefore 12 units forever for each.</p>
+</section>
+<section id="the-commons-problem-21" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Of course, this equilibrium does not use any game theory, a Social Optimum is imposed by a Benevolent Dictator. Let’s study the <em>non-cooperative</em> game now.</p>
+<div class="fragment">
+<p>We need to solve by backward induction, and we can save some work, as the last stage will be equal,<sup>1</sup> both try to consume everything, and end up splitting <span class="math inline">\(y\)</span>.</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>in the sense of a share of whatever is available.</p></li></ol></aside></section>
+<section id="the-commons-problem-22" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>For the previous period, things are different. Each agent will solve individually their own maximization problem:</p>
+<p><span class="math display">\[\max_{c_1\leq y-c_2} \ln (c_1) + \delta W^1\left[10\sqrt{y-c_1-c_2}\right]\]</span></p>
+<p>In this case <span class="math inline">\(W^1\)</span> plays the same role <span class="math inline">\(V^1\)</span> played in the SO. Moreover, they conincide for the last period, as already stated. This will not be the case for the other periods, that that’s why we use <span class="math inline">\(W\)</span> instead of <span class="math inline">\(V\)</span>.</p>
+</section>
+<section id="the-commons-problem-23" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Remember again, that <span class="math display">\[W^1(y)=\frac{1}{2} \ln (y - c_1 - c_2) + \ln (5)\]</span> And therefore the maximization problem is equivalent to:</p>
+<p><span class="math display">\[\max_{c_1\leq y-c_2} \ln (c_1) + \frac{\delta}{2} \ln \left(y-c_1-c_2\right)\]</span></p>
+</section>
+<section id="the-commons-problem-24" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>That yields FOC:</p>
+<p><span class="math display">\[\begin{aligned}
+  \frac{1}{c_1}&amp;=\frac{\delta/2}{y-c_1-c_2}\\
+  y-c_1-c_2&amp;=\frac{\delta c_1}{2}\\
+  c_1&amp;= \frac{2(y-c_2)}{2+\delta}
+\end{aligned}\]</span></p>
+<p>By symmetry <span class="math inline">\(2\)</span>’s best response is <span class="math inline">\(c_2=\frac{2(y-c_1)}{2+\delta}\)</span></p>
+</section>
+<section id="the-commons-problem-25" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Substituting one into the other:</p>
+<div style="font-size: 80%;">
+<p><span class="math display">\[\begin{aligned}
+  c_1 &amp;= \frac{2\left(y-\frac{2(y-c_1)}{2+\delta}\right)}{2+\delta}\\
+  (2+\delta)c_1&amp;=2y-\frac{4y}{2+\delta}+\frac{4c_1}{2+\delta}\\
+  \left[(2+\delta)^2-4\right]c_1&amp;=2\delta y\\
+  c_1 &amp;= \frac{2\delta}{(2+\delta)^2-4}y=\frac{y}{2+\frac{\delta}{2}}
+\end{aligned}\]</span></p>
+</div>
+</section>
+<section id="the-commons-problem-26" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>By symmetry we have that <span class="math inline">\(c_1=c_2=\frac{y}{2+\frac{\delta}{2}}=\frac{y}{2\left(1+\frac{\delta}{4}\right)}\)</span>.</p>
+<p>These consumptions are already larger than the situation we observed in the social optimum: <span class="math inline">\(c=\frac{y}{2\left(1+\frac{\delta}{2}\right)}\)</span>.</p>
+<p>Replace in the utility function and we obtain:</p>
+<p><span class="math display">\[W^2(y)=\left(1+\frac{\delta}{2}\right) \ln (y) + C_1 \]</span></p>
+<p>Where <span class="math inline">\(C_1\)</span> is a constant found in the same fashion as <span class="math inline">\(K_1\)</span>.</p>
+</section>
+<section id="the-commons-problem-27" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Now, in the same way as we did for the SO, we replace for a third period, and get the following maximization problem:</p>
+<p><span class="math display">\[\begin{align}
+  \max_{c_1\leq y-c_2} \ln (c_1) + \frac{\delta}{2}\left(1+\frac{\delta}{2}\right) \ln (y-c_1-c_2)
+\end{align}\]</span> with FOC <span class="math display">\[\frac{1}{c_1}=\frac{\frac{\delta}{2}\left(1+\frac{\delta}{2}\right)}{y-c_1-c_2}\]</span></p>
+</section>
+<section id="the-commons-problem-28" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>For now, let <span class="math inline">\(\psi = \frac{\delta}{2}\left(1+\frac{\delta}{2}\right)\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  y-c_1-c_2 &amp;= c_1 \psi \\
+  c_1 &amp;= \frac{y-c_2}{1+\psi}
+\end{aligned}
+\]</span></p>
+<p>By symmetry <span class="math inline">\(c_2=\frac{y-c_1}{1+\psi}\)</span>.</p>
+</section>
+<section id="the-commons-problem-29" class="slide level2">
+<h2>The Commons Problem</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  c_1 &amp;= \frac{y-\frac{y-c_1}{1+\psi}}{1+\psi}\\
+  (1+\psi)^2c_1 &amp;= y(1+\psi)-y+c_1\\
+  c_1 &amp;= \frac{y \psi}{(1+\psi)^2-1}=\frac{y}{2+\psi}\\
+  c_1 &amp;= \frac{y}{2+\frac{\delta}{2}\left(1+\frac{\delta}{2}\right)}=\frac{y}{2+\frac{\delta}{2}+\left(\frac{\delta}{2}\right)^2}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="the-commons-problem-30" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Note now that, if we generalize this for <span class="math inline">\(T\)</span>, the denominator becomes:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  2+\frac{\delta}{2}+\left(\frac{\delta}{2}\right)^2+\dots+\left(\frac{\delta}{2}\right)^{T-1}&amp;=\\
+  1 + \underbrace{1 +\frac{\delta}{2}+\left(\frac{\delta}{2}\right)^2+\dots+\left(\frac{\delta}{2}\right)^{T-1}}_{\text{geometric series}}&amp;=\\
+  1+\frac{1-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}=\frac{2-\frac{\delta}{2}-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}&amp;=
+\end{aligned}
+\]</span></p>
+</section>
+<section id="the-commons-problem-31" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>And as <span class="math inline">\(T\rightarrow\infty\)</span>:</p>
+<p><span class="math display">\[\frac{2-\frac{\delta}{2}-\left(\frac{\delta}{2}\right)^T}{1-\frac{\delta}{2}}\rightarrow \frac{2-\frac{\delta}{2}}{1-\frac{\delta}{2}}\]</span></p>
+<p>And <span class="math display">\[c_1=\frac{1-\frac{\delta}{2}}{2-\frac{\delta}{2}}y&gt;\underbrace{\frac{1-\frac{\delta}{2}}{2} y}_{\text{Social Optimum}}\]</span></p>
+</section>
+<section id="the-commons-problem-32" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>So consumption seems to be larger… how can this be?</p>
+<div class="fragment">
+<p>The consumption share of output is larger, but output need not be the same! Indeed most likely it will be lower. What we showed is that both consumers will <strong>over</strong>consume.</p>
+<p>Let’s check the steady state for the output in this case.</p>
+</div>
+</section>
+<section id="the-commons-problem-33" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Remember, if <span class="math inline">\(y\)</span> is a steady state, it means that <span class="math inline">\(y_{t+1}=y_t\)</span>. For that we have that:</p>
+<p><span class="math display">\[y=10\times\sqrt{y-c_1-c_2}=10\times\sqrt{y-\frac{2-\delta}{2-\frac{\delta}{2}}y}\]</span> must be true.</p>
+</section>
+<section id="the-commons-problem-34" class="slide level2">
+<h2>The Commons Problem</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  y^2&amp;=100y\left(\frac{\delta/2}{2-\delta/2}\right)\\
+  y&amp;= 50\frac{\delta}{2-\frac{\delta}{2}}
+\end{aligned}
+\]</span></p>
+<p>Again if <span class="math inline">\(\delta=0.8\)</span> we have that <span class="math inline">\(y=25\)</span>. We can see that both players will overconsume and achieve a much lower steady state (and therefore consumption).</p>
+</section>
+<section id="the-commons-problem-35" class="slide level2">
+<h2>The Commons Problem</h2>
+<p>Indeed, let <span class="math inline">\(\delta=0.8\)</span></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Consumption Rate</th>
+<th style="text-align: center;">Steady Output</th>
+<th style="text-align: center;">Perpetual Consumption</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Social Optimum</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1-\frac{\delta}{2}}{2}=0.3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(40\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(12\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Non Coop Eq</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1-\frac{\delta}{2}}{2-\frac{\delta}{2}}=0.375\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(25\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(9.375\)</span></td>
+</tr>
+</tbody>
+</table>
+</section></section>
 <section>
 <section id="bibliography" class="title-slide slide level1 center">
 <h1>Bibliography</h1>
