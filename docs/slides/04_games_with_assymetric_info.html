@@ -308,7 +308,338 @@ Paulo Fagandini
 </section>
 <section id="incomplete-information" class="slide level2">
 <h2>Incomplete Information</h2>
-<p>A game with incomplete information is a game where a player does not know some relevant characteristic of some of the other players, for example their available options, beliefs, payoffs, etc.</p>
+<p>Games where players are uncertain about:</p>
+<ul>
+<li class="fragment">Payoffs of other players</li>
+<li class="fragment">Available strategies of opponents</li>
+<li class="fragment">Types of players they face</li>
+</ul>
+<div class="fragment">
+<p>Key distinction: Players know their own type but are uncertain about others’ types</p>
+</div>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
+<p>Consider two candidates campaigning for some election</p>
+<ul>
+<li class="fragment">Each player can run a “clean” campaign, or</li>
+<li class="fragment">Each player runs a “dirty” campaign</li>
+</ul>
+<div class="fragment">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">P1-P2</th>
+<th style="text-align: center;">dirty</th>
+<th style="text-align: center;">clean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">dirty</td>
+<td style="text-align: center;">(0,0)</td>
+<td style="text-align: center;">(7,-2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">clean</td>
+<td style="text-align: center;">(-2,7)</td>
+<td style="text-align: center;">(5,5)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="example-1-1" class="slide level2">
+<h2>Example 1</h2>
+<p>Now suppose that:</p>
+<ul>
+<li class="fragment">Player 2 is as we know, for him, playing <em>dirty</em> is a dominant strategy.</li>
+<li class="fragment">Player 1’s preferences are unknown to player 2, he can be <em>tough</em> (he is like P2) or <em>accomodanting</em> (<em>clean</em> is dominant).</li>
+<li class="fragment">P1 knows exactly the payoff matrix (he knows his type), but P2 does not.</li>
+</ul>
+</section>
+<section id="example-1-2" class="slide level2">
+<h2>Example 1</h2>
+<div class="columns">
+<div class="column">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">P1-P2</th>
+<th style="text-align: center;">dirty</th>
+<th style="text-align: center;">clean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">dirty</td>
+<td style="text-align: center;">(0,0)</td>
+<td style="text-align: center;">(7,-2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">clean</td>
+<td style="text-align: center;">(-2,7)</td>
+<td style="text-align: center;">(5,5)</td>
+</tr>
+</tbody>
+</table>
+<p>P1 is <em>tough</em></p>
+</div><div class="column">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">P1-P2</th>
+<th style="text-align: center;">dirty</th>
+<th style="text-align: center;">clean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">dirty</td>
+<td style="text-align: center;">(-2,0)</td>
+<td style="text-align: center;">(5,-2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">clean</td>
+<td style="text-align: center;">(0,7)</td>
+<td style="text-align: center;">(7,5)</td>
+</tr>
+</tbody>
+</table>
+<p>P1 is <em>accomodating</em></p>
+</div></div>
+<p>Because this game has dominant strategies, the <span class="math inline">\(NE\)</span> is easy to spot, <span class="math inline">\((d,dc)\)</span>, <em>i.e.</em>, each player (type) plays his dominant strategy.</p>
+</section>
+<section id="example-1-3" class="slide level2">
+<h2>Example 1</h2>
+
+<img data-src="04_games_with_assymetric_info_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="example-1-4" class="slide level2">
+<h2>Example 1</h2>
+<p>As expected, this is the simplest scenario we could face, an equlibrium with dominant strategies. This will not be the case, and we will need to study the <em>beliefs</em> of players regarding the other player’s <strong>type</strong>.</p>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
+<div style="font-size: 70%;">
+<ol type="1">
+<li class="fragment">Suppose there are two planets trying to settle their diplomatic relationships, <strong>H</strong>oth and <strong>W</strong>obani.</li>
+<li class="fragment">They have to decide if they will be sign a <strong>F</strong>ree Trade Agreement or they will sign a <strong>S</strong>ecurity pact.</li>
+<li class="fragment"><strong>H</strong>oth is a pacifist country, and prefers to focus in trade, while <strong>H</strong>oth is concerned with their security, and then they would prefer a security pact.</li>
+<li class="fragment"><strong>W</strong>obani’s diplomatic team can be one of two types, <em>integrationist</em> or <em>isolationist</em>. This is <strong>unknown</strong> to <strong>H</strong>oth’s diplomatic team.</li>
+</ol>
+</div>
+</section>
+<section id="example-2-1" class="slide level2">
+<h2>Example 2</h2>
+<div class="columns">
+<div class="column">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">H - W</th>
+<th style="text-align: center;"><span class="math inline">\(F\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(F\)</span></td>
+<td style="text-align: center;">(3,1)</td>
+<td style="text-align: center;">(0,0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(S\)</span></td>
+<td style="text-align: center;">(0,0)</td>
+<td style="text-align: center;">(1,3)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>W</strong> is Integrationist (type 1)</p>
+</div><div class="column">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">H - W</th>
+<th style="text-align: center;"><span class="math inline">\(F\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(F\)</span></td>
+<td style="text-align: center;">(3,0)</td>
+<td style="text-align: center;">(0,1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(S\)</span></td>
+<td style="text-align: center;">(0,3)</td>
+<td style="text-align: center;">(1,0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>W</strong> is Isolationist. (type 2)</p>
+</div></div>
+</section>
+<section id="example-2-2" class="slide level2">
+<h2>Example 2</h2>
+<ol type="1">
+<li class="fragment"><strong>W</strong> knows exactly her type.</li>
+<li class="fragment">Given that <strong>H</strong> does not know the type of <strong>W</strong>, it will a probability <span class="math inline">\(p\)</span> to the scenario in which <strong>W</strong> is integrationist.</li>
+<li class="fragment">Let’s assume that <strong>W</strong> knows <span class="math inline">\(p\)</span>.</li>
+</ol>
+<div class="fragment">
+<p>The method to solve these games was developed by the Hungarian economist John Harsanyi.</p>
+</div>
+</section>
+<section id="example-2-3" class="slide level2">
+<h2>Example 2</h2>
+<ol type="1">
+<li class="fragment">Turn this game into an Imperfect Information Game. Introduce <span class="math inline">\(N\)</span> as a player.</li>
+<li class="fragment">Use the <span class="math inline">\(NE\)</span> concept we used for imperfect information games (SPNE). This will be called <strong>Bayes Nash Equilibrium</strong>.</li>
+</ol>
+</section>
+<section id="bayesian-games-framework" class="slide level2">
+<h2>Bayesian Games Framework</h2>
+<div style="font-size: 85%;">
+<p>A Bayesian game consists of:</p>
+<ul>
+<li>Set of players <span class="math inline">\(N = \{1, 2, ..., n\}\)</span></li>
+<li>Type spaces <span class="math inline">\(T_i\)</span> for each player <span class="math inline">\(i\)</span></li>
+<li>Prior beliefs <span class="math inline">\(p(t)\)</span> over type profiles</li>
+<li>Action spaces <span class="math inline">\(A_i\)</span> for each player</li>
+<li>Payoff functions <span class="math inline">\(u_i(a, t)\)</span> depending on actions and types</li>
+</ul>
+<p>Players maximize expected utility given beliefs about opponents’ types</p>
+</div>
+</section>
+<section id="bayesian-nash-equilibrium" class="slide level2">
+<h2>Bayesian Nash Equilibrium</h2>
+<p>A strategy profile where each player’s strategy is optimal given:</p>
+<ul>
+<li>Their beliefs about other players’ types</li>
+<li>The strategies of other players</li>
+</ul>
+<p>Formally: <span class="math inline">\(s_i^*(t_i) \in \arg\max_{a_i} \sum_{t_{-i}} p(t_{-i}|t_i) u_i(a_i, s_{-i}^*(t_{-i}), t_i, t_{-i})\)</span></p>
+<p>Each type of each player best responds to opponents’ strategies in <em>expected utility</em></p>
+</section>
+<section id="example-2-4" class="slide level2">
+<h2>Example 2</h2>
+<div style="font-size: 85%;">
+<p>In this case:</p>
+<ol type="1">
+<li class="fragment">A strategy for <strong>H</strong> is:
+<ol type="1">
+<li class="fragment">pure strategies, just <span class="math inline">\(F\)</span> or <span class="math inline">\(S\)</span></li>
+<li class="fragment">mixed strategies, <span class="math inline">\(\lambda\in(0,1)\)</span> where <span class="math inline">\(\lambda\)</span> is the probability of playing <span class="math inline">\(F\)</span>.</li>
+</ol></li>
+<li class="fragment">A strategy for <strong>W</strong> is:
+<ol type="1">
+<li class="fragment">pure strategies, a pair of <span class="math inline">\(F\)</span> or <span class="math inline">\(S\)</span> for each type.</li>
+<li class="fragment">mixed stragies, a pair <span class="math inline">\((\mu_1,\mu_2)\)</span> for the probability of playing <span class="math inline">\(F\)</span> for each type.</li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="example-2-5" class="slide level2">
+<h2>Example 2</h2>
+<p>A Bayes Nash Equilbrium (BNE) will be a triple <span class="math inline">\((\lambda, \mu_1,\mu_2)\)</span> in which each player (and each type of player) will play a best response as follows:</p>
+<ol type="1">
+<li><span class="math inline">\(\mu_i\)</span> maximizes type’s <span class="math inline">\(i\)</span> <strong>W</strong> expected payoffs, if <strong>H</strong> choses <span class="math inline">\(F\)</span> with probability <span class="math inline">\(\lambda\)</span>.</li>
+<li><span class="math inline">\(\lambda\)</span> maximizes <strong>H</strong>’s expected payoffs if <strong>H</strong> believes that with probability <span class="math inline">\(p\)</span> she will encounter <strong>W</strong> type 1, that will play <span class="math inline">\(F\)</span> with probability <span class="math inline">\(\mu_1\)</span>.</li>
+</ol>
+</section>
+<section id="example-2-6" class="slide level2">
+<h2>Example 2</h2>
+
+<img data-src="04_games_with_assymetric_info_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="example-2-pure-strategies" class="slide level2">
+<h2>Example 2: Pure Strategies</h2>
+<ol type="1">
+<li class="fragment">Suppose <span class="math inline">\(H\)</span> plays <span class="math inline">\(F\)</span> for sure.</li>
+<li class="fragment">In this case, <span class="math inline">\(W\)</span> will play <span class="math inline">\(FS\)</span>.</li>
+</ol>
+<div class="fragment">
+<p>But can this be an equilibrium?</p>
+</div>
+<div class="fragment">
+<p>If so, <strong>H</strong> must stick with <span class="math inline">\(F\)</span>, <span class="math inline">\(i.e.\)</span> <span class="math inline">\(F\)</span> must be a best response to <strong>W</strong> strategy’s <span class="math inline">\(FS\)</span>.</p>
+</div>
+</section>
+<section id="example-2-pure-strategies-1" class="slide level2">
+<h2>Example 2: Pure Strategies</h2>
+<div style="font-size: 85%;">
+<p>Remember, <strong>H</strong> expects <strong>W</strong> to be type 1 with probability <span class="math inline">\(p\)</span>, so her expected payoffs are:</p>
+<ol type="1">
+<li><span class="math inline">\(E[\pi_H(F,FS)]=p3+(1-p)0=3p\)</span></li>
+<li><span class="math inline">\(E[\pi_H(S,FS)]=p0+(1-p)1=1-p\)</span></li>
+</ol>
+<p>If <strong>H</strong> is to stick with <span class="math inline">\(F\)</span> when <strong>W</strong> is playing <span class="math inline">\(FS\)</span>, then it must be true that:</p>
+<p><span class="math display">\[3p\geq 1-p\ \Rightarrow\ p\geq \frac{1}{4}\]</span></p>
+</div>
+</section>
+<section id="example-2-pure-strategies-2" class="slide level2">
+<h2>Example 2: Pure Strategies</h2>
+<ol type="1">
+<li>Suppose now that <strong>H</strong> plays <span class="math inline">\(S\)</span> for sure.</li>
+<li>In this case, <strong>W</strong> will play <span class="math inline">\(SF\)</span>.</li>
+</ol>
+<p>But can this be an equilibrium? If so, <strong>H</strong> must stick with <span class="math inline">\(S\)</span>, <span class="math inline">\(i.e.\)</span> <span class="math inline">\(S\)</span> must be a best response to <strong>W</strong> strategy’s <span class="math inline">\(SF\)</span>.</p>
+</section>
+<section id="example-2-pure-strategies-3" class="slide level2">
+<h2>Example 2: Pure Strategies</h2>
+<div style="font-size: 85%;">
+<p>Remember, <strong>H</strong> expects <strong>W</strong> to be type 1 with probability <span class="math inline">\(p\)</span>, so her expected payoffs are:</p>
+<ol type="1">
+<li><span class="math inline">\(E[\pi_H(F,SF)]=p0+(1-p)3=3(1-p)\)</span></li>
+<li><span class="math inline">\(E[\pi_H(S,SF)]=p1+(1-p)0=p\)</span></li>
+</ol>
+<p>If <strong>H</strong> is to stick with <span class="math inline">\(S\)</span> when <strong>W</strong> is playing <span class="math inline">\(SF\)</span>, then it must be true that:</p>
+<p><span class="math display">\[3(1-p)\leq p\ \Rightarrow\ p\geq \frac{3}{4}\]</span></p>
+</div>
+</section>
+<section id="example-2-pure-strategies-4" class="slide level2">
+<h2>Example 2: Pure Strategies</h2>
+<p>Conclusion:</p>
+<ol type="1">
+<li class="fragment">If <span class="math inline">\(p\geq \frac{3}{4}\)</span> there are 2 BNEs, <span class="math inline">\((F,FS)\)</span> and <span class="math inline">\((S,SF)\)</span>.</li>
+<li class="fragment">If <span class="math inline">\(\frac{1}{4}\leq p &lt; \frac{3}{4}\)</span> there is only 1 BNE, <span class="math inline">\((F,FS)\)</span>.</li>
+<li class="fragment">If <span class="math inline">\(p&lt;\frac{1}{4}\)</span> there is no BNE in pure strategies.</li>
+</ol>
+</section>
+<section id="example-2-mixed-strategies" class="slide level2">
+<h2>Example 2: Mixed Strategies</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Remember that in the case of mixed strategies, to randomize, each pure strategy with positive probability must be yield the same expected payoff.</p>
+</div>
+</div>
+</div>
+<p>There can be a plethora of NEs in mixed strategies, let’s focus on a special situation, when <span class="math inline">\(p&lt;\frac{1}{4}\)</span> which is a situation when we know for sure there is no pure strategy <span class="math inline">\(BNE\)</span>.</p>
+</section>
+<section id="example-2-mixed-strategies-1" class="slide level2">
+<h2>Example 2: Mixed Strategies</h2>
+<ol type="1">
+<li class="fragment">Suppose <strong>H</strong> plays <span class="math inline">\(F\)</span> with probability <span class="math inline">\(\lambda\)</span>.</li>
+<li class="fragment">Type 1 <strong>W</strong> has expected payoff <span class="math inline">\(\lambda\)</span> by playing <span class="math inline">\(F\)</span>, while playing <span class="math inline">\(S\)</span> can expect <span class="math inline">\(3(1-\lambda)\)</span>.</li>
+<li class="fragment">Type 2 <strong>W</strong> has expected payoff by playing <span class="math inline">\(F\)</span> <span class="math inline">\(3(1-\lamba)\)</span>, while playing <span class="math inline">\(S\)</span> can expect <span class="math inline">\(\lambda\)</span>.</li>
+</ol>
+</section>
+<section id="example-2-mixed-strategies-2" class="slide level2">
+<h2>Example 2: Mixed Strategies</h2>
+<ol type="1">
+<li class="fragment"><strong>W</strong> type 1 would play a mixed strategies equilibrium only if <span class="math inline">\(\lambda=3(1-\lambda)\)</span>, or <span class="math inline">\(\lambda=\frac{3}{4}\)</span>.</li>
+<li class="fragment"><strong>W</strong> type 2 would play a mixed strategies equilibrium only if <span class="math inline">\(3(1-\lambda)=\lambda\)</span>, or <span class="math inline">\(\lambda=\frac{3}{4}\)</span>.</li>
+</ol>
+</section>
+<section id="example-2-mixed-strategies-3" class="slide level2">
+<h2>Example 2: Mixed Strategies</h2>
 </section></section>
 <section id="mechanism-design-the-revelation-principle-and-sales-to-an-unknown-buyer" class="title-slide slide level1 center">
 <h1>Mechanism Design, the Revelation Principle, and Sales to an Unknown Buyer</h1>
@@ -333,8 +664,10 @@ Paulo Fagandini
 <section id="bibliography-1" class="slide level2">
 <h2>Bibliography</h2>
 <p>These slides took definitions and examples from the book:</p>
-<p>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.</p>
-<p>The Moral Hazard example was taken from <em>Wealth and the Principal-Agent Matching</em>, by P. Fagandini (2022), Managerial and Decision Economics.</p>
+<ul>
+<li>Strategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.</li>
+<li>The Moral Hazard example was taken from <em>Wealth and the Principal-Agent Matching</em>, by P. Fagandini (2022), Managerial and Decision Economics.</li>
+</ul>
 
 
 
@@ -555,6 +888,44 @@ Paulo Fagandini
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

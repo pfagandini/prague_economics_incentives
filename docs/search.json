@@ -1082,7 +1082,7 @@
     "href": "slides/04_games_with_assymetric_info.html#bibliography-1",
     "title": "Games under  Asymmetric Information",
     "section": "Bibliography",
-    "text": "Bibliography\nThese slides took definitions and examples from the book:\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.\nThe Moral Hazard example was taken from Wealth and the Principal-Agent Matching, by P. Fagandini (2022), Managerial and Decision Economics."
+    "text": "Bibliography\nThese slides took definitions and examples from the book:\n\nStrategies and Games: Theory and Applications from Prajit Dutta. 2001 MIT Press. Chapters 19 to 24.\nThe Moral Hazard example was taken from Wealth and the Principal-Agent Matching, by P. Fagandini (2022), Managerial and Decision Economics."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-1",
@@ -2293,6 +2293,461 @@
     "href": "slides/04_games_with_assymetric_info.html#incomplete-information",
     "title": "Games under  Asymmetric Information",
     "section": "Incomplete Information",
-    "text": "Incomplete Information\nA game with incomplete information is a game where a player does not know some relevant characteristic of some of the other players, for example their available options, beliefs, payoffs, etc."
+    "text": "Incomplete Information\nGames where players are uncertain about:\n\nPayoffs of other players\nAvailable strategies of opponents\nTypes of players they face\n\n\nKey distinction: Players know their own type but are uncertain about others’ types"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example",
+    "href": "slides/04_games_with_assymetric_info.html#example",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nConsider two candidates campaigning for some election\n\nEach player can run a “clean” campaign, or\nEach player runs a “dirty” campaign\n\n\n\n\n\nP1-P2\ndirty\nclean\n\n\n\n\ndirty\n(0,0)\n(7,-2)\n\n\nclean\n(-2,7)\n(5,5)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#section",
+    "href": "slides/04_games_with_assymetric_info.html#section",
+    "title": "Games under  Asymmetric Information",
+    "section": "",
+    "text": "Player 1 is as we know, for him, confessing is a dominant strategy.\nPlayer 2’s preferences are unknown to player 1, he can be tough (he is like P1) or accomodanting (not confessing is dominant).\nP2 knows exactly the payoff matrix (he knows his type), but P1 does not."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-1",
+    "href": "slides/04_games_with_assymetric_info.html#example-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 1",
+    "text": "Example 1\nConsider two candidates campaigning for some election\n\nEach player can run a “clean” campaign, or\nEach player runs a “dirty” campaign\n\n\n\n\n\nP1-P2\ndirty\nclean\n\n\n\n\ndirty\n(0,0)\n(7,-2)\n\n\nclean\n(-2,7)\n(5,5)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#bayesian-games-framework",
+    "href": "slides/04_games_with_assymetric_info.html#bayesian-games-framework",
+    "title": "Games under  Asymmetric Information",
+    "section": "Bayesian Games Framework",
+    "text": "Bayesian Games Framework\n\nA Bayesian game consists of:\n\nSet of players \\(N = \\{1, 2, ..., n\\}\\)\nType spaces \\(T_i\\) for each player \\(i\\)\nPrior beliefs \\(p(t)\\) over type profiles\nAction spaces \\(A_i\\) for each player\nPayoff functions \\(u_i(a, t)\\) depending on actions and types\n\nPlayers maximize expected utility given beliefs about opponents’ types"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-1-entry-deterrence-game",
+    "href": "slides/04_games_with_assymetric_info.html#example-1-entry-deterrence-game",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 1: Entry Deterrence Game",
+    "text": "Example 1: Entry Deterrence Game\nIncumbent faces potential entrant with unknown costs:\n\nEntrant can be high-cost type (probability \\(p\\)) or low-cost type (probability \\(1-p\\))\nEntrant decides: Enter or Stay Out\nIncumbent decides: Fight or Accommodate\n\nPayoffs depend on entrant’s type, which incumbent doesn’t observe"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#entry-deterrence-payoffs",
+    "href": "slides/04_games_with_assymetric_info.html#entry-deterrence-payoffs",
+    "title": "Games under  Asymmetric Information",
+    "section": "Entry Deterrence Payoffs",
+    "text": "Entry Deterrence Payoffs\nIf entrant is high-cost type: - Enter + Fight: \\((-1, 0)\\) - Enter + Accommodate: \\((1, 1)\\) - Stay Out: \\((0, 2)\\)\nIf entrant is low-cost type: - Enter + Fight: \\((0, 0)\\) - Enter + Accommodate: \\((2, 1)\\) - Stay Out: \\((0, 2)\\)\nIncumbent must form beliefs about entrant’s type"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#bayesian-nash-equilibrium",
+    "href": "slides/04_games_with_assymetric_info.html#bayesian-nash-equilibrium",
+    "title": "Games under  Asymmetric Information",
+    "section": "Bayesian Nash Equilibrium",
+    "text": "Bayesian Nash Equilibrium\nA strategy profile where each player’s strategy is optimal given:\n\nTheir beliefs about other players’ types\nThe strategies of other players\n\nFormally: \\(s_i^*(t_i) \\in \\arg\\max_{a_i} \\sum_{t_{-i}} p(t_{-i}|t_i) u_i(a_i, s_{-i}^*(t_{-i}), t_i, t_{-i})\\)\nEach type of each player best responds to opponents’ strategies in expected utility"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-sealed-bid-auction",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-sealed-bid-auction",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Sealed-Bid Auction",
+    "text": "Example 2: Sealed-Bid Auction\nFirst-price sealed-bid auction with incomplete information:\n\n\\(n\\) bidders with private valuations \\(v_i\\)\nValuations drawn independently from \\([0, 1]\\) with distribution \\(F\\)\nEach bidder submits sealed bid \\(b_i\\)\nHighest bidder wins and pays their bid\nPayoff to winner: \\(v_i - b_i\\), losers get 0\n\nMust find equilibrium bidding strategies"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auction-equilibrium-strategy",
+    "href": "slides/04_games_with_assymetric_info.html#auction-equilibrium-strategy",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auction Equilibrium Strategy",
+    "text": "Auction Equilibrium Strategy\nWith symmetric independent private values and uniform distribution:\nEquilibrium bidding strategy: \\(b(v) = \\frac{n-1}{n}v\\)\nIntuition: - Bidding your true value yields zero expected profit - Must shade bid below valuation - Trade-off between winning probability and profit conditional on winning - With more bidders, less shading needed"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-3-cournot-competition-with-uncertainty",
+    "href": "slides/04_games_with_assymetric_info.html#example-3-cournot-competition-with-uncertainty",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 3: Cournot Competition with Uncertainty",
+    "text": "Example 3: Cournot Competition with Uncertainty\nTwo firms choose quantities simultaneously:\n\nFirm 1 has cost \\(c_1\\) (known to both)\nFirm 2’s cost \\(c_2\\) is private: either \\(c_L\\) with probability \\(q\\) or \\(c_H\\) with probability \\(1-q\\)\nInverse demand: \\(P(Q) = a - Q\\) where \\(Q = q_1 + q_2\\)\n\nFirm 1 must maximize expected profit over Firm 2’s possible types"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#cournot-equilibrium-with-incomplete-information",
+    "href": "slides/04_games_with_assymetric_info.html#cournot-equilibrium-with-incomplete-information",
+    "title": "Games under  Asymmetric Information",
+    "section": "Cournot Equilibrium with Incomplete Information",
+    "text": "Cournot Equilibrium with Incomplete Information\nFirm 2’s strategies: \\(q_2(c_L)\\) and \\(q_2(c_H)\\)\nFirm 1’s best response: \\(q_1^* = \\frac{a - c_1 - q \\cdot q_2(c_L) - (1-q) \\cdot q_2(c_H)}{2}\\)\nLow-cost Firm 2: \\(q_2(c_L) = \\frac{a - 2c_L + c_1}{3}\\)\nHigh-cost Firm 2: \\(q_2(c_H) = \\frac{a - 2c_H + c_1}{3}\\)\nExpected quantity from Firm 2 enters Firm 1’s calculation"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#application-insurance-markets",
+    "href": "slides/04_games_with_assymetric_info.html#application-insurance-markets",
+    "title": "Games under  Asymmetric Information",
+    "section": "Application: Insurance Markets",
+    "text": "Application: Insurance Markets\nAdverse selection in insurance:\n\nIndividuals have private information about risk type\nHigh-risk types (probability \\(p_H\\) of accident)\nLow-risk types (probability \\(p_L\\) of accident)\nInsurer cannot distinguish types\n\nResult: Pooling or separating equilibria depending on cost structure"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#insurance-market-equilibrium",
+    "href": "slides/04_games_with_assymetric_info.html#insurance-market-equilibrium",
+    "title": "Games under  Asymmetric Information",
+    "section": "Insurance Market Equilibrium",
+    "text": "Insurance Market Equilibrium\nSeparating equilibrium conditions:\n\nHigh-risk types buy full insurance at actuarially fair price\nLow-risk types buy partial insurance\nEach type’s contract maximizes utility subject to zero-profit constraint\nNo cross-subsidization between types\n\nSelf-selection: contract design induces types to reveal information"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-4-the-market-for-lemons",
+    "href": "slides/04_games_with_assymetric_info.html#example-4-the-market-for-lemons",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 4: The Market for Lemons",
+    "text": "Example 4: The Market for Lemons\nUsed car market (Akerlof 1970):\n\nSellers know car quality \\(q \\in [0, 1]\\)\nBuyers only know distribution of qualities\nBuyer willing to pay expected value\nSeller willing to sell if price exceeds \\(q\\)\n\nCan lead to market unraveling when asymmetry is severe"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#lemons-equilibrium",
+    "href": "slides/04_games_with_assymetric_info.html#lemons-equilibrium",
+    "title": "Games under  Asymmetric Information",
+    "section": "Lemons Equilibrium",
+    "text": "Lemons Equilibrium\nIf buyers believe average quality is \\(\\bar{q}\\):\n\nWilling to pay \\(\\bar{q}\\)\nOnly sellers with \\(q \\leq \\bar{q}\\) will sell\nActual average quality is \\(\\bar{q}/2\\)\nBuyers revise beliefs downward\n\nUnraveling continues until only lowest quality items trade or market collapses entirely"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#signaling-games",
+    "href": "slides/04_games_with_assymetric_info.html#signaling-games",
+    "title": "Games under  Asymmetric Information",
+    "section": "Signaling Games",
+    "text": "Signaling Games\nDynamic games where informed player moves first:\n\nNature chooses sender’s type\nSender observes type, chooses signal/action\nReceiver observes signal (not type), chooses response\nPayoffs depend on type, signal, and response\n\nEducation as signal of ability is classic example"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-5-job-market-signaling",
+    "href": "slides/04_games_with_assymetric_info.html#example-5-job-market-signaling",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 5: Job Market Signaling",
+    "text": "Example 5: Job Market Signaling\nWorkers have high or low ability (private information):\n\nHigh ability: fraction \\(\\lambda\\), productivity \\(\\theta_H\\)\nLow ability: fraction \\(1-\\lambda\\), productivity \\(\\theta_L\\)\nWorkers choose education level \\(e\\) at cost \\(c(e, \\theta)\\)\nCost assumption: \\(c_\\theta &lt; 0\\) (education cheaper for high ability)\nFirms observe education, offer wage"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#separating-equilibrium-in-signaling",
+    "href": "slides/04_games_with_assymetric_info.html#separating-equilibrium-in-signaling",
+    "title": "Games under  Asymmetric Information",
+    "section": "Separating Equilibrium in Signaling",
+    "text": "Separating Equilibrium in Signaling\nHigh-ability workers choose \\(e^*\\), low-ability choose \\(e = 0\\)\nFirms’ beliefs: \\(e \\geq e^*\\) implies high ability, \\(e &lt; e^*\\) implies low ability\nWages: \\(w(e \\geq e^*) = \\theta_H\\), \\(w(e &lt; e^*) = \\theta_L\\)\nIncentive compatibility requires: - \\(\\theta_H - c(e^*, \\theta_H) \\geq \\theta_L\\) - \\(\\theta_L \\geq \\theta_H - c(e^*, \\theta_L)\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#perfect-bayesian-equilibrium",
+    "href": "slides/04_games_with_assymetric_info.html#perfect-bayesian-equilibrium",
+    "title": "Games under  Asymmetric Information",
+    "section": "Perfect Bayesian Equilibrium",
+    "text": "Perfect Bayesian Equilibrium\nRefinement for dynamic games with incomplete information:\nRequirements: 1. Sequential rationality: strategies optimal at every information set 2. Belief consistency: beliefs derived from Bayes’ rule wherever possible 3. Off-path beliefs: must be specified even for unreached information sets\nEliminates non-credible equilibria in signaling games"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-6-poker-simplified",
+    "href": "slides/04_games_with_assymetric_info.html#example-6-poker-simplified",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 6: Poker (Simplified)",
+    "text": "Example 6: Poker (Simplified)\nTwo-player poker with incomplete information:\n\nPlayer 1 receives high or low card (equally likely)\nPlayer 1: Bet or Fold\nPlayer 2 (if P1 bets): Call or Fold\nBluffing: betting with low card\nCalling: responding to potential bluff\n\nMixed strategies emerge in equilibrium"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#poker-equilibrium",
+    "href": "slides/04_games_with_assymetric_info.html#poker-equilibrium",
+    "title": "Games under  Asymmetric Information",
+    "section": "Poker Equilibrium",
+    "text": "Poker Equilibrium\nPlayer 1 strategy: - Always bet with high card - Bluff (bet with low card) with probability \\(b\\)\nPlayer 2 strategy: - Call with probability \\(c\\)\nEquilibrium values of \\(b\\) and \\(c\\) make opponents indifferent, preventing exploitation"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nReverse game theory: design game to achieve desired outcome:\n\nDesigner wants to implement certain social choice function\nPlayers have private information (types)\nDesigner chooses rules (mechanism)\nRevelation principle: focus on direct mechanisms\n\nApplications: auctions, voting, matching markets"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-7-vickrey-auction",
+    "href": "slides/04_games_with_assymetric_info.html#example-7-vickrey-auction",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 7: Vickrey Auction",
+    "text": "Example 7: Vickrey Auction\nSecond-price sealed-bid auction:\n\nHighest bidder wins\nWinner pays second-highest bid\nDominant strategy: bid true valuation\n\nTruth-telling is optimal regardless of others’ bids: - If you win, you pay less than your value - If you lose by bidding truthfully, overbidding wouldn’t help"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#application-spectrum-auctions",
+    "href": "slides/04_games_with_assymetric_info.html#application-spectrum-auctions",
+    "title": "Games under  Asymmetric Information",
+    "section": "Application: Spectrum Auctions",
+    "text": "Application: Spectrum Auctions\nFCC spectrum auctions combine incomplete information elements:\n\nBidders have private valuations for licenses\nMay have synergies across licenses\nCommon value components (resale value)\nStrategic interaction across multiple items\n\nSimultaneous ascending auction design addresses these features"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#common-value-vs.-private-value",
+    "href": "slides/04_games_with_assymetric_info.html#common-value-vs.-private-value",
+    "title": "Games under  Asymmetric Information",
+    "section": "Common Value vs. Private Value",
+    "text": "Common Value vs. Private Value\nPrivate values: \\(v_i\\) independent across bidders\nCommon values: true value \\(v\\) same for all, but each has private signal \\(s_i\\)\nWinner’s curse in common value auctions: - Winning means you had highest signal - Conditional on winning, true value likely lower than your estimate - Rational bidders shade bids to account for this"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-8-oil-lease-auctions",
+    "href": "slides/04_games_with_assymetric_info.html#example-8-oil-lease-auctions",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 8: Oil Lease Auctions",
+    "text": "Example 8: Oil Lease Auctions\nDrilling rights with uncertain reserves:\n\nTrue value \\(v\\) unknown to all bidders\nEach has private geological survey \\(s_i\\)\nSurveys correlated with true value\nWinner likely overestimated value\n\nEquilibrium involves bidding below signal value to avoid winner’s curse"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#screening",
+    "href": "slides/04_games_with_assymetric_info.html#screening",
+    "title": "Games under  Asymmetric Information",
+    "section": "Screening",
+    "text": "Screening\nPrincipal designs menu to separate agent types:\n\nInsurance company offers coverage options\nMonopolist offers quality-quantity bundles\nEmployer offers compensation packages\n\nSecond-degree price discrimination exploits self-selection"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-9-monopoly-price-discrimination",
+    "href": "slides/04_games_with_assymetric_info.html#example-9-monopoly-price-discrimination",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 9: Monopoly Price Discrimination",
+    "text": "Example 9: Monopoly Price Discrimination\nMonopolist faces high and low-value consumers:\nCannot observe type directly, so offers two options: - High quantity at high price (for high types) - Low quantity at low price (for low types)\nDesign satisfies incentive compatibility: each type prefers their intended option"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#reputation-and-incomplete-information",
+    "href": "slides/04_games_with_assymetric_info.html#reputation-and-incomplete-information",
+    "title": "Games under  Asymmetric Information",
+    "section": "Reputation and Incomplete Information",
+    "text": "Reputation and Incomplete Information\nReputation as repeated game with incomplete information:\n\nLong-run player may be “commitment type” or “rational type”\nShort-run players uncertain about long-run player’s type\nRational type can mimic commitment type to build reputation\nReputation effects create incentives even for rational types\n\nChain store paradox resolution"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-10-chain-store-game",
+    "href": "slides/04_games_with_assymetric_info.html#example-10-chain-store-game",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 10: Chain Store Game",
+    "text": "Example 10: Chain Store Game\nChain store faces sequential entry in \\(n\\) markets:\n\nIn each market, potential entrant decides whether to enter\nIf entry occurs, chain chooses Fight or Accommodate\nSmall probability chain is “tough type” that always fights\n\nEven rational chain fights early entrants to build reputation of toughness"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#cheap-talk",
+    "href": "slides/04_games_with_assymetric_info.html#cheap-talk",
+    "title": "Games under  Asymmetric Information",
+    "section": "Cheap Talk",
+    "text": "Cheap Talk\nCommunication without direct payoff consequences:\n\nSender has private information\nSends costless message to receiver\n\nReceiver takes action affecting both parties\nMessages are “cheap talk” if they don’t directly affect payoffs\n\nCan communication be informative in equilibrium?"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-11-expert-advice",
+    "href": "slides/04_games_with_assymetric_info.html#example-11-expert-advice",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 11: Expert Advice",
+    "text": "Example 11: Expert Advice\nExpert knows true state, advises decision-maker:\n\nStates: \\(\\theta \\in \\{1, 2, ..., n\\}\\)\nExpert prefers action slightly above true state\nDecision-maker prefers action equal to true state\nExpert sends message, decision-maker chooses action\n\nPartitional equilibria: expert reveals interval containing state"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#partitional-equilibria-in-cheap-talk",
+    "href": "slides/04_games_with_assymetric_info.html#partitional-equilibria-in-cheap-talk",
+    "title": "Games under  Asymmetric Information",
+    "section": "Partitional Equilibria in Cheap Talk",
+    "text": "Partitional Equilibria in Cheap Talk\nWith preference misalignment parameter \\(b\\):\nNumber of informative intervals in equilibrium bounded by \\(1/(4b)\\)\nGreater conflict of interest means less information transmitted: - Small \\(b\\): many intervals, precise communication - Large \\(b\\): few intervals, coarse communication - Perfect alignment \\((b=0)\\): full revelation possible"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#forward-induction",
+    "href": "slides/04_games_with_assymetric_info.html#forward-induction",
+    "title": "Games under  Asymmetric Information",
+    "section": "Forward Induction",
+    "text": "Forward Induction\nRefinement based on rationality of past actions:\n\nIf player made choice that seems suboptimal under some beliefs\nUpdate beliefs: player wouldn’t have chosen that unless it was optimal\nRequires that player had good reason for observed action\n\nStrengthens PBE by restricting off-path beliefs"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-12-beer-quiche-game",
+    "href": "slides/04_games_with_assymetric_info.html#example-12-beer-quiche-game",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 12: Beer-Quiche Game",
+    "text": "Example 12: Beer-Quiche Game\nMorning routine reveals information:\n\nTwo types: Tough (prob 0.9) or Weak (prob 0.1)\nTough prefers beer, Weak prefers quiche\nAfter breakfast, may face challenge\nChallenger fights if believes opponent is Weak\n\nPooling on beer can signal toughness, but forward induction refines"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#applications-in-industrial-organization",
+    "href": "slides/04_games_with_assymetric_info.html#applications-in-industrial-organization",
+    "title": "Games under  Asymmetric Information",
+    "section": "Applications in Industrial Organization",
+    "text": "Applications in Industrial Organization\nIncomplete information models explain:\n\nEntry deterrence through limit pricing\nPredatory pricing to signal costs\nPatent races with uncertain R&D costs\nMerger decisions with private valuations\nQuality signaling through warranties\n\nKey insight: information asymmetries drive strategic behavior"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#contract-theory-applications",
+    "href": "slides/04_games_with_assymetric_info.html#contract-theory-applications",
+    "title": "Games under  Asymmetric Information",
+    "section": "Contract Theory Applications",
+    "text": "Contract Theory Applications\nIncomplete information in principal-agent relationships:\n\nEmployer cannot observe worker ability or effort\nLender uncertain about borrower risk\nRegulator doesn’t know firm’s costs\n\nOptimal contracts trade off rent extraction and efficiency: - Information rents to higher types - Distortions for lower types"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#experimental-evidence",
+    "href": "slides/04_games_with_assymetric_info.html#experimental-evidence",
+    "title": "Games under  Asymmetric Information",
+    "section": "Experimental Evidence",
+    "text": "Experimental Evidence\nLaboratory experiments test predictions:\n\nOverbidding in first-price auctions relative to theory\nWinner’s curse observed in common-value auctions\nSignaling games: partial pooling occurs\nTrust games: incomplete information reduces cooperation\n\nBehavioral factors matter but basic insights hold"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#computational-considerations",
+    "href": "slides/04_games_with_assymetric_info.html#computational-considerations",
+    "title": "Games under  Asymmetric Information",
+    "section": "Computational Considerations",
+    "text": "Computational Considerations\nFinding equilibria in incomplete information games:\n\nFirst-order conditions for continuum types\nFixed-point algorithms for discrete types\nNumerical integration for expected payoffs\nMonte Carlo methods for complex type spaces\n\nTractability varies with type space dimensionality"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#summary",
+    "href": "slides/04_games_with_assymetric_info.html#summary",
+    "title": "Games under  Asymmetric Information",
+    "section": "Summary",
+    "text": "Summary\nIncomplete information fundamentally changes strategic analysis:\n\nBayesian Nash equilibrium incorporates beliefs\nSignaling and screening emerge as strategic tools\nMechanism design exploits information revelation\nApplications across economics and beyond\n\nUnderstanding information asymmetries essential for modern game theory"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#introduction-to-incomplete-information",
+    "href": "slides/04_games_with_assymetric_info.html#introduction-to-incomplete-information",
+    "title": "Games under  Asymmetric Information",
+    "section": "Introduction to Incomplete Information",
+    "text": "Introduction to Incomplete Information"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2",
+    "href": "slides/04_games_with_assymetric_info.html#example-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2\n\n\nSuppose there are two planets trying to settle their diplomatic relationships, Hoth and Wobani.\nThey have to decide if they will be sign a Free Trade Agreement or they will sign a Security pact.\nHoth is a pacifist country, and prefers to focus in trade, while Hoth is concerned with their security, and then they would prefer a security pact.\nWobani’s diplomatic team can be one of two types, integrationist or isolationist. This is unknown to Hoth’s diplomatic team."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-3",
+    "href": "slides/04_games_with_assymetric_info.html#example-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-4",
+    "href": "slides/04_games_with_assymetric_info.html#example-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nAs expected, this is the simplest scenario we could face, an equlibrium with dominant strategies. This will not be the case, and we will need to study the beliefs of players regarding the other player’s type."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-1-1",
+    "href": "slides/04_games_with_assymetric_info.html#example-1-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 1",
+    "text": "Example 1\nNow suppose that:\n\nPlayer 2 is as we know, for him, playing dirty is a dominant strategy.\nPlayer 1’s preferences are unknown to player 2, he can be tough (he is like P2) or accomodanting (clean is dominant).\nP1 knows exactly the payoff matrix (he knows his type), but P2 does not."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-1-2",
+    "href": "slides/04_games_with_assymetric_info.html#example-1-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 1",
+    "text": "Example 1\n\n\n\n\n\nP1-P2\ndirty\nclean\n\n\n\n\ndirty\n(0,0)\n(7,-2)\n\n\nclean\n(-2,7)\n(5,5)\n\n\n\nP1 is tough\n\n\n\n\nP1-P2\ndirty\nclean\n\n\n\n\ndirty\n(-2,0)\n(5,-2)\n\n\nclean\n(0,7)\n(7,5)\n\n\n\nP1 is accomodating\n\nBecause this game has dominant strategies, the \\(NE\\) is easy to spot, \\((d,dc)\\), i.e., each player (type) plays his dominant strategy."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-1-3",
+    "href": "slides/04_games_with_assymetric_info.html#example-1-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 1",
+    "text": "Example 1"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-1-4",
+    "href": "slides/04_games_with_assymetric_info.html#example-1-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 1",
+    "text": "Example 1\nAs expected, this is the simplest scenario we could face, an equlibrium with dominant strategies. This will not be the case, and we will need to study the beliefs of players regarding the other player’s type."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-1",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2\n\n\n\n\n\nH - W\n\\(F\\)\n\\(S\\)\n\n\n\n\n\\(F\\)\n(3,1)\n(0,0)\n\n\n\\(S\\)\n(0,0)\n(1,3)\n\n\n\nW is Integrationist (type 1)\n\n\n\n\nH - W\n\\(F\\)\n\\(S\\)\n\n\n\n\n\\(F\\)\n(3,0)\n(0,1)\n\n\n\\(S\\)\n(0,3)\n(1,0)\n\n\n\nW is Isolationist. (type 2)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#bayesian-nash-equilibrum",
+    "href": "slides/04_games_with_assymetric_info.html#bayesian-nash-equilibrum",
+    "title": "Games under  Asymmetric Information",
+    "section": "Bayesian Nash Equilibrum",
+    "text": "Bayesian Nash Equilibrum\n\nW knows exactly her type.\nGiven that H does not know the type of W, it will a probability \\(p\\) to the scenario in which W is integrationist.\nLet’s assume that W knows \\(p\\).\n\n\nThe method to solve these games was developed by the Hungarian economist John Harsanyi."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-2",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2\n\nW knows exactly her type.\nGiven that H does not know the type of W, it will a probability \\(p\\) to the scenario in which W is integrationist.\nLet’s assume that W knows \\(p\\).\n\n\nThe method to solve these games was developed by the Hungarian economist John Harsanyi."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-3",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2\n\nTurn this game into an Imperfect Information Game. Introduce \\(N\\) as a player.\nUse the \\(NE\\) concept we used for imperfect information games (SPNE). This will be called Bayes Nash Equilibrium."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#bayesian",
+    "href": "slides/04_games_with_assymetric_info.html#bayesian",
+    "title": "Games under  Asymmetric Information",
+    "section": "Bayesian",
+    "text": "Bayesian"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-4",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2\n\nIn this case:\n\nA strategy for H is:\n\npure strategies, just \\(F\\) or \\(S\\)\nmixed strategies, \\(\\lambda\\in(0,1)\\) where \\(\\lambda\\) is the probability of playing \\(F\\).\n\nA strategy for W is:\n\npure strategies, a pair of \\(F\\) or \\(S\\) for each type.\nmixed stragies, a pair \\((\\mu_1,\\mu_2)\\) for the probability of playing \\(F\\) for each type."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-5",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-5",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2\nA Bayes Nash Equilbrium (BNE) will be a triple \\((\\lambda, \\mu_1,\\mu_2)\\) in which each player (and each type of player) will play a best response as follows:\n\n\\(\\mu_i\\) maximizes type’s \\(i\\) W expected payoffs, if H choses \\(F\\) with probability \\(\\lambda\\).\n\\(\\lambda\\) maximizes H’s expected payoffs if H believes that with probability \\(p\\) she will encounter W type 1, that will play \\(F\\) with probability \\(\\mu_1\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-6",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-6",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2",
+    "text": "Example 2"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Pure Strategies",
+    "text": "Example 2: Pure Strategies\n\nSuppose \\(H\\) plays \\(F\\) for sure.\nIn this case, \\(W\\) will play \\(FS\\).\n\n\nBut can this be an equilibrium?\n\n\nIf so, H must stick with \\(F\\), \\(i.e.\\) \\(F\\) must be a best response to W strategy’s \\(FS\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-1",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Pure Strategies",
+    "text": "Example 2: Pure Strategies\n\nRemember, H expects W to be type 1 with probability \\(p\\), so her expected payoffs are:\n\n\\(E[\\pi_H(F,FS)]=p3+(1-p)0=3p\\)\n\\(E[\\pi_H(S,FS)]=p0+(1-p)1=1-p\\)\n\nIf H is to stick with \\(F\\) when W is playing \\(FS\\), then it must be true that:\n\\[3p\\geq 1-p\\ \\Rightarrow\\ p\\geq \\frac{1}{4}\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-2",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Pure Strategies",
+    "text": "Example 2: Pure Strategies\n\nSuppose now that H plays \\(S\\) for sure.\nIn this case, W will play \\(SF\\).\n\nBut can this be an equilibrium? If so, H must stick with \\(S\\), \\(i.e.\\) \\(S\\) must be a best response to W strategy’s \\(SF\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-3",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Pure Strategies",
+    "text": "Example 2: Pure Strategies\n\nRemember, H expects W to be type 1 with probability \\(p\\), so her expected payoffs are:\n\n\\(E[\\pi_H(F,SF)]=p0+(1-p)3=3(1-p)\\)\n\\(E[\\pi_H(S,SF)]=p1+(1-p)0=p\\)\n\nIf H is to stick with \\(S\\) when W is playing \\(SF\\), then it must be true that:\n\\[3(1-p)\\leq p\\ \\Rightarrow\\ p\\geq \\frac{3}{4}\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-4",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-pure-strategies-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Pure Strategies",
+    "text": "Example 2: Pure Strategies\nConclusion:\n\nIf \\(p\\geq \\frac{3}{4}\\) there are 2 BNEs, \\((F,FS)\\) and \\((S,SF)\\).\nIf \\(\\frac{1}{4}\\leq p &lt; \\frac{3}{4}\\) there is only 1 BNE, \\((F,FS)\\).\nIf \\(p&lt;\\frac{1}{4}\\) there is no BNE in pure strategies."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Mixed Strategies",
+    "text": "Example 2: Mixed Strategies\n\n\n\n\n\n\nImportant\n\n\nRemember that in the case of mixed strategies, to randomize, each pure strategy with positive probability must be yield the same expected payoff.\n\n\n\nThere can be a plethora of NEs in mixed strategies, let’s focus on a special situation, when \\(p&lt;\\frac{1}{4}\\) which is a situation when we know for sure there is no pure strategy \\(BNE\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-1",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Mixed Strategies",
+    "text": "Example 2: Mixed Strategies\n\nSuppose H plays \\(F\\) with probability \\(\\lambda\\).\nType 1 W has expected payoff \\(\\lambda\\) by playing \\(F\\), while playing \\(S\\) can expect \\(3(1-\\lambda)\\).\nType 2 W has expected payoff by playing \\(F\\) \\(3(1-\\lamba)\\), while playing \\(S\\) can expect \\(\\lambda\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-2",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Mixed Strategies",
+    "text": "Example 2: Mixed Strategies\n\nW type 1 would play a mixed strategies equilibrium only if \\(\\lambda=3(1-\\lambda)\\), or \\(\\lambda=\\frac{3}{4}\\).\nW type 2 would play a mixed strategies equilibrium only if \\(3(1-\\lambda)=\\lambda\\), or \\(\\lambda=\\frac{3}{4}\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-3",
+    "href": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example 2: Mixed Strategies",
+    "text": "Example 2: Mixed Strategies"
   }
 ]
