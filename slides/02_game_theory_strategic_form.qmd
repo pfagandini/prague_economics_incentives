@@ -151,7 +151,7 @@ This is the Strategic or Normal form to represent this game:
 
 ## Equivalence in the Extensive form
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 

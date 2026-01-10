@@ -141,7 +141,7 @@ A perfect information game cannot have any simoultaneous moves.
 
 The Entry Game
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
@@ -187,7 +187,7 @@ The Entry Game
 
 The Entry Game II
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
@@ -281,7 +281,7 @@ Start from the terminal nodes to verify which choice is rational for the last pl
 
 ## Backward Induction
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
@@ -312,7 +312,7 @@ Start from the terminal nodes to verify which choice is rational for the last pl
 
 ## Backward Induction
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
@@ -382,7 +382,7 @@ For example, suppose Pepsi includes a clause in the C-level executives' contract
 
 ## The Power of Commitment
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 \tikzset{
@@ -458,7 +458,7 @@ Determining this, but in particular for games with imperfect information, is the
 
 Entry Game III
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
@@ -529,7 +529,7 @@ But are all these NEs credible? NO :x:
 To be credible, the actions taken in the equilibrium strategy profiles, must remain rational after previous moves.
 
 Suppose Coke plays enter, now the game is:
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
@@ -608,7 +608,7 @@ A **subgame** is a part of the extensive form; it is a collection of nodes and b
 
 ## Subgames
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc,fit,shapes.geometric}
 
@@ -663,7 +663,7 @@ A **subgame** is a part of the extensive form; it is a collection of nodes and b
 
 ## Subgames
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc,fit,shapes.geometric}
 
@@ -771,7 +771,7 @@ For example, if the level of preparedness is:
 
 ## Example 
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc,fit,shapes.geometric}
 
@@ -872,7 +872,7 @@ The key here is that if a player believes a bad behavior today could cause some 
 
 ## Repeated Prisoner's Dilemma
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc,fit,shapes.geometric}
 

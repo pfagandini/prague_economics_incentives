@@ -247,7 +247,7 @@ Because this game has dominant strategies, the $NE$ is easy to spot, $(d,dc)$, *
 
 ## Example 1
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc,fit,shapes.geometric}
 
@@ -447,7 +447,7 @@ A Bayes Nash Equilbrium (BNE) will be a triple $(\lambda, \mu_1,\mu_2)$ in which
 
 ## Example 2
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc,fit,shapes.geometric}
 
@@ -639,3 +639,4 @@ These slides took definitions and examples from the book:
 * The Moral Hazard example was taken from *Wealth and the Principal-Agent Matching*, by P. Fagandini (2022), Managerial and Decision Economics.
 
 :::
+

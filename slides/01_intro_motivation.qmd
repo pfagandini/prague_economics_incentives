@@ -111,7 +111,7 @@ For any game we want to model, we will need to define some components:
 
 ## Extensive form
 
-```{r, engine='tikz', fig.align='center'}
+```{r, engine='tikz', fig.align='center', clean=TRUE}
 
 \usetikzlibrary{calc}
 
