@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Paulo Fagandini">
   <title>VSE – Games under   Asymmetric Information</title>
@@ -192,113 +192,181 @@ Paulo Fagandini
 </section>
 <section id="a-principal-agent-model" class="slide level2">
 <h2>A Principal-Agent model</h2>
-<p>The most simple way to model the Pricipal-Agent model (intuitive and transparent way) is by modelling the relationship between employer (Principal) and employee (Agent).</p>
-<p>Suppose the Principal hires the Agent to perform some task.</p>
-</section>
-<section id="a-principal-agent-model-1" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>Let:</p>
+<p>Suppose the following alternative setup:</p>
 <ol type="1">
-<li class="fragment">both agent and principal be risk neutral: <span class="math inline">\(u_a(w)=w\)</span>, and <span class="math inline">\(u_p(\pi)=\pi\)</span>.</li>
-<li class="fragment">the outcome be <span class="math inline">\(x\in\{0,\xi\}\)</span>.</li>
-<li class="fragment">effort be chosen as <span class="math inline">\(e\in[0,1]\)</span>, and <span class="math inline">\(Pr(x=\xi|e)=e\)</span>.</li>
-<li class="fragment">the wage have fixed <span class="math inline">\(a\)</span> pay and bonus <span class="math inline">\(b\)</span>, paid in case <span class="math inline">\(x=\xi\)</span>.</li>
-<li class="fragment">Let <span class="math inline">\(c(e)=\frac{e^2}{2}\)</span> be the cost of effort.</li>
+<li class="fragment"><span class="math inline">\(e\)</span> is effort exherted by the Agent, with cost <span class="math inline">\(c(e)=\frac{e^2}{2}\)</span>.</li>
+<li class="fragment">Let <span class="math inline">\(x(e)=x\cdot e\)</span> the return expected for the Principal.</li>
+<li class="fragment">Suppose the contract is based on a compensation <span class="math inline">\(w(x)=a+bx\)</span>. Note that <span class="math inline">\(b\leq 1\)</span>, otherwise the Principal loses money, it would be giving away everything and then some.</li>
+<li class="fragment">Suppose the Agent can get utility <span class="math inline">\(\underline{u}\)</span> in an alternative job.</li>
 </ol>
 </section>
-<section id="a-principal-agent-model-2" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>The maximization problem of the principal is given by:</p>
-<p><span class="math display">\[
-\begin{aligned}
-  \max_{e,a,b}\quad &amp;-a+e(\xi-b)\\
-  s.t.\quad &amp;a+eb-c(e)\geq\bar{u}\\
-  &amp;e\in\arg\max_{\hat{e}}\{a+\hat{e}b-c(\hat{e})\}\\
-  &amp;a\geq -w
-\end{aligned}
-\]</span></p>
-<p>Let’s assume, further, than <span class="math inline">\(\omega = 0\)</span>, <em>i.e.</em> we will not allow negative fixed wage (or transfers from the agent to the principal). This is know as limited liability or cash constraint.</p>
-</section>
-<section id="a-principal-agent-model-3" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>Grossman and Hart (1983) show that under some conditions (satisfied in this model and in most of the simple versions of this model) the problem can be solved in two stages:</p>
+<section id="first-best" class="slide level2">
+<h2>First Best</h2>
+<p>The Principal <strong>observes</strong> <span class="math inline">\(e\)</span>. The contract must be such that:</p>
 <ol type="1">
-<li class="fragment">Solve the problem for the agent, taking everything external to the agent as a parameter.</li>
-<li class="fragment">Solve the problem of the principal, substituting the solution of the agent as a function of the principal’s variables.</li>
+<li class="fragment">The agent <em>accepts</em> to sign the contract: <span class="math display">\[a+bxe-\frac{e^2}{2}\geq \underline{u}\]</span> this is the <strong>participation constraint</strong>.</li>
+<li class="fragment">Maximizes the Principal’s expected utility, <em>i.e.</em> it solves: <span class="math display">\[\max_{e,a,b}\ xe -a-bxe\]</span></li>
 </ol>
-<p>This is how we will proceed.</p>
 </section>
-<section id="a-principal-agent-model-4" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>Given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, the agent will maximize her utility, so computing the FOC we get:</p>
-<p><span class="math display">\[b-c'=0\quad\Rightarrow\quad b=e^*\]</span></p>
-<p>So the agent will choose optimally <span class="math inline">\(e=b\)</span>.</p>
+<section id="first-best-1" class="slide level2">
+<h2>First Best</h2>
+<p>Note that the Principal has no incentive to give more than the strictly necessary to make the Agent sign the contract (first best, <span class="math inline">\(e\)</span> is observable), then the participation constraint will be binding.</p>
+<p><span class="math display">\[a+bxe-\frac{e^2}{2}= \underline{u}\]</span></p>
+<p>We can substitute this into the Principal’s maximization problem.</p>
 </section>
-<section id="a-principal-agent-model-5" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>The problem for the principal is now:</p>
-<p><span class="math display">\[
-\begin{aligned}
-  \max_{a,e}\quad &amp;-a+e(\xi-e)\\
-  s.t.\quad &amp;a+e^2-\frac{e^2}{2}\geq\bar{u}\\
-  &amp;a\geq 0
-\end{aligned}
-\]</span></p>
-<p>Now, if <span class="math inline">\(e^*=0\)</span>, the agent will accept to participate if and only if <span class="math inline">\(a\geq \bar{u}\)</span>. For simplicity assume <span class="math inline">\(\bar{u}=0\)</span>.</p>
+<section id="first-best-2" class="slide level2">
+<h2>First Best</h2>
+<p><span class="math display">\[\max_{e}\ xe-\frac{e^2}{2}\]</span></p>
+<p>With FOC:</p>
+<p><span class="math display">\[x-e^*=0\quad\Rightarrow\quad e^*=x\]</span></p>
+<p>This is the socially optimal level of effort, which will yield an output <span class="math inline">\(x^2\)</span> and set <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(a+bx^2=\underline{u}+\frac{x^2}{2}\)</span>. In particular <span class="math inline">\(a=\underline{u}\)</span> and <span class="math inline">\(b=\frac{1}{2}\)</span> would work.</p>
 </section>
-<section id="a-principal-agent-model-6" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p><span class="math display">\[
-\begin{aligned}
-  \max_{a,e}\quad &amp;-a+e(\xi-e)\\
-  s.t.\quad &amp;a+\frac{e^2}{2}\geq0\\
-  &amp;a\geq 0
-\end{aligned}
-\]</span></p>
-<p>Which constraint is irrelevant now?</p>
+<section id="second-best" class="slide level2">
+<h2>Second Best</h2>
+<p>Now assume the Principal cannot observe <span class="math inline">\(e\)</span>. What will the Agent do when offered a contract <span class="math inline">\(a+bx(e)\)</span>?</p>
 <div class="fragment">
-<p>The Participation Constraint, as <span class="math inline">\(\frac{e^2}{2}\geq 0\)</span>. Then the optimal is <span class="math inline">\(a=0\)</span>. Now what is the optimal level of effort?</p>
+<p>The agent will solve:</p>
+<p><span class="math display">\[\max_{\hat{e}} a+bx(\hat{e})-\frac{\hat{e}^2}{2}\]</span></p>
+<p>And choose <span class="math inline">\(e = bx &lt; x\)</span>. Note that the larger the bonus, the more effor the Agent will exhert! <span class="math inline">\(a\)</span> seems to be irrelevant for the amount of effort exherted.</p>
 </div>
 </section>
-<section id="a-principal-agent-model-7" class="slide level2">
-<h2>A Principal-Agent model</h2>
+<section id="second-best-1" class="slide level2">
+<h2>Second Best</h2>
+<p>This is an anomaly, as people usually are not risk neutral. Let’s assume <span class="math inline">\(u()\)</span> such that <span class="math inline">\(u'&gt;0\)</span> and <span class="math inline">\(u''&lt;0\)</span>. Now the problem becomes:</p>
+<p><span class="math display">\[\max_{\hat{e}} u(a+bx\hat{e})-\frac{\hat{e}^2}{2}\]</span></p>
+<p>And the FOC will be: <span class="math display">\[e=u'(a+bxe)bx\]</span> now we can see that a larger value of <span class="math inline">\(a\)</span> will actually <em>decrease</em> the level of effort. Now let’s go back to the risk neutral case.</p>
+</section>
+<section id="second-best-2" class="slide level2">
+<h2>Second Best</h2>
+<p>Of course, the Principal will know the Agent is planning her effort level as a function of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, so she needs to be careful setting those values</p>
 <p><span class="math display">\[
 \begin{aligned}
-  \max_{e}\quad &amp;e(\xi-e)\\
+  \max_{e,a,b}\ &amp;xe-a+-bxe\\
+  \text{s.t.}\quad &amp;a+bxe-\frac{e^2}{2}=\underline{u}\\
+  &amp;e\in\arg\max_{\hat{e}} a + bxe - \frac{e^2}{2}
 \end{aligned}
 \]</span></p>
-<p>And from there <span class="math inline">\(e^*=\frac{\xi}{2}\)</span>. Note that this makes <span class="math inline">\(b=\frac{\xi}{2}\)</span>. So the expected payoffs are:</p>
+<p>This last equation is the <strong>incentive compatiblity</strong> constraint.</p>
+</section>
+<section id="second-best-3" class="slide level2">
+<h2>Second Best</h2>
+<p>Substituting the IC for its solution and rearranging we have:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{e,a,b}\ &amp;-a+(1-b)xe\\
+  \text{s.t.}\quad &amp;a+bxe-\frac{e^2}{2}=\underline{u}\\
+  &amp;e=bx
+\end{aligned}
+\]</span></p>
+<p>We can substitute the <span class="math inline">\(IC\)</span> in the maximization problem and <span class="math inline">\(PC\)</span> to get</p>
+</section>
+<section id="second-best-4" class="slide level2">
+<h2>Second Best</h2>
+<p>And substituting in the maximization problem yields</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{a,b}\ &amp;-a+(1-b)bx^2\\
+  \text{s.t.}\quad &amp;a+\frac{(bx)^2}{2}=\underline{u}
+\end{aligned}
+\]</span></p>
+<p>And further substituting the <span class="math inline">\(PC\)</span> in the maximization problem we have:</p>
+</section>
+<section id="second-best-5" class="slide level2">
+<h2>Second Best</h2>
+<p><span class="math display">\[
+  \max_{b}\ -\left(\underline{u}-\frac{(bx)^2}{2}\right)+(1-b)bx^2
+\]</span></p>
+<p>which is equivalent to:</p>
+<p><span class="math display">\[
+  \max_{b}\ -\underline{u}+\left(1-\frac{b}{2}\right)bx^2
+\]</span></p>
+<p>With <span class="math inline">\(FOC:\)</span> <span class="math inline">\(x^2=b^*x^2\)</span>, or <span class="math inline">\(b^*=1\)</span>. What does this mean?</p>
+</section>
+<section id="second-best-6" class="slide level2">
+<h2>Second Best</h2>
+<p>Remember we discussed briefly the situation of a utility function <span class="math inline">\(u()\)</span> with <span class="math inline">\(u'()&gt;0\)</span> and <span class="math inline">\(u''&lt;0\)</span> for the agent? Why just for the agent?</p>
+<div class="fragment">
+<p>We could do that for the principal as well, but usually we can assume firms as risk neutral because shareholders can get rid of the risk by building a diversified portfolio. This is not the case for the agent. We will think on both cases.</p>
+</div>
+</section>
+<section id="second-best-7" class="slide level2">
+<h2>Second Best</h2>
+<div style="font-size: 70%;">
+<p>Let’s assume now that:</p>
 <ol type="1">
-<li class="fragment"><span class="math inline">\(E[u_a]=0+\left(\frac{\xi}{2}\right)^2-\frac{\xi^2}{8}=\frac{\xi^2}{8}\)</span></li>
-<li class="fragment"><span class="math inline">\(E[u_p]=-0+\frac{\xi}{2}\left(\xi-\frac{\xi}{2}\right)=\frac{\xi^2}{4}\)</span></li>
+<li class="fragment">Returns to effort are <span class="math inline">\(x(e)\)</span> is distributed with mean <span class="math inline">\(xe\)</span> and variance <span class="math inline">\(s^2\)</span>.</li>
+<li class="fragment">If the contract establishes <span class="math inline">\(a\)</span> as base salary and <span class="math inline">\(b\)</span> as variable pay, the wage is a random variable with mean <span class="math inline">\(a+bxe\)</span> and variance <span class="math inline">\(b^2s^2\)</span>.</li>
+<li class="fragment">Suppose the agent is risk averse, so the utility function is now <span class="math display">\[u=a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}\]</span> Now <span class="math inline">\(K\)</span> allow us to measure the cost of the effort, and <span class="math inline">\(\rho\)</span> captures the level of risk aversion of the agent.</li>
 </ol>
+</div>
 </section>
-<section id="a-principal-agent-model-8" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>What if the Principal could observe effort?</p>
-<p>Then the Incentive Compatibility is unnecessary, and the principal needs just to compensate effort (non probabilistically)</p>
+<section id="second-best-8" class="slide level2">
+<h2>Second Best</h2>
+<p>Now, given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, what is hte optimal level of effort?</p>
+<p><span class="math display">\[e^*=\frac{bx}{K}\]</span></p>
+<p>The only difference, is that the most costly effort is, the lower the optimal level of effort for the same compensation. [Homework: Introduce <span class="math inline">\(K\)</span> in the previous solution and check that the solution is the same]</p>
+</section>
+<section id="second-best-9" class="slide level2">
+<h2>Second Best</h2>
+<p>The principal’s problem is:</p>
 <p><span class="math display">\[
 \begin{aligned}
-  \max_{e}\quad &amp;e\xi-c(e)\\
+  \max_{e,a,b}\ &amp;xe-a+-bxe\\
+  \text{s.t.}\quad &amp;a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}=\underline{u}\\
+  &amp;e\in\arg\max_{\hat{e}} a + bxe - \frac{e^2}{2}-\frac{\rho b^2s^2}{2}
 \end{aligned}
 \]</span></p>
-<p>Which has solution <span class="math inline">\(e^*=\xi\)</span>, <span class="math inline">\(a=0\)</span>, and <span class="math inline">\(b=c(\xi)=\frac{\xi^2}{2}\)</span>. The expected utility of the agent is <span class="math inline">\(0\)</span>, and the expected profit for the principal is <span class="math inline">\(\frac{\xi^2}{2}\)</span>.</p>
+<p>Again, we can replace the <span class="math inline">\(IC\)</span></p>
 </section>
-<section id="a-principal-agent-model-9" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>Some notes:</p>
-<ul>
-<li class="fragment">With information asymmetry, the agent can <em>extract information rents</em> from the principal, at the cost of a worse outcome overall.</li>
-<li class="fragment">Without information asymmetry, the principal can extrat the whole surplus, which is larger than the case with information asymmetries.</li>
-</ul>
+<section id="second-best-10" class="slide level2">
+<h2>Second Best</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{e,a,b}\ &amp;xe-a+-bxe\\
+  \text{s.t.}\quad &amp;a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}=\underline{u}\\
+  &amp;e=\frac{bx}{K}
+\end{aligned}
+\]</span></p>
+<p>And we can replace the <span class="math inline">\(IC\)</span> the the <span class="math inline">\(PC\)</span> and the maximization problem.</p>
 </section>
-<section id="a-principal-agent-model-10" class="slide level2">
-<h2>A Principal-Agent model</h2>
-<p>In general,</p>
+<section id="second-best-11" class="slide level2">
+<h2>Second Best</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{a,b}\ &amp;-a+(1-b)\frac{bx^2}{K}\\
+  \text{s.t.}\quad &amp;a+\frac{(bx)^2}{K}-\frac{(bx)^2}{2K}-\frac{\rho b^2s^2}{2}=\underline{u}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="second-best-12" class="slide level2">
+<h2>Second Best</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{a,b}\ &amp;-a+(1-b)\frac{bx^2}{K}\\
+  \text{s.t.}\quad &amp;a+\frac{(bx)^2}{2K}-\frac{\rho b^2s^2}{2}=\underline{u}
+\end{aligned}
+\]</span> And further substituting <span class="math inline">\(a\)</span> into the maximization problem we obtain:</p>
+</section>
+<section id="second-best-13" class="slide level2">
+<h2>Second Best</h2>
+<p><span class="math display">\[
+\begin{aligned}
+  \max_{b}\ &amp;-\left(\underline{u}-\frac{(bx)^2}{2K}+\frac{\rho b^2s^2}{2}\right)+(1-b)\frac{bx^2}{K}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="second-best-14" class="slide level2">
+<h2>Second Best</h2>
+<p>With FOC: <span class="math display">\[\frac{bx^2}{K}-\rho s^2 b+\frac{(1-2b)x^2}{K}=0\]</span> <span class="math display">\[bx^2-\rho s^2Kb+(1-2b)x^2=0\]</span> <span class="math display">\[-\rho s^2Kb+(1-b)x^2=0\]</span></p>
+</section>
+<section id="second-best-15" class="slide level2">
+<h2>Second Best</h2>
+<p><span class="math display">\[b^*=\frac{x^2}{\rho s^2 K + x^2}\]</span></p>
+<p>Note this is:</p>
 <ol type="1">
-<li class="fragment">Incentivizing hard work is <strong>costly</strong>.</li>
-<li class="fragment">The higher the profits, the larger the bonus.</li>
-<li class="fragment">The principal is almost always worse off in the presence of moral hazard, while the agent might be better off.</li>
+<li class="fragment">Increasing in <span class="math inline">\(x^2\)</span></li>
+<li class="fragment">Decreasing in <span class="math inline">\(K\)</span></li>
+<li class="fragment">Decreasing in <span class="math inline">\(\rho\)</span> and <span class="math inline">\(s^2\)</span>.</li>
 </ol>
 </section></section>
 <section>
@@ -628,7 +696,7 @@ Paulo Fagandini
 <ol type="1">
 <li class="fragment">Suppose <strong>H</strong> plays <span class="math inline">\(F\)</span> with probability <span class="math inline">\(\lambda\)</span>.</li>
 <li class="fragment">Type 1 <strong>W</strong> has expected payoff <span class="math inline">\(\lambda\)</span> by playing <span class="math inline">\(F\)</span>, while playing <span class="math inline">\(S\)</span> can expect <span class="math inline">\(3(1-\lambda)\)</span>.</li>
-<li class="fragment">Type 2 <strong>W</strong> has expected payoff by playing <span class="math inline">\(F\)</span> <span class="math inline">\(3(1-\lamba)\)</span>, while playing <span class="math inline">\(S\)</span> can expect <span class="math inline">\(\lambda\)</span>.</li>
+<li class="fragment">Type 2 <strong>W</strong> has expected payoff by playing <span class="math inline">\(F\)</span> <span class="math inline">\(3(1-\lamdba)\)</span>, while playing <span class="math inline">\(S\)</span> can expect <span class="math inline">\(\lambda\)</span>.</li>
 </ol>
 </section>
 <section id="example-2-mixed-strategies-2" class="slide level2">
@@ -640,17 +708,127 @@ Paulo Fagandini
 </section>
 <section id="example-2-mixed-strategies-3" class="slide level2">
 <h2>Example 2: Mixed Strategies</h2>
+<p>A BNE of this game is <span class="math inline">\(\lambda=\frac{3}{4}\)</span>, <span class="math inline">\((\mu_1,\mu_2)=\left(\frac{1}{4},\frac{1}{4}\right)\)</span></p>
 </section></section>
+<section>
 <section id="mechanism-design-the-revelation-principle-and-sales-to-an-unknown-buyer" class="title-slide slide level1 center">
 <h1>Mechanism Design, the Revelation Principle, and Sales to an Unknown Buyer</h1>
 
 </section>
-
+<section id="mechanism-design" class="slide level2">
+<h2>Mechanism Design</h2>
+<ul>
+<li class="fragment">So far we have studied what players will do, given a set of rules and payoffs (not entirely true, <em>i.e.</em> Contracts)</li>
+<li class="fragment">Mechanism Design asks, if I want a specific outcome:
+<ul>
+<li class="fragment">What de rules must be?</li>
+<li class="fragment">Is it even possible?</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Basically now we design the game to induce the players to play in a specific manner.</p>
+</div>
+</section>
+<section id="mechanism-design-1" class="slide level2">
+<h2>Mechanism Design</h2>
+<p>In general, the set of players is something that will be given, <em>i.e.</em> is something we cannot <strong>design</strong>, but the <strong>designer</strong> can choose:</p>
+<ol type="1">
+<li class="fragment">choices available to players</li>
+<li class="fragment">payoffs</li>
+</ol>
+</section>
+<section id="mechanism-design-2" class="slide level2">
+<h2>Mechanism Design</h2>
+<p>However, there are some constraints for the <em>designer</em></p>
+<ol type="1">
+<li class="fragment">There cannot be any coercion (why would you need to incentivize behavior if you can force it)</li>
+<li class="fragment">Players can choose to not participate, and therefore the game must give enough incentives to make players want to play.</li>
+</ol>
+<p>The optimal design is a mechanism whose equilibrium is the one that generates the highest payoff for the designer.</p>
+</section>
+<section id="mechanism-design-3" class="slide level2">
+<h2>Mechanism Design</h2>
+<p>More formally:</p>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A mechanism is a game (a set of rules) that specifies the strategies that the player can choose from and the outcome for every choice.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mechanism-design-4" class="slide level2">
+<h2>Mechanism Design</h2>
+<ol type="1">
+<li class="fragment">Let a strategy for a player <span class="math inline">\(s\)</span>.</li>
+<li class="fragment">Let the outcome of a game be denoted by <span class="math inline">\(t\)</span>.</li>
+<li class="fragment">Let the <em>type</em> of the player be denoted by <span class="math inline">\(\theta\)</span>.</li>
+<li class="fragment">Let the payoff of the player be represented by the function <span class="math inline">\(\pi(s,t,\theta)\)</span>.</li>
+</ol>
+<p>The designer can choose <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span>, but <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\pi\)</span> is out of his control.</p>
+</section>
+<section id="mechanism-design-5" class="slide level2">
+<h2>Mechanism Design</h2>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>Suppose there are two types <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\mu\)</span>. The designer assigns <span class="math inline">\((s_{\theta},t_{\theta})\)</span> as strategies and outcomes for the player type <span class="math inline">\(\theta\)</span>, and <span class="math inline">\((s_{\mu},t_{\mu})\)</span> for the player type <span class="math inline">\(\mu\)</span>.</p>
+<p>A design is said to be <strong>incentive compatible</strong> if:</p>
+<p><span class="math display">\[\pi(s_{\theta},t_{\theta},\theta)\geq \pi(s,t,\theta)\quad \forall s,\ \forall t\]</span> and <span class="math display">\[\pi(s_{\mu},t_{\mu},\mu)\geq \pi(s,t,\mu)\quad \forall s,\ \forall t\]</span></p>
+</div>
+</div>
+</div>
+<p>This is, every player has incentives to <em>tell the truth</em>.</p>
+</section>
+<section id="mechanism-design-6" class="slide level2">
+<h2>Mechanism Design</h2>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>Suppose there are two types <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\mu\)</span>, with <em>reservation utility</em> <span class="math inline">\(\underline{\pi}_{\theta}\)</span> and <span class="math inline">\(\underline{\pi}_{\mu}\)</span>.</p>
+<p>A design is said to be <strong>idividually rational</strong> if:</p>
+<p><span class="math display">\[\pi(s_{\theta},t_{\theta},\theta)\geq \underline{\pi}_\theta\]</span> and <span class="math display">\[\pi(s_{\mu},t_{\mu},\mu)\geq \underline{\pi}_\mu\]</span></p>
+</div>
+</div>
+</div>
+<p>This is, every player has incentives to <em>participate</em>.</p>
+</section>
+<section id="mechanism-design-7" class="slide level2">
+<h2>Mechanism Design</h2>
+<p>Without much surprise we call the designer the <strong>Principal</strong>.</p>
+<p>Any design the Principal devices to maximize her expected payoff must be <strong>incentive compatible</strong> and <strong>individually rational</strong>. Her payoff usually depends on the strategies chosen by the players.</p>
+<p>For surprise to none, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named <strong>direct-revelation mechanisms</strong>.</p>
+</section>
+<section id="mechanism-design-8" class="slide level2">
+<h2>Mechanism Design</h2>
+<p>Direct-revelation mechanism:</p>
+<ol type="1">
+<li class="fragment">Each player is free to lie about his type. <span class="math inline">\(\theta\)</span> can claim to be <span class="math inline">\(\mu\)</span> if so desires, and vice-versa.</li>
+<li class="fragment">Suppose that if you claim to be type <span class="math inline">\(\theta\)</span>, the mechanism assings you <span class="math inline">\((s_\theta,t_\theta)\)</span>, and <span class="math inline">\((s_\mu,t_\mu)\)</span> for the <span class="math inline">\(\mu\)</span> type</li>
+</ol>
+</section></section>
+<section>
 <section id="auctions" class="title-slide slide level1 center">
 <h1>Auctions</h1>
 
 </section>
-
+<section id="auctions-1" class="slide level2">
+<h2>Auctions</h2>
+<p>Auctions are, probably, the most transparent mechanism.</p>
+<ol type="1">
+<li class="fragment">Auctioneer does not know the player’s individual valuations.</li>
+<li class="fragment">Auctioneer wants to exert as much money as she can from bidders.</li>
+</ol>
+</section></section>
 <section id="signaling-games-and-the-lemons-problem" class="title-slide slide level1 center">
 <h1>Signaling Games and The Lemons Problem</h1>
 

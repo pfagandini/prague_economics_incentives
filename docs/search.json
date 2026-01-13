@@ -2167,7 +2167,7 @@
     "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model",
     "title": "Games under  Asymmetric Information",
     "section": "A Principal-Agent model",
-    "text": "A Principal-Agent model\nThe most simple way to model the Pricipal-Agent model (intuitive and transparent way) is by modelling the relationship between employer (Principal) and employee (Agent).\nSuppose the Principal hires the Agent to perform some task."
+    "text": "A Principal-Agent model\nSuppose the following alternative setup:\n\n\\(e\\) is effort exherted by the Agent, with cost \\(c(e)=\\frac{e^2}{2}\\).\nLet \\(x(e)=x\\cdot e\\) the return expected for the Principal.\nSuppose the contract is based on a compensation \\(w(x)=a+bx\\). Note that \\(b\\leq 1\\), otherwise the Principal loses money, it would be giving away everything and then some.\nSuppose the Agent can get utility \\(\\underline{u}\\) in an alternative job."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-1",
@@ -2244,7 +2244,7 @@
     "href": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-11",
     "title": "Games under  Asymmetric Information",
     "section": "A Principal-Agent model",
-    "text": "A Principal-Agent model\nThe expected payoffs are now:\n\n\n\\(E[u|e_h]=0.6 u(g-f)+0.3 u(m-f)+0.1 u(b-f)-d_h\\)\n\\(E[u|e_l]=0.1 u(g-f)+0.3 u(m-f)+0.6 u(b-f)-d_l\\)\n\n\n\nWhich one is better is no longer obvious. One has lower costs, the other has higher expected rewards."
+    "text": "A Principal-Agent model\nSuppose the following alternative setup:\n\n\\(e\\) is effort exherted by the Agent, with cost \\(c(e)=\\frac{e^2}{2}\\).\nLet \\(x(e)=x\\cdot e\\) the return expected for the Principal.\nSuppose the contract is based on a compensation \\(w(x)=a+bx\\). Note that \\(b\\leq 1\\), otherwise the Principal loses money, it would be giving away everything and then some.\nSuppose the Agent can get utility \\(\\underline{u}\\) in an alternative job."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#a-principal-agent-model-12",
@@ -2447,7 +2447,7 @@
     "href": "slides/04_games_with_assymetric_info.html#mechanism-design",
     "title": "Games under  Asymmetric Information",
     "section": "Mechanism Design",
-    "text": "Mechanism Design\nReverse game theory: design game to achieve desired outcome:\n\nDesigner wants to implement certain social choice function\nPlayers have private information (types)\nDesigner chooses rules (mechanism)\nRevelation principle: focus on direct mechanisms\n\nApplications: auctions, voting, matching markets"
+    "text": "Mechanism Design\n\nSo far we have studied what players will do, given a set of rules and payoffs (not entirely true, i.e. Contracts)\nMechanism Design asks, if I want a specific outcome:\n\nWhat de rules must be?\nIs it even possible?\n\n\n\nBasically now we design the game to induce the players to play in a specific manner."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#example-7-vickrey-auction",
@@ -2734,7 +2734,7 @@
     "href": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-1",
     "title": "Games under  Asymmetric Information",
     "section": "Example 2: Mixed Strategies",
-    "text": "Example 2: Mixed Strategies\n\nSuppose H plays \\(F\\) with probability \\(\\lambda\\).\nType 1 W has expected payoff \\(\\lambda\\) by playing \\(F\\), while playing \\(S\\) can expect \\(3(1-\\lambda)\\).\nType 2 W has expected payoff by playing \\(F\\) \\(3(1-\\lamba)\\), while playing \\(S\\) can expect \\(\\lambda\\)."
+    "text": "Example 2: Mixed Strategies\n\nSuppose H plays \\(F\\) with probability \\(\\lambda\\).\nType 1 W has expected payoff \\(\\lambda\\) by playing \\(F\\), while playing \\(S\\) can expect \\(3(1-\\lambda)\\).\nType 2 W has expected payoff by playing \\(F\\) \\(3(1-\\lamdba)\\), while playing \\(S\\) can expect \\(\\lambda\\)."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-2",
@@ -2748,6 +2748,202 @@
     "href": "slides/04_games_with_assymetric_info.html#example-2-mixed-strategies-3",
     "title": "Games under  Asymmetric Information",
     "section": "Example 2: Mixed Strategies",
-    "text": "Example 2: Mixed Strategies"
+    "text": "Example 2: Mixed Strategies\nA BNE of this game is \\(\\lambda=\\frac{3}{4}\\), \\((\\mu_1,\\mu_2)=\\left(\\frac{1}{4},\\frac{1}{4}\\right)\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#first-best",
+    "href": "slides/04_games_with_assymetric_info.html#first-best",
+    "title": "Games under  Asymmetric Information",
+    "section": "First Best",
+    "text": "First Best\nThe Principal observes \\(e\\). The contract must be such that:\n\nThe agent accepts to sign the contract: \\[a+bxe-\\frac{e^2}{2}\\geq \\underline{u}\\] this is the participation constraint.\nMaximizes the Principal’s expected utility, i.e. it solves: \\[\\max_{e,a,b}\\ xe -a-bxe\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#first-best-1",
+    "href": "slides/04_games_with_assymetric_info.html#first-best-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "First Best",
+    "text": "First Best\nNote that the Principal has no incentive to give more than the strictly necessary to make the Agent sign the contract (first best, \\(e\\) is observable), then the participation constraint will be binding.\n\\[a+bxe-\\frac{e^2}{2}= \\underline{u}\\]\nWe can substitute this into the Principal’s maximization problem."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#first-best-2",
+    "href": "slides/04_games_with_assymetric_info.html#first-best-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "First Best",
+    "text": "First Best\n\\[\\max_{e}\\ xe-\\frac{e^2}{2}\\]\nWith FOC:\n\\[x-e^*=0\\quad\\Rightarrow\\quad e^*=x\\]\nThis is the socially optimal level of effort, which will yield an output \\(x^2\\) and set \\(a\\) and \\(b\\) such that \\(a+bx^2=\\underline{u}+\\frac{x^2}{2}\\). In particular \\(a=\\underline{u}\\) and \\(b=\\frac{1}{2}\\) would work."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best",
+    "href": "slides/04_games_with_assymetric_info.html#second-best",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nNow assume the Principal cannot observe \\(e\\). What will the Agent do when offered a contract \\(a+bx(e)\\)?\n\nThe agent will solve:\n\\[\\max_{\\hat{e}} a+bx(\\hat{e})-\\frac{\\hat{e}^2}{2}\\]\nAnd choose \\(e = bx &lt; x\\). Note that the larger the bonus, the more effor the Agent will exhert! \\(a\\) seems to be irrelevant for the amount of effort exherted."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-1",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nThis is an anomaly, as people usually are not risk neutral. Let’s assume \\(u()\\) such that \\(u'&gt;0\\) and \\(u''&lt;0\\). Now the problem becomes:\n\\[\\max_{\\hat{e}} u(a+bx\\hat{e})-\\frac{\\hat{e}^2}{2}\\]\nAnd the FOC will be: \\[e=u'(a+bxe)bx\\] now we can see that a larger value of \\(a\\) will actually decrease the level of effort. Now let’s go back to the risk neutral case."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-2",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nOf course, the Principal will know the Agent is planning her effort level as a function of \\(a\\) and \\(b\\), so she needs to be careful setting those values\n\\[\n\\begin{aligned}\n  \\max_{e,a,b}\\ &xe-a+-bxe\\\\\n  \\text{s.t.}\\quad &a+bxe-\\frac{e^2}{2}=\\underline{u}\\\\\n  &e\\in\\arg\\max_{\\hat{e}} a + bxe - \\frac{e^2}{2}\n\\end{aligned}\n\\]\nThis last equation is the incentive compatiblity constraint."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-3",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nSubstituting the IC for its solution and rearranging we have:\n\\[\n\\begin{aligned}\n  \\max_{e,a,b}\\ &-a+(1-b)xe\\\\\n  \\text{s.t.}\\quad &a+bxe-\\frac{e^2}{2}=\\underline{u}\\\\\n  &e=bx\n\\end{aligned}\n\\]\nWe can substitute the \\(IC\\) in the maximization problem and \\(PC\\) to get"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-4",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nAnd substituting in the maximization problem yields\n\\[\n\\begin{aligned}\n  \\max_{a,b}\\ &-a+(1-b)bx^2\\\\\n  \\text{s.t.}\\quad &a+\\frac{(bx)^2}{2}=\\underline{u}\n\\end{aligned}\n\\]\nAnd further substituting the \\(PC\\) in the maximization problem we have:"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-5",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-5",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\\[\n  \\max_{b}\\ -\\left(\\underline{u}-\\frac{(bx)^2}{2}\\right)+(1-b)bx^2\n\\]\nwhich is equivalent to:\n\\[\n  \\max_{b}\\ -\\underline{u}+\\left(1-\\frac{b}{2}\\right)bx^2\n\\]\nWith \\(FOC:\\) \\(x^2=b^*x^2\\), or \\(b^*=1\\). What does this mean?"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-6",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-6",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nRemember we discussed briefly the situation of a utility function \\(u()\\) with \\(u'()&gt;0\\) and \\(u''&lt;0\\) for the agent? Why just for the agent?\n\nWe could do that for the principal as well, but usually we can assume firms as risk neutral because shareholders can get rid of the risk by building a diversified portfolio. This is not the case for the agent. We will think on both cases."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-7",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-7",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\nLet’s assume now that:\n\nReturns to effort are \\(x(e)\\) is distributed with mean \\(xe\\) and variance \\(s^2\\).\nIf the contract establishes \\(a\\) as base salary and \\(b\\) as variable pay, the wage is a random variable with mean \\(a+bxe\\) and variance \\(b^2s^2\\).\nSuppose the agent is risk averse, so the utility function is now \\[u=a+bxe-\\frac{Ke^2}{2}-\\frac{\\rho b^2s^2}{2}\\] Now \\(K\\) allow us to measure the cost of the effort, and \\(\\rho\\) captures the level of risk aversion of the agent."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-8",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-8",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nNow, given \\(a\\) and \\(b\\), what is hte optimal level of effort?\n\\[e^*=\\frac{bx}{K}\\]\nThe only difference, is that the most costly effort is, the lower the optimal level of effort for the same compensation. [Homework: Introduce \\(K\\) in the previous solution and check that the solution is the same]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-9",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-9",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nThe principal’s problem is:\n\\[\n\\begin{aligned}\n  \\max_{e,a,b}\\ &xe-a+-bxe\\\\\n  \\text{s.t.}\\quad &a+bxe-\\frac{Ke^2}{2}-\\frac{\\rho b^2s^2}{2}=\\underline{u}\\\\\n  &e\\in\\arg\\max_{\\hat{e}} a + bxe - \\frac{e^2}{2}-\\frac{\\rho b^2s^2}{2}\n\\end{aligned}\n\\]\nAgain, we can replace the \\(IC\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-10",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-10",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\\[\n\\begin{aligned}\n  \\max_{e,a,b}\\ &xe-a+-bxe\\\\\n  \\text{s.t.}\\quad &a+bxe-\\frac{Ke^2}{2}-\\frac{\\rho b^2s^2}{2}=\\underline{u}\\\\\n  &e=\\frac{bx}{K}\n\\end{aligned}\n\\]\nAnd we can replace the \\(IC\\) the the \\(PC\\) and the maximization problem."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-11",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-11",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\\[\n\\begin{aligned}\n  \\max_{a,b}\\ &-a+(1-b)\\frac{bx^2}{K}\\\\\n  \\text{s.t.}\\quad &a+\\frac{(bx)^2}{K}-\\frac{(bx)^2}{2K}-\\frac{\\rho b^2s^2}{2}=\\underline{u}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-12",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-12",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\\[\n\\begin{aligned}\n  \\max_{a,b}\\ &-a+(1-b)\\frac{bx^2}{K}\\\\\n  \\text{s.t.}\\quad &a+\\frac{(bx)^2}{2K}-\\frac{\\rho b^2s^2}{2}=\\underline{u}\n\\end{aligned}\n\\] And further substituting \\(a\\) into the maximization problem we obtain:"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-13",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-13",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\\[\n\\begin{aligned}\n  \\max_{b}\\ &-\\left(\\underline{u}-\\frac{(bx)^2}{2K}+\\frac{\\rho b^2s^2}{2}\\right)+(1-b)\\frac{bx^2}{K}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-14",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-14",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\nWith FOC: \\[\\frac{bx^2}{K}-\\rho s^2 b+\\frac{(1-2b)x^2}{K}=0\\] \\[bx^2-\\rho s^2Kb+(1-2b)x^2=0\\] \\[-\\rho s^2Kb+(1-b)x^2=0\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#second-best-15",
+    "href": "slides/04_games_with_assymetric_info.html#second-best-15",
+    "title": "Games under  Asymmetric Information",
+    "section": "Second Best",
+    "text": "Second Best\n\\[b^*=\\frac{x^2}{\\rho s^2 K + x^2}\\]\nNote this is:\n\nIncreasing in \\(x^2\\)\nDecreasing in \\(K\\)\nDecreasing in \\(\\rho\\) and \\(s^2\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-1",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nIn general, the set of players is something that will be given, i.e. is something we cannot design, but the designer can choose:\n\nchoices available to players\npayoffs"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-2",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nHowever, there are some constraints for the designer\n\nThere cannot be any coercion (why would you need to incentivize behavior if you can force it)\nPlayers can choose to not participate, and therefore the game must give enough incentives to make players want to play.\n\nThe optimal design is a mechanism whose equilibrium is the one that generates the highest payoff for the designer."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-3",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nMore formally:\n\n\n\nDefinition\n\n\nA mechanism is a game (a set of rules) that specifies the strategies that the player can choose from and the outcome for every choice."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-4",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\nLet a strategy for a player \\(s\\).\nLet the outcome of a game be denoted by \\(t\\).\nLet the type of the player be denoted by \\(\\theta\\).\nLet the payoff of the player be represented by the function \\(\\pi(s,t,\\theta)\\).\n\nThe designer can choose \\(s\\) and \\(t\\), but \\(\\theta\\) and \\(\\pi\\) is out of his control."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-1",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-1",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nAuctions are, probably, the most transparent mechanism.\n\nAuctioneer does not know the player’s individual valuations.\nAuctioneer wants to exert as much money as she can from bidders."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-5",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-5",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\n\n\nDefinition\n\n\nSuppose there are two types \\(\\theta\\) and \\(\\mu\\). The designer assigns \\((s_{\\theta},t_{\\theta})\\) as strategies and outcomes for the player type \\(\\theta\\), and \\((s_{\\mu},t_{\\mu})\\) for the player type \\(\\mu\\).\nA design is said to be incentive compatible if:\n\\[\\pi(s_{\\theta},t_{\\theta},\\theta)\\geq \\pi(s,t,\\theta)\\quad \\forall s,\\ \\forall t\\] and \\[\\pi(s_{\\mu},t_{\\mu},\\mu)\\geq \\pi(s,t,\\mu)\\quad \\forall s,\\ \\forall t\\]\n\n\n\nThis is, every player has incentives to tell the truth."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-6",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-6",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\n\n\nDefinition\n\n\nSuppose there are two types \\(\\theta\\) and \\(\\mu\\), with reservation utility \\(\\underline{\\pi}_{\\theta}\\) and \\(\\underline{\\pi}_{\\mu}\\).\nA design is said to be idividually rational if:\n\\[\\pi(s_{\\theta},t_{\\theta},\\theta)\\geq \\underline{\\pi}_\\theta\\] and \\[\\pi(s_{\\mu},t_{\\mu},\\mu)\\geq \\underline{\\pi}_\\mu\\]\n\n\n\nThis is, every player has incentives to participate."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-7",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-7",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nWithout much surprise we call the designer the Principal.\nAny design the Principal devices to maximize her expected payoff must be incentive compatible and individually rational. Her payoff usually depends on the strategies chosen by the players.\nFor surprise to none, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named direct-revelation mechanisms."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-8",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-8",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nDirect-revelation mechanism:\n\nEach player is free to lie about his type. \\(\\theta\\) can claim to be \\(\\mu\\) if so desires, and vice-versa.\nSuppose that if you claim to be type \\(\\theta\\), the mechanism assings you \\((s_\\theta,t_\\theta)\\), and \\((s_\\mu,t_\\mu)\\) for the \\(\\mu\\) type"
   }
 ]

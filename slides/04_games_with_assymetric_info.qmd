@@ -64,122 +64,209 @@ Principals have to design schemes that *incentive* the agent to behave more in l
 
 ## A Principal-Agent model
 
-The most simple way to model the Pricipal-Agent model (intuitive and transparent way) is by modelling the relationship between employer (Principal) and employee (Agent).
+Suppose the following alternative setup:
 
-Suppose the Principal hires the Agent to perform some task. 
+1. $e$ is effort exherted by the Agent, with cost $c(e)=\frac{e^2}{2}$.
+2. Let $x(e)=x\cdot e$ the return expected for the Principal.
+3. Suppose the contract is based on a compensation $w(x)=a+bx$. Note that $b\leq 1$, otherwise the Principal loses money, it would be giving away everything and then some.
+4. Suppose the Agent can get utility $\underline{u}$ in an alternative job.
 
-## A Principal-Agent model
-Let:
+## First Best
 
-1. both agent and principal be risk neutral: $u_a(w)=w$, and $u_p(\pi)=\pi$.
-2. the outcome be $x\in\{0,\xi\}$.
-3. effort be chosen as $e\in[0,1]$, and $Pr(x=\xi|e)=e$.
-4. the wage have fixed $a$ pay and bonus $b$, paid in case $x=\xi$.
-5. Let $c(e)=\frac{e^2}{2}$ be the cost of effort.
+The Principal **observes** $e$. The contract must be such that:
 
-## A Principal-Agent model
+1. The agent *accepts* to sign the contract: $$a+bxe-\frac{e^2}{2}\geq \underline{u}$$ this is the **participation constraint**.
+2. Maximizes the Principal's expected utility, *i.e.* it solves: $$\max_{e,a,b}\ xe -a-bxe$$
 
-The maximization problem of the principal is given by:
+## First Best
 
-$$
-\begin{aligned}
-  \max_{e,a,b}\quad &-a+e(\xi-b)\\
-  s.t.\quad &a+eb-c(e)\geq\bar{u}\\
-  &e\in\arg\max_{\hat{e}}\{a+\hat{e}b-c(\hat{e})\}\\
-  &a\geq -w
-\end{aligned}
-$$
+Note that the Principal has no incentive to give more than the strictly necessary to make the Agent sign the contract (first best, $e$ is observable), then the participation constraint will be binding.
 
-Let's assume, further, than $\omega = 0$, *i.e.* we will not allow negative fixed wage (or transfers from the agent to the principal). This is know as limited liability or cash constraint.
+$$a+bxe-\frac{e^2}{2}= \underline{u}$$
 
-## A Principal-Agent model
+We can substitute this into the Principal's maximization problem.
 
-Grossman and Hart (1983) show that under some conditions (satisfied in this model and in most of the simple versions of this model) the problem can be solved in two stages:
+## First Best
 
-1. Solve the problem for the agent, taking everything external to the agent as a parameter.
-2. Solve the problem of the principal, substituting the solution of the agent as a function of the principal's variables.
+$$\max_{e}\ xe-\frac{e^2}{2}$$
 
-This is how we will proceed.
+With FOC:
 
-## A Principal-Agent model
+$$x-e^*=0\quad\Rightarrow\quad e^*=x$$
 
-Given $a$ and $b$, the agent will maximize her utility, so computing the FOC we get:
+This is the socially optimal level of effort, which will yield an output $x^2$ and set $a$ and $b$ such that $a+bx^2=\underline{u}+\frac{x^2}{2}$. In particular $a=\underline{u}$ and $b=\frac{1}{2}$ would work.
 
-$$b-c'=0\quad\Rightarrow\quad b=e^*$$
+## Second Best
 
-So the agent will choose optimally $e=b$.
-
-## A Principal-Agent model
-
-The problem for the principal is now:
-
-$$
-\begin{aligned}
-  \max_{a,e}\quad &-a+e(\xi-e)\\
-  s.t.\quad &a+e^2-\frac{e^2}{2}\geq\bar{u}\\
-  &a\geq 0
-\end{aligned}
-$$
-
-Now, if $e^*=0$, the agent will accept to participate if and only if $a\geq \bar{u}$. For simplicity assume $\bar{u}=0$.
-
-## A Principal-Agent model
-
-$$
-\begin{aligned}
-  \max_{a,e}\quad &-a+e(\xi-e)\\
-  s.t.\quad &a+\frac{e^2}{2}\geq0\\
-  &a\geq 0
-\end{aligned}
-$$
-
-Which constraint is irrelevant now?
+Now assume the Principal cannot observe $e$. What will the Agent do when offered a contract $a+bx(e)$?
 
 . . .
 
-The Participation Constraint, as $\frac{e^2}{2}\geq 0$. Then the optimal is $a=0$. Now what is the optimal level of effort?
+The agent will solve:
 
-## A Principal-Agent model
+$$\max_{\hat{e}} a+bx(\hat{e})-\frac{\hat{e}^2}{2}$$
 
-$$
-\begin{aligned}
-  \max_{e}\quad &e(\xi-e)\\
-\end{aligned}
-$$
+And choose $e = bx < x$. Note that the larger the bonus, the more effor the Agent will exhert! $a$ seems to be irrelevant for the amount of effort exherted.
 
-And from there $e^*=\frac{\xi}{2}$. Note that this makes $b=\frac{\xi}{2}$. So the expected payoffs are:
+## Second Best
 
-1. $E[u_a]=0+\left(\frac{\xi}{2}\right)^2-\frac{\xi^2}{8}=\frac{\xi^2}{8}$
-2. $E[u_p]=-0+\frac{\xi}{2}\left(\xi-\frac{\xi}{2}\right)=\frac{\xi^2}{4}$
+This is an anomaly, as people usually are not risk neutral. Let's assume $u()$ such that $u'>0$ and $u''<0$. Now the problem becomes:
 
-## A Principal-Agent model
+$$\max_{\hat{e}} u(a+bx\hat{e})-\frac{\hat{e}^2}{2}$$
 
-What if the Principal could observe effort?
+And the FOC will be: $$e=u'(a+bxe)bx$$ now we can see that a larger value of $a$ will actually *decrease* the level of effort. Now let's go back to the risk neutral case.
 
-Then the Incentive Compatibility is unnecessary, and the principal needs just to compensate effort (non probabilistically)
+## Second Best
+
+Of course, the Principal will know the Agent is planning her effort level as a function of $a$ and $b$, so she needs to be careful setting those values 
 
 $$
 \begin{aligned}
-  \max_{e}\quad &e\xi-c(e)\\
+  \max_{e,a,b}\ &xe-a+-bxe\\
+  \text{s.t.}\quad &a+bxe-\frac{e^2}{2}=\underline{u}\\
+  &e\in\arg\max_{\hat{e}} a + bxe - \frac{e^2}{2}
 \end{aligned}
 $$
 
-Which has solution $e^*=\xi$, $a=0$, and $b=c(\xi)=\frac{\xi^2}{2}$. The expected utility of the agent is $0$, and the expected profit for the principal is $\frac{\xi^2}{2}$.
+This last equation is the **incentive compatiblity** constraint.
 
-## A Principal-Agent model
+## Second Best
 
-Some notes:
+Substituting the IC for its solution and rearranging we have:
 
-* With information asymmetry, the agent can *extract information rents* from the principal, at the cost of a worse outcome overall.
-* Without information asymmetry, the principal can extrat the whole surplus, which is larger than the case with information asymmetries.
+$$
+\begin{aligned}
+  \max_{e,a,b}\ &-a+(1-b)xe\\
+  \text{s.t.}\quad &a+bxe-\frac{e^2}{2}=\underline{u}\\
+  &e=bx
+\end{aligned}
+$$
+
+We can substitute the $IC$ in the maximization problem and $PC$ to get
+
+## Second Best
+
+And substituting in the maximization problem yields
+
+$$
+\begin{aligned}
+  \max_{a,b}\ &-a+(1-b)bx^2\\
+  \text{s.t.}\quad &a+\frac{(bx)^2}{2}=\underline{u}
+\end{aligned}
+$$
+
+And further substituting the $PC$ in the maximization problem we have:
+
+## Second Best
+
+$$
+  \max_{b}\ -\left(\underline{u}-\frac{(bx)^2}{2}\right)+(1-b)bx^2
+$$
+
+which is equivalent to:
+
+$$
+  \max_{b}\ -\underline{u}+\left(1-\frac{b}{2}\right)bx^2
+$$
+
+With $FOC:$ $x^2=b^*x^2$, or $b^*=1$. What does this mean?
+
+## Second Best
+
+Remember we discussed briefly the situation of a utility function $u()$ with $u'()>0$ and $u''<0$ for the agent? Why just for the agent?
+
+. . .
+
+We could do that for the principal as well, but usually we can assume firms as risk neutral because shareholders can get rid of the risk by building a diversified portfolio. This is not the case for the agent. We will think on both cases.
+
+## Second Best
+<div style="font-size: 70%;">
+
+Let's assume now that:
+
+1. Returns to effort are $x(e)$ is distributed with mean $xe$ and variance $s^2$.
+2. If the contract establishes $a$ as base salary and $b$ as variable pay, the wage is a random variable with mean $a+bxe$ and variance $b^2s^2$.
+3. Suppose the agent is risk averse, so the utility function is now $$u=a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}$$ Now $K$ allow us to measure the cost of the effort, and $\rho$ captures the level of risk aversion of the agent.
   
-## A Principal-Agent model
+</div>
 
-In general,
+## Second Best
 
-1. Incentivizing hard work is **costly**.
-2. The higher the profits, the larger the bonus.
-3. The principal is almost always worse off in the presence of moral hazard, while the agent might be better off.
+Now, given $a$ and $b$, what is hte optimal level of effort?
+
+$$e^*=\frac{bx}{K}$$
+
+The only difference, is that the most costly effort is, the lower the optimal level of effort for the same compensation. [Homework: Introduce $K$ in the previous solution and check that the solution is the same]
+
+## Second Best
+
+The principal's problem is:
+
+$$
+\begin{aligned}
+  \max_{e,a,b}\ &xe-a+-bxe\\
+  \text{s.t.}\quad &a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}=\underline{u}\\
+  &e\in\arg\max_{\hat{e}} a + bxe - \frac{e^2}{2}-\frac{\rho b^2s^2}{2}
+\end{aligned}
+$$
+
+Again, we can replace the $IC$
+
+
+## Second Best
+
+$$
+\begin{aligned}
+  \max_{e,a,b}\ &xe-a+-bxe\\
+  \text{s.t.}\quad &a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}=\underline{u}\\
+  &e=\frac{bx}{K}
+\end{aligned}
+$$
+
+And we can replace the $IC$ the the $PC$ and the maximization problem.
+
+## Second Best
+
+$$
+\begin{aligned}
+  \max_{a,b}\ &-a+(1-b)\frac{bx^2}{K}\\
+  \text{s.t.}\quad &a+\frac{(bx)^2}{K}-\frac{(bx)^2}{2K}-\frac{\rho b^2s^2}{2}=\underline{u}
+\end{aligned}
+$$
+
+## Second Best
+
+$$
+\begin{aligned}
+  \max_{a,b}\ &-a+(1-b)\frac{bx^2}{K}\\
+  \text{s.t.}\quad &a+\frac{(bx)^2}{2K}-\frac{\rho b^2s^2}{2}=\underline{u}
+\end{aligned}
+$$
+And further substituting $a$ into the maximization problem we obtain:
+
+## Second Best
+
+$$
+\begin{aligned}
+  \max_{b}\ &-\left(\underline{u}-\frac{(bx)^2}{2K}+\frac{\rho b^2s^2}{2}\right)+(1-b)\frac{bx^2}{K}
+\end{aligned}
+$$
+
+## Second Best
+
+With FOC: $$\frac{bx^2}{K}-\rho s^2 b+\frac{(1-2b)x^2}{K}=0$$
+$$bx^2-\rho s^2Kb+(1-2b)x^2=0$$
+$$-\rho s^2Kb+(1-b)x^2=0$$
+
+## Second Best
+
+$$b^*=\frac{x^2}{\rho s^2 K + x^2}$$
+
+Note this is:
+
+1. Increasing in $x^2$
+2. Decreasing in $K$
+3. Decreasing in $\rho$ and $s^2$.
 
 # Games with Incomplete Information
 
@@ -608,7 +695,7 @@ There can be a plethora of NEs in mixed strategies, let's focus on a special sit
 
 1. Suppose **H** plays $F$ with probability $\lambda$.
 2. Type 1 **W** has expected payoff $\lambda$ by playing $F$, while playing $S$ can expect $3(1-\lambda)$.
-2. Type 2 **W** has expected payoff by playing $F$ $3(1-\lamba)$, while playing $S$ can expect $\lambda$.
+2. Type 2 **W** has expected payoff by playing $F$ $3(1-\lamdba)$, while playing $S$ can expect $\lambda$.
 
 ## Example 2: Mixed Strategies
 
@@ -617,11 +704,115 @@ There can be a plethora of NEs in mixed strategies, let's focus on a special sit
 
 ## Example 2: Mixed Strategies
 
-
+A BNE of this game is $\lambda=\frac{3}{4}$, $(\mu_1,\mu_2)=\left(\frac{1}{4},\frac{1}{4}\right)$
 
 # Mechanism Design, the Revelation Principle, and Sales to an Unknown Buyer
 
+## Mechanism Design
+
+* So far we have studied what players will do, given a set of rules and payoffs (not entirely true, *i.e.* Contracts)
+* Mechanism Design asks, if I want a specific outcome:
+  * What de rules must be?
+  * Is it even possible?
+
+. . .
+
+Basically now we design the game to induce the players to play in a specific manner.
+
+## Mechanism Design
+
+In general, the set of players is something that will be given, *i.e.* is something we cannot **design**, but the **designer** can choose:
+
+1. choices available to players
+2. payoffs
+
+## Mechanism Design
+
+However, there are some constraints for the *designer*
+
+1. There cannot be any coercion (why would you need to incentivize behavior if you can force it)
+2. Players can choose to not participate, and therefore the game must give enough incentives to make players want to play.
+
+The optimal design is a mechanism whose equilibrium is the one that generates the highest payoff for the designer.
+
+## Mechanism Design
+
+More formally:
+
+:::{.callout}
+
+## Definition
+
+A mechanism is a game (a set of rules) that specifies the strategies that the player can choose from and the outcome for every choice.
+
+:::
+
+## Mechanism Design
+
+1. Let a strategy for a player $s$.
+2. Let the outcome of a game be denoted by $t$.
+3. Let the *type* of the player be denoted by $\theta$.
+4. Let the payoff of the player be represented by the function $\pi(s,t,\theta)$.
+
+The designer can choose $s$ and $t$, but $\theta$ and $\pi$ is out of his control.
+
+## Mechanism Design
+
+:::{.callout}
+
+## Definition
+
+Suppose there are two types $\theta$ and $\mu$. The designer assigns $(s_{\theta},t_{\theta})$ as strategies and outcomes for the player type $\theta$, and $(s_{\mu},t_{\mu})$ for the player type $\mu$.
+
+A design is said to be **incentive compatible** if:
+
+$$\pi(s_{\theta},t_{\theta},\theta)\geq \pi(s,t,\theta)\quad \forall s,\ \forall t$$ and
+$$\pi(s_{\mu},t_{\mu},\mu)\geq \pi(s,t,\mu)\quad \forall s,\ \forall t$$
+
+:::
+
+This is, every player has incentives to *tell the truth*.
+
+## Mechanism Design
+
+:::{.callout}
+
+## Definition
+
+Suppose there are two types $\theta$ and $\mu$, with *reservation utility* $\underline{\pi}_{\theta}$ and $\underline{\pi}_{\mu}$.
+
+A design is said to be **idividually rational** if:
+
+$$\pi(s_{\theta},t_{\theta},\theta)\geq \underline{\pi}_\theta$$ and
+$$\pi(s_{\mu},t_{\mu},\mu)\geq \underline{\pi}_\mu$$
+
+:::
+
+This is, every player has incentives to *participate*.
+
+## Mechanism Design
+
+Without much surprise we call the designer the **Principal**.
+
+Any design the Principal devices to maximize her expected payoff must be **incentive compatible** and **individually rational**. Her payoff usually depends on the strategies chosen by the players.
+
+For surprise to none, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named **direct-revelation mechanisms**.
+
+## Mechanism Design
+
+Direct-revelation mechanism:
+
+1. Each player is free to lie about his type. $\theta$ can claim to be $\mu$ if so desires, and vice-versa.
+2. Suppose that if you claim to be type $\theta$, the mechanism assings you $(s_\theta,t_\theta)$, and $(s_\mu,t_\mu)$ for the $\mu$ type
+
 # Auctions
+
+## Auctions
+
+Auctions are, probably, the most transparent mechanism.
+
+1. Auctioneer does not know the player's individual valuations.
+2. Auctioneer wants to exert as much money as she can from bidders.
 
 # Signaling Games and The Lemons Problem
 
