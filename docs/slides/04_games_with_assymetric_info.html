@@ -1043,13 +1043,203 @@ s.t.\quad&amp; t_l-\frac{41}{90}-q_l= t_h-\frac{41}{90}-q_h\\
 <p>Auctions are, probably, the most transparent mechanism.</p>
 <ol type="1">
 <li class="fragment">Auctioneer does not know the player’s individual valuations.</li>
-<li class="fragment">Auctioneer wants to exert as much money as she can from bidders.</li>
+<li class="fragment">Auctioneer wants to extract as much money as she can from bidders.</li>
 <li class="fragment">Auctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs.</li>
 </ol>
 </section>
 <section id="auctions-2" class="slide level2">
 <h2>Auctions</h2>
+<p>There are many types of auctions, however we could identify the 4 most important:</p>
+<ol type="1">
+<li class="fragment">English Auction - Ascending Auction</li>
+<li class="fragment">Dutch Auction - Descending Auction</li>
+<li class="fragment">First Price Sealed Bid Auction</li>
+<li class="fragment">Second Price Sealed Bid Auction - Vickrey Auction</li>
+</ol>
+</section>
+<section id="auctions-3" class="slide level2">
+<h2>Auctions</h2>
 <p>We will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc.</p>
+</section>
+<section id="auctions-4" class="slide level2">
+<h2>Auctions</h2>
+<p>Basic model:</p>
+<div style="font-size: 80%;">
+<ol type="1">
+<li class="fragment">Single unit good being sold</li>
+<li class="fragment">Two buyers. Valuations can be high (<span class="math inline">\(\theta\)</span>) or low (<span class="math inline">\(\mu\)</span>).</li>
+<li class="fragment">Both types are equally likely and valuations are independent.</li>
+<li class="fragment">Seller wants to maximize expected sale price.</li>
+<li class="fragment">If the bidder wins, his payoff will be <span class="math inline">\(v-p\)</span>, with
+<ol type="a">
+<li class="fragment"><span class="math inline">\(v=\theta,\mu\)</span></li>
+<li class="fragment"><span class="math inline">\(b\)</span> is the bid, <span class="math inline">\(p\)</span> is the price bidder must pay</li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="auctions-5" class="slide level2">
+<h2>Auctions</h2>
+<h3 id="second-price-auctions">Second Price Auctions</h3>
+<p>We already talked about these auctions:</p>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Proposition 1</strong></p>
+</div>
+<div class="callout-content">
+<p>In a second-price auction, it is a dominant strategy for each player to bid exactly his valuation of the object.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="auctions-6" class="slide level2">
+<h2>Auctions</h2>
+<p>There are 4 possible scenarios (two of them identical):</p>
+<ol type="1">
+<li class="fragment">Both bidders are <span class="math inline">\(\theta\)</span></li>
+<li class="fragment">Both bidders are <span class="math inline">\(\mu\)</span></li>
+<li class="fragment">One bidder is <span class="math inline">\(\theta\)</span> and the other is <span class="math inline">\(\mu\)</span></li>
+</ol>
+</section>
+<section id="auctions-7" class="slide level2">
+<h2>Auctions</h2>
+<p>In scenario 1 (with <span class="math inline">\(\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}\)</span> probability):</p>
+<ol type="1">
+<li class="fragment">Both bidders bid <span class="math inline">\(b=\theta\)</span></li>
+<li class="fragment">Second highest bid is <span class="math inline">\(b'=\theta\)</span>, then price is <span class="math inline">\(\theta\)</span>.</li>
+<li class="fragment">The probability of winning is <span class="math inline">\(1/2\)</span></li>
+<li class="fragment">Expected bidder’s payoff is then <span class="math inline">\(\frac{1}{2}(\theta-\theta)=0\)</span>.</li>
+<li class="fragment">Revenue for the auctioneer is <span class="math inline">\(\theta\)</span></li>
+</ol>
+</section>
+<section id="auctions-8" class="slide level2">
+<h2>Auctions</h2>
+<p>In scenario 2 (with <span class="math inline">\(\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}\)</span> probability):</p>
+<ol type="1">
+<li class="fragment">Both bidders bid <span class="math inline">\(b=\mu\)</span></li>
+<li class="fragment">Second highest bid is <span class="math inline">\(b'=\mu\)</span>, then price is <span class="math inline">\(\mu\)</span>.</li>
+<li class="fragment">The probability of winning is <span class="math inline">\(1/2\)</span></li>
+<li class="fragment">Expected payoff is then <span class="math inline">\(\frac{1}{2}(\mu-\mu)=0\)</span>.</li>
+<li class="fragment">Revenue for the auctioneer is <span class="math inline">\(\mu\)</span></li>
+</ol>
+</section>
+<section id="auctions-9" class="slide level2">
+<h2>Auctions</h2>
+<p>In scenario 3 (with <span class="math inline">\(2\times\frac{1}{2}\times\frac{1}{2}=\frac{1}{2}\)</span> probability):</p>
+<ol type="1">
+<li class="fragment">One bidder bids <span class="math inline">\(\theta\)</span> the other bids <span class="math inline">\(\mu\)</span>.</li>
+<li class="fragment">Price is <span class="math inline">\(\mu\)</span></li>
+<li class="fragment">Probability of winning is 1 for <span class="math inline">\(\theta\)</span>, 0 for <span class="math inline">\(\mu\)</span>.</li>
+<li class="fragment">Expected payoff is <span class="math inline">\(\theta-\mu\)</span></li>
+<li class="fragment">Revenue for the auctioneer is <span class="math inline">\(\mu\)</span>.</li>
+</ol>
+</section>
+<section id="auctions-10" class="slide level2">
+<h2>Auctions</h2>
+<p>What is the expected revenue for the Auctioneer then?</p>
+<p><span class="math display">\[\frac{1}{4}\theta+\frac{1}{4}\mu+\frac{1}{2}\mu=\frac{\theta+3\mu}{4}\]</span></p>
+</section>
+<section id="auctions-11" class="slide level2">
+<h2>Auctions</h2>
+<h3 id="first-price-auctions">First-Price Auctions</h3>
+<p>Now, there is no obvious dominant strategy.</p>
+<p>. . .</p>
+<p>We need to use the concept of BNE.</p>
+<p>We need to look for a best response, <em>i.e.</em> a pair <span class="math inline">\((p,q)\)</span> such that <span class="math inline">\(p\)</span> is the best response to <span class="math inline">\((p,q)\)</span> from the other player, when the bidder is type <span class="math inline">\(\theta\)</span>, and the same for <span class="math inline">\(q\)</span> when the bidder is type <span class="math inline">\(\mu\)</span>.</p>
+</section>
+<section id="auctions-12" class="slide level2">
+<h2>Auctions</h2>
+<p>In this case truthful bidding is not a BNE. This would ensure a payoff of 0!</p>
+<div class="fragment">
+<p>In that case, necessarily <span class="math inline">\(p&lt;\theta\)</span> and <span class="math inline">\(q&lt;\mu\)</span>.</p>
+</div>
+</section>
+<section id="auctions-13" class="slide level2">
+<h2>Auctions</h2>
+<div style="font-size: 80%;">
+<p>Consider the case of a bidder type <span class="math inline">\(\theta\)</span>. Suppose this bidder chooses a pure strategy <span class="math inline">\(p&lt;\theta\)</span>. Can this be a BNE? If so, another player type <span class="math inline">\(\theta\)</span> must maximize his expected payoff by bidding also <span class="math inline">\(p\)</span>, but is this the case?</p>
+<p>. . .</p>
+<p>If <span class="math inline">\(p&lt;\theta\)</span> fixed, then if the second bidder bids <span class="math inline">\(p\)</span>, his expected payoff is <span class="math inline">\(\frac{\theta-p}{2}\)</span>, but if he bidds <span class="math inline">\(p+\epsilon\)</span> for some <span class="math inline">\(\epsilon&gt;0\)</span>, then he can get <span class="math inline">\(\theta-p-\epsilon&gt;\frac{\theta-p}{2}\)</span>.</p>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>There is no BNE with pure strategies for the type <span class="math inline">\(\theta\)</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="auctions-14" class="slide level2">
+<h2>Auctions</h2>
+<p>For a bidder type <span class="math inline">\(\mu\)</span>, clearly setting <span class="math inline">\(q=\mu\)</span> is a best response. Note that when facing a type <span class="math inline">\(\theta\)</span> the expected payoff is <span class="math inline">\(0\)</span>, as he always loses. Now against a type <span class="math inline">\(\mu\)</span>, if it would bid <span class="math inline">\(q&lt;\mu\)</span>, then again, for a simmilar argument we used before, it could be outbid by the opponent type <span class="math inline">\(\mu\)</span> by <span class="math inline">\(\epsilon\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Why we did not use the same argument for the bidder type <span class="math inline">\(\theta\)</span> and arrived to the conclusion that <span class="math inline">\(p=\theta\)</span> was the only possibility? What is the difference between a bidder type <span class="math inline">\(\theta\)</span> and a bidder type <span class="math inline">\(\mu\)</span>?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="auctions-15" class="slide level2">
+<h2>Auctions</h2>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Proposition 2</strong></p>
+</div>
+<div class="callout-content">
+<p>There is a symmetric BNE of the First-Price auction in which the <span class="math inline">\(\mu\)</span> type buyer bids his valuation while the <span class="math inline">\(\theta\)</span> type buyer plays a mixed strategy that assigns probability to all bids between <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\frac{\theta+\mu}{2}\)</span>. For any bid <span class="math inline">\(b\)</span> between those extremes, the probaiblity that the bid will be less than <span class="math inline">\(b\)</span> is given by <span class="math inline">\(\frac{b-\mu}{\theta-b}\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="auctions-16" class="slide level2">
+<h2>Auctions</h2>
+<div style="font-size: 80%;">
+<p>Let’s consider the type <span class="math inline">\(\theta\)</span>. By bidding <span class="math inline">\(b\)</span> between <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\frac{\theta+\mu}{2}\)</span>, the probability of beating a <span class="math inline">\(\theta\)</span> opponent (playing the same strategy) is <span class="math inline">\(\frac{b-\mu}{\theta-b}\)</span>.</p>
+<ol type="1">
+<li class="fragment">Plays against <span class="math inline">\(\theta\)</span>, the expected profit is <span class="math inline">\((\theta-b)\left(\frac{b-\mu}{\theta-b}\right)\)</span>. This happens half the time (the probability the rival is <span class="math inline">\(\theta\)</span> as well).</li>
+<li class="fragment">Plays against <span class="math inline">\(\mu\)</span>, wins for sure, expected profit is just <span class="math inline">\((\theta-b)\)</span>.</li>
+<li class="fragment"><span class="math display">\[E[\pi|b]=\frac{1}{2}(\theta-b)\left(\frac{b-\mu}{\theta-b}\right)+\frac{1}{2}(\theta-b)=\frac{\theta-\mu}{2}\]</span></li>
+<li class="fragment">Actually, the expected payoff does not depend on <span class="math inline">\(b\)</span>!</li>
+</ol>
+</div>
+</section>
+<section id="auctions-17" class="slide level2">
+<h2>Auctions</h2>
+<p>It is indifferent any <span class="math inline">\(b\in\left[\mu,\frac{\mu+\theta}{2}\right]\)</span> for the type <span class="math inline">\(\theta\)</span>, so any mixed strategy that randomizes here is fine, in particular the one proposed. If it bids less it will get the same profit (no profitable deviations). If it bids more, then he will be losing (overbidding) in the case he faces a <span class="math inline">\(\mu\)</span> type bidder, which happens half the time!</p>
+</section>
+<section id="auctions-18" class="slide level2">
+<h2>Auctions</h2>
+<p>What is the expected payoff for the auctioneer?</p>
+<p>First we need to find out what <span class="math inline">\(\theta\)</span> will pay. We know <span class="math inline">\(\theta\)</span> wins <span class="math inline">\(3/4\)</span> of the time, and the expected payoff is <span class="math inline">\(\frac{\theta-\mu}{2}\)</span>, then</p>
+<p><span class="math display">\[\theta P(\theta) - M(\theta)=\frac{\theta-\mu}{2}\]</span></p>
+<p>Where <span class="math inline">\(P(\theta)\)</span> is the probability of winning and <span class="math inline">\(M(\theta)\)</span> is the expected payment.</p>
+</section>
+<section id="auctions-19" class="slide level2">
+<h2>Auctions</h2>
+<p><span class="math display">\[\theta \frac{3}{4} - M(\theta)=\frac{\theta-\mu}{2}\]</span></p>
+<p>From where we obtain</p>
+<p><span class="math display">\[M(\theta)=\frac{\theta+2\mu}{4}\]</span></p>
+</section>
+<section id="auctions-20" class="slide level2">
+<h2>Auctions</h2>
+<p>Given that <span class="math inline">\(\mu\)</span> type wins <span class="math inline">\(1/4\)</span> of the time, the expected revenue for the auctioneer is:</p>
+<p><span class="math display">\[\frac{\theta+2\mu}{4}+\frac{\mu}{4}=\frac{t\theta+3\mu}{4}\]</span></p>
+<p>Which is exactly the same he had in the second price auction!</p>
 </section></section>
 <section id="signaling-games-and-the-lemons-problem" class="title-slide slide level1 center">
 <h1>Signaling Games and The Lemons Problem</h1>

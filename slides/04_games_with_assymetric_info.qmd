@@ -1044,16 +1044,208 @@ Which is better than the menu of contracts.
 Auctions are, probably, the most transparent mechanism.
 
 1. Auctioneer does not know the player's individual valuations.
-2. Auctioneer wants to exert as much money as she can from bidders.
+2. Auctioneer wants to extract as much money as she can from bidders.
 3. Auctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs.
+
+## Auctions
+
+There are many types of auctions, however we could identify the 4 most important:
+
+1. English Auction - Ascending Auction
+2. Dutch Auction - Descending Auction
+3. First Price Sealed Bid Auction
+4. Second Price Sealed Bid Auction - Vickrey Auction
 
 ## Auctions
 
 We will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc.
 
+## Auctions
+
+Basic model:
+
+<div style="font-size: 80%;">
+
+1. Single unit good being sold
+2. Two buyers. Valuations can be high ($\theta$) or low ($\mu$).
+3. Both types are equally likely and valuations are independent.
+4. Seller wants to maximize expected sale price.
+5. If the bidder wins, his payoff will be $v-p$, with
+   (a)  $v=\theta,\mu$ 
+   (b) $b$ is the bid, $p$ is the price bidder must pay
+
+</div>
+
+## Auctions
+
+### Second Price Auctions
+
+We already talked about these auctions:
+
+:::{.callout}
+
+## Proposition 1
+
+In a second-price auction, it is a dominant strategy for each player to bid exactly his valuation of the object.
+
+:::
+
+## Auctions
+
+There are 4 possible scenarios (two of them identical):
+
+1. Both bidders are $\theta$
+2. Both bidders are $\mu$
+3. One bidder is $\theta$ and the other is $\mu$
+
+## Auctions
+
+In scenario 1 (with $\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}$ probability):
+
+1. Both bidders bid $b=\theta$
+2. Second highest bid is $b'=\theta$, then price is $\theta$.
+3. The probability of winning is $1/2$
+4. Expected bidder's payoff is then $\frac{1}{2}(\theta-\theta)=0$.
+5. Revenue for the auctioneer is $\theta$
+
+## Auctions
+
+In scenario 2 (with $\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}$ probability):
+
+1. Both bidders bid $b=\mu$
+2. Second highest bid is $b'=\mu$, then price is $\mu$.
+3. The probability of winning is $1/2$
+4. Expected payoff is then $\frac{1}{2}(\mu-\mu)=0$.
+5. Revenue for the auctioneer is $\mu$
+
+## Auctions
+
+In scenario 3 (with $2\times\frac{1}{2}\times\frac{1}{2}=\frac{1}{2}$ probability):
+
+1. One bidder bids $\theta$ the other bids $\mu$.
+2. Price is $\mu$
+3. Probability of winning is 1 for $\theta$, 0 for $\mu$.
+4. Expected payoff is $\theta-\mu$
+5. Revenue for the auctioneer is $\mu$.
+
+## Auctions
+
+What is the expected revenue for the Auctioneer then?
+
+$$\frac{1}{4}\theta+\frac{1}{4}\mu+\frac{1}{2}\mu=\frac{\theta+3\mu}{4}$$
+
+## Auctions
+
+### First-Price Auctions
+
+Now, there is no obvious dominant strategy.
+
+. . . 
+
+We need to use the concept of BNE.
+
+We need to look for a best response, *i.e.* a pair $(p,q)$ such that $p$ is the best response to $(p,q)$ from the other player, when the bidder is type $\theta$, and the same for $q$ when the bidder is type $\mu$.
+
+## Auctions 
+
+In this case truthful bidding is not a BNE. This would ensure a payoff of 0!
+
+. . . 
+
+In that case, necessarily $p<\theta$ and $q<\mu$.
+
+## Auctions
+
+<div style="font-size: 80%;">
+
+Consider the case of a bidder type $\theta$. Suppose this bidder chooses a pure strategy $p<\theta$. Can this be a BNE? If so, another player type $\theta$ must maximize his expected payoff by bidding also $p$, but is this the case?
+
+. . . 
+
+If $p<\theta$ fixed, then if the second bidder bids $p$, his expected payoff is $\frac{\theta-p}{2}$, but if he bidds $p+\epsilon$ for some $\epsilon>0$, then he can get $\theta-p-\epsilon>\frac{\theta-p}{2}$.
+
+</div>
+
+:::{.callout-warning}
+
+There is no BNE with pure strategies for the type $\theta$
+
+:::
+
+## Auctions
+
+For a bidder type $\mu$, clearly setting $q=\mu$ is a best response. Note that when facing a type $\theta$ the expected payoff is $0$, as he always loses. Now against a type $\mu$, if it would bid $q<\mu$, then again, for a simmilar argument we used before, it could be outbid by the opponent type $\mu$ by $\epsilon$.
+
+:::{.callout-tip}
+
+Why we did not use the same argument for the bidder type $\theta$ and arrived to the conclusion that $p=\theta$ was the only possibility? What is the difference between a bidder type $\theta$ and a bidder type $\mu$?
+
+:::
+
+## Auctions
+
+:::{.callout}
+
+## Proposition 2
+
+There is a symmetric BNE of the First-Price auction in which the $\mu$ type buyer bids his valuation while the $\theta$ type buyer plays a mixed strategy that assigns probability to all bids between $\mu$ and $\frac{\theta+\mu}{2}$. For any bid $b$ between those extremes, the probaiblity that the bid will be less than $b$ is given by $\frac{b-\mu}{\theta-b}$.
+
+:::
+
+## Auctions
+
+<div style="font-size: 80%;">
+
+Let's consider the type $\theta$. By bidding $b$ between $\mu$ and $\frac{\theta+\mu}{2}$, the probability of beating a $\theta$ opponent (playing the same strategy) is $\frac{b-\mu}{\theta-b}$.
+
+1. Plays against $\theta$, the expected profit is $(\theta-b)\left(\frac{b-\mu}{\theta-b}\right)$. This happens half the time (the probability the rival is $\theta$ as well).
+2. Plays against $\mu$, wins for sure, expected profit is just $(\theta-b)$.
+3. $$E[\pi|b]=\frac{1}{2}(\theta-b)\left(\frac{b-\mu}{\theta-b}\right)+\frac{1}{2}(\theta-b)=\frac{\theta-\mu}{2}$$
+4. Actually, the expected payoff does not depend on $b$!
+
+</div>
+
+## Auctions
+
+It is indifferent any $b\in\left[\mu,\frac{\mu+\theta}{2}\right]$ for the type $\theta$, so any mixed strategy that randomizes here is fine, in particular the one proposed. If it bids less it will get the same profit (no profitable deviations). If it bids more, then he will be losing (overbidding) in the case he faces a $\mu$ type bidder, which happens half the time!
+
+## Auctions
+
+What is the expected payoff for the auctioneer?
+
+First we need to find out what $\theta$ will pay. We know $\theta$ wins $3/4$ of the time, and the expected payoff is $\frac{\theta-\mu}{2}$, then
+
+$$\theta P(\theta) - M(\theta)=\frac{\theta-\mu}{2}$$
+
+Where $P(\theta)$ is the probability of winning and $M(\theta)$ is the expected payment.
+
+## Auctions
+
+$$\theta \frac{3}{4} - M(\theta)=\frac{\theta-\mu}{2}$$
+
+From where we obtain
+
+$$M(\theta)=\frac{\theta+2\mu}{4}$$
+
+## Auctions
+
+Given that $\mu$ type wins $1/4$ of the time, the expected revenue for the auctioneer is:
+
+$$\frac{\theta+2\mu}{4}+\frac{\mu}{4}=\frac{t\theta+3\mu}{4}$$
+
+Which is exactly the same he had in the second price auction!
+
+## Auctions
+
+:::{.callout}
+
+## Theorem
+
+Revenue Equivalence Theorem, both auctions will have the same revenue for the auctioneer.
+
+:::
+
 # Signaling Games and The Lemons Problem
-
-
 
 # Bibliography
 

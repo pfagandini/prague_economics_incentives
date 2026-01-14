@@ -2916,7 +2916,7 @@
     "href": "slides/04_games_with_assymetric_info.html#auctions-1",
     "title": "Games under  Asymmetric Information",
     "section": "Auctions",
-    "text": "Auctions\nAuctions are, probably, the most transparent mechanism.\n\nAuctioneer does not know the player’s individual valuations.\nAuctioneer wants to exert as much money as she can from bidders.\nAuctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs."
+    "text": "Auctions\nAuctions are, probably, the most transparent mechanism.\n\nAuctioneer does not know the player’s individual valuations.\nAuctioneer wants to extract as much money as she can from bidders.\nAuctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-5",
@@ -2986,7 +2986,7 @@
     "href": "slides/04_games_with_assymetric_info.html#auctions-2",
     "title": "Games under  Asymmetric Information",
     "section": "Auctions",
-    "text": "Auctions\nWe will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc."
+    "text": "Auctions\nThere are many types of auctions, however we could identify the 4 most important:\n\nEnglish Auction - Ascending Auction\nDutch Auction - Descending Auction\nFirst Price Sealed Bid Auction\nSecond Price Sealed Bid Auction - Vickrey Auction"
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-14",
@@ -3085,5 +3085,131 @@
     "title": "Games under  Asymmetric Information",
     "section": "Example",
     "text": "Example\nWith that, the expected utility of the Government is: \\[\\frac{1}{2}\\left(2\\sqrt{1}-\\frac{131}{90}\\right)+\\frac{1}{2}(0)=1-\\frac{131}{180} = \\frac{49}{180}\\]\nWhich is better than the menu of contracts."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-3",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-3",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nWe will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-4",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-4",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nBasic model:\n\n\nSingle unit good being sold\nTwo buyers. Valuations can be high (\\(\\theta\\)) or low (\\(\\mu\\)).\nBoth types are equally likely and valuations are independent.\nSeller wants to maximize expected sale price.\nIf the bidder wins, his payoff will be \\(v-p\\), with\n\n\\(v=\\theta,\\mu\\)\n\\(b\\) is the bid, \\(p\\) is the price bidder must pay"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-5",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-5",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nSecond Price Auctions\nWe already talked about these auctions:\n\n\n\nProposition 1\n\n\nIn a second-price auction, it is a dominant strategy for each player to bid exactly his valuation of the object."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-6",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-6",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nThere are 4 possible scenarios (two of them identical):\n\nBoth bidders are \\(\\theta\\)\nBoth bidders are \\(\\mu\\)\nOne bidder is \\(\\theta\\) and the other is \\(\\mu\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-7",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-7",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nIn scenario 1 (with \\(\\frac{1}{2}\\times\\frac{1}{2}=\\frac{1}{4}\\) probability):\n\nBoth bidders bid \\(b=\\theta\\)\nSecond highest bid is \\(b'=\\theta\\), then price is \\(\\theta\\).\nThe probability of winning is \\(1/2\\)\nExpected bidder’s payoff is then \\(\\frac{1}{2}(\\theta-\\theta)=0\\).\nRevenue for the auctioneer is \\(\\theta\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-8",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-8",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nIn scenario 2 (with \\(\\frac{1}{2}\\times\\frac{1}{2}=\\frac{1}{4}\\) probability):\n\nBoth bidders bid \\(b=\\mu\\)\nSecond highest bid is \\(b'=\\mu\\), then price is \\(\\mu\\).\nThe probability of winning is \\(1/2\\)\nExpected payoff is then \\(\\frac{1}{2}(\\mu-\\mu)=0\\).\nRevenue for the auctioneer is \\(\\mu\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-9",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-9",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nIn scenario 3 (with \\(2\\times\\frac{1}{2}\\times\\frac{1}{2}=\\frac{1}{2}\\) probability):\n\nOne bidder bids \\(\\theta\\) the other bids \\(\\mu\\).\nPrice is \\(\\mu\\)\nProbability of winning is 1 for \\(\\theta\\), 0 for \\(\\mu\\).\nExpected payoff is \\(\\theta-\\mu\\)\nRevenue for the auctioneer is \\(\\mu\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-10",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-10",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nWhat is the expected revenue for the Auctioneer then?\n\\[\\frac{1}{4}\\theta+\\frac{1}{4}\\mu+\\frac{1}{2}\\mu=\\frac{\\theta+3\\mu}{4}\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-11",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-11",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nFirst-Price Auctions\nNow, there is no obvious dominant strategy.\n. . .\nWe need to use the concept of BNE.\nWe need to look for a best response, i.e. a pair \\((p,q)\\) such that \\(p\\) is the best response to \\((p,q)\\) from the other player, when the bidder is type \\(\\theta\\), and the same for \\(q\\) when the bidder is type \\(\\mu\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-12",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-12",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nIn this case truthful bidding is not a BNE. This would ensure a payoff of 0!\n\nIn that case, necessarily \\(p&lt;\\theta\\) and \\(q&lt;\\mu\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-13",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-13",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\n\nConsider the case of a bidder type \\(\\theta\\). Suppose this bidder chooses a pure strategy \\(p&lt;\\theta\\). Can this be a BNE? If so, another player type \\(\\theta\\) must maximize his expected payoff by bidding also \\(p\\), but is this the case?\n. . .\nIf \\(p&lt;\\theta\\) fixed, then if the second bidder bids \\(p\\), his expected payoff is \\(\\frac{\\theta-p}{2}\\), but if he bidds \\(p+\\epsilon\\) for some \\(\\epsilon&gt;0\\), then he can get \\(\\theta-p-\\epsilon&gt;\\frac{\\theta-p}{2}\\).\n\n\n\n\n\n\n\nWarning\n\n\nThere is no BNE with pure strategies for the type \\(\\theta\\)"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-14",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-14",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nFor a bidder type \\(\\mu\\), clearly setting \\(q=\\mu\\) is a best response. Note that when facing a type \\(\\theta\\) the expected payoff is \\(0\\), as he always loses. Now against a type \\(\\mu\\), if it would bid \\(q&lt;\\mu\\), then again, for a simmilar argument we used before, it could be outbid by the opponent type \\(\\mu\\) by \\(\\epsilon\\).\n\n\n\n\n\n\nTip\n\n\nWhy we did not use the same argument for the bidder type \\(\\theta\\) and arrived to the conclusion that \\(p=\\theta\\) was the only possibility? What is the difference between a bidder type \\(\\theta\\) and a bidder type \\(\\mu\\)?"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-15",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-15",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\n\n\n\nProposition 2\n\n\nThere is a symmetric BNE of the First-Price auction in which the \\(\\mu\\) type buyer bids his valuation while the \\(\\theta\\) type buyer plays a mixed strategy that assigns probability to all bids between \\(\\mu\\) and \\(\\frac{\\theta+\\mu}{2}\\). For any bid \\(b\\) between those extremes, the probaiblity that the bid will be less than \\(b\\) is given by \\(\\frac{b-\\mu}{\\theta-b}\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-16",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-16",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\n\nLet’s consider the type \\(\\theta\\). By bidding \\(b\\) between \\(\\mu\\) and \\(\\frac{\\theta+\\mu}{2}\\), the probability of beating a \\(\\theta\\) opponent (playing the same strategy) is \\(\\frac{b-\\mu}{\\theta-b}\\).\n\nPlays against \\(\\theta\\), the expected profit is \\((\\theta-b)\\left(\\frac{b-\\mu}{\\theta-b}\\right)\\). This happens half the time (the probability the rival is \\(\\theta\\) as well).\nPlays against \\(\\mu\\), wins for sure, expected profit is just \\((\\theta-b)\\).\n\\[E[\\pi|b]=\\frac{1}{2}(\\theta-b)\\left(\\frac{b-\\mu}{\\theta-b}\\right)+\\frac{1}{2}(\\theta-b)=\\frac{\\theta-\\mu}{2}\\]\nActually, the expected payoff does not depend on \\(b\\)!"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-17",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-17",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nIt is indifferent any \\(b\\in\\left[\\mu,\\frac{\\mu+\\theta}{2}\\right]\\) for the type \\(\\theta\\), so any mixed strategy that randomizes here is fine, in particular the one proposed. If it bids less it will get the same profit (no profitable deviations). If it bids more, then he will be losing (overbidding) in the case he faces a \\(\\mu\\) type bidder, which happens half the time!"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-18",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-18",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nWhat is the expected payoff for the auctioneer?\nFirst we need to find out what \\(\\theta\\) will pay. We know \\(\\theta\\) wins \\(3/4\\) of the time, and the expected payoff is \\(\\frac{\\theta-\\mu}{2}\\), then\n\\[\\theta P(\\theta) - M(\\theta)=\\frac{\\theta-\\mu}{2}\\]\nWhere \\(P(\\theta)\\) is the probability of winning and \\(M(\\theta)\\) is the expected payment."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-19",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-19",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\n\\[\\theta \\frac{3}{4} - M(\\theta)=\\frac{\\theta-\\mu}{2}\\]\nFrom where we obtain\n\\[M(\\theta)=\\frac{\\theta+2\\mu}{4}\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-20",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-20",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nGiven that \\(\\mu\\) type wins \\(1/4\\) of the time, the expected revenue for the auctioneer is:\n\\[\\frac{\\theta+2\\mu}{4}+\\frac{\\mu}{4}=\\frac{t\\theta+3\\mu}{4}\\]\nWhich is exactly the same he had in the second price auction!"
   }
 ]
