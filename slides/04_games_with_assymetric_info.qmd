@@ -771,7 +771,7 @@ $$\pi(s_{\mu},t_{\mu},\mu)\geq \pi(s,t,\mu)\quad \forall s,\ \forall t$$
 
 :::
 
-This is, every player has incentives to *tell the truth*.
+This is, every player's type has incentives to *tell the truth*.
 
 ## Mechanism Design
 
@@ -788,7 +788,7 @@ $$\pi(s_{\mu},t_{\mu},\mu)\geq \underline{\pi}_\mu$$
 
 :::
 
-This is, every player has incentives to *participate*.
+This is, every player's type has incentives to *participate*.
 
 ## Mechanism Design
 
@@ -796,7 +796,7 @@ Without much surprise we call the designer the **Principal**.
 
 Any design the Principal devices to maximize her expected payoff must be **incentive compatible** and **individually rational**. Her payoff usually depends on the strategies chosen by the players.
 
-For surprise to none, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named **direct-revelation mechanisms**.
+For surprise to no one, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named **direct-revelation mechanisms**.
 
 ## Mechanism Design
 
@@ -804,6 +804,238 @@ Direct-revelation mechanism:
 
 1. Each player is free to lie about his type. $\theta$ can claim to be $\mu$ if so desires, and vice-versa.
 2. Suppose that if you claim to be type $\theta$, the mechanism assings you $(s_\theta,t_\theta)$, and $(s_\mu,t_\mu)$ for the $\mu$ type
+3. Incentive Compatibility $\Rightarrow$ every type optimally tells the true.
+4. Individual Rationality $\Rightarrow$ every type will participate.
+
+## Mechanism Design
+
+:::{.callout}
+
+## Proposition
+
+For any mechanism and an IC-IR assignment, there is a direct-revelation mechanism in which truth telling is incentive compatible, individually rational, and which produces an indentical assignment. Hence a principal can restrict attention to direct-revelation mechanisms and truth-telling assignments within those mechanisms.
+
+:::
+
+## Mechanism Design
+
+1. Consider again two players, and two types, $\theta$ and $\mu$.
+2. Suppose there is a common prior probability that type $\theta$ has a likelihood $\rho$.
+3. Suppose the assignments for each type will be $(s_i^\tau,t_i^\tau)$, with $i=1,2$ and $\tau=\theta,\mu$.
+4. Note now, that each player can be either $\theta$ or $\mu$.
+
+## Mechanism Design
+
+<div style="font-size: 85%;">
+
+1. Let $E[\pi_i(s_i^\tau,t_i^\tau,\tau)]$ denote the expected payoff for player $i$, type $\tau$ when telling the truth.
+2. Players's payoff (realized) will depend on their actions, but also on the other player's actions, then: $$E[\pi_i(s_i^\tau,t_i^\tau,\tau)]=\rho \pi_i(s_i^\tau,t_i^\tau,s_{-i}^\theta,s_{-i}^\theta,\tau)+(1-\rho)\pi_i(s_i^\tau,t_i^\tau,s_{-i}^\mu,s_{-i}^\mu,\tau)$$
+
+</div>
+
+## Mechanism Design
+
+Now, $(s_i^\tau,t_i^\tau)$ are going to form a BNE only if they are best responses to each type of player, *i.e.* for $i=1,2$
+
+$$
+\begin{aligned}
+  E[\pi_i(s_i^\theta,t_i^\theta,\theta)] &\geq E[\pi_i(s,t,\theta)]\quad \forall\ (s,t)\\
+  E[\pi_i(s_i^\mu,t_i^\mu,\mu)] &\geq E[\pi_i(s,t,\mu)]\quad \forall\ (s,t)
+\end{aligned}
+$$
+
+It seems we have been going around in circles, but it is important to check: in this direct-revelation mechanism, truth telling **is a BNE**.
+
+## Mechanism Design
+
+:::{.callout}
+
+## Proposition
+
+For any mechanism and any BNE of that mechanism, there is a direct-revelation mechanism with truth telling as a BNE that has an identical assignemnt. Hence a principal can restrict atention to direct-revelation mechanisms and truth-tellign equilibria within those mechanisms.
+
+:::
+
+## Mechanism Design
+
+:::{.callout-important}
+
+## Attention
+
+It might not be optimal for the Principal to enforce a mechanism that satisfies participation constraint. For example, if extracting the truth from the players, it might be better just to leave some players out of the game at all.
+
+:::
+
+## Example
+
+The government wants a firm to produce a certain amount of a good (public procurement). 
+
+1. $S(q)=2\sqrt{q}$ is the government's utility as a function of quantity produced by the firms
+2. The firm has a $\underline{u}=0$, and production cost $c(q,\alpha)=\frac{41}{90}+\alpha q$.
+3. Marginal cost $\alpha$, (private information) can be of two types, $\alpha_l=1$ and $\alpha_h=2$, each with probability $p=\frac{1}{2}$.
+4. Contracts take the shape of a transfer $t_i$ and a quantity to be delivered $q_i$ by the firm $(q_i,t_i)$.
+
+## Example
+
+Let's start with the individual rationality constraints (or participation constraints):
+
+$$
+\begin{aligned}
+\alpha=1 \ \rightarrow\ &t_l-\frac{41}{90}-q_l\geq 0\\
+\alpha=2 \ \rightarrow\  &t_h-\frac{41}{90}-2q_h\geq 0
+\end{aligned}
+$$
+
+## Example
+
+Now the Incentive Compatibility are:
+
+$$
+\begin{aligned}
+\alpha=1 \ \rightarrow\ &t_l-\frac{41}{90}-q_l\geq t_h-\frac{41}{90}-q_h\\
+\alpha=2 \ \rightarrow\ &t_h-\frac{41}{90}-2q_h\geq t_l-\frac{41}{90}-2q_l
+\end{aligned}
+$$
+
+## Example
+
+If the government could observe the type...
+
+$$
+\begin{aligned}
+    \max_{q}\ & 2\sqrt{q}-\overbrace{\frac{41}{90}-\alpha q}^{t}\\
+    FOC\quad & \frac{1}{\sqrt{q^*}}-\alpha=0\\
+    & \alpha=\frac{1}{\sqrt{q^*}}\Rightarrow q^*=\frac{1}{\alpha^2}
+\end{aligned}
+$$
+
+## Example
+
+Which replacing in the IR implies $t=\frac{41}{90}+\frac{1}{\alpha}$.
+
+That gives us a contract $\left(1,\frac{131}{90}\right)$ for the efficient firm, and $\left(\frac{1}{4},\frac{86}{90}\right)$ for the inefficient one.
+
+. . .
+
+What about when the Government does not know the type of the firm?
+
+## Example
+
+The problem is:
+
+<div style="font-size: 85%;">
+
+$$
+\begin{aligned}
+\max_{q_h,t_h,q_l,t_l}\quad&\frac{1}{2}[2\sqrt{q_h}-t_h]+\frac{1}{2}[2\sqrt{q_l}-t_l]\\
+s.t.\quad& t_l-\frac{41}{90}-q_l\geq t_h-\frac{41}{90}-q_h\\
+  &t_h-\frac{41}{90}-2q_h\geq t_l-\frac{41}{90}-2q_l\\
+&t_l-\frac{41}{90}-q_l\geq 0\\
+  &t_h-\frac{41}{90}-2q_h\geq 0
+\end{aligned}
+$$
+
+</div>
+
+## Example
+
+Note:
+
+<div style="font-size: 80%;">
+
+$$
+\begin{aligned}
+\overbrace{t_l-\frac{41}{90}-q_l\geq t_h-\frac{41}{90}-q_h}^{IC_l}\geq \underbrace{t_h-\frac{41}{90}-2q_h\geq 0}_{IR_h}
+\end{aligned}
+$$
+
+</div>
+
+$$\Rightarrow\quad  t_l-\frac{41}{90}-q_l\geq0$$
+
+We conclude that, if the $IC_l$ and $IR_h$  are binding, then the $IR_l$ for the good type is satisfied.
+
+
+## Example
+
+If $IC_l$ is binding, then
+$$
+\begin{aligned}
+    t_l-\frac{41}{90}-q_l &= t_h-\frac{41}{90}-q_h\\
+    t_l-\frac{41}{90}-q_l-q_h &= t_h-\frac{41}{90}-2q_h\\
+    t_l-\frac{41}{90}-2q_l+\underbrace{(q_l-q_h)}_{\geq 0} &= t_h-\frac{41}{90}-2q_h\\
+    \Rightarrow\quad t_l-\frac{41}{90}-2q_l &\leq t_h-\frac{41}{90}-2q_h
+\end{aligned}
+$$
+The $IC_h$, if $IC_l$ is binding, then $IC_h$ is satisfied.
+
+## Example
+
+Now the problem is:
+$$
+\begin{aligned}
+  \max_{q_h,t_h,q_l,t_l}\quad&\frac{1}{2}[2\sqrt{q_h}-t_h]+\frac{1}{2}[2\sqrt{q_l}-t_l]\\
+s.t.\quad& t_l-\frac{41}{90}-q_l= t_h-\frac{41}{90}-q_h\\
+  &t_h-\frac{41}{90}-2q_h= 0
+\end{aligned}
+$$
+
+## Example
+
+From the $IR_h$, we get:
+
+$$t_h=\frac{41}{90}+2q_h$$
+
+And replacing in the $IC_l$ we get:
+
+$$t_l=\frac{41}{90}+q_l+q_h$$
+
+## Example
+
+Replacing in the objective function,
+
+$$
+\begin{aligned}
+\max_{q_h,q_l}\quad&\frac{1}{2}\left[2\sqrt{q_h}-\frac{41}{90}-2q_h\right]+\frac{1}{2}\left[2\sqrt{q_l}-\frac{41}{90}-q_l-q_h\right]\\
+\max_{q_h,q_l}\quad&-\frac{41}{90}+\sqrt{q_h}+\sqrt{q_l}-\frac{3}{2}q_h-\frac{1}{2}q_l
+\end{aligned}
+$$
+
+## Example
+
+ Whith FOCs:
+
+$$    
+\begin{aligned}
+    \frac{1}{2\sqrt{q_h}}&=\frac{3}{2}\Rightarrow q_h=\frac{1}{9}\quad\Rightarrow\quad t_h=\frac{61}{90}\\
+    \frac{1}{2\sqrt{q_l}}&=\frac{1}{2}\Rightarrow q_l=1\quad\Rightarrow\quad t_l=\frac{141}{90}
+\end{aligned}
+$$
+
+## Example
+
+The expected utility for the Government is:
+
+$$
+\begin{aligned}
+    \frac{1}{2}\times\frac{-1}{90}+\frac{1}{2}\times\frac{39}{90} = \frac{38}{180}
+\end{aligned}
+$$
+
+This is the utility the government gets by offering a menu of contracts in which everybody participates and reveal their types.
+
+## Example
+
+If the Government offers a contract $l$ (cream-skimming), the profits for the $l$ firm are zero, by construction. The profits for the $h$ firm are:
+$$\frac{131}{90}-\frac{41}{90}-1(\alpha=2)=\frac{90}{90}-2=-1<0$$
+So the *inefficient* firm will reject the contract.
+
+## Example
+
+With that, the expected utility of the Government is:
+$$\frac{1}{2}\left(2\sqrt{1}-\frac{131}{90}\right)+\frac{1}{2}(0)=1-\frac{131}{180} = \frac{49}{180}$$
+
+Which is better than the menu of contracts.
 
 # Auctions
 
@@ -813,6 +1045,11 @@ Auctions are, probably, the most transparent mechanism.
 
 1. Auctioneer does not know the player's individual valuations.
 2. Auctioneer wants to exert as much money as she can from bidders.
+3. Auctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs.
+
+## Auctions
+
+We will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc.
 
 # Signaling Games and The Lemons Problem
 

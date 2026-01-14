@@ -784,7 +784,7 @@ Paulo Fagandini
 </div>
 </div>
 </div>
-<p>This is, every player has incentives to <em>tell the truth</em>.</p>
+<p>This is, every player’s type has incentives to <em>tell the truth</em>.</p>
 </section>
 <section id="mechanism-design-6" class="slide level2">
 <h2>Mechanism Design</h2>
@@ -800,13 +800,13 @@ Paulo Fagandini
 </div>
 </div>
 </div>
-<p>This is, every player has incentives to <em>participate</em>.</p>
+<p>This is, every player’s type has incentives to <em>participate</em>.</p>
 </section>
 <section id="mechanism-design-7" class="slide level2">
 <h2>Mechanism Design</h2>
 <p>Without much surprise we call the designer the <strong>Principal</strong>.</p>
 <p>Any design the Principal devices to maximize her expected payoff must be <strong>incentive compatible</strong> and <strong>individually rational</strong>. Her payoff usually depends on the strategies chosen by the players.</p>
-<p>For surprise to none, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named <strong>direct-revelation mechanisms</strong>.</p>
+<p>For surprise to no one, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named <strong>direct-revelation mechanisms</strong>.</p>
 </section>
 <section id="mechanism-design-8" class="slide level2">
 <h2>Mechanism Design</h2>
@@ -814,7 +814,224 @@ Paulo Fagandini
 <ol type="1">
 <li class="fragment">Each player is free to lie about his type. <span class="math inline">\(\theta\)</span> can claim to be <span class="math inline">\(\mu\)</span> if so desires, and vice-versa.</li>
 <li class="fragment">Suppose that if you claim to be type <span class="math inline">\(\theta\)</span>, the mechanism assings you <span class="math inline">\((s_\theta,t_\theta)\)</span>, and <span class="math inline">\((s_\mu,t_\mu)\)</span> for the <span class="math inline">\(\mu\)</span> type</li>
+<li class="fragment">Incentive Compatibility <span class="math inline">\(\Rightarrow\)</span> every type optimally tells the true.</li>
+<li class="fragment">Individual Rationality <span class="math inline">\(\Rightarrow\)</span> every type will participate.</li>
 </ol>
+</section>
+<section id="mechanism-design-9" class="slide level2">
+<h2>Mechanism Design</h2>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>For any mechanism and an IC-IR assignment, there is a direct-revelation mechanism in which truth telling is incentive compatible, individually rational, and which produces an indentical assignment. Hence a principal can restrict attention to direct-revelation mechanisms and truth-telling assignments within those mechanisms.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mechanism-design-10" class="slide level2">
+<h2>Mechanism Design</h2>
+<ol type="1">
+<li class="fragment">Consider again two players, and two types, <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\mu\)</span>.</li>
+<li class="fragment">Suppose there is a common prior probability that type <span class="math inline">\(\theta\)</span> has a likelihood <span class="math inline">\(\rho\)</span>.</li>
+<li class="fragment">Suppose the assignments for each type will be <span class="math inline">\((s_i^\tau,t_i^\tau)\)</span>, with <span class="math inline">\(i=1,2\)</span> and <span class="math inline">\(\tau=\theta,\mu\)</span>.</li>
+<li class="fragment">Note now, that each player can be either <span class="math inline">\(\theta\)</span> or <span class="math inline">\(\mu\)</span>.</li>
+</ol>
+</section>
+<section id="mechanism-design-11" class="slide level2">
+<h2>Mechanism Design</h2>
+<div style="font-size: 85%;">
+<ol type="1">
+<li class="fragment">Let <span class="math inline">\(E[\pi_i(s_i^\tau,t_i^\tau,\tau)]\)</span> denote the expected payoff for player <span class="math inline">\(i\)</span>, type <span class="math inline">\(\tau\)</span> when telling the truth.</li>
+<li class="fragment">Players’s payoff (realized) will depend on their actions, but also on the other player’s actions, then: <span class="math display">\[E[\pi_i(s_i^\tau,t_i^\tau,\tau)]=\rho \pi_i(s_i^\tau,t_i^\tau,s_{-i}^\theta,s_{-i}^\theta,\tau)+(1-\rho)\pi_i(s_i^\tau,t_i^\tau,s_{-i}^\mu,s_{-i}^\mu,\tau)\]</span></li>
+</ol>
+</div>
+</section>
+<section id="mechanism-design-12" class="slide level2">
+<h2>Mechanism Design</h2>
+<p>Now, <span class="math inline">\((s_i^\tau,t_i^\tau)\)</span> are going to form a BNE only if they are best responses to each type of player, <em>i.e.</em> for <span class="math inline">\(i=1,2\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+  E[\pi_i(s_i^\theta,t_i^\theta,\theta)] &amp;\geq E[\pi_i(s,t,\theta)]\quad \forall\ (s,t)\\
+  E[\pi_i(s_i^\mu,t_i^\mu,\mu)] &amp;\geq E[\pi_i(s,t,\mu)]\quad \forall\ (s,t)
+\end{aligned}
+\]</span></p>
+<p>It seems we have been going around in circles, but it is important to check: in this direct-revelation mechanism, truth telling <strong>is a BNE</strong>.</p>
+</section>
+<section id="mechanism-design-13" class="slide level2">
+<h2>Mechanism Design</h2>
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>For any mechanism and any BNE of that mechanism, there is a direct-revelation mechanism with truth telling as a BNE that has an identical assignemnt. Hence a principal can restrict atention to direct-revelation mechanisms and truth-tellign equilibria within those mechanisms.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mechanism-design-14" class="slide level2">
+<h2>Mechanism Design</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Attention</strong></p>
+</div>
+<div class="callout-content">
+<p>It might not be optimal for the Principal to enforce a mechanism that satisfies participation constraint. For example, if extracting the truth from the players, it might be better just to leave some players out of the game at all.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>The government wants a firm to produce a certain amount of a good (public procurement).</p>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(S(q)=2\sqrt{q}\)</span> is the government’s utility as a function of quantity produced by the firms</li>
+<li class="fragment">The firm has a <span class="math inline">\(\underline{u}=0\)</span>, and production cost <span class="math inline">\(c(q,\alpha)=\frac{41}{90}+\alpha q\)</span>.</li>
+<li class="fragment">Marginal cost <span class="math inline">\(\alpha\)</span>, (private information) can be of two types, <span class="math inline">\(\alpha_l=1\)</span> and <span class="math inline">\(\alpha_h=2\)</span>, each with probability <span class="math inline">\(p=\frac{1}{2}\)</span>.</li>
+<li class="fragment">Contracts take the shape of a transfer <span class="math inline">\(t_i\)</span> and a quantity to be delivered <span class="math inline">\(q_i\)</span> by the firm <span class="math inline">\((q_i,t_i)\)</span>.</li>
+</ol>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
+<p>Let’s start with the individual rationality constraints (or participation constraints):</p>
+<p><span class="math display">\[
+\begin{aligned}
+\alpha=1 \ \rightarrow\ &amp;t_l-\frac{41}{90}-q_l\geq 0\\
+\alpha=2 \ \rightarrow\  &amp;t_h-\frac{41}{90}-2q_h\geq 0
+\end{aligned}
+\]</span></p>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example</h2>
+<p>Now the Incentive Compatibility are:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\alpha=1 \ \rightarrow\ &amp;t_l-\frac{41}{90}-q_l\geq t_h-\frac{41}{90}-q_h\\
+\alpha=2 \ \rightarrow\ &amp;t_h-\frac{41}{90}-2q_h\geq t_l-\frac{41}{90}-2q_l
+\end{aligned}
+\]</span></p>
+</section>
+<section id="example-5" class="slide level2">
+<h2>Example</h2>
+<p>If the government could observe the type…</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \max_{q}\ &amp; 2\sqrt{q}-\overbrace{\frac{41}{90}-\alpha q}^{t}\\
+    FOC\quad &amp; \frac{1}{\sqrt{q^*}}-\alpha=0\\
+    &amp; \alpha=\frac{1}{\sqrt{q^*}}\Rightarrow q^*=\frac{1}{\alpha^2}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="example-6" class="slide level2">
+<h2>Example</h2>
+<p>Which replacing in the IR implies <span class="math inline">\(t=\frac{41}{90}+\frac{1}{\alpha}\)</span>.</p>
+<p>That gives us a contract <span class="math inline">\(\left(1,\frac{131}{90}\right)\)</span> for the efficient firm, and <span class="math inline">\(\left(\frac{1}{4},\frac{86}{90}\right)\)</span> for the inefficient one.</p>
+<div class="fragment">
+<p>What about when the Government does not know the type of the firm?</p>
+</div>
+</section>
+<section id="example-7" class="slide level2">
+<h2>Example</h2>
+<p>The problem is:</p>
+<div style="font-size: 85%;">
+<p><span class="math display">\[
+\begin{aligned}
+\max_{q_h,t_h,q_l,t_l}\quad&amp;\frac{1}{2}[2\sqrt{q_h}-t_h]+\frac{1}{2}[2\sqrt{q_l}-t_l]\\
+s.t.\quad&amp; t_l-\frac{41}{90}-q_l\geq t_h-\frac{41}{90}-q_h\\
+  &amp;t_h-\frac{41}{90}-2q_h\geq t_l-\frac{41}{90}-2q_l\\
+&amp;t_l-\frac{41}{90}-q_l\geq 0\\
+  &amp;t_h-\frac{41}{90}-2q_h\geq 0
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="example-8" class="slide level2">
+<h2>Example</h2>
+<p>Note:</p>
+<div style="font-size: 80%;">
+<p><span class="math display">\[
+\begin{aligned}
+\overbrace{t_l-\frac{41}{90}-q_l\geq t_h-\frac{41}{90}-q_h}^{IC_l}\geq \underbrace{t_h-\frac{41}{90}-2q_h\geq 0}_{IR_h}
+\end{aligned}
+\]</span></p>
+</div>
+<p><span class="math display">\[\Rightarrow\quad  t_l-\frac{41}{90}-q_l\geq0\]</span></p>
+<p>We conclude that, if the <span class="math inline">\(IC_l\)</span> and <span class="math inline">\(IR_h\)</span> are binding, then the <span class="math inline">\(IR_l\)</span> for the good type is satisfied.</p>
+</section>
+<section id="example-9" class="slide level2">
+<h2>Example</h2>
+<p>If <span class="math inline">\(IC_l\)</span> is binding, then <span class="math display">\[
+\begin{aligned}
+    t_l-\frac{41}{90}-q_l &amp;= t_h-\frac{41}{90}-q_h\\
+    t_l-\frac{41}{90}-q_l-q_h &amp;= t_h-\frac{41}{90}-2q_h\\
+    t_l-\frac{41}{90}-2q_l+\underbrace{(q_l-q_h)}_{\geq 0} &amp;= t_h-\frac{41}{90}-2q_h\\
+    \Rightarrow\quad t_l-\frac{41}{90}-2q_l &amp;\leq t_h-\frac{41}{90}-2q_h
+\end{aligned}
+\]</span> The <span class="math inline">\(IC_h\)</span>, if <span class="math inline">\(IC_l\)</span> is binding, then <span class="math inline">\(IC_h\)</span> is satisfied.</p>
+</section>
+<section id="example-10" class="slide level2">
+<h2>Example</h2>
+<p>Now the problem is: <span class="math display">\[
+\begin{aligned}
+  \max_{q_h,t_h,q_l,t_l}\quad&amp;\frac{1}{2}[2\sqrt{q_h}-t_h]+\frac{1}{2}[2\sqrt{q_l}-t_l]\\
+s.t.\quad&amp; t_l-\frac{41}{90}-q_l= t_h-\frac{41}{90}-q_h\\
+  &amp;t_h-\frac{41}{90}-2q_h= 0
+\end{aligned}
+\]</span></p>
+</section>
+<section id="example-11" class="slide level2">
+<h2>Example</h2>
+<p>From the <span class="math inline">\(IR_h\)</span>, we get:</p>
+<p><span class="math display">\[t_h=\frac{41}{90}+2q_h\]</span></p>
+<p>And replacing in the <span class="math inline">\(IC_l\)</span> we get:</p>
+<p><span class="math display">\[t_l=\frac{41}{90}+q_l+q_h\]</span></p>
+</section>
+<section id="example-12" class="slide level2">
+<h2>Example</h2>
+<p>Replacing in the objective function,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\max_{q_h,q_l}\quad&amp;\frac{1}{2}\left[2\sqrt{q_h}-\frac{41}{90}-2q_h\right]+\frac{1}{2}\left[2\sqrt{q_l}-\frac{41}{90}-q_l-q_h\right]\\
+\max_{q_h,q_l}\quad&amp;-\frac{41}{90}+\sqrt{q_h}+\sqrt{q_l}-\frac{3}{2}q_h-\frac{1}{2}q_l
+\end{aligned}
+\]</span></p>
+</section>
+<section id="example-13" class="slide level2">
+<h2>Example</h2>
+<p>Whith FOCs:</p>
+<p><span class="math display">\[    
+\begin{aligned}
+    \frac{1}{2\sqrt{q_h}}&amp;=\frac{3}{2}\Rightarrow q_h=\frac{1}{9}\quad\Rightarrow\quad t_h=\frac{61}{90}\\
+    \frac{1}{2\sqrt{q_l}}&amp;=\frac{1}{2}\Rightarrow q_l=1\quad\Rightarrow\quad t_l=\frac{141}{90}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="example-14" class="slide level2">
+<h2>Example</h2>
+<p>The expected utility for the Government is:</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \frac{1}{2}\times\frac{-1}{90}+\frac{1}{2}\times\frac{39}{90} = \frac{38}{180}
+\end{aligned}
+\]</span></p>
+<p>This is the utility the government gets by offering a menu of contracts in which everybody participates and reveal their types.</p>
+</section>
+<section id="example-15" class="slide level2">
+<h2>Example</h2>
+<p>If the Government offers a contract <span class="math inline">\(l\)</span> (cream-skimming), the profits for the <span class="math inline">\(l\)</span> firm are zero, by construction. The profits for the <span class="math inline">\(h\)</span> firm are: <span class="math display">\[\frac{131}{90}-\frac{41}{90}-1(\alpha=2)=\frac{90}{90}-2=-1&lt;0\]</span> So the <em>inefficient</em> firm will reject the contract.</p>
+</section>
+<section id="example-16" class="slide level2">
+<h2>Example</h2>
+<p>With that, the expected utility of the Government is: <span class="math display">\[\frac{1}{2}\left(2\sqrt{1}-\frac{131}{90}\right)+\frac{1}{2}(0)=1-\frac{131}{180} = \frac{49}{180}\]</span></p>
+<p>Which is better than the menu of contracts.</p>
 </section></section>
 <section>
 <section id="auctions" class="title-slide slide level1 center">
@@ -827,7 +1044,12 @@ Paulo Fagandini
 <ol type="1">
 <li class="fragment">Auctioneer does not know the player’s individual valuations.</li>
 <li class="fragment">Auctioneer wants to exert as much money as she can from bidders.</li>
+<li class="fragment">Auctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs.</li>
 </ol>
+</section>
+<section id="auctions-2" class="slide level2">
+<h2>Auctions</h2>
+<p>We will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc.</p>
 </section></section>
 <section id="signaling-games-and-the-lemons-problem" class="title-slide slide level1 center">
 <h1>Signaling Games and The Lemons Problem</h1>

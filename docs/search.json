@@ -2300,7 +2300,7 @@
     "href": "slides/04_games_with_assymetric_info.html#example",
     "title": "Games under  Asymmetric Information",
     "section": "Example",
-    "text": "Example\nConsider two candidates campaigning for some election\n\nEach player can run a “clean” campaign, or\nEach player runs a “dirty” campaign\n\n\n\n\n\nP1-P2\ndirty\nclean\n\n\n\n\ndirty\n(0,0)\n(7,-2)\n\n\nclean\n(-2,7)\n(5,5)"
+    "text": "Example\nThe government wants a firm to produce a certain amount of a good (public procurement).\n\n\\(S(q)=2\\sqrt{q}\\) is the government’s utility as a function of quantity produced by the firms\nThe firm has a \\(\\underline{u}=0\\), and production cost \\(c(q,\\alpha)=\\frac{41}{90}+\\alpha q\\).\nMarginal cost \\(\\alpha\\), (private information) can be of two types, \\(\\alpha_l=1\\) and \\(\\alpha_h=2\\), each with probability \\(p=\\frac{1}{2}\\).\nContracts take the shape of a transfer \\(t_i\\) and a quantity to be delivered \\(q_i\\) by the firm \\((q_i,t_i)\\)."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#section",
@@ -2594,14 +2594,14 @@
     "href": "slides/04_games_with_assymetric_info.html#example-3",
     "title": "Games under  Asymmetric Information",
     "section": "Example",
-    "text": "Example"
+    "text": "Example\nLet’s start with the individual rationality constraints (or participation constraints):\n\\[\n\\begin{aligned}\n\\alpha=1 \\ \\rightarrow\\ &t_l-\\frac{41}{90}-q_l\\geq 0\\\\\n\\alpha=2 \\ \\rightarrow\\  &t_h-\\frac{41}{90}-2q_h\\geq 0\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#example-4",
     "href": "slides/04_games_with_assymetric_info.html#example-4",
     "title": "Games under  Asymmetric Information",
     "section": "Example",
-    "text": "Example\nAs expected, this is the simplest scenario we could face, an equlibrium with dominant strategies. This will not be the case, and we will need to study the beliefs of players regarding the other player’s type."
+    "text": "Example\nNow the Incentive Compatibility are:\n\\[\n\\begin{aligned}\n\\alpha=1 \\ \\rightarrow\\ &t_l-\\frac{41}{90}-q_l\\geq t_h-\\frac{41}{90}-q_h\\\\\n\\alpha=2 \\ \\rightarrow\\ &t_h-\\frac{41}{90}-2q_h\\geq t_l-\\frac{41}{90}-2q_l\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#example-1-1",
@@ -2916,34 +2916,174 @@
     "href": "slides/04_games_with_assymetric_info.html#auctions-1",
     "title": "Games under  Asymmetric Information",
     "section": "Auctions",
-    "text": "Auctions\nAuctions are, probably, the most transparent mechanism.\n\nAuctioneer does not know the player’s individual valuations.\nAuctioneer wants to exert as much money as she can from bidders."
+    "text": "Auctions\nAuctions are, probably, the most transparent mechanism.\n\nAuctioneer does not know the player’s individual valuations.\nAuctioneer wants to exert as much money as she can from bidders.\nAuctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-5",
     "href": "slides/04_games_with_assymetric_info.html#mechanism-design-5",
     "title": "Games under  Asymmetric Information",
     "section": "Mechanism Design",
-    "text": "Mechanism Design\n\n\n\nDefinition\n\n\nSuppose there are two types \\(\\theta\\) and \\(\\mu\\). The designer assigns \\((s_{\\theta},t_{\\theta})\\) as strategies and outcomes for the player type \\(\\theta\\), and \\((s_{\\mu},t_{\\mu})\\) for the player type \\(\\mu\\).\nA design is said to be incentive compatible if:\n\\[\\pi(s_{\\theta},t_{\\theta},\\theta)\\geq \\pi(s,t,\\theta)\\quad \\forall s,\\ \\forall t\\] and \\[\\pi(s_{\\mu},t_{\\mu},\\mu)\\geq \\pi(s,t,\\mu)\\quad \\forall s,\\ \\forall t\\]\n\n\n\nThis is, every player has incentives to tell the truth."
+    "text": "Mechanism Design\n\n\n\nDefinition\n\n\nSuppose there are two types \\(\\theta\\) and \\(\\mu\\). The designer assigns \\((s_{\\theta},t_{\\theta})\\) as strategies and outcomes for the player type \\(\\theta\\), and \\((s_{\\mu},t_{\\mu})\\) for the player type \\(\\mu\\).\nA design is said to be incentive compatible if:\n\\[\\pi(s_{\\theta},t_{\\theta},\\theta)\\geq \\pi(s,t,\\theta)\\quad \\forall s,\\ \\forall t\\] and \\[\\pi(s_{\\mu},t_{\\mu},\\mu)\\geq \\pi(s,t,\\mu)\\quad \\forall s,\\ \\forall t\\]\n\n\n\nThis is, every player’s type has incentives to tell the truth."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-6",
     "href": "slides/04_games_with_assymetric_info.html#mechanism-design-6",
     "title": "Games under  Asymmetric Information",
     "section": "Mechanism Design",
-    "text": "Mechanism Design\n\n\n\nDefinition\n\n\nSuppose there are two types \\(\\theta\\) and \\(\\mu\\), with reservation utility \\(\\underline{\\pi}_{\\theta}\\) and \\(\\underline{\\pi}_{\\mu}\\).\nA design is said to be idividually rational if:\n\\[\\pi(s_{\\theta},t_{\\theta},\\theta)\\geq \\underline{\\pi}_\\theta\\] and \\[\\pi(s_{\\mu},t_{\\mu},\\mu)\\geq \\underline{\\pi}_\\mu\\]\n\n\n\nThis is, every player has incentives to participate."
+    "text": "Mechanism Design\n\n\n\nDefinition\n\n\nSuppose there are two types \\(\\theta\\) and \\(\\mu\\), with reservation utility \\(\\underline{\\pi}_{\\theta}\\) and \\(\\underline{\\pi}_{\\mu}\\).\nA design is said to be idividually rational if:\n\\[\\pi(s_{\\theta},t_{\\theta},\\theta)\\geq \\underline{\\pi}_\\theta\\] and \\[\\pi(s_{\\mu},t_{\\mu},\\mu)\\geq \\underline{\\pi}_\\mu\\]\n\n\n\nThis is, every player’s type has incentives to participate."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-7",
     "href": "slides/04_games_with_assymetric_info.html#mechanism-design-7",
     "title": "Games under  Asymmetric Information",
     "section": "Mechanism Design",
-    "text": "Mechanism Design\nWithout much surprise we call the designer the Principal.\nAny design the Principal devices to maximize her expected payoff must be incentive compatible and individually rational. Her payoff usually depends on the strategies chosen by the players.\nFor surprise to none, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named direct-revelation mechanisms."
+    "text": "Mechanism Design\nWithout much surprise we call the designer the Principal.\nAny design the Principal devices to maximize her expected payoff must be incentive compatible and individually rational. Her payoff usually depends on the strategies chosen by the players.\nFor surprise to no one, there as infinite number of ways in which a Principal can set a mechanism, however we will focus on the class named direct-revelation mechanisms."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-8",
     "href": "slides/04_games_with_assymetric_info.html#mechanism-design-8",
     "title": "Games under  Asymmetric Information",
     "section": "Mechanism Design",
-    "text": "Mechanism Design\nDirect-revelation mechanism:\n\nEach player is free to lie about his type. \\(\\theta\\) can claim to be \\(\\mu\\) if so desires, and vice-versa.\nSuppose that if you claim to be type \\(\\theta\\), the mechanism assings you \\((s_\\theta,t_\\theta)\\), and \\((s_\\mu,t_\\mu)\\) for the \\(\\mu\\) type"
+    "text": "Mechanism Design\nDirect-revelation mechanism:\n\nEach player is free to lie about his type. \\(\\theta\\) can claim to be \\(\\mu\\) if so desires, and vice-versa.\nSuppose that if you claim to be type \\(\\theta\\), the mechanism assings you \\((s_\\theta,t_\\theta)\\), and \\((s_\\mu,t_\\mu)\\) for the \\(\\mu\\) type\nIncentive Compatibility \\(\\Rightarrow\\) every type optimally tells the true.\nIndividual Rationality \\(\\Rightarrow\\) every type will participate."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-9",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-9",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\n\n\nProposition\n\n\nFor any mechanism and an IC-IR assignment, there is a direct-revelation mechanism in which truth telling is incentive compatible, individually rational, and which produces an indentical assignment. Hence a principal can restrict attention to direct-revelation mechanisms and truth-telling assignments within those mechanisms."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-10",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-10",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\nConsider again two players, and two types, \\(\\theta\\) and \\(\\mu\\).\nSuppose there is a common prior probability that type \\(\\theta\\) has a likelihood \\(\\rho\\).\nSuppose the assignments for each type will be \\((s_i^\\tau,t_i^\\tau)\\), with \\(i=1,2\\) and \\(\\tau=\\theta,\\mu\\).\nNote now, that each player can be either \\(\\theta\\) or \\(\\mu\\)."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-11",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-11",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\n\nLet \\(E[\\pi_i(s_i^\\tau,t_i^\\tau,\\tau)]\\) denote the expected payoff for player \\(i\\), type \\(\\tau\\) when telling the truth.\nPlayers’s payoff (realized) will depend on their actions, but also on the other player’s actions, then: \\[E[\\pi_i(s_i^\\tau,t_i^\\tau,\\tau)]=\\rho \\pi_i(s_i^\\tau,t_i^\\tau,s_{-i}^\\theta,s_{-i}^\\theta,\\tau)+(1-\\rho)\\pi_i(s_i^\\tau,t_i^\\tau,s_{-i}^\\mu,s_{-i}^\\mu,\\tau)\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-12",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-12",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\nNow, \\((s_i^\\tau,t_i^\\tau)\\) are going to form a BNE only if they are best responses to each type of player, i.e. for \\(i=1,2\\)\n\\[\n\\begin{aligned}\n  E[\\pi_i(s_i^\\theta,t_i^\\theta,\\theta)] &\\geq E[\\pi_i(s,t,\\theta)]\\quad \\forall\\ (s,t)\\\\\n  E[\\pi_i(s_i^\\mu,t_i^\\mu,\\mu)] &\\geq E[\\pi_i(s,t,\\mu)]\\quad \\forall\\ (s,t)\n\\end{aligned}\n\\]\nIt seems we have been going around in circles, but it is important to check: in this direct-revelation mechanism, truth telling is a BNE."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-13",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-13",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\n\n\nProposition\n\n\nFor any mechanism and any BNE of that mechanism, there is a direct-revelation mechanism with truth telling as a BNE that has an identical assignemnt. Hence a principal can restrict atention to direct-revelation mechanisms and truth-tellign equilibria within those mechanisms."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-2",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-2",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nWe will focus the attention to auctions where the auctioneer wants to sell an item. For policy, these could be teasury bills (yes, they are auctioned), exploration rights, licences, etc."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#mechanism-design-14",
+    "href": "slides/04_games_with_assymetric_info.html#mechanism-design-14",
+    "title": "Games under  Asymmetric Information",
+    "section": "Mechanism Design",
+    "text": "Mechanism Design\n\n\n\n\n\n\nAttention\n\n\nIt might not be optimal for the Principal to enforce a mechanism that satisfies participation constraint. For example, if extracting the truth from the players, it might be better just to leave some players out of the game at all."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-5",
+    "href": "slides/04_games_with_assymetric_info.html#example-5",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nIf the government could observe the type…\n\\[\n\\begin{aligned}\n    \\max_{q}\\ & 2\\sqrt{q}-\\overbrace{\\frac{41}{90}-\\alpha q}^{t}\\\\\n    FOC\\quad & \\frac{1}{\\sqrt{q^*}}-\\alpha=0\\\\\n    & \\alpha=\\frac{1}{\\sqrt{q^*}}\\Rightarrow q^*=\\frac{1}{\\alpha^2}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-6",
+    "href": "slides/04_games_with_assymetric_info.html#example-6",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nWhich replacing in the IR implies \\(t=\\frac{41}{90}+\\frac{1}{\\alpha}\\).\nThat gives us a contract \\(\\left(1,\\frac{131}{90}\\right)\\) for the efficient firm, and \\(\\left(\\frac{1}{4},\\frac{86}{90}\\right)\\) for the inefficient one.\n\nWhat about when the Government does not know the type of the firm?"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-7",
+    "href": "slides/04_games_with_assymetric_info.html#example-7",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nThe problem is:\n\n\\[\n\\begin{aligned}\n\\max_{q_h,t_h,q_l,t_l}\\quad&\\frac{1}{2}[2\\sqrt{q_h}-t_h]+\\frac{1}{2}[2\\sqrt{q_l}-t_l]\\\\\ns.t.\\quad& t_l-\\frac{41}{90}-q_l\\geq t_h-\\frac{41}{90}-q_h\\\\\n  &t_h-\\frac{41}{90}-2q_h\\geq t_l-\\frac{41}{90}-2q_l\\\\\n&t_l-\\frac{41}{90}-q_l\\geq 0\\\\\n  &t_h-\\frac{41}{90}-2q_h\\geq 0\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-8",
+    "href": "slides/04_games_with_assymetric_info.html#example-8",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nNote:\n\n\\[\n\\begin{aligned}\n\\overbrace{t_l-\\frac{41}{90}-q_l\\geq t_h-\\frac{41}{90}-q_h}^{IC_l}\\geq \\underbrace{t_h-\\frac{41}{90}-2q_h\\geq 0}_{IR_h}\n\\end{aligned}\n\\]\n\n\\[\\Rightarrow\\quad  t_l-\\frac{41}{90}-q_l\\geq0\\]\nWe conclude that, if the \\(IC_l\\) and \\(IR_h\\) are binding, then the \\(IR_l\\) for the good type is satisfied."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-9",
+    "href": "slides/04_games_with_assymetric_info.html#example-9",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nIf \\(IC_l\\) is binding, then \\[\n\\begin{aligned}\n    t_l-\\frac{41}{90}-q_l &= t_h-\\frac{41}{90}-q_h\\\\\n    t_l-\\frac{41}{90}-q_l-q_h &= t_h-\\frac{41}{90}-2q_h\\\\\n    t_l-\\frac{41}{90}-2q_l+\\underbrace{(q_l-q_h)}_{\\geq 0} &= t_h-\\frac{41}{90}-2q_h\\\\\n    \\Rightarrow\\quad t_l-\\frac{41}{90}-2q_l &\\leq t_h-\\frac{41}{90}-2q_h\n\\end{aligned}\n\\] The \\(IC_h\\), if \\(IC_l\\) is binding, then \\(IC_h\\) is satisfied."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-10",
+    "href": "slides/04_games_with_assymetric_info.html#example-10",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nNow the problem is: \\[\n\\begin{aligned}\n  \\max_{q_h,t_h,q_l,t_l}\\quad&\\frac{1}{2}[2\\sqrt{q_h}-t_h]+\\frac{1}{2}[2\\sqrt{q_l}-t_l]\\\\\ns.t.\\quad& t_l-\\frac{41}{90}-q_l= t_h-\\frac{41}{90}-q_h\\\\\n  &t_h-\\frac{41}{90}-2q_h= 0\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-11",
+    "href": "slides/04_games_with_assymetric_info.html#example-11",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nFrom the \\(IR_h\\), we get:\n\\[t_h=\\frac{41}{90}+2q_h\\]\nAnd replacing in the \\(IC_l\\) we get:\n\\[t_l=\\frac{41}{90}+q_l+q_h\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-12",
+    "href": "slides/04_games_with_assymetric_info.html#example-12",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nReplacing in the objective function,\n\\[\n\\begin{aligned}\n\\max_{q_h,q_l}\\quad&\\frac{1}{2}\\left[2\\sqrt{q_h}-\\frac{41}{90}-2q_h\\right]+\\frac{1}{2}\\left[2\\sqrt{q_l}-\\frac{41}{90}-q_l-q_h\\right]\\\\\n\\max_{q_h,q_l}\\quad&-\\frac{41}{90}+\\sqrt{q_h}+\\sqrt{q_l}-\\frac{3}{2}q_h-\\frac{1}{2}q_l\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions",
+    "href": "slides/04_games_with_assymetric_info.html#auctions",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\nAuctions are, probably, the most transparent mechanism.\n\nAuctioneer does not know the player’s individual valuations.\nAuctioneer wants to exert as much money as she can from bidders.\nAuctions are used to sell or buy items (procurement). In particular, governments use these competitive process to optimize revenue or minimize costs."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-13",
+    "href": "slides/04_games_with_assymetric_info.html#example-13",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nWhith FOCs:\n\\[    \n\\begin{aligned}\n    \\frac{1}{2\\sqrt{q_h}}&=\\frac{3}{2}\\Rightarrow q_h=\\frac{1}{9}\\quad\\Rightarrow\\quad t_h=\\frac{61}{90}\\\\\n    \\frac{1}{2\\sqrt{q_l}}&=\\frac{1}{2}\\Rightarrow q_l=1\\quad\\Rightarrow\\quad t_l=\\frac{141}{90}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-14",
+    "href": "slides/04_games_with_assymetric_info.html#example-14",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nThe expected utility for the Government is:\n\\[\n\\begin{aligned}\n    \\frac{1}{2}\\times\\frac{-1}{90}+\\frac{1}{2}\\times\\frac{39}{90} = \\frac{38}{180}\n\\end{aligned}\n\\]\nThis is the utility the government gets by offering a menu of contracts in which everybody participates and reveal their types."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-15",
+    "href": "slides/04_games_with_assymetric_info.html#example-15",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nIf the Government offers a contract \\(l\\) (cream-skimming), the profits for the \\(l\\) firm are zero, by construction. The profits for the \\(h\\) firm are: \\[\\frac{131}{90}-\\frac{41}{90}-1(\\alpha=2)=\\frac{90}{90}-2=-1&lt;0\\] So the inefficient firm will reject the contract."
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#example-16",
+    "href": "slides/04_games_with_assymetric_info.html#example-16",
+    "title": "Games under  Asymmetric Information",
+    "section": "Example",
+    "text": "Example\nWith that, the expected utility of the Government is: \\[\\frac{1}{2}\\left(2\\sqrt{1}-\\frac{131}{90}\\right)+\\frac{1}{2}(0)=1-\\frac{131}{180} = \\frac{49}{180}\\]\nWhich is better than the menu of contracts."
   }
 ]
