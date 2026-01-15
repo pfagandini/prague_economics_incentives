@@ -1211,6 +1211,22 @@ It is indifferent any $b\in\left[\mu,\frac{\mu+\theta}{2}\right]$ for the type $
 
 ## Auctions
 
+<div style="font-size: 80%;">
+
+This is the logic to find that function. In a mixed strategy any bid in the support must yield the same expected payoff, in particular $b=\mu$, so we have: 
+
+$$(\theta-b)P(b)=(\theta-\mu)P(\mu) \Leftrightarrow P(b)=\frac{\theta-\mu}{\theta-b}P(\mu)$$
+
+With $P(b)$ the probability of a bid $b$ wins. Note that $\frac{\theta-\mu}{\theta-b}=\frac{(\theta-b)+(b-\mu)}{\theta-b}$ so we have:
+
+$$P(b)=\left(1+\frac{b-\mu}{\theta-b}\right)P(\mu)$$
+
+The probability must increase by $\frac{b-\mu}{\theta-b}$
+
+</div>
+
+## Auctions
+
 What is the expected payoff for the auctioneer?
 
 First we need to find out what $\theta$ will pay. We know $\theta$ wins $3/4$ of the time, and the expected payoff is $\frac{\theta-\mu}{2}$, then
@@ -1235,17 +1251,13 @@ $$\frac{\theta+2\mu}{4}+\frac{\mu}{4}=\frac{t\theta+3\mu}{4}$$
 
 Which is exactly the same he had in the second price auction!
 
-## Auctions
-
-:::{.callout}
-
-## Theorem
-
-Revenue Equivalence Theorem, both auctions will have the same revenue for the auctioneer.
-
-:::
-
 # Signaling Games and The Lemons Problem
+
+## Signaling Games
+
+In these games, the player who has private information about his type, has an action that acts as signal for the other player, who can try to learn/infer the other player's type from.
+
+
 
 # Bibliography
 

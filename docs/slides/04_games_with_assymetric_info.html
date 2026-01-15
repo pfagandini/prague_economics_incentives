@@ -1224,28 +1224,42 @@ s.t.\quad&amp; t_l-\frac{41}{90}-q_l= t_h-\frac{41}{90}-q_h\\
 </section>
 <section id="auctions-18" class="slide level2">
 <h2>Auctions</h2>
+<div style="font-size: 80%;">
+<p>This is the logic to find that function. In a mixed strategy any bid in the support must yield the same expected payoff, in particular <span class="math inline">\(b=\mu\)</span>, so we have:</p>
+<p><span class="math display">\[(\theta-b)P(b)=(\theta-\mu)P(\mu) \Leftrightarrow P(b)=\frac{\theta-\mu}{\theta-b}P(\mu)\]</span></p>
+<p>With <span class="math inline">\(P(b)\)</span> the probability of a bid <span class="math inline">\(b\)</span> wins. Note that <span class="math inline">\(\frac{\theta-\mu}{\theta-b}=\frac{(\theta-b)+(b-\mu)}{\theta-b}\)</span> so we have:</p>
+<p><span class="math display">\[P(b)=\left(1+\frac{b-\mu}{\theta-b}\right)P(\mu)\]</span></p>
+<p>The probability must increase by <span class="math inline">\(\frac{b-\mu}{\theta-b}\)</span></p>
+</div>
+</section>
+<section id="auctions-19" class="slide level2">
+<h2>Auctions</h2>
 <p>What is the expected payoff for the auctioneer?</p>
 <p>First we need to find out what <span class="math inline">\(\theta\)</span> will pay. We know <span class="math inline">\(\theta\)</span> wins <span class="math inline">\(3/4\)</span> of the time, and the expected payoff is <span class="math inline">\(\frac{\theta-\mu}{2}\)</span>, then</p>
 <p><span class="math display">\[\theta P(\theta) - M(\theta)=\frac{\theta-\mu}{2}\]</span></p>
 <p>Where <span class="math inline">\(P(\theta)\)</span> is the probability of winning and <span class="math inline">\(M(\theta)\)</span> is the expected payment.</p>
 </section>
-<section id="auctions-19" class="slide level2">
+<section id="auctions-20" class="slide level2">
 <h2>Auctions</h2>
 <p><span class="math display">\[\theta \frac{3}{4} - M(\theta)=\frac{\theta-\mu}{2}\]</span></p>
 <p>From where we obtain</p>
 <p><span class="math display">\[M(\theta)=\frac{\theta+2\mu}{4}\]</span></p>
 </section>
-<section id="auctions-20" class="slide level2">
+<section id="auctions-21" class="slide level2">
 <h2>Auctions</h2>
 <p>Given that <span class="math inline">\(\mu\)</span> type wins <span class="math inline">\(1/4\)</span> of the time, the expected revenue for the auctioneer is:</p>
 <p><span class="math display">\[\frac{\theta+2\mu}{4}+\frac{\mu}{4}=\frac{t\theta+3\mu}{4}\]</span></p>
 <p>Which is exactly the same he had in the second price auction!</p>
 </section></section>
+<section>
 <section id="signaling-games-and-the-lemons-problem" class="title-slide slide level1 center">
 <h1>Signaling Games and The Lemons Problem</h1>
 
 </section>
-
+<section id="signaling-games" class="slide level2">
+<h2>Signaling Games</h2>
+<p>In these games, the player who has private information about his type, has an action that acts as signal for the other player, who can try to learn/infer the other player’s type from.</p>
+</section></section>
 <section>
 <section id="bibliography" class="title-slide slide level1 center">
 <h1>Bibliography</h1>

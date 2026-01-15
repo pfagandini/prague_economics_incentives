@@ -2405,7 +2405,7 @@
     "href": "slides/04_games_with_assymetric_info.html#signaling-games",
     "title": "Games under  Asymmetric Information",
     "section": "Signaling Games",
-    "text": "Signaling Games\nDynamic games where informed player moves first:\n\nNature chooses sender’s type\nSender observes type, chooses signal/action\nReceiver observes signal (not type), chooses response\nPayoffs depend on type, signal, and response\n\nEducation as signal of ability is classic example"
+    "text": "Signaling Games\nIn these games, the player who has private information about his type, has an action that acts as signal for the other player, who can try to learn/infer the other player’s type from."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#example-5-job-market-signaling",
@@ -3196,20 +3196,34 @@
     "href": "slides/04_games_with_assymetric_info.html#auctions-18",
     "title": "Games under  Asymmetric Information",
     "section": "Auctions",
-    "text": "Auctions\nWhat is the expected payoff for the auctioneer?\nFirst we need to find out what \\(\\theta\\) will pay. We know \\(\\theta\\) wins \\(3/4\\) of the time, and the expected payoff is \\(\\frac{\\theta-\\mu}{2}\\), then\n\\[\\theta P(\\theta) - M(\\theta)=\\frac{\\theta-\\mu}{2}\\]\nWhere \\(P(\\theta)\\) is the probability of winning and \\(M(\\theta)\\) is the expected payment."
+    "text": "Auctions\n\nThis is the logic to find that function. In a mixed strategy any bid in the support must yield the same expected payoff, in particular \\(b=\\mu\\), so we have:\n\\[(\\theta-b)P(b)=(\\theta-\\mu)P(\\mu) \\Leftrightarrow P(b)=\\frac{\\theta-\\mu}{\\theta-b}P(\\mu)\\]\nWith \\(P(b)\\) the probability of a bid \\(b\\) wins. Note that \\(\\frac{\\theta-\\mu}{\\theta-b}=\\frac{(\\theta-b)+(b-\\mu)}{\\theta-b}\\) so we have:\n\\[P(b)=\\left(1+\\frac{b-\\mu}{\\theta-b}\\right)P(\\mu)\\]\nThe probability must increase by \\(\\frac{b-\\mu}{\\theta-b}\\)"
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#auctions-19",
     "href": "slides/04_games_with_assymetric_info.html#auctions-19",
     "title": "Games under  Asymmetric Information",
     "section": "Auctions",
-    "text": "Auctions\n\\[\\theta \\frac{3}{4} - M(\\theta)=\\frac{\\theta-\\mu}{2}\\]\nFrom where we obtain\n\\[M(\\theta)=\\frac{\\theta+2\\mu}{4}\\]"
+    "text": "Auctions\nWhat is the expected payoff for the auctioneer?\nFirst we need to find out what \\(\\theta\\) will pay. We know \\(\\theta\\) wins \\(3/4\\) of the time, and the expected payoff is \\(\\frac{\\theta-\\mu}{2}\\), then\n\\[\\theta P(\\theta) - M(\\theta)=\\frac{\\theta-\\mu}{2}\\]\nWhere \\(P(\\theta)\\) is the probability of winning and \\(M(\\theta)\\) is the expected payment."
   },
   {
     "objectID": "slides/04_games_with_assymetric_info.html#auctions-20",
     "href": "slides/04_games_with_assymetric_info.html#auctions-20",
     "title": "Games under  Asymmetric Information",
     "section": "Auctions",
+    "text": "Auctions\n\\[\\theta \\frac{3}{4} - M(\\theta)=\\frac{\\theta-\\mu}{2}\\]\nFrom where we obtain\n\\[M(\\theta)=\\frac{\\theta+2\\mu}{4}\\]"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-21",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-21",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
     "text": "Auctions\nGiven that \\(\\mu\\) type wins \\(1/4\\) of the time, the expected revenue for the auctioneer is:\n\\[\\frac{\\theta+2\\mu}{4}+\\frac{\\mu}{4}=\\frac{t\\theta+3\\mu}{4}\\]\nWhich is exactly the same he had in the second price auction!"
+  },
+  {
+    "objectID": "slides/04_games_with_assymetric_info.html#auctions-22",
+    "href": "slides/04_games_with_assymetric_info.html#auctions-22",
+    "title": "Games under  Asymmetric Information",
+    "section": "Auctions",
+    "text": "Auctions\n\n\n\nTheorem\n\n\nRevenue Equivalence Theorem, both auctions will have the same revenue for the auctioneer."
   }
 ]
