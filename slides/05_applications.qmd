@@ -1,0 +1,77 @@
+---
+title: "Policy Applications"
+author: "Paulo Fagandini"
+institute: "Prague University of Economics and Business <br> Faculty of Informatics and Statistics"
+format: 
+  revealjs:
+    self-contained: false
+    logo: ../images/vse.jpg
+    slide-number: true
+    cross-ref: true
+    incremental: true
+    math: 
+      method: mathjax
+    transition: slide
+    footer: "Economics of Incentives"
+    from: markdown+emoji
+    code-overflow: wrap
+    code-block-font-size: 0.75em
+    progress: true
+editor: source
+
+---
+
+<div style="font-size: 70%;">
+</div>
+
+# The Winner's Curse
+
+## The Winner's Curse
+
+The Winner's Curse says basically that if the bidders don't know really the true value of some objects, but their "guess" is in average correct, the winner always will tend to overpay for it.
+
+This case is relevant for example in auctions for oil drilling projects, or the TV Shows where people bid for closed bags.
+
+## The Winner's Curse
+
+<div style="font-size: 70%;">
+
+Imagine the following case, in an auction for a bag that is worth 25 each bidder has an estimate according to the following table:
+
+| 1 | 2 | 3 | 4 | 5 | $\bar{x}$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|15|35|24|17|33|24,8 |
+
+Who wins the auction?
+
+Obviously if they are symmetric ex-ante of receiving the signal, bidder 2 will win the auction.
+
+How much profits will this bidder make?
+
+It might even make some profits, if the strategy is to shade a lot, but definitively will end up with a very much lower margin than expected.
+
+</div>
+
+## The Winner's Curse
+
+What can they do?
+
+Acquire information, share information and considering previous auctions try to estimate how wrong would their estimate be, in the case of being the winners.
+
+There is a lot of research published in this field, in particular in the **Operational Research** literature.
+
+Basically, what you want is to maximize your profits, *controlling for the fact of having received the highest signal*.
+
+## The Winner's Curse
+
+Imagine the following situation:
+
+> You bid for some project in your firm, and ex-post you realize that all your competitors' bids were not even half of yours. A naïve manager would claim "Yeah!, we beat the competition! and for so much! muahahaha!"
+
+A smart manager would say "Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much."
+
+# Barro-Gordon model for monetary policy
+
+# Elections and public expenditure
+
+# Dynamic Inconsistency with taxes

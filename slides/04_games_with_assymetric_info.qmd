@@ -1249,6 +1249,21 @@ $$\frac{\theta+2\mu}{4}+\frac{\mu}{4}=\frac{t\theta+3\mu}{4}$$
 
 Which is exactly the same he had in the second price auction!
 
+## Auctions
+
+:::{.callout}
+
+## Equivalence Revenue Theorem
+
+If in two auctions (Incentive Compatible), holds that under the BNE:
+
+1. A bidder of the same type, has the same probability of winning in both auctions, and
+2. The bidder with the lowest valuation gets the same expected utility in both auctions,
+    
+Then the auctioneer, has the same expected revenue with both auctions.
+
+
+
 # Signaling Games and The Lemons Problem
 
 ## Signaling Games

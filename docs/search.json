@@ -3358,5 +3358,33 @@
     "title": "Games under  Asymmetric Information",
     "section": "Market for lemons: Adverse Selection",
     "text": "Market for lemons: Adverse Selection\n\n\nAkerlof had a more friendly setup.\nSuppose people are selling second-hand cars. There are well maintained cars, worth \\(\\theta\\), and poorly maintained cars (lemons) worth \\(\\mu\\).\nA buyer cannot know the type of the car, so if the buyer knows the distribution, the buyer will pay the value of the expected car, which will be a convex combination between \\(\\theta\\) and \\(\\mu\\).\nThis is too low for the owners of the good cars, and they will not be willing to sell, but it is a great price for the lemons!\nOnly lemons will be traded in the market, but this can be learnt by the buyer, and then will adjust the willingness to pay, and only lemons will be traded in the market."
+  },
+  {
+    "objectID": "slides/05_applications.html#the-winners-curse-1",
+    "href": "slides/05_applications.html#the-winners-curse-1",
+    "title": "Policy Applications",
+    "section": "The Winner’s Curse",
+    "text": "The Winner’s Curse\nThe Winner’s Curse says basically that if the bidders don’t know really the true value of some objects, but their “guess” is in average correct, the winner always will tend to overpay for it.\nThis case is relevant for example in auctions for oil drilling projects, or the TV Shows where people bid for closed bags."
+  },
+  {
+    "objectID": "slides/05_applications.html#the-winners-curse-2",
+    "href": "slides/05_applications.html#the-winners-curse-2",
+    "title": "Policy Applications",
+    "section": "The Winner’s Curse",
+    "text": "The Winner’s Curse\n\nImagine the following case, in an auction for a bag that is worth 25 each bidder has an estimate according to the following table:\n\n\n\n1\n2\n3\n4\n5\n\\(\\bar{x}\\)\n\n\n\n\n15\n35\n24\n17\n33\n24,8\n\n\n\nWho wins the auction?\nObviously if they are symmetric ex-ante of receiving the signal, bidder 2 will win the auction.\nHow much profits will this bidder make?\nIt might even make some profits, if the strategy is to shade a lot, but definitively will end up with a very much lower margin than expected."
+  },
+  {
+    "objectID": "slides/05_applications.html#the-winners-curse-3",
+    "href": "slides/05_applications.html#the-winners-curse-3",
+    "title": "Policy Applications",
+    "section": "The Winner’s Curse",
+    "text": "The Winner’s Curse\nWhat can they do?\nAcquire information, share information and considering previous auctions try to estimate how wrong would their estimate be, in the case of being the winners.\nThere is a lot of research published in this field, in particular in the Operational Research literature.\nBasically, what you want is to maximize your profits, controlling for the fact of having received the highest signal."
+  },
+  {
+    "objectID": "slides/05_applications.html#the-winners-curse-4",
+    "href": "slides/05_applications.html#the-winners-curse-4",
+    "title": "Policy Applications",
+    "section": "The Winner’s Curse",
+    "text": "The Winner’s Curse\nImagine the following situation:\n\nYou bid for some project in your firm, and ex-post you realize that all your competitors’ bids were not even half of yours. A naïve manager would claim “Yeah!, we beat the competition! and for so much! muahahaha!”\n\nSome smart Manager would say “Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much.”"
   }
 ]
