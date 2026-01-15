@@ -1144,7 +1144,6 @@ s.t.\quad&amp; t_l-\frac{41}{90}-q_l= t_h-\frac{41}{90}-q_h\\
 <h2>Auctions</h2>
 <h3 id="first-price-auctions">First-Price Auctions</h3>
 <p>Now, there is no obvious dominant strategy.</p>
-<p>. . .</p>
 <p>We need to use the concept of BNE.</p>
 <p>We need to look for a best response, <em>i.e.</em> a pair <span class="math inline">\((p,q)\)</span> such that <span class="math inline">\(p\)</span> is the best response to <span class="math inline">\((p,q)\)</span> from the other player, when the bidder is type <span class="math inline">\(\theta\)</span>, and the same for <span class="math inline">\(q\)</span> when the bidder is type <span class="math inline">\(\mu\)</span>.</p>
 </section>
@@ -1258,7 +1257,252 @@ s.t.\quad&amp; t_l-\frac{41}{90}-q_l= t_h-\frac{41}{90}-q_h\\
 </section>
 <section id="signaling-games" class="slide level2">
 <h2>Signaling Games</h2>
-<p>In these games, the player who has private information about his type, has an action that acts as signal for the other player, who can try to learn/infer the other player’s type from.</p>
+<p>In incomplete information games, at least one player knew something that would affect both player’s payoffs. In some circumstances, the player might be interested in doing an action to <em>signal</em> this information to the other players.</p>
+</section>
+<section id="signaling-game" class="slide level2">
+<h2>Signaling Game</h2>
+<div style="font-size: 80%;">
+<p>Suppose that:</p>
+<ol type="1">
+<li class="fragment">there are two players.</li>
+<li class="fragment">Player 1’s type is private information (<span class="math inline">\(\theta\)</span>, <span class="math inline">\(\mu\)</span>).</li>
+<li class="fragment">The probability player 1 is type <span class="math inline">\(\theta\)</span> is <span class="math inline">\(\rho\)</span>.</li>
+<li class="fragment">Player 1 sends a signal <span class="math inline">\(s\)</span> to player 2, who acts after observing <span class="math inline">\(s\)</span></li>
+<li class="fragment">Denote P1’s payoffs as <span class="math inline">\(\pi_1(s,t,T)\)</span> with <span class="math inline">\(T\in\{\theta,\mu\}\)</span>.</li>
+<li class="fragment">Denote P2’s payoffs as <span class="math inline">\(\pi_2(s,t,T)\)</span>, it <strong>depends on P2’s type</strong>.</li>
+</ol>
+</div>
+</section>
+<section id="signaling-game-1" class="slide level2">
+<h2>Signaling Game</h2>
+<p>A strategy in equilibrium for P2 needs to be an action that depends on the <em>signal</em>, <em>i.e.</em>, depends on what P2 observes P1 did: <span class="math display">\[t(s)\]</span></p>
+<p>P2 does not know <span class="math inline">\(\rho\)</span>, but it will estimate it based on <span class="math inline">\(s\)</span>, so let’s call this estimate <span class="math inline">\(\rho(s)\)</span>.</p>
+</section>
+<section id="signaling-game-2" class="slide level2">
+<h2>Signaling Game</h2>
+<div style="font-size: 80%;">
+<div class="callout callout-none no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>Perfect Bayesian Equilibrium</strong> (PBNE) is given by:</p>
+<ol type="1">
+<li class="fragment">Best respose of each type of P1: <span class="math display">\[\pi_1(s^*,t(s)^*,T)\geq \pi_1(s, t(s),T)\quad \forall s,\ T\in\{\theta,\mu\}\]</span></li>
+<li class="fragment">Best response of P2 for every <span class="math inline">\(s\)</span>: <span class="math display">\[\rho(s)\pi_2(s,t(s),\theta)+(1-\rho(s))\pi_2(s,t(s),\mu)\geq \rho(s)\pi_2(s,t,\theta)+(1-\rho(s))\pi_2(s,t,\mu),\ \forall t\]</span></li>
+<li class="fragment">Correct estimate revision:
+<ol type="1">
+<li class="fragment">If <span class="math inline">\(s_{\theta}\neq s_{\mu}\)</span>, then <span class="math display">\[\rho(s)=\begin{cases} 1 &amp; s=s(\theta) \\ 0 &amp; s = s(\mu) \\ \text{anything} &amp; s\not \in \{s_\theta,s_\mu\}\end{cases}\]</span></li>
+<li class="fragment">If <span class="math inline">\(s_{\theta}=s_{mu}\)</span>, then <span class="math display">\[\rho(s)=\begin{cases}\rho &amp; s \in \{s_\theta,s_\mu\} \\ \text{anything} &amp; s \not \in \{s_\theta,s_\mu\}\end{cases}\]</span></li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="signaling-game-3" class="slide level2">
+<h2>Signaling Game</h2>
+<p>From the previous definition, we could infer that there are two particular cases:</p>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(s_\theta\neq s_\mu\)</span>, which we call the <strong>separating</strong> equilibrium. We can learn the type exactly from the signal.</li>
+<li class="fragment"><span class="math inline">\(s_\theta=s_\mu\)</span>, which we call the <strong>pooling</strong> equilibrium. Every one is doing the same, the signal does not carry any information, and from experience, we will know which fraction is type <span class="math inline">\(\theta\)</span> and which fraction is type <span class="math inline">\(\mu\)</span>.</li>
+</ol>
+</section>
+<section id="example-17" class="slide level2">
+<h2>Example</h2>
+<p>Check if separating strategies [<span class="math inline">\((L,R)\)</span>, <span class="math inline">\((R,L)\)</span>] and pooling strategies [<span class="math inline">\((L,L)\)</span>, <span class="math inline">\((R,R)\)</span>] lead to PBNE in the following game, and describe the equilibria.</p>
+</section>
+<section id="example-18" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="04_games_with_assymetric_info_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="example-19" class="slide level2">
+<h2>Example</h2>
+<p>This is the typical way in which we draw a signaling game. <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are the beliefs of P1 about the type of <span class="math inline">\(P2\)</span> given their move.</p>
+<p>This is, if <span class="math inline">\(P1\)</span> observes <span class="math inline">\(L\)</span> in this case, he will believe <span class="math inline">\(P2\)</span> is type <span class="math inline">\(I\)</span> with probability <span class="math inline">\(p\)</span> and Type II with probability <span class="math inline">\(1-p\)</span>.</p>
+<p>The same applies for <span class="math inline">\(q\)</span> when <span class="math inline">\(P2\)</span> plays <span class="math inline">\(R\)</span>.</p>
+</section>
+<section id="example-20" class="slide level2">
+<h2>Example</h2>
+<p>If Player 2 believes in <span class="math inline">\(LR\)</span>, then he believes that the probability of having a Type I when observing <span class="math inline">\(L\)</span> is 1, and that the probability of having a Type II when observing <span class="math inline">\(R\)</span> is 1. Therefore <span class="math inline">\(p=1\)</span> and <span class="math inline">\(q=0\)</span>.</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>At I.S.p:</p>
+<p><span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= p \times 0 + (1-p) \times 3 = 0\\
+    E[\pi|d] &amp;= p \times 1 + (1-p) \times 1 = 1
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>At I.S.q: <span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= q \times 0 + (1-q) \times 2 = 2\\
+    E[\pi|d] &amp;= q \times 1 + (1-q) \times 0 = 0
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>The Strategy for Player 2 would be <span class="math inline">\(du\)</span>, that is down when he observes <span class="math inline">\(L\)</span> and up when he observes <span class="math inline">\(R\)</span>.</p>
+</section>
+<section id="example-21" class="slide level2">
+<h2>Example</h2>
+<p>We now know that Player 2 for sure plays <span class="math inline">\(du\)</span> with those beliefs. Will then Player 1 play indeed <span class="math inline">\(LR\)</span> knowing this?</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>For Type I <span class="math display">\[\begin{align*}
+    U(L) = 1\\
+    U(R) = 0
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>For Type II <span class="math display">\[\begin{align*}
+    U(L) = 0\\
+    U(R) = 1
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>Player 1 will indeed play <span class="math inline">\(LR\)</span>, that is Left when is type 1 and Right when is type 2. The PBNE is then <span class="math inline">\((LR,du,p=1,q=0)\)</span>.</p>
+</section>
+<section id="example-22" class="slide level2">
+<h2>Example</h2>
+<p>If Player 2 believes in <span class="math inline">\(RL\)</span>, then he believes that the probability of having a Type II when observing <span class="math inline">\(L\)</span> is 1, and that the probability of having a type I when observing <span class="math inline">\(R\)</span> is 1. Therefore <span class="math inline">\(p=0\)</span> and <span class="math inline">\(q=1\)</span>.</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>At I.S.p:</p>
+<p><span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= p \times 0 + (1-p) \times 3 = 3\\
+    E[\pi|d] &amp;= p \times 1 + (1-p) \times 1 = 1
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>At I.S.q: <span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= q \times 0 + (1-q) \times 2 = 0\\
+    E[\pi|d] &amp;= q \times 1 + (1-q) \times 0 = 1
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>So the Strategy for Player 2 would be <span class="math inline">\(ud\)</span>, that is up when he observes <span class="math inline">\(L\)</span> and down when he observes <span class="math inline">\(R\)</span>.</p>
+</section>
+<section id="example-23" class="slide level2">
+<h2>Example</h2>
+<p>We now know that Player 2 for sure plays <span class="math inline">\(ud\)</span> with those beliefs. Will then Player 1 play indeed <span class="math inline">\(RL\)</span> knowing this?</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>For Type I <span class="math display">\[\begin{align*}
+    U(L) = 3\\
+    U(R) = 4
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>For Type II <span class="math display">\[\begin{align*}
+    U(L) = 3\\
+    U(R) = 2
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>So Player 1 will play <span class="math inline">\(RL\)</span> so no deviation and then there is a PBNE here.</p>
+</section>
+<section id="example-24" class="slide level2">
+<h2>Example</h2>
+<p>If player 2 believes <span class="math inline">\(LL\)</span>, then he believes that the probability of having a Type I when observing <span class="math inline">\(L\)</span> is <span class="math inline">\(\frac{1}{2}\)</span> (the same for having a Type 2). The beliefs are then <span class="math inline">\(p=\frac{1}{2}\)</span> and <span class="math inline">\(q\)</span> free.</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>At I.S.p:</p>
+<p><span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= p \times 0 + (1-p) \times 3 = \frac{3}{2}\\
+    E[\pi|d] &amp;= p \times 1 + (1-p) \times 1 = 1
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>At I.S.q: <span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= q \times 0 + (1-q) \times 2 = 2(1-q)\\
+    E[\pi|d] &amp;= q \times 1 + (1-q) \times 0 = q
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>So Player 2 will play <span class="math inline">\(uu\)</span> when <span class="math inline">\(2(1-q)&gt;q\)</span>, or equivalently <span class="math inline">\(q&lt;\frac{2}{3}\)</span>, and <span class="math inline">\(ud\)</span> when <span class="math inline">\(q&gt;\frac{2}{3}\)</span>.</p>
+</section>
+<section id="example-25" class="slide level2">
+<h2>Example</h2>
+<p>So what will player 1 do?</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>For Type 1: <span class="math display">\[\begin{align*}
+    U(L)&amp; =3\\
+    U(R)&amp; =0\quad q&lt;\frac{2}{3}\\
+    U(R)&amp; =4\quad q&gt;\frac{2}{3}
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>For Type 2: <span class="math display">\[\begin{align*}
+    U(L)&amp; =3\\
+    U(R)&amp; =1 \quad q&lt;\frac{2}{3}\\
+    U(R)&amp; =2 \quad q&gt;\frac{2}{3}
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>So P1 will play <span class="math inline">\(LL\)</span> if <span class="math inline">\(q&lt;\frac{2}{3}\)</span> and <span class="math inline">\(RL\)</span> if <span class="math inline">\(q&gt;\frac{2}{3}\)</span>. So for <span class="math inline">\(LL\)</span> be a PBNE we have: <span class="math inline">\(\left(LL,uu, p=\frac{1}{2},q&lt;\frac{2}{3}\right)\)</span>.</p>
+</section>
+<section id="example-26" class="slide level2">
+<h2>Example</h2>
+<p>If P2 believes <span class="math inline">\(RR\)</span>, then he believes that the probability of having a Type I when observing <span class="math inline">\(R\)</span> is <span class="math inline">\(\frac{1}{2}\)</span>, and therefore the probability of having a Type 2 when observing <span class="math inline">\(R\)</span> is also <span class="math inline">\(\frac{1}{2}\)</span>. The beliefs are then <span class="math inline">\(q=\frac{1}{2}\)</span> and now <span class="math inline">\(p\)</span> free.</p>
+<div style="font-size: 75%;">
+<div class="columns">
+<div class="column">
+<p>At I.S.p:</p>
+<p><span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= p \times 0 + (1-p) \times 3 = 3(1-p)\\
+    E[\pi|d] &amp;= p \times 1 + (1-p) \times 1 = 1
+\end{align*}\]</span></p>
+</div><div class="column">
+<p>At I.S.q: <span class="math display">\[\begin{align*}
+    E[\pi|u] &amp;= q \times 0 + (1-q) \times 2 = 1\\
+    E[\pi|d] &amp;= q \times 1 + (1-q) \times 0 = \frac{1}{2}
+\end{align*}\]</span></p>
+</div></div>
+</div>
+<p>P2 will play <span class="math inline">\(uu\)</span> when <span class="math inline">\(3(1-p)&gt;1\)</span>, or equivalently <span class="math inline">\(p&lt;\frac{2}{3}\)</span>, and <span class="math inline">\(du\)</span> when <span class="math inline">\(p&gt;\frac{2}{3}\)</span>.</p>
+</section>
+<section id="example-27" class="slide level2">
+<h2>Example</h2>
+<p>For Type 2: <span class="math display">\[\begin{align*}
+    U(L)&amp; =3 \quad p&lt;\frac{2}{3}\\
+    U(L)&amp; =0 \quad p&gt;\frac{2}{3}\\
+    U(R)&amp; =1
+\end{align*}\]</span></p>
+<p>So Player 1 will never play <span class="math inline">\(RR\)</span>, note that playing <span class="math inline">\(L\)</span> is always better than <span class="math inline">\(R\)</span> for player 1. We have a deviation and therefore no PBNE.</p>
+</section>
+<section id="market-for-lemons" class="slide level2">
+<h2>Market for lemons</h2>
+<p>Applying this framework, (G. Akerlof got a Nobel Prize for this) we can take some serious conclusions:</p>
+<ol type="1">
+<li class="fragment">If one player has private information about her type, we are in the face of <strong>adverse selection</strong></li>
+<li class="fragment">Typical in any kind of insurance</li>
+</ol>
+</section>
+<section id="market-for-lemons-1" class="slide level2">
+<h2>Market for lemons</h2>
+<div style="font-size: 75%;">
+<ol type="1">
+<li class="fragment">Suppose you want to provide a universal, but <strong>voluntarily</strong>, insurace with a single price, to provide healthcare to your citizens.</li>
+<li class="fragment">Ignore the problem of moral hazard for now.</li>
+<li class="fragment">If your goal is to have balanced budget, then you must charge everyone just the expected expenditures divided by the number of insured people.</li>
+<li class="fragment">Suppose there are healthy (<span class="math inline">\(\theta\)</span>) and not so healthy (<span class="math inline">\(\mu\)</span>) citizens. <span class="math inline">\(\theta\)</span> carries a cost of 0 for the insurance, and <span class="math inline">\(\mu\)</span> a cost of 10. Suppose the proportion in the population is <span class="math inline">\(0.8\)</span> and <span class="math inline">\(0.2\)</span>. If the population is <span class="math inline">\(N=100\)</span>, what is the cost for the government?</li>
+<li class="fragment">Will a <span class="math inline">\(\theta\)</span> type be willing to pay those <span class="math inline">\(2\)</span> if she knows she will never use the insurance? Probably not. How do we fix this?</li>
+</ol>
+</div>
+</section>
+<section id="market-for-lemons-adverse-selection" class="slide level2">
+<h2>Market for lemons: Adverse Selection</h2>
+<div style="font-size: 75%;">
+<ol type="1">
+<li class="fragment">Akerlof had a more friendly setup.</li>
+<li class="fragment">Suppose people are selling second-hand cars. There are well maintained cars, worth <span class="math inline">\(\theta\)</span>, and poorly maintained cars (lemons) worth <span class="math inline">\(\mu\)</span>.</li>
+<li class="fragment">A buyer cannot know the type of the car, so if the buyer knows the distribution, the buyer will pay the value of the <em>expected car</em>, which will be a convex combination between <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\mu\)</span>.</li>
+<li class="fragment">This is too low for the owners of the good cars, and they will not be willing to sell, but it is a great price for the <em>lemons</em>!</li>
+<li class="fragment">Only <em>lemons</em> will be traded in the market, but this can be learnt by the buyer, and then will adjust the willingness to pay, and only <strong>lemons</strong> will be traded in the market.</li>
+</ol>
+</div>
 </section></section>
 <section>
 <section id="bibliography" class="title-slide slide level1 center">
