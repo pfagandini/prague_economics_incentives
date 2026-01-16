@@ -47,7 +47,7 @@ The course will have 4 assessment activities.
 
 ## Quizzes
 
-The quizzes will be multiple choice, and will cover the in-classroom lectures and discussion.
+The quizzes will be a short question, and will cover the in-classroom lectures and discussion.
 
 These quizzes are closed-book.
 
@@ -61,9 +61,13 @@ For the problem set, you are allowed to use LLM tools to help you along the way.
 
 Solutions can be delivered using
 
+:::{.nonincremental}
+
 1. MS Word or equivalent.
 2. LaTeX
 3. Markdown/Quarto
+
+:::
 
 While the last two methods are prefered, there is no bonus or penalty in case you choose to deliver using another software.
 
@@ -78,19 +82,27 @@ The exam will consist of two main parts:
 
 ## Dynamic Inconsistency
 
-Crypto regulation
+In 2008 Spain modified the *feed-in tariffs*^[long-term contracts and a guaranteed price to energy producers], that prejudiced the people who had already invested in Solar Power.
 
-[Source 1](https://www.trmlabs.com/reports-and-whitepapers/global-crypto-policy-review-outlook-2025-26)
-[Source 2](https://www.chainalysis.com/blog/2025-crypto-regulatory-round-up/)
+*Risky Business? The Energy Charter Treaty, Renewable Energy, and Investor-State Disputes*, Kyla Tienhaara and Christian Downie, Global Governance (2018).
 
 ## Auctions / Competitive Tender
 
-Governments can use auction theory to reduce cost of material or service sourcing, and the construction of bridges and stuff.
-
+![Source: opentender.eu](../images/tender.png)
 
 ## Adverse Selection
 
-Market for lemons in clear energy markets.
+<div style="font-size: 70%;">
+
+1. During the COVID-19 pandemic, many governments used "auto-enrollment" to keep people insured without requiring them to fill out paperwork. As these protections ended in 2024 and 2025, many regions reintroduced paperwork to stay enrolled.
+
+2. Adding these manual steps reduced enrollment by 33%. Crucially, the people who dropped out were mostly young, healthy, and low-cost.
+
+3. This forced insurers to raise premiums because their average cost per person went up, which is the classic "Death Spiral" of adverse selection.
+
+[article](https://www.aeaweb.org/articles?id=10.1257/aer.20231133#:~:text=We%20provide%20new%20evidence%20by,healthy%2C%20and%20economically%20disadvantaged%20people.)
+
+</div>
 
 # Getting the Playground Ready
 

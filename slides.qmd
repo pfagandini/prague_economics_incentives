@@ -14,6 +14,9 @@ In this page you can find the course materials, specifically the slide decks I w
 
 ## Some Extra Material
 
-1. [Rules, Discretion and Reputation in a model of Monetary Policy, Robert Barro and David Gordon, 1983](https://www.nber.org/system/files/working_papers/w1079/w1079.pdf)
+1. [Wealth and the Principal-Agent Matching, Paulo Fagandini, 2022](https://pfagandini.github.io/preprints/P_A_Matching_Accepted.pdf)
+2. [Computing Profit-Maximizing Bid Shading Factors in First-Price Sealed-Bid Auctions, Paulo Fagandini and Ingemar Dierickx, 2023](https://pfagandini.github.io/preprints/Bidding_Accepted.pdf)
+3. [Rules, Discretion and Reputation in a model of Monetary Policy, Robert Barro and David Gordon, 1983](https://www.nber.org/system/files/working_papers/w1079/w1079.pdf)
+4. [Dynamic Inconsistency, Cooperation and the Benevolent Dissembling Government, Stanley Fisher, 1980](https://people.bu.edu/rking/SZG2011WK3/DAY2/fischer-jedc1980.pdf)
 
 ## Problem Set

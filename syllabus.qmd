@@ -40,7 +40,7 @@ By the end of the course, it is expected that students will be able to apply bas
    - What is a mechanism?
    - Allocating resources under private information
    - Incentive compatibility and truthful revelation
-   - Voting mechanisms
+   <!-- - Voting mechanisms -->
 
 6. **Mechanism Design II: Auctions**
    - Classical Auctions
@@ -53,7 +53,7 @@ By the end of the course, it is expected that students will be able to apply bas
    - Application of the Barro Gordon model
 
 8. **Incentives in Politics and Fiscal Policy**
-   - Political agency problems
+   <!-- - Political agency problems -->
    - The Dynamic Common Pool and Public Debt
    - Dynamic Inconsistency in Fiscal Policy
 

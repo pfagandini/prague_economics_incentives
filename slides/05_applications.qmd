@@ -406,7 +406,7 @@ Note that:
 
 ## Barro-Gordon model for monetary policy
 
-```{r, engine='tikz', engine.opts=list(extra.preamble="\\usepackage{pgfplots}\\pgfplotsset{compat=1.18}"), fig.align='center'}
+```{r, engine='tikz', engine.opts=list(extra.preamble="\\usepackage{pgfplots}\\pgfplotsset{compat=1.18}"), fig.align='center', clean=TRUE}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -485,6 +485,179 @@ This mode gives us an inflation rate that is a Nash Equilibrium, where nobody ha
 
 ## Dynamic Inconsistency of the Fiscal Policy
 
+This, follows a simplified version of Allan Drazen's presentation of the model in chapter 4.2 of his book *Political Economy in Macroeconomics (2000)*.
+
+A 2-period model:
+
+1. Agents consume in both periods.
+2. Production and government activity only in period $2$.
+3. At $t=1$, agents receive an exogenous endowment $y$ every period, that is used to consume and invest: $$c_1+k_2=y$$
+
+## Dynamic Inconsistency: Fiscal Policy
+
+4. In the second period, individuals consume $c_2$, and government provides public goods with cost $g_2$.
+5. There is a linear production function $$y_2= y+R k_2$$, with $R$ exogenous.
+6. The budget constraint for the economy in $t=2$ is: $$c_2+g_2=Rk_2$$
+
+## Dynamic Inconsistency: Fiscal Policy
+
+The lifetime utility for the representative agent is:
+
+$$\Omega = \ln c_1 + \beta \left[\ln c_2 + \gamma \ln g_2\right]$$
+
+With $\beta$ and $\gamma$ some known parameters.
+
+## Dynamic Inconsistency: Fiscal Policy
+
+We can collapse the budget constraint as: $$c_2+g_2=y+R(y-c_1)$$ and we get the Lagrangian:
+<div style="font-size: 90%;">
+$$\mathcal{L}=\ln c_1 + \beta \left[\ln c_2 + \gamma \ln g_2\right]+\lambda\left(y+R(y-c_1)-c_2-g_2\right)$$
+</div>
+
+## Dynamic Inconsistency: Fiscal Policy
+
+With first order conditions:
+
+:::{.columns}
+
+:::{.column}
+
+<div style="font-size: 80%;">
+\begin{align*}
+    \frac{1}{c_1}&=\lambda R\\
+    \frac{\beta}{c_2}&=\lambda\\
+    \frac{\beta\gamma}{g_2}&=\lambda\\
+    c_2+g_2&=y+R(y-c_1)
+\end{align*}
+</div>
+
+:::
+
+:::{.column}
+
+<div style="font-size: 70%;">
+\begin{align*}
+    c_1&=\frac{y(1+R)}{R(1+\beta(1+\gamma))}\\
+    c_2&=\beta R c_1\\
+    g_2&=\gamma\beta R c_1\\
+    k_2&= \frac{R\beta(1+\gamma)-1}{R(1+\beta(1+\gamma))}y
+\end{align*}
+</div>
+
+:::
+
+:::
+
+This is what Fisher's call the *command optimum*, or what would be the First-Best.
+
+## Dynamic Inconsistency: Fiscal Policy
+
+In real life, governments need to collect *taxes* in order to fund $g_2$, and cannot directly affect $c_1,c_2$.
+
+Suppose the government can collect taxes on the return of capital, $\tau$. Now the budget constraints for the agent are:
+
+<div style="font-size: 80%;">
+\begin{align*}
+    c_1+k_2&=y\\
+    c_2&=(1-\tau)R k_2+y
+\end{align*}
+</div>
+
+## Dynamic Inconsistency: Fiscal Policy
+
+Let's rewrite the lifetime utility as a function of $k_2$ and $l_2$:
+
+$$\ln (c_1) + \beta \ln (c_2) + \beta \gamma \ln (g_2)$$
+
+with FOCs:
+
+\begin{align*}
+\left.\begin{array}{c}
+    \frac{1}{c_1}=\lambda(1-\tau)R\\
+    \frac{\beta}{c_2}=\lambda
+\end{array}\right\} \Rightarrow c_2=c_1\beta(1-\tau)R
+\end{align*}
 
 
-# Elections and public expenditure
+## Dynamic Inconsistency: Fiscal Policy
+
+Substituting into the budget constraint:
+
+\begin{align}
+    c_1\beta(1-\tau)R &= y + (1-\tau)R(y-c_1)\\
+    c_1(1-\tau)R (1+\beta)&= \left(1 + (1-\tau) R\right)y\\
+    c_1 &= \frac{1 + (1-\tau) R}{(1-\tau)R (1+\beta)}y
+\end{align}
+
+## Dynamic Inconsistency: Fiscal Policy
+
+\begin{align*}
+    k_2 &= y-c_1\\
+    &= y-\frac{1 + (1-\tau) R}{(1-\tau)R (1+\beta)}y\\
+    &= \frac{(1-\tau)R (1+\beta) - 1 - (1-\tau) R}{(1-\tau)R (1+\beta)}y\\
+    &= \frac{(1-\tau)R \beta - 1 }{(1-\tau)R (1+\beta)}y\\
+    k_2& = \frac{\beta}{1+\beta}y - \frac{1}{(1-\tau)R(1+\beta)}y
+\end{align*}
+
+## Dynamic Inconsistency: Fiscal Policy
+
+It is clear that for an announced $\tau$, $k_2$ is decreasing in $\tau$. On the other hand, the government has an incentive to have a large $k_2$, so it can raise more taxes and fund a larger $g_2$.
+
+Suppose the government announces a very *low* $\tau$ with the hope of incentivizing a larger $k_2$. Will the consumers believe it?
+
+No! this is not SPNE! Once the consumers invested, the government has incentives to increase taxes.
+
+## Dynamic Inconsistency: Fiscal Policy
+
+What is the optimal rule?
+
+Suppose the government chooses the maximize utility in $t=2$ only (it has no power in $t=1$):
+
+$$\max_{t_k}\ \ln(\overbrace{y+R(1-\tau)k_2}^{c_2})+\gamma \ln(\overbrace{\tau R k_2}^{g_2})$$
+
+With $FOC$:
+
+\begin{align*}
+    \frac{\gamma R k_2}{\tau R k_2} = \frac{Rk_2}{y+R(1-\tau)k_2}
+\end{align*}
+
+## Dynamic Inconsistency: Fiscal Policy
+
+\begin{align*}
+    \frac{\gamma}{\tau}&=\frac{Rk_2}{y+R(1-\tau)k_2}\\
+    \tau&= \frac{\gamma(y+R(1-\tau)k_2)}{R k_2}\\
+    \tau&= \frac{\gamma y}{R k_2}+\gamma(1-\tau)\\
+    \tau &=\frac{(y+R k_2)}{R k_2}\frac{\gamma}{1+\gamma}
+\end{align*}
+
+## Dynamic Inconsistency: Fiscal Policy
+
+What if $\tau\neq\tau^e$? In this case $k_2$ is just a constant, and therefore it is not present in the optimization problem:
+
+\begin{align*}
+    \max_{t_k}\ &\ln(y+R(1-\tau)k_2)+\gamma \ln(\tau R k_2)\\
+    \max_{t_k}\ &\ln(y+R(1-\tau)k_2)+\gamma \ln (\tau)+\underbrace{\gamma\ln(R k_2)}_{\text{constant in}\ \tau}
+\end{align*}
+
+## Dynamic Inconsistency: Fiscal Policy
+
+With FOC:
+
+\begin{align*}
+    \frac{\gamma}{\tau}&=\frac{Rk_2}{y+R(1-\tau)k_2}\\
+    \tau Rk_2 &= \gamma y + \gamma R (1-\tau)k_2\\
+    (1+\gamma)\tau R k_2 &= \gamma (y+Rk_2)\\
+    \tau &= (y+Rk_2)\frac{\gamma}{1+\gamma}
+\end{align*}
+
+## Bibliography
+
+These slides follow what is found in:
+
+:::{.nonincremental}
+
+1. A Primer on Auction Design, Management and Strategy, David Salant.
+2. Rules, Discretion and Reputation in a model of Monetary Policy, Robert Barro and David Gordon, 1983
+3. Dynamic Inconsistency, Cooperation and the Benevolent Dissembling Government, Stanley Fisher, 1980
+
+:::
