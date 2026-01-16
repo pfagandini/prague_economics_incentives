@@ -483,4 +483,8 @@ This mode gives us an inflation rate that is a Nash Equilibrium, where nobody ha
 
 # Dynamic Inconsistency with taxes
 
+## Dynamic Inconsistency of the Fiscal Policy
+
+
+
 # Elections and public expenditure
