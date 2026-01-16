@@ -70,8 +70,417 @@ Imagine the following situation:
 
 A smart manager would say "Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much."
 
+## First Price Sealed Bid Auctions## The Winner's Curse
+
+1. Consider an auction where you are one out of $N$ bidders.
+2. Each bidder has a private valuation $\nu_i$ of the item being auctioned. Let $\nu_i\sum U[0,1]$.
+3. Assume bidders are equal in everything except their valuations.
+4. Let $u(x)=x$ for every bidder (*i.e.* bidders are risk neutral).
+
+## First Price Sealed Bid Auctions
+
+The expected utility for the bidder $i$ is:
+
+\begin{align*}
+    E[u_i|\nu_i,b_i]=&u_i(\nu_i-b_i)\times Pr(b_i>b_{-i})\\&+u_i(0)\times[1-Pr(b_i>b_{-i})]
+\end{align*}
+
+Where $Pr(b_i>b_{-i})$ represents the probability of his bid being greater than all the others' bids.
+
+## First Price Sealed Bid Auctions
+
+Note that the probability of beating all the other bidders is:
+
+<div style="font-size: 70%;">
+
+\begin{align*}
+    Pr(b_i>b_{-i})=Pr(b_i>b_1)\times Pr(b_i>b_2)...Pr(b_i>b_n)
+\end{align*}
+
+</div>
+
+Let's rewrite the expected utility of bidder $i$:
+
+<div style="font-size: 70%;">
+
+\begin{align*}
+    E[u|\nu_i]=u(\nu_i-b_i)\times Pr(b_i>b_1)\times Pr(b_i>b_2)...\times Pr(b_i>b_n)
+\end{align*}
+
+</div>
+
+## First Price Sealed Bid Auctions
+
+<div style="font-size: 70%;">
+
+If:
+
+:::{.nonincremental}
+
+1. bidders have the same strategy (they are equal ex-ante of receiving their valuation), and
+2. bidding strategy is increasing in the valuation (this is a very weak assumption, common in literature)
+   
+:::
+
+Then the probability of winning is equivalent to the probability of receiving the highest signal.
+
+This information, though, can only be used \textbf{ex-post} finding the FOC, because symmetry is a *consequence* of optimization. If we impose symmetry ex-ante, we could end up with a very collusive equilibrium.
+
+</div>
+
+## First Price Sealed Bid Auctions
+
+The FOC is:
+
+<div style="font-size: 70%;">
+\begin{align*}
+    u'(\nu_i-b_i)\phi=u(\nu_i-b_i)\left[\sum_{t\neq i}\left(\frac{\partial Pr(b_i>b_t)}{\partial b_i}\prod_{j\neq\{i,t\}}Pr(b_i>b_j)\right)\right]
+\end{align*}
+
+</div>
+
+Calling $\phi=\prod_{j\neq i} Pr(b_i>b_j)$.
+
+This looks ugly, but it is not: multiply and divide by $Pr(b_i>b_t)$ inside the rounded parenthesis. Note that when doing this, the product will be equal for any $j\neq i$, and can be factored out.
+
+## First Price Sealed Bid Auctions
+
+<div style="font-size: 60%;">
+
+\begin{align*}
+    u'(\nu_i-b_i)\phi=u(\nu_i-b_i)\underbrace{\left[\prod_{j\neq i}Pr(b_i>b_j)\right]}_{\phi}\left[\sum_{t\neq i}\frac{\partial Pr(b_i>b_t)}{\partial b_i}\frac{1}{Pr(b_i>b_t)}\right]
+\end{align*}
+</div>
+
+Now, note that $\prod_{j\neq i} Pr(b_i>b_j)$ is the probability of winning the auction, and we already differentiated, so we can use symmetry.
+
+What is the probability of some bidder to have received the highest valuation? exactly, $\frac{1}{n}$, as everyone has the same probability of having received the highest valuation.
+
+## First Price Sealed Bid Auctions
+
+<div style="font-size: 60%;">
+\begin{align*}
+    \frac{ u'(\nu_i-b_i)}{u(\nu_i-b_i)}=\sum_{t\neq i}\frac{\partial Pr(b_i>b_t)}{\partial b_i}\frac{1}{Pr(b_i>b_t)}
+\end{align*}
+</div>
+
+Recall that the probability of beating one other bidder, is the same that beating another bidder:
+
+<div style="font-size: 60%;">
+\begin{align*}
+\frac{ u'(\nu_i-b_i)}{u(\nu_i-b_i)}=(n-1)\frac{\partial Pr(b_i>b_{t\neq i})}{\partial b_i}\frac{1}{Pr(b_i>b_{t\neq i})}
+\end{align*}
+</div>
+
+## First Price Sealed Bid Auctions
+
+If the bidding strategy is increasing in the valuation, the probability of beating another bidder is the probability of receiving a higher valuation than him!
+\begin{align*}
+    Pr(b_i>b_{t\neq i})=G(\nu_i)
+\end{align*}
+We can conclude that the bid is a function of the valuation, and therefore $b_i=b(\nu_i)$.
+
+## First Price Sealed Bid Auctions
+
+Now we want to deal with $\frac{\partial Pr(b_i>b_{t\neq i})}{\partial b_i}$ so consider our last two equations:
+
+<div style="font-size: 70%;">
+\begin{align*}
+\frac{\partial G(\nu_i)}{\partial \nu_i}=g(\nu_i)=\frac{\partial Pr(b_i>b_{t\neq i})}{\partial b_i}\frac{\partial b(\nu_i)}{\partial \nu_i}
+\end{align*}
+</div>
+
+And $g(\nu_i)$ is the density function of the distribution of the valuations. With that we obtain that:
+<div style="font-size: 70%;">
+\begin{align*}
+    \frac{\partial Pr(b_i>b_{t\neq i})}{\partial b_i}=\frac{g(\nu_i)}{\partial b(\nu_i)/\partial\nu_i}
+\end{align*}
+
+</div>
+
+## First Price Sealed Bid Auctions
+
+If we replace then:
+\begin{align*}
+        \frac{\partial Pr(b_i>b_{t\neq i})}{\partial b_i}&=\frac{g(\nu_i)}{\partial b(\nu_i)/\partial\nu_i}\\
+        Pr(b_i>b_{t\neq i})&=G(\nu_i)
+\end{align*}
+In our previous expression we obtain:
+
+\begin{align*}
+    \frac{1}{n-1}\frac{ u'(\nu_i-b_i)}{u(\nu_i-b_i)}=\frac{1}{\partial b(\nu_i)/\partial\nu_i}\frac{g(\nu_i)}{G(\nu_i)}
+\end{align*}
+
+## First Price Sealed Bid Auctions
+
+Let's recall what are we looking for: $b(\nu)$. Remember $\nu\sim U[0,1]$ and $u(x)=x$. This implies that $G(\nu)=\nu$ and $g(\nu)=1$. Also $u'=1$.
+<div style="font-size: 90%;">
+\begin{align*}
+\frac{1}{n-1}\frac{1}{\nu-b(\nu)}=\frac{1}{\partial b(\nu)/\partial\nu}\frac{1}{\nu}
+\end{align*}
+</div>
+
+## First Price Sealed Bid Auctions
+
+So we end up with a differential equation. Let $A=n-1$.
+
+\begin{align*}
+  \frac{\partial b(\nu)}{\partial \nu}+A\frac{b(\nu)}{\nu}&=A\\
+  e^{A\log(\nu)}\frac{\partial b(\nu)}{\partial \nu}+\frac{A e^{A\log(\nu)}}{ \nu} b(\nu)&=A e^{A\log(\nu)}
+\end{align*}
+
+Using the integrating factor $e^{A\log(\nu)}$.
+
+## First Price Sealed Bid Auctions
+
+We end up with the following equation:
+<div style="font-size: 80%;">
+\begin{align*}
+\frac{\partial}{\partial \nu}\left[e^{A\log(\nu)}b(\nu)\right]&=Ae^{A\log(\nu)}\\
+e^{A\log(\nu)}b(\nu)&=\int A e^{A\log(\nu)}d\nu\\
+e^{A\log(\nu)}b(\nu)&=A\int \nu^A d\nu\\
+\nu^A b(\nu)&=A \frac{\nu^{A+1}}{A+1}\\
+b(\nu)&=\frac{n-1}{n} \nu
+\end{align*}
+</div>
+The constant is zero, check at home.
+
 # Barro-Gordon model for monetary policy
 
-# Elections and public expenditure
+## Barro-Gordon model for monetary policy
+
+1. Have you ever wondered why the Central Bank is so stressed about making inflation go back to its target?
+2. Why does the bank actually **has** a target inflation?
+3. Why reputation is so important for a Central Bank?
+
+## Barro-Gordon model for monetary policy
+
+There are two main *profits* of having inflation larger than the one is expected by the agents:
+
+1. Agents will produce more (Lucas Island model), because they will believe the higher prices they observe comes from a higher demand [Phillips Curve].
+2. Real value of public debt will decrease (interest rates for the future are based on expectations!)
+
+## Barro-Gordon model for monetary policy
+
+1. Let the inflation at some year be $\pi_t$
+2. Let the *expected* inflation for year $t$ be $\pi_t^e$
+
+## Barro-Gordon model for monetary policy
+
+The Central Bank will have the following loss function
+
+$$z_t = \frac{a}{2}\pi_t^2-b_t(\pi_t-\pi_t^e)$$
+
+with $a>0$ and $b>0$. Assume $b_t$ is a shock, distributed *iid* $(\bar{b},\sigma_b^2)$. This means that in some periods it can be more convenient to surprise the market than others. The key here, is that these periods cannot be anticipated.
+
+## Barro-Gordon model for monetary policy
+
+The goal of the Central Bank is to minimize the lifetime loss:
+
+$$ min Z_t = E\left[z_t+\frac{z_{t+1}}{1+r}+\frac{z_{t+2}}{(1+r)^2}+\dots\right]$$
+
+Let $q_t=\frac{1}{1+r_t}$, and $q_t\overset{iid}{\rightarrow}(\bar{q},\sigma_q^2)$. $b_t$ and $q_t$ are shocks, and therefore cannot be anticipated.
+
+## Barro-Gordon model for monetary policy
+
+If we take the FOC with respect to $\pi_t$, what the central banker **can actually influence**, we end up with:
+
+\begin{align*}
+    \frac{\partial z_t}{\partial \pi_t}=a\pi_t-\bar{b}=0\quad \Rightarrow\quad \pi_t^D=\frac{\bar{b}}{a}
+\end{align*}
+
+This is the discretionary inflation that the central banker will choose.
+
+## Barro-Gordon model for monetary policy
+
+What is the problem?
+
+. . .
+
+Agents are rational! They will anticipate this, and will set $$\pi_t^e=\frac{\bar{b}}{a}$$
+
+Which leads to the loss: $$z_t^D=\frac{1}{2}\frac{\bar{b}^2}{a}$$
+
+## Barro-Gordon model for monetary policy
+
+Assume now, the Central Bank commits to an inflation level ex-ante, and people gives them the benefit of the doubt.
+
+If the Central Bank tries to preserve its reputation: $$z_t= E\left[\frac{a}{2}\pi_t^2 - b_t\underbrace{(\pi_t-\pi_t)}_{0}\right]= \frac{a}{2}\pi_t^2$$
+
+Which is obviously minimized at $\pi_t^C=0$.
+
+## Barro-Gordon model for monetary policy
+
+This is, with this commitment rule, the ideal inflation is 0.
+
+Substituting this back in the loss function leads to $$z_t^R=0$$
+
+Are we over?
+
+. . .
+
+Now $\pi_t^e=0$, so the loss function for the Central Bank is:
+
+$$z_t=\left[\frac{a}{2}\pi_t^2-b_t(\pi_t-0)\right]$$
+
+## Barro-Gordon model for monetary policy
+
+This has a minimum at $\pi_t^B = \frac{\bar{b}}{a}$, *i.e.*, it coincides with $\pi_t^D$, but now the loss of the Central Bank is: $$z_t^B=\frac{a}{2}\left(\frac{\bar{b}}{2}\right)^2-\bar{b}\frac{\bar{b}}{a}=\frac{-\bar{b}^2}{2a}$$
+
+And negative loss is a gain! The Central Bank, by making people believe that $\pi_t$ would be zero, had an even larger temptation to betray them!
+
+## Barro-Gordon model for monetary policy
+
+What was the gain?
+
+$$B=E[Z_t^R-z_t^E]=\frac{\bar{b}^2}{a}>0$$
+
+## Barro-Gordon model for monetary policy
+
+The Central Bank has these 3 alternatives:
+
+| | Payoff |
+|--:|:--:|
+| Betray | $\frac{-\bar{b}^2}{2a}$ |
+| (follow the) Rule | $0$ |
+| (no rule) Discretion  | $\frac{\bar{b}^2}{2a}$|
+
+## Barro-Gordon model for monetary policy
+
+The key is that agents are rational, and if the Central Betray's the rule, they will not believe it anymore and follow a discretionary equilibrium in the next period. Let's assume the *punishment* lasts a single period.
+
+We already know that the temptation to betray is $B=\frac{\bar{b}^2}{2a}>0$. The problem, is that if this is the case, the next period the agents believe in the discretionary arrangement, and the authority losses $z_{t+1}^D=\frac{\bar{b}^2}{2a}$.
+
+## Barro-Gordon model for monetary policy
+
+We can bring the future cost of betraying the agents today by multiplying by $q$, and then we find the expected value of betraying today for the Central Banker:
+
+$$C = E\left[q_t(z_{t+1}^D-z_{t+1}^R)\right]=\bar{q}\frac{\bar{b}^2}{2a}>0$$
+
+And the CB will follow the rule if $C\geq B$, *i.e.* the gains of following the rule are larger than the ones it gets by betraying the agents.
+
+## Barro-Gordon model for monetary policy
+
+Problem?
+
+. . .
+
+$$C=\frac{\bar{b}^2}{2a} < \bar{q}\frac{\bar{b}^2}{2a}$$
+
+Because $\bar{q}<1$! Betraying the rule is always rationa, and therefore agents (who are rational) will never believe the rule. $\pi^R=0$ is too low, temptation is always too large.
+
+## Barro-Gordon model for monetary policy
+
+Need to find $\pi^R$ such that minimizes $Z_t$, but at the same time is high enough to make the betraying costs too large, and make the CB stick with it.
+
+Clearly $\pi^R>0$, as $0$ does not work. Just let $\pi^R=\pi$ for now.
+
+## Barro-Gordon model for monetary policy
+
+The loss for the Central Bank is:
+
+<div style="font-size: 80%;">
+
+1. If it betrays: $$E[z_t^B]=E[z_t^D]=\frac{a}{2}\left(\bar{b}{a}\right)^2-\bar{b}\left(\frac{\bar{b}}{a}-\pi\right)=\bar{b}\pi-\frac{\bar{b}^2}{2a}$$
+2. If it follows the rule $$E[z_t^R]=\frac{a}{2}\pi^2$$
+
+</div>
+
+. . .
+
+Note that following the discretionary policy (D) or betraying yields the same payoff (it is the same thing today!) 
+
+## Barro-Gordon model for monetary policy
+
+$$E[z_t^R-z_t^B]=\frac{a}{2}\left(\frac{\bar{b}}{a}-\pi\right)^2$$
+
+$$\bar{q}E[z_t^D-z_t^R]=\bar{q}\frac{a}{2}\left(\left(\frac{\bar{b}}{a}\right)^2-\pi^2\right)$$
+
+## Barro-Gordon model for monetary policy
+
+Note that:
+
+1. If $\pi=\frac{\bar{b}}{a}$ then both expressions are zero.
+2. If $\pi=0$, then $E[z_t^R-z_t^B]=\frac{\bar{b}^2}{2a}$, and $\bar{q}E[z_t^D-z_t^R]=\bar{q}\frac{\bar{b}^2}{2a}$.
+3. The first expression (gains from betrayal) is convex, the second (gains from commitment) is concave.
+
+## Barro-Gordon model for monetary policy
+
+```{r, engine='tikz', engine.opts=list(extra.preamble="\\usepackage{pgfplots}\\pgfplotsset{compat=1.18}"), fig.align='center'}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=12cm,
+        height=10cm,
+        axis lines=middle,
+        xlabel={Inflation ($\pi$)},
+        ylabel={Social Welfare Loss},
+        xmin=0, xmax=1.1,
+        ymin=0, ymax=0.25,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel style={at={(axis description cs:1.0,-0.05)}, anchor=north},
+        ylabel style={at={(axis description cs:-0.05,1.0)}, anchor=south},
+        legend pos=north west,
+        legend style={draw=none},
+        samples=100,
+        domain=0:1,
+        clip=false
+    ]
+
+    \pgfmathsetmacro{\mya}{0.8}
+    \pgfmathsetmacro{\myq}{0.8}
+    \pgfmathsetmacro{\myb}{0.5}
+
+    % Commitment (concave) - parabola opening upward centered at optimal inflation
+    \addplot[blue, thick, smooth] {{(\mya/2)*((\myb/\mya-x)^2)}} node[pos=0, left] {$\frac{\bar{b}^2}{2a}$};
+    \addlegendentry{Commitment}
+    
+    % Discretionary (convex from commitment perspective) - steeper parabola centered at discretionary inflation
+    \addplot[red, thick, smooth, dashed] {\myq*(\mya/2)*((\myb/\mya)^2-x^2)} node[pos=0, left] {$\frac{\bar{q}\bar{b}^2}{2a}$};
+    \addlegendentry{Discretion}
+    
+    % Add annotations
+    \node[blue, align=center] at (axis cs:{(1-\myq)/(1+\myq)*(\myb/\mya)},{-0.05}) {Optimal with\\commitment};
+    \node[red, align=center] at (axis cs:{\myb/\mya},{-0.05}) {Discretionary\\equilibrium};
+
+    \node[blue, align=center, label =below:{$\left(\frac{1-\bar{q}}{1+\bar{q}}\right)\frac{\bar{b}}{a}$}] at (axis cs:{(1-\myq)/(1+\myq)*(\myb/\mya)},{-0.0}) {};
+    \node[red, align=center, label= below:{$\bar{b}/a$}] at (axis cs:{\myb/\mya},{-0.0}) {};
+    
+    \draw[dashed] ({(1-\myq)/(1+\myq)*(\myb/\mya)},0) -- ({(1-\myq)/(1+\myq)*(\myb/\mya)},0.12);
+
+    % Arrow showing enforceable rules
+    \draw[<->, thick] (axis cs:{(1-\myq)/(1+\myq)*(\myb/\mya)},-0.075) -- (axis cs:{\myb/\mya},-0.075) node[midway, above] {enforceable rule};
+    
+    \end{axis}
+\end{tikzpicture}
+```
+
+## Barro-Gordon model for monetary policy
+
+So any $\pi^*\in\left[\left(\frac{1-\bar{q}}{1+\bar{q}}\right)\frac{\bar{b}}{a},\frac{\bar{b}}{a}\right]$ is a good candidate for an equilibrium inflation goal.
+
+But, what is the best? What will the Central Banker choose?
+
+## Barro-Gordon model for monetary policy
+
+The optimal goal for inflation will be the one that minimizes the present value of the loss function.
+
+In general, the only benefits of inflation come from *surprise inflaction*, everything else is pure cost. If the Bank will stick to its goal, then there are no gains of having higher inflation levels!
+
+$$\pi^*=\left(\frac{1-\bar{q}}{1+\bar{q}}\right)\frac{\bar{b}}{a}$$
+
+## Barro-Gordon model for monetary policy
+
+Note that the optimal inflation depends on variables that are stochastic! Then, the Central Banks will allow for an interval around this ideal inflation goal.
+
+1. What can affect $q$ and how does that change the solution?
+2. What can affect $b$ and how does that change the solution?
+
+. . .
+
+This mode gives us an inflation rate that is a Nash Equilibrium, where nobody has incentives to deviate: Central Banks sticks to the inflation it promised, and Agents stick to believe this goal.
 
 # Dynamic Inconsistency with taxes
+
+# Elections and public expenditure

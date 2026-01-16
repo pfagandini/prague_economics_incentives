@@ -202,20 +202,342 @@ Paulo Fagandini
 <blockquote>
 <p>You bid for some project in your firm, and ex-post you realize that all your competitors’ bids were not even half of yours. A naïve manager would claim “Yeah!, we beat the competition! and for so much! muahahaha!”</p>
 </blockquote>
-<p>Some smart Manager would say “Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much.”</p>
+<p>A smart manager would say “Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much.”</p>
+</section>
+<section id="first-price-sealed-bid-auctions-the-winners-curse" class="slide level2">
+<h2>First Price Sealed Bid Auctions## The Winner’s Curse</h2>
+<ol type="1">
+<li class="fragment">Consider an auction where you are one out of <span class="math inline">\(N\)</span> bidders.</li>
+<li class="fragment">Each bidder has a private valuation <span class="math inline">\(\nu_i\)</span> of the item being auctioned. Let <span class="math inline">\(\nu_i\sum U[0,1]\)</span>.</li>
+<li class="fragment">Assume bidders are equal in everything except their valuations.</li>
+<li class="fragment">Let <span class="math inline">\(u(x)=x\)</span> for every bidder (<em>i.e.</em> bidders are risk neutral).</li>
+</ol>
+</section>
+<section id="first-price-sealed-bid-auctions" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>The expected utility for the bidder <span class="math inline">\(i\)</span> is:</p>
+<p><span class="math display">\[\begin{align*}
+    E[u_i|\nu_i,b_i]=&amp;u_i(\nu_i-b_i)\times Pr(b_i&gt;b_{-i})\\&amp;+u_i(0)\times[1-Pr(b_i&gt;b_{-i})]
+\end{align*}\]</span></p>
+<p>Where <span class="math inline">\(Pr(b_i&gt;b_{-i})\)</span> represents the probability of his bid being greater than all the others’ bids.</p>
+</section>
+<section id="first-price-sealed-bid-auctions-1" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>Note that the probability of beating all the other bidders is:</p>
+<div style="font-size: 70%;">
+<p><span class="math display">\[\begin{align*}
+    Pr(b_i&gt;b_{-i})=Pr(b_i&gt;b_1)\times Pr(b_i&gt;b_2)...Pr(b_i&gt;b_n)
+\end{align*}\]</span></p>
+</div>
+<p>Let’s rewrite the expected utility of bidder <span class="math inline">\(i\)</span>:</p>
+<div style="font-size: 70%;">
+<p><span class="math display">\[\begin{align*}
+    E[u|\nu_i]=u(\nu_i-b_i)\times Pr(b_i&gt;b_1)\times Pr(b_i&gt;b_2)...\times Pr(b_i&gt;b_n)
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="first-price-sealed-bid-auctions-2" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<div style="font-size: 70%;">
+<p>If:</p>
+<ol type="1">
+<li>bidders have the same strategy (they are equal ex-ante of receiving their valuation), and</li>
+<li>bidding strategy is increasing in the valuation (this is a very weak assumption, common in literature)</li>
+</ol>
+<p>Then the probability of winning is equivalent to the probability of receiving the highest signal.</p>
+<p>This information, though, can only be used finding the FOC, because symmetry is a <em>consequence</em> of optimization. If we impose symmetry ex-ante, we could end up with a very collusive equilibrium.</p>
+</div>
+</section>
+<section id="first-price-sealed-bid-auctions-3" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>The FOC is:</p>
+<div style="font-size: 70%;">
+<p><span class="math display">\[\begin{align*}
+    u'(\nu_i-b_i)\phi=u(\nu_i-b_i)\left[\sum_{t\neq i}\left(\frac{\partial Pr(b_i&gt;b_t)}{\partial b_i}\prod_{j\neq\{i,t\}}Pr(b_i&gt;b_j)\right)\right]
+\end{align*}\]</span></p>
+</div>
+<p>Calling <span class="math inline">\(\phi=\prod_{j\neq i} Pr(b_i&gt;b_j)\)</span>.</p>
+<p>This looks ugly, but it is not: multiply and divide by <span class="math inline">\(Pr(b_i&gt;b_t)\)</span> inside the rounded parenthesis. Note that when doing this, the product will be equal for any <span class="math inline">\(j\neq i\)</span>, and can be factored out.</p>
+</section>
+<section id="first-price-sealed-bid-auctions-4" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<div style="font-size: 60%;">
+<p><span class="math display">\[\begin{align*}
+    u'(\nu_i-b_i)\phi=u(\nu_i-b_i)\underbrace{\left[\prod_{j\neq i}Pr(b_i&gt;b_j)\right]}_{\phi}\left[\sum_{t\neq i}\frac{\partial Pr(b_i&gt;b_t)}{\partial b_i}\frac{1}{Pr(b_i&gt;b_t)}\right]
+\end{align*}\]</span></p>
+</div>
+<p>Now, note that <span class="math inline">\(\prod_{j\neq i} Pr(b_i&gt;b_j)\)</span> is the probability of winning the auction, and we already differentiated, so we can use symmetry.</p>
+<p>What is the probability of some bidder to have received the highest valuation? exactly, <span class="math inline">\(\frac{1}{n}\)</span>, as everyone has the same probability of having received the highest valuation.</p>
+</section>
+<section id="first-price-sealed-bid-auctions-5" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<div style="font-size: 60%;">
+<p><span class="math display">\[\begin{align*}
+    \frac{ u'(\nu_i-b_i)}{u(\nu_i-b_i)}=\sum_{t\neq i}\frac{\partial Pr(b_i&gt;b_t)}{\partial b_i}\frac{1}{Pr(b_i&gt;b_t)}
+\end{align*}\]</span></p>
+</div>
+<p>Recall that the probability of beating one other bidder, is the same that beating another bidder:</p>
+<div style="font-size: 60%;">
+<p><span class="math display">\[\begin{align*}
+\frac{ u'(\nu_i-b_i)}{u(\nu_i-b_i)}=(n-1)\frac{\partial Pr(b_i&gt;b_{t\neq i})}{\partial b_i}\frac{1}{Pr(b_i&gt;b_{t\neq i})}
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="first-price-sealed-bid-auctions-6" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>If the bidding strategy is increasing in the valuation, the probability of beating another bidder is the probability of receiving a higher valuation than him! <span class="math display">\[\begin{align*}
+    Pr(b_i&gt;b_{t\neq i})=G(\nu_i)
+\end{align*}\]</span> We can conclude that the bid is a function of the valuation, and therefore <span class="math inline">\(b_i=b(\nu_i)\)</span>.</p>
+</section>
+<section id="first-price-sealed-bid-auctions-7" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>Now we want to deal with <span class="math inline">\(\frac{\partial Pr(b_i&gt;b_{t\neq i})}{\partial b_i}\)</span> so consider our last two equations:</p>
+<div style="font-size: 70%;">
+<p><span class="math display">\[\begin{align*}
+\frac{\partial G(\nu_i)}{\partial \nu_i}=g(\nu_i)=\frac{\partial Pr(b_i&gt;b_{t\neq i})}{\partial b_i}\frac{\partial b(\nu_i)}{\partial \nu_i}
+\end{align*}\]</span></p>
+</div>
+And <span class="math inline">\(g(\nu_i)\)</span> is the density function of the distribution of the valuations. With that we obtain that:
+<div style="font-size: 70%;">
+<p><span class="math display">\[\begin{align*}
+    \frac{\partial Pr(b_i&gt;b_{t\neq i})}{\partial b_i}=\frac{g(\nu_i)}{\partial b(\nu_i)/\partial\nu_i}
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="first-price-sealed-bid-auctions-8" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>If we replace then: <span class="math display">\[\begin{align*}
+        \frac{\partial Pr(b_i&gt;b_{t\neq i})}{\partial b_i}&amp;=\frac{g(\nu_i)}{\partial b(\nu_i)/\partial\nu_i}\\
+        Pr(b_i&gt;b_{t\neq i})&amp;=G(\nu_i)
+\end{align*}\]</span> In our previous expression we obtain:</p>
+<p><span class="math display">\[\begin{align*}
+    \frac{1}{n-1}\frac{ u'(\nu_i-b_i)}{u(\nu_i-b_i)}=\frac{1}{\partial b(\nu_i)/\partial\nu_i}\frac{g(\nu_i)}{G(\nu_i)}
+\end{align*}\]</span></p>
+</section>
+<section id="first-price-sealed-bid-auctions-9" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+Let’s recall what are we looking for: <span class="math inline">\(b(\nu)\)</span>. Remember <span class="math inline">\(\nu\sim U[0,1]\)</span> and <span class="math inline">\(u(x)=x\)</span>. This implies that <span class="math inline">\(G(\nu)=\nu\)</span> and <span class="math inline">\(g(\nu)=1\)</span>. Also <span class="math inline">\(u'=1\)</span>.
+<div style="font-size: 90%;">
+<p><span class="math display">\[\begin{align*}
+\frac{1}{n-1}\frac{1}{\nu-b(\nu)}=\frac{1}{\partial b(\nu)/\partial\nu}\frac{1}{\nu}
+\end{align*}\]</span></p>
+</div>
+</section>
+<section id="first-price-sealed-bid-auctions-10" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+<p>So we end up with a differential equation. Let <span class="math inline">\(A=n-1\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+  \frac{\partial b(\nu)}{\partial \nu}+A\frac{b(\nu)}{\nu}&amp;=A\\
+  e^{A\log(\nu)}\frac{\partial b(\nu)}{\partial \nu}+\frac{A e^{A\log(\nu)}}{ \nu} b(\nu)&amp;=A e^{A\log(\nu)}
+\end{align*}\]</span></p>
+<p>Using the integrating factor <span class="math inline">\(e^{A\log(\nu)}\)</span>.</p>
+</section>
+<section id="first-price-sealed-bid-auctions-11" class="slide level2">
+<h2>First Price Sealed Bid Auctions</h2>
+We end up with the following equation:
+<div style="font-size: 80%;">
+<p><span class="math display">\[\begin{align*}
+\frac{\partial}{\partial \nu}\left[e^{A\log(\nu)}b(\nu)\right]&amp;=Ae^{A\log(\nu)}\\
+e^{A\log(\nu)}b(\nu)&amp;=\int A e^{A\log(\nu)}d\nu\\
+e^{A\log(\nu)}b(\nu)&amp;=A\int \nu^A d\nu\\
+\nu^A b(\nu)&amp;=A \frac{\nu^{A+1}}{A+1}\\
+b(\nu)&amp;=\frac{n-1}{n} \nu
+\end{align*}\]</span></p>
+</div>
+<p>The constant is zero, check at home.</p>
 </section></section>
+<section>
 <section id="barro-gordon-model-for-monetary-policy" class="title-slide slide level1 center">
 <h1>Barro-Gordon model for monetary policy</h1>
+
+</section>
+<section id="barro-gordon-model-for-monetary-policy-1" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<ol type="1">
+<li class="fragment">Have you ever wondered why the Central Bank is so stressed about making inflation go back to its target?</li>
+<li class="fragment">Why does the bank actually <strong>has</strong> a target inflation?</li>
+<li class="fragment">Why reputation is so important for a Central Bank?</li>
+</ol>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-2" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>There are two main <em>profits</em> of having inflation larger than the one is expected by the agents:</p>
+<ol type="1">
+<li class="fragment">Agents will produce more (Lucas Island model), because they will believe the higher prices they observe comes from a higher demand [Phillips Curve].</li>
+<li class="fragment">Real value of public debt will decrease (interest rates for the future are based on expectations!)</li>
+</ol>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-3" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<ol type="1">
+<li class="fragment">Let the inflation at some year be <span class="math inline">\(\pi_t\)</span></li>
+<li class="fragment">Let the <em>expected</em> inflation for year <span class="math inline">\(t\)</span> be <span class="math inline">\(\pi_t^e\)</span></li>
+</ol>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-4" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>The Central Bank will have the following loss function</p>
+<p><span class="math display">\[z_t = \frac{a}{2}\pi_t^2-b_t(\pi_t-\pi_t^e)\]</span></p>
+<p>with <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(b&gt;0\)</span>. Assume <span class="math inline">\(b_t\)</span> is a shock, distributed <em>iid</em> <span class="math inline">\((\bar{b},\sigma_b^2)\)</span>. This means that in some periods it can be more convenient to surprise the market than others. The key here, is that these periods cannot be anticipated.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-5" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>The goal of the Central Bank is to minimize the lifetime loss:</p>
+<p><span class="math display">\[ min Z_t = E\left[z_t+\frac{z_{t+1}}{1+r}+\frac{z_{t+2}}{(1+r)^2}+\dots\right]\]</span></p>
+<p>Let <span class="math inline">\(q_t=\frac{1}{1+r_t}\)</span>, and <span class="math inline">\(q_t\overset{iid}{\rightarrow}(\bar{q},\sigma_q^2)\)</span>. <span class="math inline">\(b_t\)</span> and <span class="math inline">\(q_t\)</span> are shocks, and therefore cannot be anticipated.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-6" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>If we take the FOC with respect to <span class="math inline">\(\pi_t\)</span>, what the central banker <strong>can actually influence</strong>, we end up with:</p>
+<p><span class="math display">\[\begin{align*}
+    \frac{\partial z_t}{\partial \pi_t}=a\pi_t-\bar{b}=0\quad \Rightarrow\quad \pi_t^D=\frac{\bar{b}}{a}
+\end{align*}\]</span></p>
+<p>This is the discretionary inflation that the central banker will choose.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-7" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>What is the problem?</p>
+<div class="fragment">
+<p>Agents are rational! They will anticipate this, and will set <span class="math display">\[\pi_t^e=\frac{\bar{b}}{a}\]</span></p>
+<p>Which leads to the loss: <span class="math display">\[z_t^D=\frac{1}{2}\frac{\bar{b}^2}{a}\]</span></p>
+</div>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-8" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>Assume now, the Central Bank commits to an inflation level ex-ante, and people gives them the benefit of the doubt.</p>
+<p>If the Central Bank tries to preserve its reputation: <span class="math display">\[z_t= E\left[\frac{a}{2}\pi_t^2 - b_t\underbrace{(\pi_t-\pi_t)}_{0}\right]= \frac{a}{2}\pi_t^2\]</span></p>
+<p>Which is obviously minimized at <span class="math inline">\(\pi_t^C=0\)</span>.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-9" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>This is, with this commitment rule, the ideal inflation is 0.</p>
+<p>Substituting this back in the loss function leads to <span class="math display">\[z_t^R=0\]</span></p>
+<p>Are we over?</p>
+<div class="fragment">
+<p>Now <span class="math inline">\(\pi_t^e=0\)</span>, so the loss function for the Central Bank is:</p>
+<p><span class="math display">\[z_t=\left[\frac{a}{2}\pi_t^2-b_t(\pi_t-0)\right]\]</span></p>
+</div>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-10" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>This has a minimum at <span class="math inline">\(\pi_t^B = \frac{\bar{b}}{a}\)</span>, <em>i.e.</em>, it coincides with <span class="math inline">\(\pi_t^D\)</span>, but now the loss of the Central Bank is: <span class="math display">\[z_t^B=\frac{a}{2}\left(\frac{\bar{b}}{2}\right)^2-\bar{b}\frac{\bar{b}}{a}=\frac{-\bar{b}^2}{2a}\]</span></p>
+<p>And negative loss is a gain! The Central Bank, by making people believe that <span class="math inline">\(\pi_t\)</span> would be zero, had an even larger temptation to betray them!</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-11" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>What was the gain?</p>
+<p><span class="math display">\[B=E[Z_t^R-z_t^E]=\frac{\bar{b}^2}{a}&gt;0\]</span></p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-12" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>The Central Bank has these 3 alternatives:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"></th>
+<th style="text-align: center;">Payoff</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Betray</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{-\bar{b}^2}{2a}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(follow the) Rule</td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(no rule) Discretion</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\bar{b}^2}{2a}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-13" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>The key is that agents are rational, and if the Central Betray’s the rule, they will not believe it anymore and follow a discretionary equilibrium in the next period. Let’s assume the <em>punishment</em> lasts a single period.</p>
+<p>We already know that the temptation to betray is <span class="math inline">\(B=\frac{\bar{b}^2}{2a}&gt;0\)</span>. The problem, is that if this is the case, the next period the agents believe in the discretionary arrangement, and the authority losses <span class="math inline">\(z_{t+1}^D=\frac{\bar{b}^2}{2a}\)</span>.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-14" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>We can bring the future cost of betraying the agents today by multiplying by <span class="math inline">\(q\)</span>, and then we find the expected value of betraying today for the Central Banker:</p>
+<p><span class="math display">\[C = E\left[q_t(z_{t+1}^D-z_{t+1}^R)\right]=\bar{q}\frac{\bar{b}^2}{2a}&gt;0\]</span></p>
+<p>And the CB will follow the rule if <span class="math inline">\(C\geq B\)</span>, <em>i.e.</em> the gains of following the rule are larger than the ones it gets by betraying the agents.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-15" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>Problem?</p>
+<div class="fragment">
+<p><span class="math display">\[C=\frac{\bar{b}^2}{2a} &lt; \bar{q}\frac{\bar{b}^2}{2a}\]</span></p>
+<p>Because <span class="math inline">\(\bar{q}&lt;1\)</span>! Betraying the rule is always rationa, and therefore agents (who are rational) will never believe the rule. <span class="math inline">\(\pi^R=0\)</span> is too low, temptation is always too large.</p>
+</div>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-16" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>Need to find <span class="math inline">\(\pi^R\)</span> such that minimizes <span class="math inline">\(Z_t\)</span>, but at the same time is high enough to make the betraying costs too large, and make the CB stick with it.</p>
+<p>Clearly <span class="math inline">\(\pi^R&gt;0\)</span>, as <span class="math inline">\(0\)</span> does not work. Just let <span class="math inline">\(\pi^R=\pi\)</span> for now.</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-17" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>The loss for the Central Bank is:</p>
+<div style="font-size: 80%;">
+<ol type="1">
+<li class="fragment">If it betrays: <span class="math display">\[E[z_t^B]=E[z_t^D]=\frac{a}{2}\left(\bar{b}{a}\right)^2-\bar{b}\left(\frac{\bar{b}}{a}-\pi\right)=\bar{b}\pi-\frac{\bar{b}^2}{2a}\]</span></li>
+<li class="fragment">If it follows the rule <span class="math display">\[E[z_t^R]=\frac{a}{2}\pi^2\]</span></li>
+</ol>
+</div>
+<div class="fragment">
+<p>Note that following the discretionary policy (D) or betraying yields the same payoff (it is the same thing today!)</p>
+</div>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-18" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p><span class="math display">\[E[z_t^R-z_t^B]=\frac{a}{2}\left(\frac{\bar{b}}{a}-\pi\right)^2\]</span></p>
+<p><span class="math display">\[\bar{q}E[z_t^D-z_t^R]=\bar{q}\frac{a}{2}\left(\left(\frac{\bar{b}}{a}\right)^2-\pi^2\right)\]</span></p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-19" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>Note that:</p>
+<ol type="1">
+<li class="fragment">If <span class="math inline">\(\pi=\frac{\bar{b}}{a}\)</span> then both expressions are zero.</li>
+<li class="fragment">If <span class="math inline">\(\pi=0\)</span>, then <span class="math inline">\(E[z_t^R-z_t^B]=\frac{\bar{b}^2}{2a}\)</span>, and <span class="math inline">\(\bar{q}E[z_t^D-z_t^R]=\bar{q}\frac{\bar{b}^2}{2a}\)</span>.</li>
+<li class="fragment">The first expression (gains from betrayal) is convex, the second (gains from commitment) is concave.</li>
+</ol>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-20" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+
+<img data-src="05_applications_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="barro-gordon-model-for-monetary-policy-21" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>So any <span class="math inline">\(\pi^*\in\left[\left(\frac{1-\bar{q}}{1+\bar{q}}\right)\frac{\bar{b}}{a},\frac{\bar{b}}{a}\right]\)</span> is a good candidate for an equilibrium inflation goal.</p>
+<p>But, what is the best? What will the Central Banker choose?</p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-22" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>The optimal goal for inflation will be the one that minimizes the present value of the loss function.</p>
+<p>In general, the only benefits of inflation come from <em>surprise inflaction</em>, everything else is pure cost. If the Bank will stick to its goal, then there are no gains of having higher inflation levels!</p>
+<p><span class="math display">\[\pi^*=\left(\frac{1-\bar{q}}{1+\bar{q}}\right)\frac{\bar{b}}{a}\]</span></p>
+</section>
+<section id="barro-gordon-model-for-monetary-policy-23" class="slide level2">
+<h2>Barro-Gordon model for monetary policy</h2>
+<p>Note that the optimal inflation depends on variables that are stochastic! Then, the Central Banks will allow for an interval around this ideal inflation goal.</p>
+<ol type="1">
+<li class="fragment">What can affect <span class="math inline">\(q\)</span> and how does that change the solution?</li>
+<li class="fragment">What can affect <span class="math inline">\(b\)</span> and how does that change the solution?</li>
+</ol>
+<div class="fragment">
+<p>This mode gives us an inflation rate that is a Nash Equilibrium, where nobody has incentives to deviate: Central Banks sticks to the inflation it promised, and Agents stick to believe this goal.</p>
+</div>
+</section></section>
+<section id="dynamic-inconsistency-with-taxes" class="title-slide slide level1 center">
+<h1>Dynamic Inconsistency with taxes</h1>
 
 </section>
 
 <section id="elections-and-public-expenditure" class="title-slide slide level1 center">
 <h1>Elections and public expenditure</h1>
-
-</section>
-
-<section id="dynamic-inconsistency-with-taxes" class="title-slide slide level1 center">
-<h1>Dynamic Inconsistency with taxes</h1>
 
 
 
@@ -436,6 +758,44 @@ Paulo Fagandini
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

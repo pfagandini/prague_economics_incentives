@@ -3385,6 +3385,272 @@
     "href": "slides/05_applications.html#the-winners-curse-4",
     "title": "Policy Applications",
     "section": "The Winner’s Curse",
-    "text": "The Winner’s Curse\nImagine the following situation:\n\nYou bid for some project in your firm, and ex-post you realize that all your competitors’ bids were not even half of yours. A naïve manager would claim “Yeah!, we beat the competition! and for so much! muahahaha!”\n\nSome smart Manager would say “Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much.”"
+    "text": "The Winner’s Curse\nImagine the following situation:\n\nYou bid for some project in your firm, and ex-post you realize that all your competitors’ bids were not even half of yours. A naïve manager would claim “Yeah!, we beat the competition! and for so much! muahahaha!”\n\nA smart manager would say “Holy Guacamole!! bring me the head of the engineering team, and explain me why nobody else believed this project was worth so much.”"
+  },
+  {
+    "objectID": "slides/05_applications.html#the-winners-curse-5",
+    "href": "slides/05_applications.html#the-winners-curse-5",
+    "title": "Policy Applications",
+    "section": "The Winner’s Curse",
+    "text": "The Winner’s Curse\nConsider an auction where you are one out of \\(N\\) bidders."
+  },
+  {
+    "objectID": "slides/05_applications.html#the-winners-curse-6",
+    "href": "slides/05_applications.html#the-winners-curse-6",
+    "title": "Policy Applications",
+    "section": "The Winner’s Curse",
+    "text": "The Winner’s Curse\nThe expected utility for the bidder \\(i\\) is:\n\\[\\begin{align*}\n    E[u_i|\\nu_i,b_i]=&u_i(\\nu_i-b_i)\\times Pr(b_i&gt;b_{-i})\\\\&+u_i(0)\\times[1-Pr(b_i&gt;b_{-i})]\n\\end{align*}\\]\nWhere \\(Pr(b_i&gt;b_{-i})\\) represents the probability of his bid being greater than all the others’ bids."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-the-winners-curse",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-the-winners-curse",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions## The Winner’s Curse",
+    "text": "First Price Sealed Bid Auctions## The Winner’s Curse\n\nConsider an auction where you are one out of \\(N\\) bidders.\nEach bidder has a private valuation \\(\\nu_i\\) of the item being auctioned. Let \\(\\nu_i\\sum U[0,1]\\).\nAssume bidders are equal in everything except their valuations.\nLet \\(u(x)=x\\) for every bidder (i.e. bidders are risk neutral)."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nThe expected utility for the bidder \\(i\\) is:\n\\[\\begin{align*}\n    E[u_i|\\nu_i,b_i]=&u_i(\\nu_i-b_i)\\times Pr(b_i&gt;b_{-i})\\\\&+u_i(0)\\times[1-Pr(b_i&gt;b_{-i})]\n\\end{align*}\\]\nWhere \\(Pr(b_i&gt;b_{-i})\\) represents the probability of his bid being greater than all the others’ bids."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-1",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-1",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nNote that the probability of beating all the other bidders is:\n\n\\[\\begin{align*}\n    Pr(b_i&gt;b_{-i})=Pr(b_i&gt;b_1)\\times Pr(b_i&gt;b_2)...Pr(b_i&gt;b_n)\n\\end{align*}\\]\n\nLet’s rewrite the expected utility of bidder \\(i\\):\n\n\\[\\begin{align*}\n    E[u|\\nu_i]=u(\\nu_i-b_i)\\times Pr(b_i&gt;b_1)\\times Pr(b_i&gt;b_2)...\\times Pr(b_i&gt;b_n)\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-2",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-2",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\n\nIf:\n\nbidders have the same strategy (they are equal ex-ante of receiving their valuation), and\nbidding strategy is increasing in the valuation (this is a very weak assumption, common in literature)\n\nThen the probability of winning is equivalent to the probability of receiving the highest signal.\nThis information, though, can only be used finding the FOC, because symmetry is a consequence of optimization. If we impose symmetry ex-ante, we could end up with a very collusive equilibrium."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-3",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-3",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nThe FOC is:\n\n\\[\\begin{align*}\n    u'(\\nu_i-b_i)\\phi=u(\\nu_i-b_i)\\left[\\sum_{t\\neq i}\\left(\\frac{\\partial Pr(b_i&gt;b_t)}{\\partial b_i}\\prod_{j\\neq\\{i,t\\}}Pr(b_i&gt;b_j)\\right)\\right]\n\\end{align*}\\]\n\nCalling \\(\\phi=\\prod_{j\\neq i} Pr(b_i&gt;b_j)\\).\nThis looks ugly, but it is not: multiply and divide by \\(Pr(b_i&gt;b_t)\\) inside the rounded parenthesis. Note that when doing this, the product will be equal for any \\(j\\neq i\\), and can be factored out."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-4",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-4",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\n\n\\[\\begin{align*}\n    u'(\\nu_i-b_i)\\phi=u(\\nu_i-b_i)\\underbrace{\\left[\\prod_{j\\neq i}Pr(b_i&gt;b_j)\\right]}_{\\phi}\\left[\\sum_{t\\neq i}\\frac{\\partial Pr(b_i&gt;b_t)}{\\partial b_i}\\frac{1}{Pr(b_i&gt;b_t)}\\right]\n\\end{align*}\\]\n\nNow, note that \\(\\prod_{j\\neq i} Pr(b_i&gt;b_j)\\) is the probability of winning the auction, and we already differentiated, so we can use symmetry.\nWhat is the probability of some bidder to have received the highest valuation? exactly, \\(\\frac{1}{n}\\), as everyone has the same probability of having received the highest valuation."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-5",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-5",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\n\n\\[\\begin{align*}\n    \\frac{ u'(\\nu_i-b_i)}{u(\\nu_i-b_i)}=\\sum_{t\\neq i}\\frac{\\partial Pr(b_i&gt;b_t)}{\\partial b_i}\\frac{1}{Pr(b_i&gt;b_t)}\n\\end{align*}\\]\n\nRecall that the probability of beating one other bidder, is the same that beating another bidder:\n\n\\[\\begin{align*}\n\\frac{ u'(\\nu_i-b_i)}{u(\\nu_i-b_i)}=(n-1)\\frac{\\partial Pr(b_i&gt;b_{t\\neq i})}{\\partial b_i}\\frac{1}{Pr(b_i&gt;b_{t\\neq i})}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-6",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-6",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nIf the bidding strategy is increasing in the valuation, the probability of beating another bidder is the probability of receiving a higher valuation than him! \\[\\begin{align*}\n    Pr(b_i&gt;b_{t\\neq i})=G(\\nu_i)\n\\end{align*}\\] We can conclude that the bid is a function of the valuation, and therefore \\(b_i=b(\\nu_i)\\)."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-7",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-7",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nNow we want to deal with \\(\\frac{\\partial Pr(b_i&gt;b_{t\\neq i})}{\\partial b_i}\\) so consider our last two equations:\n\n\\[\\begin{align*}\n\\frac{\\partial G(\\nu_i)}{\\partial \\nu_i}=g(\\nu_i)=\\frac{\\partial Pr(b_i&gt;b_{t\\neq i})}{\\partial b_i}\\frac{\\partial b(\\nu_i)}{\\partial \\nu_i}\n\\end{align*}\\]\n\nAnd \\(g(\\nu_i)\\) is the density function of the distribution of the valuations. With that we obtain that:\n\n\\[\\begin{align*}\n    \\frac{\\partial Pr(b_i&gt;b_{t\\neq i})}{\\partial b_i}=\\frac{g(\\nu_i)}{\\partial b(\\nu_i)/\\partial\\nu_i}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-8",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-8",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nIf we replace then: \\[\\begin{align*}\n        \\frac{\\partial Pr(b_i&gt;b_{t\\neq i})}{\\partial b_i}&=\\frac{g(\\nu_i)}{\\partial b(\\nu_i)/\\partial\\nu_i}\\\\\n        Pr(b_i&gt;b_{t\\neq i})&=G(\\nu_i)\n\\end{align*}\\] In our previous expression we obtain:\n\\[\\begin{align*}\n    \\frac{1}{n-1}\\frac{ u'(\\nu_i-b_i)}{u(\\nu_i-b_i)}=\\frac{1}{\\partial b(\\nu_i)/\\partial\\nu_i}\\frac{g(\\nu_i)}{G(\\nu_i)}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-9",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-9",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nLet’s recall what are we looking for: \\(b(\\nu)\\). Remember \\(\\nu\\sim U[0,1]\\) and \\(u(x)=x\\). This implies that \\(G(\\nu)=\\nu\\) and \\(g(\\nu)=1\\). Also \\(u'=1\\).\n\n\\[\\begin{align*}\n\\frac{1}{n-1}\\frac{1}{\\nu-b(\\nu)}=\\frac{1}{\\partial b(\\nu)/\\partial\\nu}\\frac{1}{\\nu}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-10",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-10",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nSo we end up with a differential equation. Let \\(A=n-1\\).\n\\[\\begin{align*}\n  \\frac{\\partial b(\\nu)}{\\partial \\nu}+A\\frac{b(\\nu)}{\\nu}&=A\\\\\n  e^{A\\log(\\nu)}\\frac{\\partial b(\\nu)}{\\partial \\nu}+\\frac{A e^{A\\log(\\nu)}}{ \\nu} b(\\nu)&=A e^{A\\log(\\nu)}\n\\end{align*}\\]\nUsing the integrating factor \\(e^{A\\log(\\nu)}\\)."
+  },
+  {
+    "objectID": "slides/05_applications.html#first-price-sealed-bid-auctions-11",
+    "href": "slides/05_applications.html#first-price-sealed-bid-auctions-11",
+    "title": "Policy Applications",
+    "section": "First Price Sealed Bid Auctions",
+    "text": "First Price Sealed Bid Auctions\nWe end up with the following equation:\n\n\\[\\begin{align*}\n\\frac{\\partial}{\\partial \\nu}\\left[e^{A\\log(\\nu)}b(\\nu)\\right]&=Ae^{A\\log(\\nu)}\\\\\ne^{A\\log(\\nu)}b(\\nu)&=\\int A e^{A\\log(\\nu)}d\\nu\\\\\ne^{A\\log(\\nu)}b(\\nu)&=A\\int \\nu^A d\\nu\\\\\n\\nu^A b(\\nu)&=A \\frac{\\nu^{A+1}}{A+1}\\\\\nb(\\nu)&=\\frac{n-1}{n} \\nu\n\\end{align*}\\]\n\nThe constant is zero, check at home."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-1",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-1",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\n\nHave you ever wondered why the Central Bank is so stressed about making inflation go back to its target?\nWhy does the bank actually has a target inflation?\nWhy reputation is so important for a Central Bank?"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-2",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-2",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThere are two main profits of having inflation larger than the one is expected by the agents:\n\nAgents will produce more (Lucas Island model), because they will believe the higher prices they observe comes from a higher demand [Phillips Curve].\nReal value of public debt will decrease (interest rates for the future are based on expectations!)"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-3",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-3",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\n\nLet the inflation at some year be \\(\\pi_t\\)\nLet the expected inflation for year \\(t\\) be \\(\\pi_t^e\\)"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-4",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-4",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThe Central Bank will have the following loss function\n\\[z_t = \\frac{a}{2}\\pi_t^2-b_t(\\pi_t-\\pi_t^e)\\]\nwith \\(a&gt;0\\) and \\(b&gt;0\\). Assume \\(b_t\\) is a shock, distributed iid \\((\\bar{b},\\sigma_b^2)\\). This means that in some periods it can be more convenient to surprise the market than others. The key here, is that these periods cannot be anticipated."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-5",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-5",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThe goal of the Central Bank is to minimize the lifetime loss:\n\\[ min Z_t = E\\left[z_t+\\frac{z_{t+1}}{1+r}+\\frac{z_{t+2}}{(1+r)^2}+\\dots\\right]\\]\nLet \\(q_t=\\frac{1}{1+r_t}\\), and \\(q_t\\overset{iid}{\\rightarrow}(\\bar{q},\\sigma_q^2)\\). \\(b_t\\) and \\(q_t\\) are shocks, and therefore cannot be anticipated."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-6",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-6",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nIf we take the FOC with respect to \\(\\pi_t\\), what the central banker can actually influence, we end up with:\n\\[\\begin{align*}\n    \\frac{\\partial z_t}{\\partial \\pi_t}=a\\pi_t-\\bar{b}=0\\quad \\Rightarrow\\quad \\pi_t^D=\\frac{\\bar{b}}{a}\n\\end{align*}\\]\nThis is the discretionary inflation that the central banker will choose."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-7",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-7",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nWhat is the problem?\n\nAgents are rational! They will anticipate this, and will set \\[\\pi_t^e=\\frac{\\bar{b}}{a}\\]\nWhich leads to the loss: \\[z_t^D=\\frac{1}{2}\\frac{\\bar{b}^2}{a}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-8",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-8",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nAssume now, the Central Bank commits to an inflation level ex-ante, and people gives them the benefit of the doubt.\nIf the Central Bank tries to preserve its reputation: \\[z_t= E\\left[\\frac{a}{2}\\pi_t^2 - b_t\\underbrace{(\\pi_t-\\pi_t)}_{0}\\right]= \\frac{a}{2}\\pi_t^2\\]\nWhich is obviously minimized at \\(\\pi_t^C=0\\)."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-9",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-9",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThis is, with this commitment rule, the ideal inflation is 0.\nSubstituting this back in the loss function leads to \\[z_t^R=0\\]\nAre we over?\n\nNow \\(\\pi_t^e=0\\), so the loss function for the Central Bank is:\n\\[z_t=\\left[\\frac{a}{2}\\pi_t^2-b_t(\\pi_t-0)\\right]\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-10",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-10",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThis has a minimum at \\(\\pi_t^B = \\frac{\\bar{b}}{a}\\), i.e., it coincides with \\(\\pi_t^D\\), but now the loss of the Central Bank is: \\[z_t^B=\\frac{a}{2}\\left(\\frac{\\bar{b}}{2}\\right)^2-\\bar{b}\\frac{\\bar{b}}{a}=\\frac{-\\bar{b}^2}{2a}\\]\nAnd negative loss is a gain! The Central Bank, by making people believe that \\(\\pi_t\\) would be zero, had an even larger temptation to betray them!"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-11",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-11",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nWhat was the gain?\n\\[B=E[Z_t^R-z_t^E]=\\frac{\\bar{b}^2}{a}&gt;0\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-12",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-12",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThe Central Bank has these 3 alternatives:\n\n\n\n\nPayoff\n\n\n\n\nBetray\n\\(\\frac{-\\bar{b}^2}{2a}\\)\n\n\n(follow the) Rule\n\\(0\\)\n\n\n(no rule) Discretion\n\\(\\frac{\\bar{b}^2}{2a}\\)"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-13",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-13",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThe key is that agents are rational, and if the Central Betray’s the rule, they will not believe it anymore and follow a discretionary equilibrium in the next period. Let’s assume the punishment lasts a single period.\nWe already know that the temptation to betray is \\(B=\\frac{\\bar{b}^2}{2a}&gt;0\\). The problem, is that if this is the case, the next period the agents believe in the discretionary arrangement, and the authority losses \\(z_{t+1}^D=\\frac{\\bar{b}^2}{2a}\\)."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-14",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-14",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nWe can bring the future cost of betraying the agents today by multiplying by \\(q\\), and then we find the expected value of betraying today for the Central Banker:\n\\[C = E\\left[q_t(z_{t+1}^D-z_{t+1}^R)\\right]=\\bar{q}\\frac{\\bar{b}^2}{2a}&gt;0\\]\nAnd the CB will follow the rule if \\(C\\geq B\\), i.e. the gains of following the rule are larger than the ones it gets by betraying the agents."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-15",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-15",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nProblem?\n\n\\[C=\\frac{\\bar{b}^2}{2a} &lt; \\bar{q}\\frac{\\bar{b}^2}{2a}\\]\nBecause \\(\\bar{q}&lt;1\\)! Betraying the rule is always rationa, and therefore agents (who are rational) will never believe the rule. \\(\\pi^R=0\\) is too low, temptation is always too large."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-16",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-16",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nNeed to find \\(\\pi^R\\) such that minimizes \\(Z_t\\), but at the same time is high enough to make the betraying costs too large, and make the CB stick with it.\nClearly \\(\\pi^R&gt;0\\), as \\(0\\) does not work. Just let \\(\\pi^R=\\pi\\) for now."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-17",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-17",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThe loss for the Central Bank is:\n\n\nIf it betrays: \\[E[z_t^B]=E[z_t^D]=\\frac{a}{2}\\left(\\bar{b}{a}\\right)^2-\\bar{b}\\left(\\frac{\\bar{b}}{a}-\\pi\\right)=\\bar{b}\\pi-\\frac{\\bar{b}^2}{2a}\\]\nIf it follows the rule \\[E[z_t^R]=\\frac{a}{2}\\pi^2\\]\n\n\n\nNote that following the discretionary policy (D) or betraying yields the same payoff (it is the same thing today!)"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-18",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-18",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\n\\[E[z_t^R-z_t^B]=\\frac{a}{2}\\left(\\frac{\\bar{b}}{a}-\\pi\\right)^2\\]\n\\[\\bar{q}E[z_t^D-z_t^R]=\\bar{q}\\frac{a}{2}\\left(\\left(\\frac{\\bar{b}}{a}\\right)^2-\\pi^2\\right)\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-19",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-19",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nNote that:\n\nIf \\(\\pi=\\frac{\\bar{b}}{a}\\) then both expressions are zero.\nIf \\(\\pi=0\\), then \\(E[z_t^R-z_t^B]=\\frac{\\bar{b}^2}{2a}\\), and \\(\\bar{q}E[z_t^D-z_t^R]=\\bar{q}\\frac{\\bar{b}^2}{2a}\\).\nThe first expression (gains from betrayal) is convex, the second (gains from commitment) is concave."
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-20",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-20",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-21",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-21",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nSo any \\(\\pi^*\\in\\left[\\left(\\frac{1-\\bar{q}}{1+\\bar{q}}\\right)\\frac{\\bar{b}}{a},\\frac{\\bar{b}}{a}\\right]\\) is a good candidate for an equilibrium inflation goal.\nBut, what is the best? What will the Central Banker choose?"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-22",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-22",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nThe optimal goal for inflation will be the one that minimizes the present value of the loss function.\nIn general, the only benefits of inflation come from surprise inflaction, everything else is pure cost. If the Bank will stick to its goal, then there are no gains of having higher inflation levels!\n\\[\\pi^*=\\left(\\frac{1-\\bar{q}}{1+\\bar{q}}\\right)\\frac{\\bar{b}}{a}\\]"
+  },
+  {
+    "objectID": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-23",
+    "href": "slides/05_applications.html#barro-gordon-model-for-monetary-policy-23",
+    "title": "Policy Applications",
+    "section": "Barro-Gordon model for monetary policy",
+    "text": "Barro-Gordon model for monetary policy\nNote that the optimal inflation depends on variables that are stochastic! Then, the Central Banks will allow for an interval around this ideal inflation goal.\n\nWhat can affect \\(q\\) and how does that change the solution?\nWhat can affect \\(b\\) and how does that change the solution?\n\n\nThis mode gives us an inflation rate that is a Nash Equilibrium, where nobody has incentives to deviate: Central Banks sticks to the inflation it promised, and Agents stick to believe this goal."
   }
 ]
