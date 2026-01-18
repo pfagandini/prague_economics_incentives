@@ -778,7 +778,7 @@ Paulo Fagandini
 </section>
 <section id="the-tragedy-of-the-commons-1" class="slide level2">
 <h2>The tragedy of the Commons</h2>
-<p>Even though this problem has been thought by thinkers since many millenia, it was formalize much more recently.</p>
+<p>Even though this problem has been thought by thinkers since many millenia, it was formalized much more recently.</p>
 <ol type="1">
 <li class="fragment">The commons were lands shared in the center of 16th Century England villages, where, among other things, people could take their cattle pasture.</li>
 <li class="fragment">In modern times we can find an example in International Waters, or the Athmosphere.</li>
@@ -808,7 +808,7 @@ Paulo Fagandini
 <div class="callout-content">
 <p>Suppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.</p>
 <ol type="1">
-<li class="fragment">If you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.</li>
+<li class="fragment">If you live in the area, you and everyone that lives around your factory will suffer (pay the costs) of your pollution.</li>
 <li class="fragment">Given the cost is spread among many agents, you will <em>over</em>pollute, as well as any other factory in the area.</li>
 <li class="fragment">Overall there will be a larger pollution level than the optimal for the local population.</li>
 </ol>
@@ -818,6 +818,7 @@ Paulo Fagandini
 </section>
 <section id="the-tragedy-of-the-commons-4" class="slide level2">
 <h2>The tragedy of the Commons</h2>
+<div style="font-size: 70%;">
 <p>Let’s introduce a model to study this problem:</p>
 <ol type="1">
 <li class="fragment">Assume there are only two periods <span class="math inline">\(t=0,1\)</span>.</li>
@@ -825,20 +826,18 @@ Paulo Fagandini
 <li class="fragment">Common property resource of size <span class="math inline">\(y^0&gt;0\)</span>.</li>
 <li class="fragment"><span class="math inline">\(y^1=y^0-\sum_{i\in\{1,2\}} c_i^0\)</span>.</li>
 <li class="fragment">If they try to consume more than <span class="math inline">\(y^t\)</span>, in a single period, then each gets <span class="math inline">\(\frac{y^t}{2}\)</span>, and <span class="math inline">\(y^{t+1}=0\)</span>.</li>
-<li class="fragment">Agents drive utility <span class="math inline">\(u(c)\)</span> from consuming, with <span class="math inline">\(u'(c)&gt;0\)</span> and <span class="math inline">\(u''(c)&lt;0\)</span>, for example <span class="math inline">\(u(c)=\ln(c)\)</span>.</li>
+<li class="fragment">Agents get utility <span class="math inline">\(u(c)\)</span> from consuming, with <span class="math inline">\(u'(c)&gt;0\)</span> and <span class="math inline">\(u''(c)&lt;0\)</span>, for example <span class="math inline">\(u(c)=\ln(c)\)</span>. </li>
 </ol>
-</section>
 <section id="the-tragedy-of-the-commons-5" class="slide level2">
 <h2>The tragedy of the Commons</h2>
-<p>To solve this, we will use a technique that we will revisit in the future with more detailed, which is known <strong>Backward Induction</strong>. This means we will solve the problem starting from the end:</p>
+<div style="font-size: 70%;">
+<p>To solve this, we will use a technique that we will revisit in the future with more detail, which is known <strong>Backward Induction</strong>. This means we will solve the problem starting from the end:</p>
 <ol type="1">
 <li class="fragment">If there is no <span class="math inline">\(t=2\)</span>, then consumers will try to consume as much as they can in <span class="math inline">\(t=1\)</span>, and therefore <span class="math inline">\(c_1=c_2=\frac{y^1}{2}\)</span>.</li>
 <li class="fragment">Note that <span class="math inline">\(y^1=y^0-c_1^0-c_2^0\)</span>, and therefore <span class="math inline">\(c_i=\frac{y^0-c_1^0-c_2^0}{2}\)</span> with <span class="math inline">\(i=1,2\)</span>.</li>
 </ol>
-<div class="fragment">
-<p>Note that <span class="math inline">\(c_1^1\)</span> and <span class="math inline">\(c_2^2\)</span> are equal and depend on <span class="math inline">\(c_1^0\)</span> and <span class="math inline">\(c_2^0\)</span>, and actually these are the only relevant variables. Let’s drop the supra-index for time.</p>
-</div>
-</section>
+<p>. . .</p>
+<p>Note that <span class="math inline">\(c_1^1\)</span> and <span class="math inline">\(c_2^2\)</span> are equal and depend on <span class="math inline">\(c_1^0\)</span> and <span class="math inline">\(c_2^0\)</span>, and actually these are the only relevant variables. Let’s drop the supra-index for time. </p>
 <section id="the-tragedy-of-the-commons-6" class="slide level2">
 <h2>The tragedy of the Commons</h2>
 <p>Let’s solve for consumer 1 (the problem is symmetric). Let’s take <span class="math inline">\(\bar{c}_2\)</span> as “some” value for <span class="math inline">\(c_2\)</span>.</p>
@@ -901,8 +900,7 @@ Paulo Fagandini
 <h2>The tragedy of the Commons</h2>
 <p>Graphical representation:</p>
 
-<img data-src="02_game_theory_strategic_form_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section></section>
-<section>
+<img data-src="02_game_theory_strategic_form_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="mixed-strategies-ch8" class="title-slide slide level1 center">
 <h1>Mixed Strategies (CH8)</h1>
 
@@ -924,7 +922,7 @@ Paulo Fagandini
 </section>
 <section id="mixed-strategies-2" class="slide level2">
 <h2>Mixed Strategies</h2>
-<p>Really you won an infinity of new possiblities, as any randomization would yield a new strategies. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions.</p>
+<p>Really you won an infinity of new possiblities, as any randomization would yield a new strategy. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions.</p>
 </section>
 <section id="mixed-strategies-3" class="slide level2">
 <h2>Mixed Strategies</h2>
@@ -965,6 +963,7 @@ Paulo Fagandini
 </section>
 <section id="mixed-strategies-5" class="slide level2">
 <h2>Mixed Strategies</h2>
+<div style="font-size: 70%;">
 <p>We use the expected payoffs. Consider the following game:</p>
 <table class="caption-top">
 <thead>
@@ -992,9 +991,10 @@ Paulo Fagandini
 <li class="fragment">For Player 1: <span class="math inline">\(E[\pi_1] = \frac{2}{3} 3 + \frac{1}{3} 0 = 2\)</span></li>
 <li class="fragment">For Player 2: <span class="math inline">\(E[\pi_2] = \frac{2}{3} 1 + \frac{1}{3} 0 = \frac{2}{3}\)</span></li>
 </ol>
-</section>
+<p></p>
 <section id="mixed-strategies-6" class="slide level2">
 <h2>Mixed Strategies</h2>
+<div style="font-size: 70%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1021,7 +1021,7 @@ Paulo Fagandini
 <li class="fragment">For Player 1: <span class="math inline">\(E[\pi_1]= \frac{2}{3}\frac{1}{2}3 + \frac{2}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}1 = \frac{7}{6}\)</span></li>
 <li class="fragment">For Player 2: <span class="math inline">\(E[\pi_2]= \frac{2}{3}\frac{1}{2}1 + \frac{2}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}3 = \frac{5}{6}\)</span></li>
 </ol>
-</section>
+<p></p>
 <section id="mixed-strategies-7" class="slide level2">
 <h2>Mixed Strategies</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1227,8 +1227,7 @@ Paulo Fagandini
 </div>
 </div>
 </div>
-</section></section>
-<section>
+</section>
 <section id="bibliography" class="title-slide slide level1 center">
 <h1>Bibliography</h1>
 
@@ -1240,6 +1239,16 @@ Paulo Fagandini
 
 
 
+</section>
+
+</div>
+</section>
+</div>
+</section>
+
+</div>
+</section>
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

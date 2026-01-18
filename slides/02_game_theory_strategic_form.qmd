@@ -482,7 +482,7 @@ This indeed has the same core as the classical externality problem, this is what
 
 Suppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.
 
-1. If you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.
+1. If you live in the area, you and everyone that lives around your factory will suffer (pay the costs) of your pollution.
 2. Given the cost is spread among many agents, you will *over*pollute, as well as any other factory in the area.
 3. Overall there will be a larger pollution level than the optimal for the local population.
 
@@ -490,6 +490,7 @@ Suppose you own a factory and you dump the fumes of your furnaces directly to th
 
 ## The tragedy of the Commons
 
+<div style="font-size: 70%;">
 Let's introduce a model to study this problem:
 
 1. Assume there are only two periods $t=0,1$.
@@ -497,11 +498,13 @@ Let's introduce a model to study this problem:
 3. Common property resource of size $y^0>0$.
 4. $y^1=y^0-\sum_{i\in\{1,2\}} c_i^0$.
 5. If they try to consume more than $y^t$, in a single period, then each gets $\frac{y^t}{2}$, and $y^{t+1}=0$.
-6. Agents drive utility $u(c)$ from consuming, with $u'(c)>0$ and $u''(c)<0$, for example $u(c)=\ln(c)$.
+6. Agents get utility $u(c)$ from consuming, with $u'(c)>0$ and $u''(c)<0$, for example $u(c)=\ln(c)$.
+</dev>
 
 ## The tragedy of the Commons
 
-To solve this, we will use a technique that we will revisit in the future with more detailed, which is known **Backward Induction**. This means we will solve the problem starting from the end:
+<div style="font-size: 70%;">
+To solve this, we will use a technique that we will revisit in the future with more detail, which is known **Backward Induction**. This means we will solve the problem starting from the end:
 
 1. If there is no $t=2$, then consumers will try to consume as much as they can in $t=1$, and therefore $c_1=c_2=\frac{y^1}{2}$.
 2. Note that $y^1=y^0-c_1^0-c_2^0$, and therefore $c_i=\frac{y^0-c_1^0-c_2^0}{2}$ with $i=1,2$.
@@ -509,6 +512,7 @@ To solve this, we will use a technique that we will revisit in the future with m
 . . .
 
 Note that $c_1^1$ and $c_2^2$ are equal and depend on $c_1^0$ and $c_2^0$, and actually these are the only relevant variables. Let's drop the supra-index for time.
+</dev>
 
 ## The tragedy of the Commons
 
@@ -613,7 +617,7 @@ Now you see, instead of having only three options, you have 4!
 
 ## Mixed Strategies 
 
-Really you won an infinity of new possiblities, as any randomization would yield a new strategies. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions.
+Really you won an infinity of new possiblities, as any randomization would yield a new strategy. These are known as mixed strategies, when your strategy is to decide a probability distribution over the available actions.
 
 ## Mixed Strategies 
 
@@ -645,6 +649,8 @@ A reasonable question is, and then, how do we evaluate the payoffs?
 
 ## Mixed Strategies 
 
+<div style="font-size: 70%;">
+
 We use the expected payoffs. Consider the following game:
 
 | P1 - P2 | Left | Right |
@@ -657,7 +663,11 @@ What Happens if $P1$ randomizes $\frac{2}{3}$ for Up, and $P2$ plays for sure $L
 1. For Player 1: $E[\pi_1] = \frac{2}{3} 3 + \frac{1}{3} 0 = 2$
 2. For Player 2: $E[\pi_2] = \frac{2}{3} 1 + \frac{1}{3} 0 = \frac{2}{3}$
 
+</dev>
+
 ## Mixed Strategies 
+
+<div style="font-size: 70%;">
 
 | P1 - P2 | Left | Right |
 | --: | :--: | :--: |
@@ -668,6 +678,8 @@ What if both players randomize? Suppose $P1$ repeats her strategy, and $P2$ now 
 
 1. For Player 1: $E[\pi_1]= \frac{2}{3}\frac{1}{2}3 + \frac{2}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}1 = \frac{7}{6}$
 2. For Player 2: $E[\pi_2]= \frac{2}{3}\frac{1}{2}1 + \frac{2}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}0 + \frac{1}{3}\frac{1}{2}3 = \frac{5}{6}$
+
+</dev>
 
 ## Mixed Strategies 
 
