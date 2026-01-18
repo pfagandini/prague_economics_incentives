@@ -865,7 +865,7 @@
     "href": "slides/02_game_theory_strategic_form.html#core-bibliography",
     "title": "Fundamentals of  Game Theory I",
     "section": "Core Bibliography",
-    "text": "Core Bibliography\nThe core of the contents of this chapter takes as reference the book\n:book: Strategies and Games: Theory and Practice by Prajit K. Dutta. 2001 MIT Press."
+    "text": "Core Bibliography\nThe core of the contents of this chapter takes as reference the book\n📖 Strategies and Games: Theory and Practice by Prajit K. Dutta. 2001 MIT Press."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-1",
@@ -879,14 +879,14 @@
     "href": "slides/02_game_theory_strategic_form.html#strategic-form-games-2",
     "title": "Fundamentals of  Game Theory I",
     "section": "Strategic Form Games",
-    "text": "Strategic Form Games\nSuppose \\(S_1=\\{U,D\\}\\) and \\(S_2=\\{L,R\\}\\), the payoff matrix would be:\n\n\n\n1\\(\\setminus\\) 2\n\\(L\\)\n\\(R\\)\n\n\n\n\n\\(U\\)\n\\((\\pi_1(U,L),\\pi_2(U,L))\\)\n\\((\\pi_1(U,R),\\pi_2(U,R))\\)\n\n\n\\(D\\)\n\\((\\pi_1(D,L),\\pi_2(D,L))\\)\n\\((\\pi_1(D,R),\\pi_2(D,R))\\)\n\n\n\n. . .\n\n\n\n\n\n\nImportant\n\n\n\nThe payoff for each player, depends on the strategy profile, that in each position on the table, is the same."
+    "text": "Strategic Form Games\nSuppose \\(S_1=\\{U,D\\}\\) and \\(S_2=\\{L,R\\}\\), the payoff matrix would be:\n\n\n\n1\\(\\setminus\\) 2\n\\(L\\)\n\\(R\\)\n\n\n\n\n\\(U\\)\n\\((\\pi_1(U,L),\\pi_2(U,L))\\)\n\\((\\pi_1(U,R),\\pi_2(U,R))\\)\n\n\n\\(D\\)\n\\((\\pi_1(D,L),\\pi_2(D,L))\\)\n\\((\\pi_1(D,R),\\pi_2(D,R))\\)\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nThe payoff for each player, depends on the strategy profile, that in each position on the table, is the same."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-3",
     "href": "slides/02_game_theory_strategic_form.html#strategic-form-games-3",
     "title": "Fundamentals of  Game Theory I",
     "section": "Strategic Form Games",
-    "text": "Strategic Form Games\nWhat if we have more than 2 players, and strategies?\n. . .\n\nIf we have \\(N\\in\\mathbb{N}\\) players, we will index them: 1,2, \\(\\dots\\), \\(N\\).\nTheir strategy space is \\(S_i\\).\nA strategy profile is an ordered tuple \\((s_1,s_2,\\dots,s_N)\\in S_1\\times S_2\\times\\dots S_N\\).\n\\(\\pi_i(s_1,\\dots,s_N)\\) represents the payoff for player \\(i\\), given the strategy profile \\((s_1,s_2,\\dots,s_N)\\).\n\n. . .\nWe can do better"
+    "text": "Strategic Form Games\nWhat if we have more than 2 players, and strategies?\n\n\nIf we have \\(N\\in\\mathbb{N}\\) players, we will index them: 1,2, \\(\\dots\\), \\(N\\).\nTheir strategy space is \\(S_i\\).\nA strategy profile is an ordered tuple \\((s_1,s_2,\\dots,s_N)\\in S_1\\times S_2\\times\\dots S_N\\).\n\\(\\pi_i(s_1,\\dots,s_N)\\) represents the payoff for player \\(i\\), given the strategy profile \\((s_1,s_2,\\dots,s_N)\\).\n\n\n\nWe can do better"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#strategic-form-games-4",
@@ -963,7 +963,7 @@
     "href": "slides/02_game_theory_strategic_form.html#equivalence-in-the-extensive-form-4",
     "title": "Fundamentals of  Game Theory I",
     "section": "Equivalence in the Extensive form",
-    "text": "Equivalence in the Extensive form\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$P1$}]{}\n    child{\n      node(1)[solid node, label=above left:{$P2$}]{}\n      child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[left]{$R$}}\n      child{node[hollow node,label=below:{$(-1,1)$}]{} edge from parent node[right]{$P$}}\n      child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[right]{$S$}}\n      edge from parent node[left,xshift=-3]{$R$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$P2$}]{}\n      child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[left]{$R$}}\n      child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[right]{$P$}}\n      child{node[hollow node,label=below:{$(-1,1)$}]{} edge from parent node[right]{$S$}}\n      edge from parent node[right,xshift=3]{$P$}\n    }\n    child{\n      node(3)[solid node, label=above right:{$P2$}]{}\n      child{node[hollow node,label=below:{$(-1,1)$}]{} edge from parent node[left]{$R$}}\n      child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[right]{$P$}}\n      child{node[hollow node,label=below:{$(0,0)$}]{} edge from parent node[right]{$S$}}\n      edge from parent node[right,xshift=3]{$S$}\n    };\n\n   \\draw[dashed,rounded corners=10]($(1) + (-.2,.25)$)rectangle($(3) +(.2,-.25)$);\n   \\node at ($(1)!.5!(2)$) {$P2$};\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n\n\nThe dashed set represents an information set. This means that all these nodes carry the same information, or that at this point \\(P2\\) does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game."
+    "text": "Equivalence in the Extensive form\n\n\nThe dashed set represents an information set. This means that all these nodes carry the same information, or that at this point \\(P2\\) does not know exactly in which node she is, and must play accordingly. This is equivalent to a simoultaneous game."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominant-strategy-solution",
@@ -977,14 +977,14 @@
     "href": "slides/02_game_theory_strategic_form.html#dominant-strategy-solution-1",
     "title": "Fundamentals of  Game Theory I",
     "section": "Dominant Strategy Solution",
-    "text": "Dominant Strategy Solution\n\n\n\n\n\n\nNoteStrongly Dominant Strategy\n\n\n\nA strategy \\(s_i'\\) is said to be strongly dominant if \\[\\pi_i(s_i',s_{-i}) &gt; \\pi_i(s_i,s_{-i})\\quad \\forall s_i\\in S_i,\\ \\forall s_{-i}\\in\\prod_{j\\neq i} S_j\\]"
+    "text": "Dominant Strategy Solution\n\n\n\n\n\n\nStrongly Dominant Strategy\n\n\nA strategy \\(s_i'\\) is said to be strongly dominant if \\[\\pi_i(s_i',s_{-i}) &gt; \\pi_i(s_i,s_{-i})\\quad \\forall s_i\\in S_i,\\ \\forall s_{-i}\\in\\prod_{j\\neq i} S_j\\]"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominant-strategy-solution-2",
     "href": "slides/02_game_theory_strategic_form.html#dominant-strategy-solution-2",
     "title": "Fundamentals of  Game Theory I",
     "section": "Dominant Strategy Solution",
-    "text": "Dominant Strategy Solution\n\n\n\n\n\n\nNoteWeakly Dominant Strategy\n\n\n\nA strategy \\(s_i'\\) is said to be weakly dominant if \\[\\pi_i(s_i',s_{-i})\\geq \\pi_i(s_i,s_{-i})\\quad \\forall s_i\\in S_i,\\ \\forall s_{-i}\\in\\prod_{j\\neq i} S_j\\] and \\[\\exists \\hat{s}_{-i}\\in\\prod_{j\\neq i} S_j\\ s.t.\\ \\forall s_i \\in S_i\\setminus\\{s_i'\\},\\ \\pi_i(s_i',\\hat{s}_{-i})&gt;\\pi_i(s_i,\\hat{s}_{-i})\\]"
+    "text": "Dominant Strategy Solution\n\n\n\n\n\n\nWeakly Dominant Strategy\n\n\nA strategy \\(s_i'\\) is said to be weakly dominant if \\[\\pi_i(s_i',s_{-i})\\geq \\pi_i(s_i,s_{-i})\\quad \\forall s_i\\in S_i,\\ \\forall s_{-i}\\in\\prod_{j\\neq i} S_j\\] and \\[\\exists \\hat{s}_{-i}\\in\\prod_{j\\neq i} S_j\\ s.t.\\ \\forall s_i \\in S_i\\setminus\\{s_i'\\},\\ \\pi_i(s_i',\\hat{s}_{-i})&gt;\\pi_i(s_i,\\hat{s}_{-i})\\]"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#application-second-price-sealed-bid-auctions",
@@ -1012,7 +1012,7 @@
     "href": "slides/02_game_theory_strategic_form.html#application-second-price-auctions-2",
     "title": "Fundamentals of  Game Theory I",
     "section": "Application: Second Price Auctions",
-    "text": "Application: Second Price Auctions\nThe question is then, what is the value of \\(b_i\\) that maximizes the expected payoff? i.e. what is \\(b_i^*\\)?\n\nSuppose we chose \\(b_i^*&gt;v_i\\).\nSuppose we choose \\(b_i^*&lt;v_i\\).\nWhat about then if we choose \\(b_i^*=v_i\\)?\n\n. . .\nThis is the solution proposed by William Vickrey, and these types of auctions are known as Vickrey Auctions."
+    "text": "Application: Second Price Auctions\nThe question is then, what is the value of \\(b_i\\) that maximizes the expected payoff? i.e. what is \\(b_i^*\\)?\n\nSuppose we chose \\(b_i^*&gt;v_i\\).\nSuppose we choose \\(b_i^*&lt;v_i\\).\nWhat about then if we choose \\(b_i^*=v_i\\)?\n\n\nThis is the solution proposed by William Vickrey, and these types of auctions are known as Vickrey Auctions."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#application-second-price-auctions-3",
@@ -1026,21 +1026,21 @@
     "href": "slides/02_game_theory_strategic_form.html#application-second-price-auctions-4",
     "title": "Fundamentals of  Game Theory I",
     "section": "Application: Second Price Auctions",
-    "text": "Application: Second Price Auctions\nWhy now?\n. . .\nThis auction presents an example of a dominant strategy, we saw that \\(b_i=v_i\\) always provides a higher (or equal) than any other bid, and therefore it is a weakly dominant strategy, whatever the other bidders are doing."
+    "text": "Application: Second Price Auctions\nWhy now?\n\nThis auction presents an example of a dominant strategy, we saw that \\(b_i=v_i\\) always provides a higher (or equal) than any other bid, and therefore it is a weakly dominant strategy, whatever the other bidders are doing."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominance-solvability",
     "href": "slides/02_game_theory_strategic_form.html#dominance-solvability",
     "title": "Fundamentals of  Game Theory I",
     "section": "Dominance Solvability",
-    "text": "Dominance Solvability\n\n\n\n\n\n\nNoteCorollary\n\n\n\nIf a strategy is dominated, it cannot be optimal.\n\n\n\n\n\n\n\n\nWarningUndominated vs Dominant strategy\n\n\n\nOf course, looking at the definition, a dominant strategy is optimal, however, not every game has a dominant strategy for every player!"
+    "text": "Dominance Solvability\n\n\n\n\n\n\nCorollary\n\n\nIf a strategy is dominated, it cannot be optimal.\n\n\n\n\n\n\n\n\n\nUndominated vs Dominant strategy\n\n\nOf course, looking at the definition, a dominant strategy is optimal, however, not every game has a dominant strategy for every player!"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominance-solvability-1",
     "href": "slides/02_game_theory_strategic_form.html#dominance-solvability-1",
     "title": "Fundamentals of  Game Theory I",
     "section": "Dominance Solvability",
-    "text": "Dominance Solvability\nHow can we solve this problem?\n\n\n\n\n\n\nNoteIterated Elimination of Dominated Strategies\n\n\n\nA first approach to start looking for a solution, could be to reduce a game by removing dominated strategies, i.e. all the strategies for which there is always a better alternative whatever the other players chose to do."
+    "text": "Dominance Solvability\nHow can we solve this problem?\n\n\n\n\n\n\nIterated Elimination of Dominated Strategies\n\n\nA first approach to start looking for a solution, could be to reduce a game by removing dominated strategies, i.e. all the strategies for which there is always a better alternative whatever the other players chose to do."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#dominance-solvability-2",
@@ -1096,14 +1096,14 @@
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-2",
     "title": "Fundamentals of  Game Theory I",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\n\n\n\n\n\n\nNoteBest Response\n\n\n\nIf given a fixed strategy profile \\(\\bar{s}_{-i}\\in \\prod_{j\\neq i}S_j\\) from the other players, \\(s_i'\\in S_i\\) is the best response of player \\(i\\) if \\[\\pi_i(s_i',\\bar{s}_{-i})\\geq \\pi_i(s_i,\\bar{s}_{-i})\\] for any \\(s_i\\in S_i\\).\n\n\n. . .\nIs this enough to have an equilibrium?"
+    "text": "Nash Equilibrium\n\n\n\n\n\n\nBest Response\n\n\nIf given a fixed strategy profile \\(\\bar{s}_{-i}\\in \\prod_{j\\neq i}S_j\\) from the other players, \\(s_i'\\in S_i\\) is the best response of player \\(i\\) if \\[\\pi_i(s_i',\\bar{s}_{-i})\\geq \\pi_i(s_i,\\bar{s}_{-i})\\] for any \\(s_i\\in S_i\\).\n\n\n\n\nIs this enough to have an equilibrium?"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-3",
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-3",
     "title": "Fundamentals of  Game Theory I",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\nNo! Every single player needs to be best responding.\n\n\n\n\n\n\nNoteNash Equilibrium\n\n\n\nThe strategy profile \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\in S_1\\times S_2 \\times \\dots \\times S_N\\) is a Nash Equilibrium if\n\\[\\pi_i(s_i^*,s_{-i}^*)\\geq \\pi_i(s_i,s_{-i}^*),\\quad \\forall s_i\\in S_i,\\ \\forall i\\in \\{1,\\dots,N\\}\\]\n\n\nEvery \\(s_k^*\\) is itself a best response to \\(s_{-k}^*\\), and then, nobody has incentives to unilaterally change their decision."
+    "text": "Nash Equilibrium\nNo! Every single player needs to be best responding.\n\n\n\n\n\n\nNash Equilibrium\n\n\nThe strategy profile \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\in S_1\\times S_2 \\times \\dots \\times S_N\\) is a Nash Equilibrium if\n\\[\\pi_i(s_i^*,s_{-i}^*)\\geq \\pi_i(s_i,s_{-i}^*),\\quad \\forall s_i\\in S_i,\\ \\forall i\\in \\{1,\\dots,N\\}\\]\n\n\n\nEvery \\(s_k^*\\) is itself a best response to \\(s_{-k}^*\\), and then, nobody has incentives to unilaterally change their decision."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-4",
@@ -1117,14 +1117,14 @@
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-5",
     "title": "Fundamentals of  Game Theory I",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\nLet’s check the proposed solution we found using IEDS for the game:\n\n\n\n\n\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(1,1)\n(0,1)\n\n\nMiddle\n(0,2)\n(1,0)\n\n\nDown\n(0,-1)\n(0,0)\n\n\n\n. . .\n\\((Up,Left)\\) is indeed a Nash Equilibrium, as every player is best responding, or no player can unilaterally profit from deviating from the NE."
+    "text": "Nash Equilibrium\nLet’s check the proposed solution we found using IEDS for the game:\n\n\n\n\n\n\n\n\nP1 - P2\nLeft\nRight\n\n\n\n\nUp\n(1,1)\n(0,1)\n\n\nMiddle\n(0,2)\n(1,0)\n\n\nDown\n(0,-1)\n(0,0)\n\n\n\n\n\\((Up,Left)\\) is indeed a Nash Equilibrium, as every player is best responding, or no player can unilaterally profit from deviating from the NE."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-6",
     "href": "slides/02_game_theory_strategic_form.html#nash-equilibrium-6",
     "title": "Fundamentals of  Game Theory I",
     "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\n\n\n\n\n\n\nImportantProposition\n\n\n\nIf in a game there is an outcome to IEDS. Then this outcome is a Nash Equilibrium. However, a Nash Equilibrium not always can be reached using IEDS.\n\n\nWe just saw an example of a IEDS where it was a NE. Let’s check an example where we have a NE that is not IEDS reachable."
+    "text": "Nash Equilibrium\n\n\n\n\n\n\nProposition\n\n\nIf in a game there is an outcome to IEDS. Then this outcome is a Nash Equilibrium. However, a Nash Equilibrium not always can be reached using IEDS.\n\n\n\nWe just saw an example of a IEDS where it was a NE. Let’s check an example where we have a NE that is not IEDS reachable."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#nash-equilibrium-7",
@@ -1173,14 +1173,14 @@
     "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-2",
     "title": "Fundamentals of  Game Theory I",
     "section": "The tragedy of the Commons",
-    "text": "The tragedy of the Commons\nThey have two core features:\n\nAccess to (almost) everybody\nResource depletability (finite)\n\n. . .\nThis indeed has the same core as the classical externality problem, this is what we will study."
+    "text": "The tragedy of the Commons\nThey have two core features:\n\nAccess to (almost) everybody\nResource depletability (finite)\n\n\nThis indeed has the same core as the classical externality problem, this is what we will study."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-3",
     "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-3",
     "title": "Fundamentals of  Game Theory I",
     "section": "The tragedy of the Commons",
-    "text": "The tragedy of the Commons\n\n\n\n\n\n\nTipIntuition\n\n\n\nSuppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.\n\nIf you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.\nGiven the cost is spread among many agents, you will overpollute, as well as any other factory in the area.\nOverall there will be a larger pollution level than the optimal for the local population."
+    "text": "The tragedy of the Commons\n\n\n\n\n\n\nIntuition\n\n\nSuppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.\n\nIf you live in the area, you and eveyrone that lives around your factory will suffer (pay the costs) of your pollution.\nGiven the cost is spread among many agents, you will overpollute, as well as any other factory in the area.\nOverall there will be a larger pollution level than the optimal for the local population."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#intuition",
@@ -1201,7 +1201,7 @@
     "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-5",
     "title": "Fundamentals of  Game Theory I",
     "section": "The tragedy of the Commons",
-    "text": "The tragedy of the Commons\nTo solve this, we will use a technique that we will revisit in the future with more detailed, which is known Backward Induction. This means we will solve the problem starting from the end:\n\nIf there is no \\(t=2\\), then consumers will try to consume as much as they can in \\(t=1\\), and therefore \\(c_1=c_2=\\frac{y^1}{2}\\).\nNote that \\(y^1=y^0-c_1^0-c_2^0\\), and therefore \\(c_i=\\frac{y^0-c_1^0-c_2^0}{2}\\) with \\(i=1,2\\).\n\n. . .\nNote that \\(c_1^1\\) and \\(c_2^2\\) are equal and depend on \\(c_1^0\\) and \\(c_2^0\\), and actually these are the only relevant variables. Let’s drop the supra-index for time."
+    "text": "The tragedy of the Commons\nTo solve this, we will use a technique that we will revisit in the future with more detailed, which is known Backward Induction. This means we will solve the problem starting from the end:\n\nIf there is no \\(t=2\\), then consumers will try to consume as much as they can in \\(t=1\\), and therefore \\(c_1=c_2=\\frac{y^1}{2}\\).\nNote that \\(y^1=y^0-c_1^0-c_2^0\\), and therefore \\(c_i=\\frac{y^0-c_1^0-c_2^0}{2}\\) with \\(i=1,2\\).\n\n\nNote that \\(c_1^1\\) and \\(c_2^2\\) are equal and depend on \\(c_1^0\\) and \\(c_2^0\\), and actually these are the only relevant variables. Let’s drop the supra-index for time."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-6",
@@ -1236,7 +1236,7 @@
     "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-10",
     "title": "Fundamentals of  Game Theory I",
     "section": "The tragedy of the Commons",
-    "text": "The tragedy of the Commons\nIs this socially optimal?\n\n\n\n\n\n\nNoteSocial Optimum\n\n\n\nA pattern of consumption, \\((\\hat{c}_1,\\hat{c}_2)\\) is socially optimal if it maximizes the sum of the two player’s utility, that is, if it solves the following problem:\n\\[\\max_{c_1,c_2} \\ln (c_1) + \\ln (c_2) + 2 \\ln \\left(\\frac{y-(c_1+c_2)}{2}\\right)\\]"
+    "text": "The tragedy of the Commons\nIs this socially optimal?\n\n\n\n\n\n\nSocial Optimum\n\n\nA pattern of consumption, \\((\\hat{c}_1,\\hat{c}_2)\\) is socially optimal if it maximizes the sum of the two player’s utility, that is, if it solves the following problem:\n\\[\\max_{c_1,c_2} \\ln (c_1) + \\ln (c_2) + 2 \\ln \\left(\\frac{y-(c_1+c_2)}{2}\\right)\\]"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-11",
@@ -1257,7 +1257,7 @@
     "href": "slides/02_game_theory_strategic_form.html#the-tragedy-of-the-commons-13",
     "title": "Fundamentals of  Game Theory I",
     "section": "The tragedy of the Commons",
-    "text": "The tragedy of the Commons\nGraphical representation:\n\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n\n  \\draw[&lt;-&gt;] (0,4)node[left]{$c_2$} -- (0,0) -- (4,0)node[below]{$c_1$};\n\n  \\draw[red] (0,3)node[left]{$y$} -- (0.5,2)node[above right]{$c_1(c_2)$} -- (1.5,0)node[below]{$\\frac{y}{2}$};\n  \\draw[blue] (0,1.5)node[left]{$\\frac{y}{2}$} -- (2,0.5)node[above right]{$c_2(c_1)$} -- (3,0)node[below]{$y$};\n\n  \\node at ({3/3}, {3/3}) [circle, fill=black, inner sep=1.5pt, label=above right:{N.E.}] {};\n  \\draw[dashed] (0,1)node[left]{$\\frac{y}{3}$} -- (1,1) -- (1,0)node[below]{$\\frac{y}{3}$};\n\n\\end{tikzpicture}"
+    "text": "The tragedy of the Commons\nGraphical representation:"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-ch8-1",
@@ -1341,14 +1341,14 @@
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\nConsider the game of Rock-Paper-Scissors. You have three possible strategies: {:fist:, :raised_hand:, :v:}. So far we have considered that a strategy for you, would be to pick either of those options. You would think à priori that you have only 3 options, however, there are other options."
+    "text": "Mixed Strategies\nConsider the game of Rock-Paper-Scissors. You have three possible strategies: {✊, ✋, ✌️}. So far we have considered that a strategy for you, would be to pick either of those options. You would think à priori that you have only 3 options, however, there are other options."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-1",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-1",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\nWhat about if you would randomize your choice? For example, you could say that you will not play :raised_hand: but you could play :fist: or :v:. To decide which will be your choice, you will toss a coin :coin:.\n\nIf you see head, you will chose :fist:, and\nif you see tails you will choose :v:.\n\n. . .\nNow you see, instead of having only three options, you have 4!"
+    "text": "Mixed Strategies\nWhat about if you would randomize your choice? For example, you could say that you will not play ✋ but you could play ✊ or ✌️. To decide which will be your choice, you will toss a coin 🪙.\n\nIf you see head, you will chose ✊, and\nif you see tails you will choose ✌️.\n\n\nNow you see, instead of having only three options, you have 4!"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-2",
@@ -1362,14 +1362,14 @@
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-3",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\n\n\n\n\n\n\nNoteDefinition\n\n\n\nA strategy \\(s^j\\) is called a pure strategy, if, it contains a specific, concrete, and unambiguous, action for every decision node the agent might encounter along the game.\n\n\n\n\n\n\n\n\nNoteDefinition\n\n\n\nSuppose a player has \\(M\\) pure strategies \\(s^1, s^2,\\dots, s^M\\). A mixed strategy for this player is a probability distribution over his pure strategies; that is, it is a probability vector \\((p^1, p^2,\\dots, p^M)\\), with \\(p^k\\geq 0\\), \\(k=1,\\dots,M\\), and \\(\\sum_{k=1}^M p^k=1\\)."
+    "text": "Mixed Strategies\n\n\n\n\n\n\nDefinition\n\n\nA strategy \\(s^j\\) is called a pure strategy, if, it contains a specific, concrete, and unambiguous, action for every decision node the agent might encounter along the game.\n\n\n\n\n\n\n\n\n\nDefinition\n\n\nSuppose a player has \\(M\\) pure strategies \\(s^1, s^2,\\dots, s^M\\). A mixed strategy for this player is a probability distribution over his pure strategies; that is, it is a probability vector \\((p^1, p^2,\\dots, p^M)\\), with \\(p^k\\geq 0\\), \\(k=1,\\dots,M\\), and \\(\\sum_{k=1}^M p^k=1\\)."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-4",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-4",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\nYou could say that any pure strategy is a mixed strategy that concentrates the probability over a single strategy.\nThe pure strategy :v: is the same as the mixed strategy \\(\\{0,0,1\\}\\) over the pure strategies (:fist:,:raised_hand:,:v:).\n. . .\nA reasonable question is, and then, how do we evaluate the payoffs?"
+    "text": "Mixed Strategies\nYou could say that any pure strategy is a mixed strategy that concentrates the probability over a single strategy.\nThe pure strategy ✌️ is the same as the mixed strategy \\(\\{0,0,1\\}\\) over the pure strategies (✊,✋,✌️).\n\nA reasonable question is, and then, how do we evaluate the payoffs?"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-5",
@@ -1390,35 +1390,35 @@
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-7",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\n\n\n\n\n\n\nNoteDefinition\n\n\n\nSuppose that player \\(i\\) plays a mixed strategy \\((p^1,p^2,\\dots,p^M)\\). Suppose that the other players play the pure strategy \\(s_{-i}^\\#\\). Then the expected payoff to player \\(i\\) is equal to \\[E[\\pi_i]= \\sum_{k=1}^M p^k \\pi_i(s^k,s_{-i}^\\#)\\]"
+    "text": "Mixed Strategies\n\n\n\n\n\n\nDefinition\n\n\nSuppose that player \\(i\\) plays a mixed strategy \\((p^1,p^2,\\dots,p^M)\\). Suppose that the other players play the pure strategy \\(s_{-i}^\\#\\). Then the expected payoff to player \\(i\\) is equal to \\[E[\\pi_i]= \\sum_{k=1}^M p^k \\pi_i(s^k,s_{-i}^\\#)\\]"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-8",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-8",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\n\n\n\n\n\n\nImportantProposition\n\n\n\n\nA mixed strategy \\((p^1,\\dots,p^M)\\) is a best response to \\(s_{-i}^\\#\\) if and only if each of the pure strategies in its support is itself a bset response to \\(s_{-i}^\\#\\).\nIn that case, any mixed strategy over the same support (strategies with positive probability), is a best response as well.\n\n\n\nNote that if this is not the case, then you could drop the worse strategies and the expected payoff would increase!"
+    "text": "Mixed Strategies\n\n\n\n\n\n\nProposition\n\n\n\nA mixed strategy \\((p^1,\\dots,p^M)\\) is a best response to \\(s_{-i}^\\#\\) if and only if each of the pure strategies in its support is itself a bset response to \\(s_{-i}^\\#\\).\nIn that case, any mixed strategy over the same support (strategies with positive probability), is a best response as well.\n\n\n\n\nNote that if this is not the case, then you could drop the worse strategies and the expected payoff would increase!"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-9",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-9",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\n\n\n\n\n\n\nImportantFact\n\n\n\nA mixed strategy can dominate some pure strategies.\n\n\n\n\n\nP1-P2\nL\n\\(M_1\\)\n\\(M_2\\)\nR\n\n\n\n\nU\n(1,0)\n(4,2)\n(2,4)\n(3,1)\n\n\nM\n(2,4)\n(2,0)\n(2,2)\n(2,1)\n\n\nD\n(4,2)\n(1,4)\n(2,0)\n(3,1)\n\n\n\n\nNo dominant strategy in pure strategies\nSuppose \\(P1\\) plays \\(\\left(\\frac{1}{2},0,\\frac{1}{2}\\right)\\)."
+    "text": "Mixed Strategies\n\n\n\n\n\n\nFact\n\n\nA mixed strategy can dominate some pure strategies.\n\n\n\n\n\n\nP1-P2\nL\n\\(M_1\\)\n\\(M_2\\)\nR\n\n\n\n\nU\n(1,0)\n(4,2)\n(2,4)\n(3,1)\n\n\nM\n(2,4)\n(2,0)\n(2,2)\n(2,1)\n\n\nD\n(4,2)\n(1,4)\n(2,0)\n(3,1)\n\n\n\n\nNo dominant strategy in pure strategies\nSuppose \\(P1\\) plays \\(\\left(\\frac{1}{2},0,\\frac{1}{2}\\right)\\)."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-10",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-10",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies",
-    "text": "Mixed Strategies\nExpected payoffs for \\(P1\\) are:\n\\[[2.5, 2.5, 2, 3]\\]\nWith this strategy, \\(P1\\) can ensure an expected payoff of \\(2\\) or more. This mixed strategy weakly dominates the pure strategy \\(M\\).\n. . .\nDoes this change something on a solution in dominant strategy?"
+    "text": "Mixed Strategies\nExpected payoffs for \\(P1\\) are:\n\\[[2.5, 2.5, 2, 3]\\]\nWith this strategy, \\(P1\\) can ensure an expected payoff of \\(2\\) or more. This mixed strategy weakly dominates the pure strategy \\(M\\).\n\nDoes this change something on a solution in dominant strategy?"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies and NE",
-    "text": "Mixed Strategies and NE\nWithout mixed strategies, there might be no NE, recall the game {:fist:, :raised_hand:, :v:}. In every strategy profile, there are incentives for unilateral deviations!\n\n\n\nP1-P2\n:fist:\n:raised_hand:\n:v:\n\n\n\n\n:fist:\n(0,0)\n(-1,1)\n(1,-1)\n\n\n:raised_hand:\n(1,-1)\n(0,0)\n(-1,1)\n\n\n:v:\n(-1,1)\n(1,-1)\n(0,0)"
+    "text": "Mixed Strategies and NE\nWithout mixed strategies, there might be no NE, recall the game {✊, ✋, ✌️}. In every strategy profile, there are incentives for unilateral deviations!\n\n\n\nP1-P2\n✊\n✋\n✌️\n\n\n\n\n✊\n(0,0)\n(-1,1)\n(1,-1)\n\n\n✋\n(1,-1)\n(0,0)\n(-1,1)\n\n\n✌️\n(-1,1)\n(1,-1)\n(0,0)"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-1",
@@ -1439,14 +1439,14 @@
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-3",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies and NE",
-    "text": "Mixed Strategies and NE\nSuppose \\(P2\\) will choose \\(L\\) with probability \\(q\\) and \\(R\\) with probability \\((1-q)\\).\n. . .\nWhat is the expected payoff for \\(P1\\)?\n. . .\n\\[E[\\pi_1|Left]=-1\\times q + 1 \\times (1-q) = 1-2q\\] \\[E[\\pi_1|Right]=1\\times q - 1 \\times (1-q) = -1+2q\\]"
+    "text": "Mixed Strategies and NE\nSuppose \\(P2\\) will choose \\(L\\) with probability \\(q\\) and \\(R\\) with probability \\((1-q)\\).\n\nWhat is the expected payoff for \\(P1\\)?\n\n\n\\[E[\\pi_1|Left]=-1\\times q + 1 \\times (1-q) = 1-2q\\] \\[E[\\pi_1|Right]=1\\times q - 1 \\times (1-q) = -1+2q\\]"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-4",
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-4",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies and NE",
-    "text": "Mixed Strategies and NE\nIf one is larger than the other, then \\(P1\\) would surely choose that one, so in order to randomize as well, both must be equal:\n\\[1-2q=-1+2q\\ \\Rightarrow\\ q=\\frac{1}{2}\\]\n. . .\nNow, if \\(P2\\) is randomizing, it must be true that the expected payoff of each pure strategy is also the same for her:"
+    "text": "Mixed Strategies and NE\nIf one is larger than the other, then \\(P1\\) would surely choose that one, so in order to randomize as well, both must be equal:\n\\[1-2q=-1+2q\\ \\Rightarrow\\ q=\\frac{1}{2}\\]\n\nNow, if \\(P2\\) is randomizing, it must be true that the expected payoff of each pure strategy is also the same for her:"
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-5",
@@ -1460,7 +1460,7 @@
     "href": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-6",
     "title": "Fundamentals of  Game Theory I",
     "section": "Mixed Strategies and NE",
-    "text": "Mixed Strategies and NE\nThe Nash Equilibrium in Mixed Strategies in this case is \\(\\left((L,p=\\frac{1}{2}),(L,q=\\frac{1}{2})\\right)\\).\n\n\n\n\n\n\nNoteTheorem (Nash)\n\n\n\nIn a game where mixed strategies are allowed, then every game with a finite number of players in which each player can choose from finitely many pure strategies has at least one Nash equilibrium, which might be in mixed or pure strategies."
+    "text": "Mixed Strategies and NE\nThe Nash Equilibrium in Mixed Strategies in this case is \\(\\left((L,p=\\frac{1}{2}),(L,q=\\frac{1}{2})\\right)\\).\n\n\n\n\n\n\nTheorem (Nash)\n\n\nIn a game where mixed strategies are allowed, then every game with a finite number of players in which each player can choose from finitely many pure strategies has at least one Nash equilibrium, which might be in mixed or pure strategies."
   },
   {
     "objectID": "slides/02_game_theory_strategic_form.html#mixed-strategies-and-ne-7",
@@ -1481,7 +1481,7 @@
     "href": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Extensive Representation of a Game",
-    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nNoteDefinition\n\n\n\nThe predecessors of a node, say \\(\\alpha\\), are those nodes from which you can go (through a sequence of branches) to \\(\\alpha\\)."
+    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nDefinition\n\n\nThe predecessors of a node, say \\(\\alpha\\), are those nodes from which you can go (through a sequence of branches) to \\(\\alpha\\)."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-2",
@@ -1495,49 +1495,49 @@
     "href": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-3",
     "title": "Fundamentals of  Game Theory II",
     "section": "Extensive Representation of a Game",
-    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nTipDefinition (Refresh)\n\n\n\nA player’s strategy is a complete, conditional plan of action. It is conditional in that it tells a player which branch to follow out of a decision node if the game arrives at that node. It is complete in that it tells him what to choose at every relevant decision node.\n\n\n\n\n\n\n\n\nImportantDefinition\n\n\n\nA mixed strategy, for extensive form games, is defined exactly as it was for strategic form games: a probability distribution over the pure strategies."
+    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nDefinition (Refresh)\n\n\nA player’s strategy is a complete, conditional plan of action. It is conditional in that it tells a player which branch to follow out of a decision node if the game arrives at that node. It is complete in that it tells him what to choose at every relevant decision node.\n\n\n\n\n\n\n\n\n\nDefinition\n\n\nA mixed strategy, for extensive form games, is defined exactly as it was for strategic form games: a probability distribution over the pure strategies."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-4",
     "href": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-4",
     "title": "Fundamentals of  Game Theory II",
     "section": "Extensive Representation of a Game",
-    "text": "Extensive Representation of a Game\nWe know at least 2 sources of uncertainty in the game:\n\nSimoultaneity (not really uncertainty in the traditional sense, but a player plays not knowing what the other did)\nMixed strategies\n\n. . .\nThere is another possible source of uncertainty:\n. . .\nNature"
+    "text": "Extensive Representation of a Game\nWe know at least 2 sources of uncertainty in the game:\n\nSimoultaneity (not really uncertainty in the traditional sense, but a player plays not knowing what the other did)\nMixed strategies\n\n\nThere is another possible source of uncertainty:\n\n\nNature"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-5",
     "href": "slides/03_game_theory_extensive_form.html#extensive-representation-of-a-game-5",
     "title": "Fundamentals of  Game Theory II",
     "section": "Extensive Representation of a Game",
-    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nNoteDefinition\n\n\n\nA chance node is a node that represents several random possibilities.\n\n\nFor example, the payoffs of the players can depend on:\n\nIs it raining or not\nIs there traffic or not\netc\n\n. . .\nSome or all players might be aware of this randomness or not."
+    "text": "Extensive Representation of a Game\n\n\n\n\n\n\nDefinition\n\n\nA chance node is a node that represents several random possibilities.\n\n\n\nFor example, the payoffs of the players can depend on:\n\nIs it raining or not\nIs there traffic or not\netc\n\n\nSome or all players might be aware of this randomness or not."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games",
     "href": "slides/03_game_theory_extensive_form.html#perfect-information-games",
     "title": "Fundamentals of  Game Theory II",
     "section": "Perfect Information Games",
-    "text": "Perfect Information Games\n\n\n\n\n\n\nNoteDefinition\n\n\n\nA perfect information game is a game in which there is no information set (with more than one node).\n\n\n\n\n\n\n\n\nImportantCorollary\n\n\n\nA perfect information game cannot have any simoultaneous moves."
+    "text": "Perfect Information Games\n\n\n\n\n\n\nDefinition\n\n\nA perfect information game is a game in which there is no information set (with more than one node).\n\n\n\n\n\n\n\n\n\nCorollary\n\n\nA perfect information game cannot have any simoultaneous moves."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-1",
     "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Perfect Information Games",
-    "text": "Perfect Information Games\nThe Entry Game\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{node[hollow node,label=below:{$(-2,-1)$}]{} edge from parent node[left]{$Tough$}}\n      child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[right]{$Accommodate$}}\n      edge from parent node[right,xshift=3]{$Enter$}\n    };\n\n\\end{tikzpicture}"
+    "text": "Perfect Information Games\nThe Entry Game"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-2",
     "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-2",
     "title": "Fundamentals of  Game Theory II",
     "section": "Perfect Information Games",
-    "text": "Perfect Information Games\n\n\n\nP1-P2\nTough\nAccommodate\n\n\n\n\nEnter\n(-2,-1)\n(1,2)\n\n\nOut\n(0,5)\n(0,5)\n\n\n\n. . .\nNE: * \\((Enter, Accommodate)\\) * \\((Out, Tough)\\)"
+    "text": "Perfect Information Games\n\n\n\nP1-P2\nTough\nAccommodate\n\n\n\n\nEnter\n(-2,-1)\n(1,2)\n\n\nOut\n(0,5)\n(0,5)\n\n\n\n\nNE: * \\((Enter, Accommodate)\\) * \\((Out, Tough)\\)"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-3",
     "href": "slides/03_game_theory_extensive_form.html#perfect-information-games-3",
     "title": "Fundamentals of  Game Theory II",
     "section": "Perfect Information Games",
-    "text": "Perfect Information Games\nThe Entry Game II\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]\n  \\tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{\n        node(3)[solid node, label=above left:{$Coke$}]{}\n        child{\n          node[hollow node,label=below:{$(-2,-1)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(-3,1)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[left]{$Tough$}\n      }\n      child{\n        node(4)[solid node, label=above right:{$Coke$}]{}\n        child{\n          node[hollow node,label=below:{$(0,-3)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(1,2)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[right]{$Accommodate$}\n      }\n      edge from parent node[right,xshift=3]{$Enter$}\n    };\n\n\\end{tikzpicture}"
+    "text": "Perfect Information Games\nThe Entry Game II"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#perfect-information-games-4",
@@ -1558,14 +1558,14 @@
     "href": "slides/03_game_theory_extensive_form.html#backward-induction-2",
     "title": "Fundamentals of  Game Theory II",
     "section": "Backward Induction",
-    "text": "Backward Induction\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{node[hollow node,label=below:{$(-2,-1)$}]{} edge from parent node[left]{$Tough$}}\n      child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[red, right]{$Accommodate$}}\n      edge from parent node[red, right,xshift=3]{$Enter$}\n    };\n\n\\end{tikzpicture}"
+    "text": "Backward Induction"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#backward-induction-3",
     "href": "slides/03_game_theory_extensive_form.html#backward-induction-3",
     "title": "Fundamentals of  Game Theory II",
     "section": "Backward Induction",
-    "text": "Backward Induction\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]\n  \\tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{\n        node(3)[solid node, label=above left:{$Coke$}]{}\n        child{\n          node[hollow node,label=below:{$(-2,-1)$}]{}\n          edge from parent node[red, left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(-3,1)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[left]{$Tough$}\n      }\n      child{\n        node(4)[solid node, label=above right:{$Coke$}]{}\n        child{\n          node[hollow node,label=below:{$(0,-3)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(1,2)$}]{}\n          edge from parent node[red, right]{$Accommodate$}  \n        }\n        edge from parent node[red, right]{$Accommodate$}\n      }\n      edge from parent node[red, right,xshift=3]{$Enter$}\n    };\n\n\\end{tikzpicture}"
+    "text": "Backward Induction"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment",
@@ -1579,7 +1579,7 @@
     "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Power of Commitment",
-    "text": "The Power of Commitment\n\n\n\nUlysses and the Sirens, by John William Waterhouse"
+    "text": "The Power of Commitment\n\nUlysses and the Sirens, by John William Waterhouse"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-2",
@@ -1593,49 +1593,49 @@
     "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-3",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Power of Commitment",
-    "text": "The Power of Commitment\n\n\n\\usetikzlibrary{calc}\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=35mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=10mm]\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{node[hollow node,label=below:{$(-2,-1)$}]{} edge from parent node[left]{$Tough$}}\n      child{node[hollow node,draw=lightgray,label=below:{\\textcolor{lightgray}{$(1,2)$}}]{} edge from parent node[right,text=lightgray]{$Accommodate$} [draw=lightgray]}\n      edge from parent node[right,xshift=3]{$Enter$}\n    };\n\\end{tikzpicture}"
+    "text": "The Power of Commitment"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-4",
     "href": "slides/03_game_theory_extensive_form.html#the-power-of-commitment-4",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Power of Commitment",
-    "text": "The Power of Commitment\nNow the game’s Nash Equilibrium is \\((Out,Tough)\\) with payoffs \\((0,5)\\).\n. . .\nThis clause, that was free for Pepsi, increased their payoffs from 2 to 5!"
+    "text": "The Power of Commitment\nNow the game’s Nash Equilibrium is \\((Out,Tough)\\) with payoffs \\((0,5)\\).\n\nThis clause, that was free for Pepsi, increased their payoffs from 2 to 5!"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#backward-induction-4",
     "href": "slides/03_game_theory_extensive_form.html#backward-induction-4",
     "title": "Fundamentals of  Game Theory II",
     "section": "Backward Induction",
-    "text": "Backward Induction\n\n\n\n\n\n\nNoneKuhn’s (and Zermelo’s) Theorem\n\n\n\nEvery game of perfect information with a finite number of nodes has a solution to backward induction. Indeed, if for every player it is the case that no two payoffs are the same, then there is a unique solution to backward induction.\n\n\n\nThe proof is very simple, and it is, by coincidence, a proof by induction:1\n\nShow that for \\(n=1\\), where \\(n\\) is the number of “steps” of the game, the game is solved by finding the best alternative for the playing player.\nShow that, if the game is solvable by backward induction for the \\(n-1\\) stages, it can also be solved for the \\(n^{th}\\) stage as well, by using again a best-response by the last playing player."
+    "text": "Backward Induction\n\n\n\nKuhn’s (and Zermelo’s) Theorem\n\n\nEvery game of perfect information with a finite number of nodes has a solution to backward induction. Indeed, if for every player it is the case that no two payoffs are the same, then there is a unique solution to backward induction.\n\n\n\n\nThe proof is very simple, and it is, by coincidence, a proof by induction:1\n\nShow that for \\(n=1\\), where \\(n\\) is the number of “steps” of the game, the game is solved by finding the best alternative for the playing player.\nShow that, if the game is solvable by backward induction for the \\(n-1\\) stages, it can also be solved for the \\(n^{th}\\) stage as well, by using again a best-response by the last playing player.\n\n\nDetailed explanation see Dutta’s book, section 11.4"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#motivation",
     "href": "slides/03_game_theory_extensive_form.html#motivation",
     "title": "Fundamentals of  Game Theory II",
     "section": "Motivation",
-    "text": "Motivation\n\n\n\n\n\n\nNoteDefinition\n\n\n\nA game without perfect information is called a game with imperfect information. This is, games where at least once, a player does not know exactly the full set of actions taken before her turn.\n\n\n\nWe know that sequential games can have many NEs, but some of them might be not credible or reasonable.\nDetermining this, but in particular for games with imperfect information, is the motivation behind the definition of Subgame Perfect (Nash) Equilibria, SPNE henceforward."
+    "text": "Motivation\n\n\n\n\n\n\nDefinition\n\n\nA game without perfect information is called a game with imperfect information. This is, games where at least once, a player does not know exactly the full set of actions taken before her turn.\n\n\n\n\nWe know that sequential games can have many NEs, but some of them might be not credible or reasonable.\nDetermining this, but in particular for games with imperfect information, is the motivation behind the definition of Subgame Perfect (Nash) Equilibria, SPNE henceforward."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#motivation-1",
     "href": "slides/03_game_theory_extensive_form.html#motivation-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Motivation",
-    "text": "Motivation\nEntry Game III\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]\n  \\tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{\n        node(3)[solid node, label=above left:{}]{}\n        child{\n          node[hollow node,label=below:{$(-2,-1)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(-3,1)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[left]{$Tough$}\n      }\n      child{\n        node(4)[solid node, label=above right:{}]{}\n        child{\n          node[hollow node,label=below:{$(0,-3)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(1,2)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[right]{$Accommodate$}\n      }\n      edge from parent node[right,xshift=3]{$Enter$}\n    };\n\n   \\draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);\n   \\node at ($(3)!.5!(4)$) {$Coke$};\n\n\\end{tikzpicture}"
+    "text": "Motivation\nEntry Game III"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#motivation-2",
     "href": "slides/03_game_theory_extensive_form.html#motivation-2",
     "title": "Fundamentals of  Game Theory II",
     "section": "Motivation",
-    "text": "Motivation\n\n\n\nCoke-Pepsi\n\\(T\\)\n\\(A\\)\n\n\n\n\n\\((ET)\\)\n(-2,-1)\n(0,-3)\n\n\n\\((EA)\\)\n(-3,1)\n(1,2)*\n\n\n\\((OT)\\)\n(0,5)*\n(0,5)\n\n\n\\((OA)\\)\n(0,5)*\n(0,5)\n\n\n\nBut are all these NEs credible? NO :x:"
+    "text": "Motivation\n\n\n\nCoke-Pepsi\n\\(T\\)\n\\(A\\)\n\n\n\n\n\\((ET)\\)\n(-2,-1)\n(0,-3)\n\n\n\\((EA)\\)\n(-3,1)\n(1,2)*\n\n\n\\((OT)\\)\n(0,5)*\n(0,5)\n\n\n\\((OA)\\)\n(0,5)*\n(0,5)\n\n\n\nBut are all these NEs credible? NO ❌"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#motivation-3",
     "href": "slides/03_game_theory_extensive_form.html#motivation-3",
     "title": "Fundamentals of  Game Theory II",
     "section": "Motivation",
-    "text": "Motivation\nTo be credible, the actions taken in the equilibrium strategy profiles, must remain rational after previous moves.\nSuppose Coke plays enter, now the game is:\n\n\n\\usetikzlibrary{calc}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=30mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=20mm]\n\n  \\node(2)[solid node, label=above right:{$Pepsi$}]{}\n    child{\n      node(3)[solid node, label=above left:{}]{}\n      child{\n        node[hollow node,label=below:{$(-2,-1)$}]{}\n        edge from parent node[left]{$Tough$}  \n      }\n      child{\n        node[hollow node,label=below:{$(-3,1)$}]{}\n        edge from parent node[right]{$Accommodate$}  \n      }\n      edge from parent node[left]{$Tough$}\n    }\n    child{\n      node(4)[solid node, label=above right:{}]{}\n      child{\n        node[hollow node,label=below:{$(0,-3)$}]{}\n        edge from parent node[left]{$Tough$}  \n      }\n      child{\n        node[hollow node,label=below:{$(1,2)$}]{}\n        edge from parent node[right]{$Accommodate$}  \n      }\n      edge from parent node[right]{$Accommodate$}\n    };\n  \n\n   \\draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);\n   \\node at ($(3)!.5!(4)$) {$Coke$};\n\n\\end{tikzpicture}"
+    "text": "Motivation\nTo be credible, the actions taken in the equilibrium strategy profiles, must remain rational after previous moves.\nSuppose Coke plays enter, now the game is:"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#motivation-4",
@@ -1656,49 +1656,49 @@
     "href": "slides/03_game_theory_extensive_form.html#subgames",
     "title": "Fundamentals of  Game Theory II",
     "section": "Subgames",
-    "text": "Subgames\n\n\n\n\n\n\nNoteDefinition\n\n\n\nA subgame is a part of the extensive form; it is a collection of nodes and branches that satisfies three properties: 1. It starts at a single decision node. 2. It contains every successor to this node. 3. If it contains any part of an information set, the it contains all the nodes in that information set."
+    "text": "Subgames\n\n\n\n\n\n\nDefinition\n\n\nA subgame is a part of the extensive form; it is a collection of nodes and branches that satisfies three properties: 1. It starts at a single decision node. 2. It contains every successor to this node. 3. If it contains any part of an information set, the it contains all the nodes in that information set."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#subgames-1",
     "href": "slides/03_game_theory_extensive_form.html#subgames-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Subgames",
-    "text": "Subgames\n\n\n\\usetikzlibrary{calc,fit,shapes.geometric}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5},\n  subgame/.style={draw=blue,dotted,thick,rounded corners,inner sep=3mm}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]\n  \\tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{\n        node(3)[solid node, label=above left:{$Coke$}]{}\n        child{\n          node(5)[hollow node,label=below:{$(-2,-1)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node(6)[hollow node,label=below:{$(-3,1)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[left]{$Tough$}\n      }\n      child{\n        node(4)[solid node, label=above right:{$Coke$}]{}\n        child{\n          node(7)[hollow node,label=below:{$(0,-3)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node(8)[hollow node,label=below:{$(1,2)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[right]{$Accommodate$}\n      }\n      edge from parent node[right,xshift=3]{$Enter$}\n    };\n\n\\end{tikzpicture}"
+    "text": "Subgames"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#subgames-2",
     "href": "slides/03_game_theory_extensive_form.html#subgames-2",
     "title": "Fundamentals of  Game Theory II",
     "section": "Subgames",
-    "text": "Subgames\n\n\n\\usetikzlibrary{calc,fit,shapes.geometric}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5},\n  subgame/.style={draw=blue,dotted,thick,rounded corners,inner sep=3mm}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=20mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=30mm]\n  \\tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Coke$}]{}\n    child{\n      node(1)[hollow node, label=below:{$(0,5)$}]{}\n      edge from parent node[left,xshift=-3]{$Out$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Pepsi$}]{}\n      child{\n        node(3)[solid node, label=above left:{}]{}\n        child{\n          node[hollow node,label=below:{$(-2,-1)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(-3,1)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[left]{$Tough$}\n      }\n      child{\n        node(4)[solid node, label=above right:{}]{}\n        child{\n          node[hollow node,label=below:{$(0,-3)$}]{}\n          edge from parent node[left]{$Tough$}  \n        }\n        child{\n          node[hollow node,label=below:{$(1,2)$}]{}\n          edge from parent node[right]{$Accommodate$}  \n        }\n        edge from parent node[right]{$Accommodate$}\n      }\n      edge from parent node[right,xshift=3]{$Enter$}\n    };\n\n   \\draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);\n   \\node at ($(3)!.5!(4)$) {$Coke$};\n\n\\end{tikzpicture}"
+    "text": "Subgames"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#subgame-perfect-equilibrium-spne",
     "href": "slides/03_game_theory_extensive_form.html#subgame-perfect-equilibrium-spne",
     "title": "Fundamentals of  Game Theory II",
     "section": "Subgame Perfect Equilibrium SPNE",
-    "text": "Subgame Perfect Equilibrium SPNE\n\n\n\n\n\n\nNoteDefinition\n\n\n\nThe strategy profile \\((s_1,s_2)\\) is a Subgame Perfect Nash Equilibrium (SPNE) if, for every subgame \\(g\\), (\\(s_1(g),s_2(g)\\)) is itself a Nash Equilibrium of the subgame \\(g\\).\n\n\n\n\n\n\n\n\nImportantProposition\n\n\n\nIn a game of perfect information, the subgame perfect equilibria are precisely the backward induction solutions. Hence, whenever the backward induction solution is unique, there is a single subgame perfect equilibrium.2"
+    "text": "Subgame Perfect Equilibrium SPNE\n\n\n\n\n\n\nDefinition\n\n\nThe strategy profile \\((s_1,s_2)\\) is a Subgame Perfect Nash Equilibrium (SPNE) if, for every subgame \\(g\\), (\\(s_1(g),s_2(g)\\)) is itself a Nash Equilibrium of the subgame \\(g\\).\n\n\n\n\n\n\n\n\n\nProposition\n\n\nIn a game of perfect information, the subgame perfect equilibria are precisely the backward induction solutions. Hence, whenever the backward induction solution is unique, there is a single subgame perfect equilibrium.1\n\n\n\nIf you are interested in the proof, look at section 13.3 of Dutta’s book."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#example",
     "href": "slides/03_game_theory_extensive_form.html#example",
     "title": "Fundamentals of  Game Theory II",
     "section": "Example",
-    "text": "Example\nIn the context of the World War I, there were some spontaneous periods of truce in the trenches between the Allies (:uk:, :fr:, :us:, :ru:) and the Central Powers (:de:, :austria:-:hungary:,:tr:)\nSupose that there are two possible levels of preparedness for the soldiers: high (H) or low (L). Regardless of the level of preparedness each side has available two options on what it can do, fight (f), or accommodate (a)."
+    "text": "Example\nIn the context of the World War I, there were some spontaneous periods of truce in the trenches between the Allies (🇬🇧, 🇫🇷, 🇺🇸, 🇷🇺) and the Central Powers (🇩🇪, 🇦🇹-🇭🇺,🇹🇷)\nSupose that there are two possible levels of preparedness for the soldiers: high (H) or low (L). Regardless of the level of preparedness each side has available two options on what it can do, fight (f), or accommodate (a)."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#example-1",
     "href": "slides/03_game_theory_extensive_form.html#example-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Example",
-    "text": "Example\n\nFor example, if the level of preparedness is:\n\n\nhigh, then the strategic form (sub)game is as follows:\n\n\n\n\nC-A\nf\na\n\n\n\n\nf\n\\(\\left(-\\frac{1}{2},-\\frac{1}{2}\\right)\\)\n\\((1,-1)\\)\n\n\na\n\\((-1,1)\\)\n\\((0,0)\\)\n\n\n\n\nlow, then the strategic form (sub)game is as follows:\n\n\n\n\nC-A\nf\na\n\n\n\n\nf\n\\(\\left(-\\frac{3}{4},-\\frac{1}{4}\\right)\\)\n\\((0,0)\\)\n\n\na\n\\((-2,2)\\)\n\\((1,3)\\)"
+    "text": "Example\n\nFor example, if the level of preparedness is:\n\nhigh, then the strategic form (sub)game is as follows:\n\n\n\n\nC-A\nf\na\n\n\n\n\nf\n\\(\\left(-\\frac{1}{2},-\\frac{1}{2}\\right)\\)\n\\((1,-1)\\)\n\n\na\n\\((-1,1)\\)\n\\((0,0)\\)\n\n\n\n\nlow, then the strategic form (sub)game is as follows:\n\n\n\n\nC-A\nf\na\n\n\n\n\nf\n\\(\\left(-\\frac{3}{4},-\\frac{1}{4}\\right)\\)\n\\((0,0)\\)\n\n\na\n\\((-2,2)\\)\n\\((1,3)\\)"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#example-2",
     "href": "slides/03_game_theory_extensive_form.html#example-2",
     "title": "Fundamentals of  Game Theory II",
     "section": "Example",
-    "text": "Example\n\n\n\\usetikzlibrary{calc,fit,shapes.geometric}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\footnotesize]\n  \\tikzstyle{level 1}=[level distance=15mm,sibling distance=40mm]\n  \\tikzstyle{level 2}=[level distance=15mm,sibling distance=20mm]\n  \\tikzstyle{level 3}=[level distance=15mm,sibling distance=10mm]\n\n  \\node(0)[solid node,label=above:{$Central$}]{}\n    child{\n      node(1)[solid node, label=above left:{$Allied$}]{}\n      child{\n        node(5)[solid node, label=above left:{}]{}\n        child{\n          node[hollow node,label=below:{$(1,3)$}]{}\n          edge from parent node[left]{$a$}  \n        }\n        child{\n          node[hollow node,label=below:{$(0,0)$}]{}\n          edge from parent node[right]{$f$}  \n        }\n        edge from parent node[left]{$a$}\n      }\n      child{\n        node(6)[solid node, label=above right:{}]{}\n        child{\n          node[hollow node,label=below:{$(-2,2)$}]{}\n          edge from parent node[left]{$a$}  \n        }\n        child{\n          node[hollow node,label=below:{$\\left(-\\frac{3}{4},-\\frac{1}{4}\\right)$}]{}\n          edge from parent node[right]{$f$}  \n        }\n        edge from parent node[right]{$f$}\n      }\n      edge from parent node[left,xshift=-3]{$L$}\n    }\n    child{\n      node(2)[solid node, label=above right:{$Allied$}]{}\n      child{\n        node(3)[solid node, label=above left:{}]{}\n        child{\n          node[hollow node,label=below:{$(0,0)$}]{}\n          edge from parent node[left]{$a$}  \n        }\n        child{\n          node[hollow node,label=below:{$(1,-1)$}]{}\n          edge from parent node[right]{$f$}  \n        }\n        edge from parent node[left]{$a$}\n      }\n      child{\n        node(4)[solid node, label=above right:{}]{}\n        child{\n          node[hollow node,label=below:{$(-1,1)$}]{}\n          edge from parent node[left]{$a$}  \n        }\n        child{\n          node[hollow node,label=below:{$\\left(-\\frac{1}{2},-\\frac{1}{2}\\right)$}]{}\n          edge from parent node[right]{$f$}  \n        }\n        edge from parent node[right]{$f$}\n      }\n      edge from parent node[right,xshift=3]{$H$}\n    };\n\n   \\draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);\n   \\node at ($(3)!.5!(4)$) {$Central$};\n\n   \\draw[dashed,rounded corners=10]($(5) + (-.2,.25)$)rectangle($(6) +(.2,-.25)$);\n   \\node at ($(5)!.5!(6)$) {$Central$};\n\n\\end{tikzpicture}\n\n\n\n\n\n\n\n\nThe SPNE is \\(((L,af),af)\\)"
+    "text": "Example\n\nThe SPNE is \\(((L,af),af)\\)"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-1",
@@ -1733,7 +1733,7 @@
     "href": "slides/03_game_theory_extensive_form.html#repeated-prisoners-dilemma-1",
     "title": "Fundamentals of  Game Theory II",
     "section": "Repeated Prisoner’s Dilemma",
-    "text": "Repeated Prisoner’s Dilemma\n\n\n\\usetikzlibrary{calc,fit,shapes.geometric}\n\n\\tikzset{\n  solid node/.style={circle,draw,inner sep=1.5,fill=black},\n  hollow node/.style={circle,draw,inner sep=1.5}\n}\n\n\\begin{tikzpicture}[scale=1.5,font=\\tiny]\n  \\tikzstyle{level 1}=[level distance=10mm,sibling distance=40mm]\n  \\tikzstyle{level 2}=[level distance=10mm,sibling distance=20mm]\n  \\tikzstyle{level 3}=[level distance=10mm,sibling distance=10mm]\n  \\tikzstyle{level 4}=[level distance=10mm,sibling distance=5mm]\n\n  \\node(0)[solid node,label=above:{$1$}]{}\n    child{\n      node(1)[solid node, label=above left:{}]{}\n      child{\n        node()[solid node, label=above left:{1}]{}\n        child{\n          node(3)[solid node,label=above left:{}]{}\n          child{\n            node[hollow node,label=below:{$(0,0)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(7,-2)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[left]{$c$}  \n        }\n        child{\n          node(4)[solid node,label=above right:{}]{}\n          child{\n            node[hollow node,label=below:{$(-2,7)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(5,5)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[right]{$nc$}  \n        }\n        edge from parent node[left]{$c$}\n      }\n      child{\n        node()[solid node, label=above right:{1}]{}\n        child{\n          node(5)[solid node,label=above left:{}]{}\n          child{\n            node[hollow node,label=below:{$(7,-2)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(14,-4)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[left]{$c$}  \n        }\n        child{\n          node(6)[solid node,label=above right:{}]{}\n          child{\n            node[hollow node,label=below:{$(5,5)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(12,3)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[right]{$nc$}  \n        }\n        edge from parent node[right]{$nc$}\n      }\n      edge from parent node[left,xshift=-3]{$c$}\n    }\n    child{\n      node(2)[solid node, label=above right:{}]{}\n      child{\n        node()[solid node, label=above left:{$1$}]{}\n        child{\n          node(7)[solid node,label=above left:{}]{}\n          child{\n            node[hollow node,label=below:{$(-2,7)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(5,5)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[left]{$c$}  \n        }\n        child{\n          node(8)[solid node,label=above right:{}]{}\n          child{\n            node[hollow node,label=below:{$(-4,14)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(3,12)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[right]{$nc$}  \n        }\n        edge from parent node[left]{$c$}\n      }\n      child{\n        node()[solid node, label=above right:{$1$}]{}\n        child{\n          node(9)[solid node,label=above left:{}]{}\n          child{\n            node[hollow node,label=below:{$(5,5)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(12,3)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[left]{$c$}  \n        }\n        child{\n          node(10)[solid node,label=above right:{}]{}\n          child{\n            node[hollow node,label=below:{$(3,12)$}]{}\n            edge from parent node[left]{$c$}  \n          }\n          child{\n            node[hollow node,label=below:{$(10,10)$}]{}\n            edge from parent node[right]{$nc$}  \n          }\n          edge from parent node[right]{$nc$}  \n        }\n        edge from parent node[right]{$nc$}\n      }\n      edge from parent node[right,xshift=3]{$nc$}\n    };\n\n   \\draw[dashed,rounded corners=10]($(1) + (-.2,.25)$)rectangle($(2) +(.2,-.25)$);\n   \\node at ($(1)!.5!(2)$) {$2$};\n\n    \\foreach \\i [evaluate=\\i as \\nexti using int(\\i+1)] in {3, 5, 7, 9} {\n        \\draw[dashed, rounded corners=10] ($(\\i) + (-.2, .25)$) rectangle ($(\\nexti) + (.2, -.25)$);\n        \\node at ($(\\i)!0.5!(\\nexti)$) {$2$};\n    }\n\n\n\\end{tikzpicture}"
+    "text": "Repeated Prisoner’s Dilemma"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-2",
@@ -1747,7 +1747,7 @@
     "href": "slides/03_game_theory_extensive_form.html#repeated-games",
     "title": "Fundamentals of  Game Theory II",
     "section": "Repeated Games",
-    "text": "Repeated Games\n\n\n\n\n\n\nNoteDefinition\n\n\n\nA repeated game is defined by a stage game \\(G\\) and the number of its repetitions, say \\(T\\). The stage game \\(G\\) is a game in strategic form: \\(G=\\{S_i,\\pi_i ; i=1,\\dots,N\\}\\) where \\(S_i\\) is player \\(i's\\) set of strategies and \\(\\pi_i\\) is his payoff function [and it depends on \\((s_1,s_2,\\dots,N)\\)].\n\nIf \\(T&lt;\\infty\\), the game is called finitely repeated game,\nIf \\(T=\\infty\\), the game is called infinitely repeated game."
+    "text": "Repeated Games\n\n\n\n\n\n\nDefinition\n\n\nA repeated game is defined by a stage game \\(G\\) and the number of its repetitions, say \\(T\\). The stage game \\(G\\) is a game in strategic form: \\(G=\\{S_i,\\pi_i ; i=1,\\dots,N\\}\\) where \\(S_i\\) is player \\(i's\\) set of strategies and \\(\\pi_i\\) is his payoff function [and it depends on \\((s_1,s_2,\\dots,N)\\)].\n\nIf \\(T&lt;\\infty\\), the game is called finitely repeated game,\nIf \\(T=\\infty\\), the game is called infinitely repeated game."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#examples",
@@ -1768,7 +1768,7 @@
     "href": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-4",
     "title": "Fundamentals of  Game Theory II",
     "section": "Finitely Repeated Games",
-    "text": "Finitely Repeated Games\n\n\n\n\n\n\nImportantCorollary\n\n\n\nIn any finitely repeated game, one SPNE of the repeated game is for players to play a one-stage NE over and over again.\n\n\n. . .\n\n\n\n\n\n\nNoteProposition\n\n\n\nConsider a finitely repeated game \\((G,T)\\) with \\(G=\\{S_i,\\pi_i ; i=1,\\dots,N\\}\\). Suppose the stage game \\(G\\) has exactly one NE, say \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\). Then the repeated game has a unique SPNE. In this equilibrium, player \\(i\\) plays \\(s_i^*\\) at every one of the \\(T\\) stages, regardless of what might have been played, by her or any of the others, in any previous stage."
+    "text": "Finitely Repeated Games\n\n\n\n\n\n\nCorollary\n\n\nIn any finitely repeated game, one SPNE of the repeated game is for players to play a one-stage NE over and over again.\n\n\n\n\n\n\n\n\n\n\nProposition\n\n\nConsider a finitely repeated game \\((G,T)\\) with \\(G=\\{S_i,\\pi_i ; i=1,\\dots,N\\}\\). Suppose the stage game \\(G\\) has exactly one NE, say \\(s^*=(s_1^*,s_2^*,\\dots,s_N^*)\\). Then the repeated game has a unique SPNE. In this equilibrium, player \\(i\\) plays \\(s_i^*\\) at every one of the \\(T\\) stages, regardless of what might have been played, by her or any of the others, in any previous stage."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#finitely-repeated-games-5",
@@ -1810,7 +1810,7 @@
     "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-3",
     "title": "Fundamentals of  Game Theory II",
     "section": "Infinitely Repeated Games",
-    "text": "Infinitely Repeated Games\n\n\n\n\n\n\nNoteFact\n\n\n\nWhen the stage-game payoffs are constant, say \\(\\pi\\), then the lifetime payoffs are given by \\(\\frac{\\pi}{1-\\delta}\\). This is easily shown using the fact that \\(0&lt;\\delta&lt;1\\), and the geometric series."
+    "text": "Infinitely Repeated Games\n\n\n\n\n\n\nFact\n\n\nWhen the stage-game payoffs are constant, say \\(\\pi\\), then the lifetime payoffs are given by \\(\\frac{\\pi}{1-\\delta}\\). This is easily shown using the fact that \\(0&lt;\\delta&lt;1\\), and the geometric series."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-4",
@@ -1824,7 +1824,7 @@
     "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-5",
     "title": "Fundamentals of  Game Theory II",
     "section": "Infinitely Repeated Games",
-    "text": "Infinitely Repeated Games\nSuppose now that the following strategy is played:\n\n\nPlay \\(nc\\) and observe the outcome.\nPlay \\(c\\) forever if previously \\(c\\) was observed.\n\n\nCan this be a SPNE?"
+    "text": "Infinitely Repeated Games\nSuppose now that the following strategy is played:\n\nPlay \\(nc\\) and observe the outcome.\nPlay \\(c\\) forever if previously \\(c\\) was observed.\n\nCan this be a SPNE?"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-6",
@@ -1838,7 +1838,7 @@
     "href": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-7",
     "title": "Fundamentals of  Game Theory II",
     "section": "Infinitely Repeated Games",
-    "text": "Infinitely Repeated Games\nSuppose the other player plays \\(nc\\):\n\nIf you play \\(c\\), you get benefits today, but in every future iteration you are stuck in \\((c,c)\\). Your lifetime (future) payoff is \\[\\Pi_c = 0 - \\frac{15\\times 0.9}{1-0.9}=-135\\]\n\n. . .\nClearly it compensates to be good!"
+    "text": "Infinitely Repeated Games\nSuppose the other player plays \\(nc\\):\n\nIf you play \\(c\\), you get benefits today, but in every future iteration you are stuck in \\((c,c)\\). Your lifetime (future) payoff is \\[\\Pi_c = 0 - \\frac{15\\times 0.9}{1-0.9}=-135\\]\n\n\nClearly it compensates to be good!"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#infinitely-repeated-games-8",
@@ -1971,7 +1971,7 @@
     "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-15",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Commons Problem",
-    "text": "The Commons Problem\nLet’s wrap this up:\n\n\n\nPeriods remaining\n\\(c^*\\) as a fraction of \\(y\\)\n\n\n\n\n1\n\\(\\frac{1}{2}\\)\n\n\n2\n\\(\\frac{1}{2\\left(1+\\frac{\\delta}{2}\\right)}\\)\n\n\n3\n\\(\\frac{1}{2(1+\\frac{\\delta}{2}+\\frac{\\delta^2}{4})}\\)\n\n\n\n. . .\nWhat is the pattern?"
+    "text": "The Commons Problem\nLet’s wrap this up:\n\n\n\nPeriods remaining\n\\(c^*\\) as a fraction of \\(y\\)\n\n\n\n\n1\n\\(\\frac{1}{2}\\)\n\n\n2\n\\(\\frac{1}{2\\left(1+\\frac{\\delta}{2}\\right)}\\)\n\n\n3\n\\(\\frac{1}{2(1+\\frac{\\delta}{2}+\\frac{\\delta^2}{4})}\\)\n\n\n\n\nWhat is the pattern?"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-16",
@@ -1999,7 +1999,7 @@
     "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-19",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Commons Problem",
-    "text": "The Commons Problem\nIs there a stable output level?\n. . .\n\\[C(y) = 2 c(y) = \\left(1-\\frac{\\delta}{2}\\right) y\\ \\Rightarrow\\ S(y)=\\frac{\\delta}{2}y\\]\nWhich in turns imply that:\n\\[ y_{t+1}= 10\\times\\sqrt{\\frac{\\delta}{2}y_t} \\]"
+    "text": "The Commons Problem\nIs there a stable output level?\n\n\\[C(y) = 2 c(y) = \\left(1-\\frac{\\delta}{2}\\right) y\\ \\Rightarrow\\ S(y)=\\frac{\\delta}{2}y\\]\nWhich in turns imply that:\n\\[ y_{t+1}= 10\\times\\sqrt{\\frac{\\delta}{2}y_t} \\]"
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-20",
@@ -2013,7 +2013,7 @@
     "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-21",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Commons Problem",
-    "text": "The Commons Problem\nOf course, this equilibrium does not use any game theory, a Social Optimum is imposed by a Benevolent Dictator. Let’s study the non-cooperative game now.\n. . .\nWe need to solve by backward induction, and we can save some work, as the last stage will be equal,3 both try to consume everything, and end up splitting \\(y\\)."
+    "text": "The Commons Problem\nOf course, this equilibrium does not use any game theory, a Social Optimum is imposed by a Benevolent Dictator. Let’s study the non-cooperative game now.\n\nWe need to solve by backward induction, and we can save some work, as the last stage will be equal,1 both try to consume everything, and end up splitting \\(y\\).\n\nin the sense of a share of whatever is available."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-22",
@@ -2090,7 +2090,7 @@
     "href": "slides/03_game_theory_extensive_form.html#the-commons-problem-32",
     "title": "Fundamentals of  Game Theory II",
     "section": "The Commons Problem",
-    "text": "The Commons Problem\nSo consumption seems to be larger… how can this be?\n. . .\nThe consumption share of output is larger, but output need not be the same! Indeed most likely it will be lower. What we showed is that both consumers will overconsume.\nLet’s check the steady state for the output in this case."
+    "text": "The Commons Problem\nSo consumption seems to be larger… how can this be?\n\nThe consumption share of output is larger, but output need not be the same! Indeed most likely it will be lower. What we showed is that both consumers will overconsume.\nLet’s check the steady state for the output in this case."
   },
   {
     "objectID": "slides/03_game_theory_extensive_form.html#the-commons-problem-33",
