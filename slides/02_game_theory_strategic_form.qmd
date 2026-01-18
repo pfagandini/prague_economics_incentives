@@ -459,7 +459,7 @@ Note that *(19:30,19:30)* and *(17:30,17:30)* are both NE of this game, however 
 
 ## The tragedy of the Commons
 
-Even though this problem has been thought by thinkers since many millenia, it was formalize much more recently.
+Even though this problem has been thought by thinkers since many millenia, it was formalized much more recently.
 
 1. The commons were lands shared in the center of 16th Century England villages, where, among other things, people could take their cattle pasture.
 2. In modern times we can find an example in International Waters, or the Athmosphere.
