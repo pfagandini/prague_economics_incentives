@@ -3883,5 +3883,12 @@
     "title": "Policy Applications",
     "section": "Dynamic Inconsistency: Fiscal Policy",
     "text": "Dynamic Inconsistency: Fiscal Policy\nWith FOC:\n\\[\\begin{align*}\n    \\frac{\\gamma}{\\tau}&=\\frac{Rk_2}{y+R(1-\\tau)k_2}\\\\\n    \\tau Rk_2 &= \\gamma y + \\gamma R (1-\\tau)k_2\\\\\n    (1+\\gamma)\\tau R k_2 &= \\gamma (y+Rk_2)\\\\\n    \\tau &= (y+Rk_2)\\frac{\\gamma}{1+\\gamma}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/02_game_theory_strategic_form.html#dominance-solvability-ch-4-1",
+    "href": "slides/02_game_theory_strategic_form.html#dominance-solvability-ch-4-1",
+    "title": "Fundamentals of  Game Theory I",
+    "section": "Dominance Solvability (CH 4)",
+    "text": "Dominance Solvability (CH 4)\n\n\n\n\n\n\nDominated Strategy\n\n\nA strategy \\(s_i^\\#\\in S_i\\) is dominated by another strategy \\(s_i'\\in S_i\\), if the latter does at least as well as \\(s_i^\\#\\) against every strategy of the other players, and against some it does strictly better, such that:\n\\[\\pi_i(s_i',s_{-i})\\geq\\pi_i(s_i^\\#,s_{-i}),\\quad \\forall s_{-i}\\in\\prod_{j\\neq i}S_j\\] and \\[\\exists \\hat{s}_{-i}\\in\\prod_{j\\neq i} S_j,\\ s.t.\\ \\pi_i(s_i',\\hat{s}_{-i})&gt;\\pi_i(s_i^\\#,\\hat{s}_{-i})\\]\n\n\n\nIf a strategy is not dominated, then it is said to be undominated."
   }
 ]

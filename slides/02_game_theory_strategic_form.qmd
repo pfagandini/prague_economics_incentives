@@ -274,6 +274,8 @@ This auction presents an example of a dominant strategy, we saw that $b_i=v_i$ a
 
 # Dominance Solvability (CH 4)
 
+## Dominance Solvability (CH 4)
+
 :::{.callout-note}
 
 ## Dominated Strategy
