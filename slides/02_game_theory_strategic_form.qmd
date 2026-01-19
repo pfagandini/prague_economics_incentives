@@ -478,6 +478,7 @@ This indeed has the same core as the classical externality problem, this is what
 ## The tragedy of the Commons
 
 :::{.callout-tip}
+
 ## Intuition
 
 Suppose you own a factory and you dump the fumes of your furnaces directly to the athmosphere.
@@ -491,6 +492,7 @@ Suppose you own a factory and you dump the fumes of your furnaces directly to th
 ## The tragedy of the Commons
 
 <div style="font-size: 70%;">
+
 Let's introduce a model to study this problem:
 
 1. Assume there are only two periods $t=0,1$.
@@ -499,7 +501,8 @@ Let's introduce a model to study this problem:
 4. $y^1=y^0-\sum_{i\in\{1,2\}} c_i^0$.
 5. If they try to consume more than $y^t$, in a single period, then each gets $\frac{y^t}{2}$, and $y^{t+1}=0$.
 6. Agents get utility $u(c)$ from consuming, with $u'(c)>0$ and $u''(c)<0$, for example $u(c)=\ln(c)$.
-</dev>
+
+</div>
 
 ## The tragedy of the Commons
 
@@ -512,7 +515,8 @@ To solve this, we will use a technique that we will revisit in the future with m
 . . .
 
 Note that $c_1^1$ and $c_2^2$ are equal and depend on $c_1^0$ and $c_2^0$, and actually these are the only relevant variables. Let's drop the supra-index for time.
-</dev>
+
+</div>
 
 ## The tragedy of the Commons
 
