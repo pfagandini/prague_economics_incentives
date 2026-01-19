@@ -21,6 +21,4 @@ In this page you can find the course materials, specifically the slide decks I w
 
 ## Problem Set
 
-You need to deliver this problem set until 
-
 1. [Problem Set](problem_set/Problem_Set.pdf)
