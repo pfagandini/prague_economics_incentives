@@ -189,7 +189,7 @@ Let's assume now that:
 3. Suppose the agent is risk averse, so the utility function is now $$u=a+bxe-\frac{Ke^2}{2}-\frac{\rho b^2s^2}{2}$$ Now $K$ allow us to measure the cost of the effort, and $\rho$ captures the level of risk aversion of the agent.
   
 </div>
-
+e
 ## Second Best
 
 Now, given $a$ and $b$, what is hte optimal level of effort?
@@ -1262,7 +1262,7 @@ If in two auctions (Incentive Compatible), holds that under the BNE:
     
 Then the auctioneer, has the same expected revenue with both auctions.
 
-
+:::
 
 # Signaling Games and The Lemons Problem
 
