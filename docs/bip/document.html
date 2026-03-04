@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>document – VSE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">VSE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../slides.html"> 
+<span class="menu-text">Course Materials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About the Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#public-goods-local-finance-and-the-political-economy-of-cities" id="toc-public-goods-local-finance-and-the-political-economy-of-cities" class="nav-link active" data-scroll-target="#public-goods-local-finance-and-the-political-economy-of-cities">Public Goods, Local Finance, and the Political Economy of Cities</a>
+  <ul class="collapse">
+  <li><a href="#from-tiebout-to-tax-competition-a-game-theoretic-perspective" id="toc-from-tiebout-to-tax-competition-a-game-theoretic-perspective" class="nav-link" data-scroll-target="#from-tiebout-to-tax-competition-a-game-theoretic-perspective">From Tiebout to Tax Competition: A Game-Theoretic Perspective</a></li>
+  <li><a href="#the-problem-why-cant-cities-just-ask-what-people-want" id="toc-the-problem-why-cant-cities-just-ask-what-people-want" class="nav-link" data-scroll-target="#the-problem-why-cant-cities-just-ask-what-people-want">1. The Problem: Why Can’t Cities Just Ask What People Want?</a>
+  <ul class="collapse">
+  <li><a href="#key-references-for-section-1" id="toc-key-references-for-section-1" class="nav-link" data-scroll-target="#key-references-for-section-1">Key references for Section 1</a></li>
+  </ul></li>
+  <li><a href="#tiebouts-elegant-answer-vote-with-your-feet" id="toc-tiebouts-elegant-answer-vote-with-your-feet" class="nav-link" data-scroll-target="#tiebouts-elegant-answer-vote-with-your-feet">2. Tiebout’s Elegant Answer: Vote With Your Feet</a>
+  <ul class="collapse">
+  <li><a href="#evidence-that-tiebout-sorting-occurs" id="toc-evidence-that-tiebout-sorting-occurs" class="nav-link" data-scroll-target="#evidence-that-tiebout-sorting-occurs">Evidence that Tiebout sorting occurs</a></li>
+  <li><a href="#evidence-challenging-or-qualifying-the-tiebout-model" id="toc-evidence-challenging-or-qualifying-the-tiebout-model" class="nav-link" data-scroll-target="#evidence-challenging-or-qualifying-the-tiebout-model">Evidence challenging or qualifying the Tiebout model</a></li>
+  </ul></li>
+  <li><a href="#where-the-analogy-breaks-down-four-failures" id="toc-where-the-analogy-breaks-down-four-failures" class="nav-link" data-scroll-target="#where-the-analogy-breaks-down-four-failures">3. Where the Analogy Breaks Down: Four Failures</a>
+  <ul class="collapse">
+  <li><a href="#moving-is-costly" id="toc-moving-is-costly" class="nav-link" data-scroll-target="#moving-is-costly">3.1 Moving is Costly</a></li>
+  <li><a href="#evidence-on-mobility-costs-and-sorting-failures" id="toc-evidence-on-mobility-costs-and-sorting-failures" class="nav-link" data-scroll-target="#evidence-on-mobility-costs-and-sorting-failures">Evidence on mobility costs and sorting failures</a></li>
+  <li><a href="#fiscal-externalities-the-smell-from-the-next-stall" id="toc-fiscal-externalities-the-smell-from-the-next-stall" class="nav-link" data-scroll-target="#fiscal-externalities-the-smell-from-the-next-stall">3.2 Fiscal Externalities: The Smell from the Next Stall</a></li>
+  <li><a href="#the-race-to-the-bottom-a-prisoners-dilemma" id="toc-the-race-to-the-bottom-a-prisoners-dilemma" class="nav-link" data-scroll-target="#the-race-to-the-bottom-a-prisoners-dilemma">3.3 The Race to the Bottom — A Prisoner’s Dilemma</a></li>
+  <li><a href="#evidence-on-the-race-to-the-bottom" id="toc-evidence-on-the-race-to-the-bottom" class="nav-link" data-scroll-target="#evidence-on-the-race-to-the-bottom">Evidence on the race to the bottom</a></li>
+  <li><a href="#stratification-and-inequality" id="toc-stratification-and-inequality" class="nav-link" data-scroll-target="#stratification-and-inequality">3.4 Stratification and Inequality</a></li>
+  <li><a href="#evidence-on-stratification" id="toc-evidence-on-stratification" class="nav-link" data-scroll-target="#evidence-on-stratification">Evidence on stratification</a></li>
+  </ul></li>
+  <li><a href="#the-eu-as-a-natural-laboratory-real-evidence" id="toc-the-eu-as-a-natural-laboratory-real-evidence" class="nav-link" data-scroll-target="#the-eu-as-a-natural-laboratory-real-evidence">4. The EU as a Natural Laboratory: Real Evidence</a>
+  <ul class="collapse">
+  <li><a href="#irelands-12.5-corporate-tax-rate" id="toc-irelands-12.5-corporate-tax-rate" class="nav-link" data-scroll-target="#irelands-12.5-corporate-tax-rate">4.1 Ireland’s 12.5% Corporate Tax Rate</a></li>
+  <li><a href="#strategic-tax-setting-empirical-evidence" id="toc-strategic-tax-setting-empirical-evidence" class="nav-link" data-scroll-target="#strategic-tax-setting-empirical-evidence">4.2 Strategic Tax-Setting: Empirical Evidence</a></li>
+  <li><a href="#supporting-evidence-on-euinternational-tax-competition" id="toc-supporting-evidence-on-euinternational-tax-competition" class="nav-link" data-scroll-target="#supporting-evidence-on-euinternational-tax-competition">Supporting evidence on EU/international tax competition</a></li>
+  <li><a href="#escaping-the-dilemma-international-coordination" id="toc-escaping-the-dilemma-international-coordination" class="nav-link" data-scroll-target="#escaping-the-dilemma-international-coordination">4.3 Escaping the Dilemma: International Coordination</a></li>
+  </ul></li>
+  <li><a href="#political-economy-who-actually-decides" id="toc-political-economy-who-actually-decides" class="nav-link" data-scroll-target="#political-economy-who-actually-decides">5. Political Economy: Who Actually Decides?</a>
+  <ul class="collapse">
+  <li><a href="#the-median-voter-theorem" id="toc-the-median-voter-theorem" class="nav-link" data-scroll-target="#the-median-voter-theorem">5.1 The Median Voter Theorem</a></li>
+  <li><a href="#evidence-on-median-voter-predictions-in-local-public-finance" id="toc-evidence-on-median-voter-predictions-in-local-public-finance" class="nav-link" data-scroll-target="#evidence-on-median-voter-predictions-in-local-public-finance">Evidence on median voter predictions in local public finance</a></li>
+  <li><a href="#homeowners-as-median-voters-and-the-exclusion-problem" id="toc-homeowners-as-median-voters-and-the-exclusion-problem" class="nav-link" data-scroll-target="#homeowners-as-median-voters-and-the-exclusion-problem">5.2 Homeowners as Median Voters and the Exclusion Problem</a></li>
+  <li><a href="#evidence-on-homeowner-political-power-and-housing-undersupply" id="toc-evidence-on-homeowner-political-power-and-housing-undersupply" class="nav-link" data-scroll-target="#evidence-on-homeowner-political-power-and-housing-undersupply">Evidence on homeowner political power and housing undersupply</a></li>
+  <li><a href="#zoning-as-an-incomplete-contract" id="toc-zoning-as-an-incomplete-contract" class="nav-link" data-scroll-target="#zoning-as-an-incomplete-contract">5.3 Zoning as an Incomplete Contract</a></li>
+  <li><a href="#evidence-on-zoning-as-regulatory-rent-extraction" id="toc-evidence-on-zoning-as-regulatory-rent-extraction" class="nav-link" data-scroll-target="#evidence-on-zoning-as-regulatory-rent-extraction">Evidence on zoning as regulatory rent extraction</a></li>
+  </ul></li>
+  <li><a href="#bringing-it-together" id="toc-bringing-it-together" class="nav-link" data-scroll-target="#bringing-it-together">6. Bringing It Together</a></li>
+  <li><a href="#full-reference-list" id="toc-full-reference-list" class="nav-link" data-scroll-target="#full-reference-list">Full Reference List</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="public-goods-local-finance-and-the-political-economy-of-cities" class="level1">
+<h1>Public Goods, Local Finance, and the Political Economy of Cities</h1>
+<section id="from-tiebout-to-tax-competition-a-game-theoretic-perspective" class="level3">
+<h3 class="anchored" data-anchor-id="from-tiebout-to-tax-competition-a-game-theoretic-perspective">From Tiebout to Tax Competition: A Game-Theoretic Perspective</h3>
+<p><strong>Lecture Notes | BIP Planning and Economics of Cities | Prague, March 2026</strong></p>
+<hr>
+</section>
+<section id="the-problem-why-cant-cities-just-ask-what-people-want" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-why-cant-cities-just-ask-what-people-want">1. The Problem: Why Can’t Cities Just Ask What People Want?</h2>
+<p>Imagine a city council trying to decide how big to build a new public park. They could simply ask residents: <em>“How much would you pay for this park?”</em> But here is the catch — since the park is free for everyone once built, a rational person has every incentive to understate their true willingness to pay, hoping others will foot the bill. This is the <strong>free-rider problem</strong>, and it is the central obstacle in the economics of public goods.</p>
+<p><strong>What makes a good “public”?</strong> Two properties. It is <strong>non-excludable</strong> (once provided, you cannot stop anyone from enjoying it — like a lighthouse beam or national defence) and <strong>non-rival</strong> (your enjoyment does not reduce mine — the park is not “used up”). City parks, street lighting, and local infrastructure all have these features.</p>
+<p>The Nobel-Prize-winning economist Paul Samuelson formalised the optimum in his 1954 paper. His result, known as the <strong>Samuelson condition</strong>, says that efficiency requires the sum of all individuals’ marginal willingness to pay to equal the marginal cost of providing the good. The problem is purely informational: the government does not know individual preferences, and asking people to report them honestly is a game they will systematically lose.</p>
+<blockquote class="blockquote">
+<p><em>Samuelson (1954, Review of Economics and Statistics) showed that no decentralised pricing system can achieve the efficient provision of pure public goods — setting the stage for decades of mechanism design research.</em></p>
+</blockquote>
+<p>Economists Clarke (1971) and Groves (1973) later developed the <strong>pivotal mechanism</strong> — a clever auction-like device where each person pays a “tax” equal to the harm they impose on others by their vote. This makes honest reporting a dominant strategy. If this sounds like auction theory, it is: the Clarke–Groves–Vickrey (VCG) mechanism is a generalisation of the second-price auction applied to public goods.</p>
+<section id="key-references-for-section-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-references-for-section-1">Key references for Section 1</h3>
+<ul>
+<li>Samuelson, P. (1954). The pure theory of public expenditure. <em>Review of Economics and Statistics</em>, 36(4), 387–389.</li>
+<li>Clarke, E. (1971). Multipart pricing of public goods. <em>Public Choice</em>, 11, 17–33.</li>
+<li>Groves, T. (1973). Incentives in teams. <em>Econometrica</em>, 41(4), 617–631.</li>
+<li>Vickrey, W. (1961). Counterspeculation, auctions and competitive sealed tenders. <em>Journal of Finance</em>, 16(1), 8–37.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="tiebouts-elegant-answer-vote-with-your-feet" class="level2">
+<h2 class="anchored" data-anchor-id="tiebouts-elegant-answer-vote-with-your-feet">2. Tiebout’s Elegant Answer: Vote With Your Feet</h2>
+<p>In 1956, economist Charles Tiebout proposed a beautiful solution that bypassed the preference revelation problem entirely. His insight: if there are many local governments, each offering a different bundle of taxes and public services, people will naturally sort themselves into the jurisdiction that best matches their preferences — just by choosing where to live.</p>
+<p><strong>The apple-and-orange market analogy:</strong> Think of a town with two markets side by side — an apple stall and an orange stall. People who prefer apples go to the apple stall; those who prefer oranges go to the orange stall. Nobody is forced to buy fruit they do not want. Tiebout argued that local governments are like these stalls. If there are enough of them, each offering a distinct tax-and-service mix, households self-sort into their preferred “stall”. Preferences are revealed not through words, but through location choices.</p>
+<p>This is a mechanism design result in disguise: mobility substitutes for the costly truth-telling devices of Samuelson’s world. Under Tiebout’s assumptions — perfect mobility, full information, many jurisdictions, no spillovers across borders, no economies of scale — the outcome is Pareto-efficient.</p>
+<p>Does Tiebout sorting actually happen? The evidence is mixed. There is strong support for the basic idea that households respond to local public good quality when choosing where to live. But the full Tiebout prediction — that mobility should cause communities to become increasingly homogeneous in preferences over time — has been challenged.</p>
+<section id="evidence-that-tiebout-sorting-occurs" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-that-tiebout-sorting-occurs">Evidence that Tiebout sorting occurs</h3>
+<ul>
+<li><strong>Banzhaf and Walsh (2008)</strong> — Households move toward communities with better air quality (a local public good), providing direct evidence of foot-voting. <em>American Economic Review</em>, 98(3), 843–877.</li>
+<li><strong>Oates (1969)</strong> — Early landmark study showing that higher local public school quality is capitalised into higher house prices, consistent with households valuing and sorting over local public goods. <em>Journal of Political Economy</em>, 77(6), 957–971.</li>
+<li><strong>Epple and Sieg (1999)</strong> — Structural estimation confirming income and preference sorting across jurisdictions consistent with Tiebout equilibrium. <em>Journal of Political Economy</em>, 107(4), 645–681.</li>
+</ul>
+</section>
+<section id="evidence-challenging-or-qualifying-the-tiebout-model" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-challenging-or-qualifying-the-tiebout-model">Evidence challenging or qualifying the Tiebout model</h3>
+<ul>
+<li><strong>Rhode and Strumpf (2003)</strong> — Contrary to Tiebout’s prediction, heterogeneity <em>across</em> US municipalities has <em>decreased</em> since 1850, even as mobility costs fell. <em>American Economic Review</em>, 93(5), 1648–1677.</li>
+<li><strong>Epple and Romer (1991)</strong> — Tiebout sorting produces income stratification across jurisdictions as an equilibrium outcome, raising serious equity concerns. <em>Journal of Political Economy</em>, 99(4), 828–860.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="where-the-analogy-breaks-down-four-failures" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-analogy-breaks-down-four-failures">3. Where the Analogy Breaks Down: Four Failures</h2>
+<p>Tiebout’s apple market is intellectually elegant but rests on very strong assumptions. When these assumptions fail — and they usually do — the efficient sorting unravels.</p>
+<section id="moving-is-costly" class="level3">
+<h3 class="anchored" data-anchor-id="moving-is-costly">3.1 Moving is Costly</h3>
+<p>Real households cannot costlessly switch jurisdictions. Homeowners especially face enormous mobility barriers: transaction costs, attachment, school disruptions, employment constraints. Unlike our apple buyer who can walk to the next stall, most residents are largely stuck. This friction breaks the preference-revelation mechanism at its core: if you cannot leave, your location choice reveals nothing about your preferences.</p>
+<p><strong>Fischel (2001)</strong> coined the term “homevoter” to describe how homeowners, whose wealth is locked in their house, systematically oppose any policy that could lower property values — including allowing more housing supply or accepting less desirable land uses nearby.</p>
+</section>
+<section id="evidence-on-mobility-costs-and-sorting-failures" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-on-mobility-costs-and-sorting-failures">Evidence on mobility costs and sorting failures</h3>
+<ul>
+<li><strong>Fischel, W. (2001).</strong> <em>The Homevoter Hypothesis.</em> Harvard University Press. — Homeowners are systematically less mobile than renters, distorting Tiebout sorting.</li>
+<li><strong>Kennan, J. and Walker, J. (2011).</strong> The effect of expected income on individual migration decisions. <em>Econometrica</em>, 79(1), 211–251. — Moving costs are large relative to income gains, severely constraining the “voting with feet” mechanism.</li>
+<li><strong>Bound, J. and Holzer, H. (2000).</strong> Demand shifts, population adjustments, and labor market outcomes during the 1980s. <em>Journal of Labor Economics</em>, 18(1), 20–54. — Labour market frictions severely limit geographic mobility in response to local shocks.</li>
+</ul>
+</section>
+<section id="fiscal-externalities-the-smell-from-the-next-stall" class="level3">
+<h3 class="anchored" data-anchor-id="fiscal-externalities-the-smell-from-the-next-stall">3.2 Fiscal Externalities: The Smell from the Next Stall</h3>
+<p>What one jurisdiction does affects its neighbours. Imagine an apple vendor whose apples ferment and produce a strong smell that drifts into the orange stall next door. That is a fiscal externality. Town A accepting a polluting factory to boost its tax base imposes costs on Town B (pollution, congestion, road wear). Town A does not count these costs when making its decision, so the equilibrium is inefficient. The analogy extends to public spending: a city that builds good schools raises property values in surrounding municipalities too — but those spillover benefits are not counted when the city sets its school budget.</p>
+</section>
+<section id="the-race-to-the-bottom-a-prisoners-dilemma" class="level3">
+<h3 class="anchored" data-anchor-id="the-race-to-the-bottom-a-prisoners-dilemma">3.3 The Race to the Bottom — A Prisoner’s Dilemma</h3>
+<p>This is the most important failure for a game-theorist. When capital is mobile, jurisdictions compete for it by cutting taxes. Consider two towns, Alpha and Beta, each deciding whether to maintain a high or low corporate tax rate:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Beta: High Tax</strong></th>
+<th><strong>Beta: Low Tax</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Alpha: High Tax</strong></td>
+<td>Both fund good services ✓</td>
+<td>Beta gains firms; Alpha loses</td>
+</tr>
+<tr class="even">
+<td><strong>Alpha: Low Tax</strong></td>
+<td>Alpha gains firms; Beta loses</td>
+<td>Both lose revenue, neither gains much ✗</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>If both maintain high taxes: both collect high revenue and fund good services — the best collective outcome. If one defects and cuts taxes, it attracts mobile firms and gains in the short run. If both defect, both lose revenue without gaining much capital, since all jurisdictions cut together. This is a classic <strong>Prisoner’s Dilemma</strong>: individually rational defection produces a collectively inferior equilibrium.</p>
+</blockquote>
+<p>This result was formalised by <strong>Zodrow and Mieszkowski (1986)</strong> — one of the most cited papers in urban economics. They showed that when capital is mobile and governments compete, equilibrium tax rates are too low and public services are under-provided relative to the social optimum.</p>
+</section>
+<section id="evidence-on-the-race-to-the-bottom" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-on-the-race-to-the-bottom">Evidence on the race to the bottom</h3>
+<ul>
+<li><strong>Zodrow, G. and Mieszkowski, P. (1986).</strong> Pigou, Tiebout, property taxation, and the underprovision of local public goods. <em>Journal of Urban Economics</em>, 19(3), 356–370. — The foundational theoretical model.</li>
+<li><strong>Wilson, J. (1986).</strong> A theory of interregional tax competition. <em>Journal of Urban Economics</em>, 19(3), 296–315. — Independent parallel formalisation.</li>
+<li><strong>Devereux, M., Lockwood, B. and Redoano, M. (2008).</strong> Do countries compete over corporate tax rates? <em>Journal of Public Economics</em>, 92(5–6), 1210–1235. — Empirical evidence of strategic tax-setting across OECD countries: a country’s rate responds significantly to rate cuts by neighbours.</li>
+<li><strong>Keen, M. and Konrad, K. (2013).</strong> The theory of international tax competition and coordination. <em>Handbook of Public Economics</em>, Vol. 5, 257–328. — Comprehensive survey of both theory and evidence.</li>
+<li><strong>Clausing, K. (2007).</strong> Corporate tax revenues in OECD countries. <em>International Tax and Public Finance</em>, 14(2), 115–133. — Documents the secular decline in statutory corporate rates across OECD countries consistent with the race-to-the-bottom prediction.</li>
+</ul>
+</section>
+<section id="stratification-and-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="stratification-and-inequality">3.4 Stratification and Inequality</h3>
+<p>Tiebout sorting is not just inefficient — it can be deeply inequitable. When households sort by income and preferences, rich jurisdictions end up with high tax bases and good schools; poor jurisdictions are left with low tax bases and poor services. The very mechanism that was supposed to produce efficiency ends up entrenching inequality.</p>
+</section>
+<section id="evidence-on-stratification" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-on-stratification">Evidence on stratification</h3>
+<ul>
+<li><strong>Epple, D. and Romer, T. (1991).</strong> Mobility and redistribution. <em>Journal of Political Economy</em>, 99(4), 828–860. — Shows income stratification is a theoretical equilibrium of Tiebout sorting.</li>
+<li><strong>Reardon, S. and Bischoff, K. (2011).</strong> Income inequality and income segregation. <em>American Journal of Sociology</em>, 116(4), 1092–1153. — Documents dramatic increase in residential income segregation in the US over 1970–2000.</li>
+<li><strong>Chetty, R., Hendren, N. and Katz, L. (2016).</strong> The effects of exposure to better neighbourhoods on children. <em>American Economic Review</em>, 106(4), 855–902. — Moving to a higher-income jurisdiction has large positive causal effects on children’s long-run outcomes, illustrating the stakes of stratification.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="the-eu-as-a-natural-laboratory-real-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="the-eu-as-a-natural-laboratory-real-evidence">4. The EU as a Natural Laboratory: Real Evidence</h2>
+<p>The European Union is the world’s best natural experiment in fiscal competition. Member states retain sovereignty over most taxes but share a single capital market, making capital almost perfectly mobile — exactly the conditions of the Zodrow–Mieszkowski model.</p>
+<section id="irelands-12.5-corporate-tax-rate" class="level3">
+<h3 class="anchored" data-anchor-id="irelands-12.5-corporate-tax-rate">4.1 Ireland’s 12.5% Corporate Tax Rate</h3>
+<p>Ireland maintained a corporate tax rate of 12.5% while most EU partners charged 25–35%. The result: Apple, Google, Facebook, and many other tech multinationals established their European headquarters in Dublin, routing continental profits through Irish subsidiaries. The European Commission investigated Apple’s specific arrangements and in 2016 ruled them illegal state aid (State Aid Case SA.38373), ordering Ireland to recover approximately €13 billion in back taxes.</p>
+<p>This is the prisoner’s dilemma in action: Ireland defected from high-tax cooperation, gained enormously in the short run, but imposed fiscal externalities on other EU member states (who lost tax base) and triggered competitive pressure for others to cut their own rates.</p>
+</section>
+<section id="strategic-tax-setting-empirical-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-tax-setting-empirical-evidence">4.2 Strategic Tax-Setting: Empirical Evidence</h3>
+<p><strong>Devereux, Lockwood and Redoano (2008)</strong> studied OECD countries over several decades and found strong evidence of strategic complementarity in corporate tax-setting: a country is significantly more likely to cut its statutory rate in response to rate cuts by neighbours. Countries are literally playing a repeated game, and the equilibrium involves rates significantly below what a global social planner would choose.</p>
+</section>
+<section id="supporting-evidence-on-euinternational-tax-competition" class="level3">
+<h3 class="anchored" data-anchor-id="supporting-evidence-on-euinternational-tax-competition">Supporting evidence on EU/international tax competition</h3>
+<ul>
+<li><strong>Devereux, M., Lockwood, B. and Redoano, M. (2008).</strong> Do countries compete over corporate tax rates? <em>Journal of Public Economics</em>, 92(5–6), 1210–1235.</li>
+<li><strong>Slemrod, J. (2004).</strong> Are corporate tax rates, or countries, converging? <em>Journal of Public Economics</em>, 88(6), 1169–1186. — Finds convergence in corporate tax rates across OECD countries consistent with competition.</li>
+<li><strong>European Commission (2016).</strong> State Aid Case SA.38373 — Commission Decision on Apple’s tax arrangements with Ireland.</li>
+<li><strong>OECD/G20 Inclusive Framework (2021).</strong> Statement on a Two-Pillar Solution to Address the Tax Challenges Arising from the Digitalisation of the Economy. — The 15% global minimum tax (“Pillar Two”) as an international coordination solution to the prisoner’s dilemma.</li>
+</ul>
+</section>
+<section id="escaping-the-dilemma-international-coordination" class="level3">
+<h3 class="anchored" data-anchor-id="escaping-the-dilemma-international-coordination">4.3 Escaping the Dilemma: International Coordination</h3>
+<p>The OECD/G20 agreement on a global minimum corporate tax of 15% (2021, effective 2024 in many jurisdictions) is best understood as an attempt to escape the prisoner’s dilemma through binding coordination — the same logic as a repeated-game folk theorem result. By establishing a binding floor, countries collectively commit not to defect below 15%.</p>
+<hr>
+</section>
+</section>
+<section id="political-economy-who-actually-decides" class="level2">
+<h2 class="anchored" data-anchor-id="political-economy-who-actually-decides">5. Political Economy: Who Actually Decides?</h2>
+<p>Even if we knew the efficient level of local public goods, we would still need a political mechanism to deliver it. Who wins in local democracy, and whose preferences shape zoning, school spending, and public investment?</p>
+<section id="the-median-voter-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="the-median-voter-theorem">5.1 The Median Voter Theorem</h3>
+<p>The classical answer is the <strong>median voter theorem</strong> (Hotelling 1929; Black 1948; Downs 1957): in a majority vote over a single policy dimension, the outcome reflects the preference of the median voter — the person exactly in the middle of the distribution. In a town choosing school spending, the level chosen will be whatever the person at the 50th percentile prefers. The theorem is elegant and has empirical support for simple local decisions.</p>
+</section>
+<section id="evidence-on-median-voter-predictions-in-local-public-finance" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-on-median-voter-predictions-in-local-public-finance">Evidence on median voter predictions in local public finance</h3>
+<ul>
+<li><strong>Bergstrom, T. and Goodman, R. (1973).</strong> Private demands for public goods. <em>American Economic Review</em>, 63(3), 280–296. — Early empirical support for median voter determination of local government spending.</li>
+<li><strong>Holtz-Eakin, D. (1986).</strong> Unobserved tastes and the determination of municipal services. <em>National Tax Journal</em>, 39(4), 527–532. — Confirms median voter predictions for municipal expenditures.</li>
+<li><strong>Romer, T. and Rosenthal, H. (1979).</strong> The elusive median voter. <em>Journal of Public Economics</em>, 12(2), 143–170. — Important qualification: agenda-setting power of bureaucrats can push outcomes away from the median voter’s ideal point.</li>
+</ul>
+</section>
+<section id="homeowners-as-median-voters-and-the-exclusion-problem" class="level3">
+<h3 class="anchored" data-anchor-id="homeowners-as-median-voters-and-the-exclusion-problem">5.2 Homeowners as Median Voters and the Exclusion Problem</h3>
+<p>Fischel’s (2001) “homevoter hypothesis” applies median voter logic to suburban municipalities. Homeowners, whose primary asset is their house, vote to protect property values. This means they systematically oppose any development — apartment blocks, social housing, higher-density zoning — that might lower neighbouring property values. The result is <strong>exclusionary zoning</strong> that keeps housing supply artificially constrained.</p>
+<p><strong>Hilber and Vermeulen (2016)</strong> provide rigorous econometric evidence for England, finding that regulatory constraints — driven by the political influence of existing homeowners — are the primary explanation for housing undersupply, more important than physical geography. Their estimates suggest South East England house prices would have been roughly 25% lower in 2008 if planning regulations had been as permissive as in the North East.</p>
+</section>
+<section id="evidence-on-homeowner-political-power-and-housing-undersupply" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-on-homeowner-political-power-and-housing-undersupply">Evidence on homeowner political power and housing undersupply</h3>
+<ul>
+<li><strong>Fischel, W. (2001).</strong> <em>The Homevoter Hypothesis.</em> Harvard University Press.</li>
+<li><strong>Hilber, C. and Vermeulen, W. (2016).</strong> The impact of supply constraints on house prices in England. <em>Economic Journal</em>, 126(591), 358–405.</li>
+<li><strong>Glaeser, E., Schuetz, J. and Ward, B. (2006).</strong> Regulation and the rise of housing prices in Greater Boston. <em>Pioneer Institute / Rappaport Institute Report.</em> — Documents how incumbent homeowner political coalitions block housing supply in Massachusetts municipalities.</li>
+<li><strong>Gyourko, J., Hartley, J. and Krimmel, J. (2021).</strong> The local residential land use regulatory environment across US housing markets. <em>Journal of Urban Economics</em>, 124, 103337. — National evidence that more restrictive zoning is associated with higher prices and lower supply elasticity.</li>
+<li><strong>Hsieh, C. and Moretti, E. (2019).</strong> Housing constraints and spatial misallocation. <em>American Economic Journal: Macroeconomics</em>, 11(2), 1–39. — Estimates that removing housing restrictions in high-productivity US cities (New York, San Francisco, San Jose) would increase aggregate US GDP by 2–9%.</li>
+</ul>
+</section>
+<section id="zoning-as-an-incomplete-contract" class="level3">
+<h3 class="anchored" data-anchor-id="zoning-as-an-incomplete-contract">5.3 Zoning as an Incomplete Contract</h3>
+<p>From contract theory, zoning rules are an <strong>incomplete contract</strong> between the city and its residents and developers. Like any incomplete contract, it is impossible to specify in advance all future contingencies — what buildings may be built, at what density, for what use. The residual control rights (what happens in unspecified circumstances) are allocated politically. Existing homeowners and their representatives systematically use these residual rights to restrict supply, capturing <strong>regulatory rent</strong>.</p>
+<p><strong>Glaeser and Gyourko (2003)</strong> documented this wedge empirically: in many US cities, housing prices far exceed the physical costs of construction. The gap — sometimes 50% or more of market price — represents the value of the regulatory permit, monopolised by the political process.</p>
+</section>
+<section id="evidence-on-zoning-as-regulatory-rent-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-on-zoning-as-regulatory-rent-extraction">Evidence on zoning as regulatory rent extraction</h3>
+<ul>
+<li><strong>Glaeser, E. and Gyourko, J. (2003).</strong> The impact of building restrictions on housing affordability. <em>Federal Reserve Bank of New York Economic Policy Review</em>, 9(2), 21–39.</li>
+<li><strong>Cheshire, P. and Sheppard, S. (2002).</strong> The welfare economics of land use planning. <em>Journal of Urban Economics</em>, 52(2), 242–269. — Estimates large welfare losses from UK land use restrictions.</li>
+<li><strong>Cheshire, P. and Hilber, C. (2008).</strong> Office space supply restrictions in Britain: the political economy of market revenge. <em>Economic Journal</em>, 118(529), 185–221. — Finds that UK office space is extraordinarily expensive because of planning restrictions driven by incumbent interests.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="bringing-it-together" class="level2">
+<h2 class="anchored" data-anchor-id="bringing-it-together">6. Bringing It Together</h2>
+<p>The economics of local public goods is, at its core, a story about <strong>information and incentives</strong> — the same themes that run through mechanism design, auction theory, and contract theory. The Tiebout model is an ingenious market mechanism, but its assumptions crack under real-world pressure:</p>
+<ul>
+<li>Mobility costs prevent the preference-revelation mechanism from working cleanly.</li>
+<li>Fiscal externalities mean that jurisdiction-level rational behaviour is socially inefficient.</li>
+<li>Tax competition is a prisoner’s dilemma with documented, measurable consequences for EU public finance.</li>
+<li>Local democracy produces median-voter outcomes systematically biased by homeowner political power.</li>
+<li>Zoning is an incomplete contract whose residual rights get captured by incumbents.</li>
+</ul>
+<p>These are not abstract theoretical curiosities. They describe why housing is unaffordable in Lisbon and London, why Ireland built a tech cluster by undercutting its neighbours, and why OECD countries needed a multi-year negotiation to stop racing each other to the bottom on corporate taxes.</p>
+<hr>
+</section>
+<section id="full-reference-list" class="level2">
+<h2 class="anchored" data-anchor-id="full-reference-list">Full Reference List</h2>
+<p><strong>Foundational theory</strong></p>
+<ul>
+<li>Samuelson, P. (1954). The pure theory of public expenditure. <em>Review of Economics and Statistics</em>, 36(4), 387–389.</li>
+<li>Tiebout, C. (1956). A pure theory of local expenditures. <em>Journal of Political Economy</em>, 64(5), 416–424.</li>
+<li>Clarke, E. (1971). Multipart pricing of public goods. <em>Public Choice</em>, 11, 17–33.</li>
+<li>Groves, T. (1973). Incentives in teams. <em>Econometrica</em>, 41(4), 617–631.</li>
+<li>Vickrey, W. (1961). Counterspeculation, auctions and competitive sealed tenders. <em>Journal of Finance</em>, 16(1), 8–37.</li>
+<li>Hotelling, H. (1929). Stability in competition. <em>Economic Journal</em>, 39(153), 41–57.</li>
+<li>Black, D. (1948). On the rationale of group decision-making. <em>Journal of Political Economy</em>, 56(1), 23–34.</li>
+<li>Downs, A. (1957). <em>An Economic Theory of Democracy.</em> Harper and Row.</li>
+</ul>
+<p><strong>Tax competition</strong></p>
+<ul>
+<li>Zodrow, G. and Mieszkowski, P. (1986). Pigou, Tiebout, property taxation, and the underprovision of local public goods. <em>Journal of Urban Economics</em>, 19(3), 356–370.</li>
+<li>Wilson, J. (1986). A theory of interregional tax competition. <em>Journal of Urban Economics</em>, 19(3), 296–315.</li>
+<li>Devereux, M., Lockwood, B. and Redoano, M. (2008). Do countries compete over corporate tax rates? <em>Journal of Public Economics</em>, 92(5–6), 1210–1235.</li>
+<li>Slemrod, J. (2004). Are corporate tax rates, or countries, converging? <em>Journal of Public Economics</em>, 88(6), 1169–1186.</li>
+<li>Clausing, K. (2007). Corporate tax revenues in OECD countries. <em>International Tax and Public Finance</em>, 14(2), 115–133.</li>
+<li>Keen, M. and Konrad, K. (2013). The theory of international tax competition and coordination. <em>Handbook of Public Economics</em>, Vol. 5, 257–328.</li>
+<li>European Commission (2016). State Aid Case SA.38373.</li>
+<li>OECD/G20 Inclusive Framework (2021). Statement on a Two-Pillar Solution.</li>
+</ul>
+<p><strong>Tiebout sorting — evidence</strong></p>
+<ul>
+<li>Oates, W. (1969). The effects of property taxes and local public spending on property values. <em>Journal of Political Economy</em>, 77(6), 957–971.</li>
+<li>Epple, D. and Sieg, H. (1999). Estimating equilibrium models of local jurisdictions. <em>Journal of Political Economy</em>, 107(4), 645–681.</li>
+<li>Epple, D. and Romer, T. (1991). Mobility and redistribution. <em>Journal of Political Economy</em>, 99(4), 828–860.</li>
+<li>Rhode, P. and Strumpf, K. (2003). Assessing the importance of Tiebout sorting: local heterogeneity from 1850 to 1990. <em>American Economic Review</em>, 93(5), 1648–1677.</li>
+<li>Banzhaf, H. and Walsh, R. (2008). Do people vote with their feet? An empirical test of Tiebout. <em>American Economic Review</em>, 98(3), 843–877.</li>
+</ul>
+<p><strong>Housing, political economy, and zoning</strong></p>
+<ul>
+<li>Fischel, W. (2001). <em>The Homevoter Hypothesis.</em> Harvard University Press.</li>
+<li>Glaeser, E. and Gyourko, J. (2003). The impact of building restrictions on housing affordability. <em>Federal Reserve Bank of New York Economic Policy Review</em>, 9(2), 21–39.</li>
+<li>Hilber, C. and Vermeulen, W. (2016). The impact of supply constraints on house prices in England. <em>Economic Journal</em>, 126(591), 358–405.</li>
+<li>Cheshire, P. and Sheppard, S. (2002). The welfare economics of land use planning. <em>Journal of Urban Economics</em>, 52(2), 242–269.</li>
+<li>Cheshire, P. and Hilber, C. (2008). Office space supply restrictions in Britain. <em>Economic Journal</em>, 118(529), 185–221.</li>
+<li>Hsieh, C. and Moretti, E. (2019). Housing constraints and spatial misallocation. <em>American Economic Journal: Macroeconomics</em>, 11(2), 1–39.</li>
+<li>Gyourko, J., Hartley, J. and Krimmel, J. (2021). The local residential land use regulatory environment across US housing markets. <em>Journal of Urban Economics</em>, 124, 103337.</li>
+<li>Reardon, S. and Bischoff, K. (2011). Income inequality and income segregation. <em>American Journal of Sociology</em>, 116(4), 1092–1153.</li>
+<li>Chetty, R., Hendren, N. and Katz, L. (2016). The effects of exposure to better neighbourhoods on children. <em>American Economic Review</em>, 106(4), 855–902.</li>
+</ul>
+<hr>
+<p><em>Notes prepared for BIP “Planning and Economics of Cities”, Prague, March 2026. Audience: mixed international bachelor students. Lecture duration: 35 minutes.</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

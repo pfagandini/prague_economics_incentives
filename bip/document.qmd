@@ -1,0 +1,234 @@
+# Public Goods, Local Finance, and the Political Economy of Cities
+### From Tiebout to Tax Competition: A Game-Theoretic Perspective
+
+**Lecture Notes | BIP Planning and Economics of Cities | Prague, March 2026**
+
+---
+
+## 1. The Problem: Why Can't Cities Just Ask What People Want?
+
+Imagine a city council trying to decide how big to build a new public park. They could simply ask residents: *"How much would you pay for this park?"* But here is the catch — since the park is free for everyone once built, a rational person has every incentive to understate their true willingness to pay, hoping others will foot the bill. This is the **free-rider problem**, and it is the central obstacle in the economics of public goods.
+
+**What makes a good "public"?** Two properties. It is **non-excludable** (once provided, you cannot stop anyone from enjoying it — like a lighthouse beam or national defence) and **non-rival** (your enjoyment does not reduce mine — the park is not "used up"). City parks, street lighting, and local infrastructure all have these features.
+
+The Nobel-Prize-winning economist Paul Samuelson formalised the optimum in his 1954 paper. His result, known as the **Samuelson condition**, says that efficiency requires the sum of all individuals' marginal willingness to pay to equal the marginal cost of providing the good. The problem is purely informational: the government does not know individual preferences, and asking people to report them honestly is a game they will systematically lose.
+
+> *Samuelson (1954, Review of Economics and Statistics) showed that no decentralised pricing system can achieve the efficient provision of pure public goods — setting the stage for decades of mechanism design research.*
+
+Economists Clarke (1971) and Groves (1973) later developed the **pivotal mechanism** — a clever auction-like device where each person pays a "tax" equal to the harm they impose on others by their vote. This makes honest reporting a dominant strategy. If this sounds like auction theory, it is: the Clarke–Groves–Vickrey (VCG) mechanism is a generalisation of the second-price auction applied to public goods.
+
+### Key references for Section 1
+
+- Samuelson, P. (1954). The pure theory of public expenditure. *Review of Economics and Statistics*, 36(4), 387–389.
+- Clarke, E. (1971). Multipart pricing of public goods. *Public Choice*, 11, 17–33.
+- Groves, T. (1973). Incentives in teams. *Econometrica*, 41(4), 617–631.
+- Vickrey, W. (1961). Counterspeculation, auctions and competitive sealed tenders. *Journal of Finance*, 16(1), 8–37.
+
+---
+
+## 2. Tiebout's Elegant Answer: Vote With Your Feet
+
+In 1956, economist Charles Tiebout proposed a beautiful solution that bypassed the preference revelation problem entirely. His insight: if there are many local governments, each offering a different bundle of taxes and public services, people will naturally sort themselves into the jurisdiction that best matches their preferences — just by choosing where to live.
+
+**The apple-and-orange market analogy:** Think of a town with two markets side by side — an apple stall and an orange stall. People who prefer apples go to the apple stall; those who prefer oranges go to the orange stall. Nobody is forced to buy fruit they do not want. Tiebout argued that local governments are like these stalls. If there are enough of them, each offering a distinct tax-and-service mix, households self-sort into their preferred "stall". Preferences are revealed not through words, but through location choices.
+
+This is a mechanism design result in disguise: mobility substitutes for the costly truth-telling devices of Samuelson's world. Under Tiebout's assumptions — perfect mobility, full information, many jurisdictions, no spillovers across borders, no economies of scale — the outcome is Pareto-efficient.
+
+Does Tiebout sorting actually happen? The evidence is mixed. There is strong support for the basic idea that households respond to local public good quality when choosing where to live. But the full Tiebout prediction — that mobility should cause communities to become increasingly homogeneous in preferences over time — has been challenged.
+
+### Evidence that Tiebout sorting occurs
+
+- **Banzhaf and Walsh (2008)** — Households move toward communities with better air quality (a local public good), providing direct evidence of foot-voting. *American Economic Review*, 98(3), 843–877.
+- **Oates (1969)** — Early landmark study showing that higher local public school quality is capitalised into higher house prices, consistent with households valuing and sorting over local public goods. *Journal of Political Economy*, 77(6), 957–971.
+- **Epple and Sieg (1999)** — Structural estimation confirming income and preference sorting across jurisdictions consistent with Tiebout equilibrium. *Journal of Political Economy*, 107(4), 645–681.
+
+### Evidence challenging or qualifying the Tiebout model
+
+- **Rhode and Strumpf (2003)** — Contrary to Tiebout's prediction, heterogeneity *across* US municipalities has *decreased* since 1850, even as mobility costs fell. *American Economic Review*, 93(5), 1648–1677.
+- **Epple and Romer (1991)** — Tiebout sorting produces income stratification across jurisdictions as an equilibrium outcome, raising serious equity concerns. *Journal of Political Economy*, 99(4), 828–860.
+
+---
+
+## 3. Where the Analogy Breaks Down: Four Failures
+
+Tiebout's apple market is intellectually elegant but rests on very strong assumptions. When these assumptions fail — and they usually do — the efficient sorting unravels.
+
+### 3.1 Moving is Costly
+
+Real households cannot costlessly switch jurisdictions. Homeowners especially face enormous mobility barriers: transaction costs, attachment, school disruptions, employment constraints. Unlike our apple buyer who can walk to the next stall, most residents are largely stuck. This friction breaks the preference-revelation mechanism at its core: if you cannot leave, your location choice reveals nothing about your preferences.
+
+**Fischel (2001)** coined the term "homevoter" to describe how homeowners, whose wealth is locked in their house, systematically oppose any policy that could lower property values — including allowing more housing supply or accepting less desirable land uses nearby.
+
+### Evidence on mobility costs and sorting failures
+
+- **Fischel, W. (2001).** *The Homevoter Hypothesis.* Harvard University Press. — Homeowners are systematically less mobile than renters, distorting Tiebout sorting.
+- **Kennan, J. and Walker, J. (2011).** The effect of expected income on individual migration decisions. *Econometrica*, 79(1), 211–251. — Moving costs are large relative to income gains, severely constraining the "voting with feet" mechanism.
+- **Bound, J. and Holzer, H. (2000).** Demand shifts, population adjustments, and labor market outcomes during the 1980s. *Journal of Labor Economics*, 18(1), 20–54. — Labour market frictions severely limit geographic mobility in response to local shocks.
+
+### 3.2 Fiscal Externalities: The Smell from the Next Stall
+
+What one jurisdiction does affects its neighbours. Imagine an apple vendor whose apples ferment and produce a strong smell that drifts into the orange stall next door. That is a fiscal externality. Town A accepting a polluting factory to boost its tax base imposes costs on Town B (pollution, congestion, road wear). Town A does not count these costs when making its decision, so the equilibrium is inefficient. The analogy extends to public spending: a city that builds good schools raises property values in surrounding municipalities too — but those spillover benefits are not counted when the city sets its school budget.
+
+### 3.3 The Race to the Bottom — A Prisoner's Dilemma
+
+This is the most important failure for a game-theorist. When capital is mobile, jurisdictions compete for it by cutting taxes. Consider two towns, Alpha and Beta, each deciding whether to maintain a high or low corporate tax rate:
+
+|  | **Beta: High Tax** | **Beta: Low Tax** |
+|---|---|---|
+| **Alpha: High Tax** | Both fund good services ✓ | Beta gains firms; Alpha loses |
+| **Alpha: Low Tax** | Alpha gains firms; Beta loses | Both lose revenue, neither gains much ✗ |
+
+> If both maintain high taxes: both collect high revenue and fund good services — the best collective outcome. If one defects and cuts taxes, it attracts mobile firms and gains in the short run. If both defect, both lose revenue without gaining much capital, since all jurisdictions cut together. This is a classic **Prisoner's Dilemma**: individually rational defection produces a collectively inferior equilibrium.
+
+This result was formalised by **Zodrow and Mieszkowski (1986)** — one of the most cited papers in urban economics. They showed that when capital is mobile and governments compete, equilibrium tax rates are too low and public services are under-provided relative to the social optimum.
+
+### Evidence on the race to the bottom
+
+- **Zodrow, G. and Mieszkowski, P. (1986).** Pigou, Tiebout, property taxation, and the underprovision of local public goods. *Journal of Urban Economics*, 19(3), 356–370. — The foundational theoretical model.
+- **Wilson, J. (1986).** A theory of interregional tax competition. *Journal of Urban Economics*, 19(3), 296–315. — Independent parallel formalisation.
+- **Devereux, M., Lockwood, B. and Redoano, M. (2008).** Do countries compete over corporate tax rates? *Journal of Public Economics*, 92(5–6), 1210–1235. — Empirical evidence of strategic tax-setting across OECD countries: a country's rate responds significantly to rate cuts by neighbours.
+- **Keen, M. and Konrad, K. (2013).** The theory of international tax competition and coordination. *Handbook of Public Economics*, Vol. 5, 257–328. — Comprehensive survey of both theory and evidence.
+- **Clausing, K. (2007).** Corporate tax revenues in OECD countries. *International Tax and Public Finance*, 14(2), 115–133. — Documents the secular decline in statutory corporate rates across OECD countries consistent with the race-to-the-bottom prediction.
+
+### 3.4 Stratification and Inequality
+
+Tiebout sorting is not just inefficient — it can be deeply inequitable. When households sort by income and preferences, rich jurisdictions end up with high tax bases and good schools; poor jurisdictions are left with low tax bases and poor services. The very mechanism that was supposed to produce efficiency ends up entrenching inequality.
+
+### Evidence on stratification
+
+- **Epple, D. and Romer, T. (1991).** Mobility and redistribution. *Journal of Political Economy*, 99(4), 828–860. — Shows income stratification is a theoretical equilibrium of Tiebout sorting.
+- **Reardon, S. and Bischoff, K. (2011).** Income inequality and income segregation. *American Journal of Sociology*, 116(4), 1092–1153. — Documents dramatic increase in residential income segregation in the US over 1970–2000.
+- **Chetty, R., Hendren, N. and Katz, L. (2016).** The effects of exposure to better neighbourhoods on children. *American Economic Review*, 106(4), 855–902. — Moving to a higher-income jurisdiction has large positive causal effects on children's long-run outcomes, illustrating the stakes of stratification.
+
+---
+
+## 4. The EU as a Natural Laboratory: Real Evidence
+
+The European Union is the world's best natural experiment in fiscal competition. Member states retain sovereignty over most taxes but share a single capital market, making capital almost perfectly mobile — exactly the conditions of the Zodrow–Mieszkowski model.
+
+### 4.1 Ireland's 12.5% Corporate Tax Rate
+
+Ireland maintained a corporate tax rate of 12.5% while most EU partners charged 25–35%. The result: Apple, Google, Facebook, and many other tech multinationals established their European headquarters in Dublin, routing continental profits through Irish subsidiaries. The European Commission investigated Apple's specific arrangements and in 2016 ruled them illegal state aid (State Aid Case SA.38373), ordering Ireland to recover approximately €13 billion in back taxes.
+
+This is the prisoner's dilemma in action: Ireland defected from high-tax cooperation, gained enormously in the short run, but imposed fiscal externalities on other EU member states (who lost tax base) and triggered competitive pressure for others to cut their own rates.
+
+### 4.2 Strategic Tax-Setting: Empirical Evidence
+
+**Devereux, Lockwood and Redoano (2008)** studied OECD countries over several decades and found strong evidence of strategic complementarity in corporate tax-setting: a country is significantly more likely to cut its statutory rate in response to rate cuts by neighbours. Countries are literally playing a repeated game, and the equilibrium involves rates significantly below what a global social planner would choose.
+
+### Supporting evidence on EU/international tax competition
+
+- **Devereux, M., Lockwood, B. and Redoano, M. (2008).** Do countries compete over corporate tax rates? *Journal of Public Economics*, 92(5–6), 1210–1235.
+- **Slemrod, J. (2004).** Are corporate tax rates, or countries, converging? *Journal of Public Economics*, 88(6), 1169–1186. — Finds convergence in corporate tax rates across OECD countries consistent with competition.
+- **European Commission (2016).** State Aid Case SA.38373 — Commission Decision on Apple's tax arrangements with Ireland.
+- **OECD/G20 Inclusive Framework (2021).** Statement on a Two-Pillar Solution to Address the Tax Challenges Arising from the Digitalisation of the Economy. — The 15% global minimum tax ("Pillar Two") as an international coordination solution to the prisoner's dilemma.
+
+### 4.3 Escaping the Dilemma: International Coordination
+
+The OECD/G20 agreement on a global minimum corporate tax of 15% (2021, effective 2024 in many jurisdictions) is best understood as an attempt to escape the prisoner's dilemma through binding coordination — the same logic as a repeated-game folk theorem result. By establishing a binding floor, countries collectively commit not to defect below 15%.
+
+---
+
+## 5. Political Economy: Who Actually Decides?
+
+Even if we knew the efficient level of local public goods, we would still need a political mechanism to deliver it. Who wins in local democracy, and whose preferences shape zoning, school spending, and public investment?
+
+### 5.1 The Median Voter Theorem
+
+The classical answer is the **median voter theorem** (Hotelling 1929; Black 1948; Downs 1957): in a majority vote over a single policy dimension, the outcome reflects the preference of the median voter — the person exactly in the middle of the distribution. In a town choosing school spending, the level chosen will be whatever the person at the 50th percentile prefers. The theorem is elegant and has empirical support for simple local decisions.
+
+### Evidence on median voter predictions in local public finance
+
+- **Bergstrom, T. and Goodman, R. (1973).** Private demands for public goods. *American Economic Review*, 63(3), 280–296. — Early empirical support for median voter determination of local government spending.
+- **Holtz-Eakin, D. (1986).** Unobserved tastes and the determination of municipal services. *National Tax Journal*, 39(4), 527–532. — Confirms median voter predictions for municipal expenditures.
+- **Romer, T. and Rosenthal, H. (1979).** The elusive median voter. *Journal of Public Economics*, 12(2), 143–170. — Important qualification: agenda-setting power of bureaucrats can push outcomes away from the median voter's ideal point.
+
+### 5.2 Homeowners as Median Voters and the Exclusion Problem
+
+Fischel's (2001) "homevoter hypothesis" applies median voter logic to suburban municipalities. Homeowners, whose primary asset is their house, vote to protect property values. This means they systematically oppose any development — apartment blocks, social housing, higher-density zoning — that might lower neighbouring property values. The result is **exclusionary zoning** that keeps housing supply artificially constrained.
+
+**Hilber and Vermeulen (2016)** provide rigorous econometric evidence for England, finding that regulatory constraints — driven by the political influence of existing homeowners — are the primary explanation for housing undersupply, more important than physical geography. Their estimates suggest South East England house prices would have been roughly 25% lower in 2008 if planning regulations had been as permissive as in the North East.
+
+### Evidence on homeowner political power and housing undersupply
+
+- **Fischel, W. (2001).** *The Homevoter Hypothesis.* Harvard University Press.
+- **Hilber, C. and Vermeulen, W. (2016).** The impact of supply constraints on house prices in England. *Economic Journal*, 126(591), 358–405.
+- **Glaeser, E., Schuetz, J. and Ward, B. (2006).** Regulation and the rise of housing prices in Greater Boston. *Pioneer Institute / Rappaport Institute Report.* — Documents how incumbent homeowner political coalitions block housing supply in Massachusetts municipalities.
+- **Gyourko, J., Hartley, J. and Krimmel, J. (2021).** The local residential land use regulatory environment across US housing markets. *Journal of Urban Economics*, 124, 103337. — National evidence that more restrictive zoning is associated with higher prices and lower supply elasticity.
+- **Hsieh, C. and Moretti, E. (2019).** Housing constraints and spatial misallocation. *American Economic Journal: Macroeconomics*, 11(2), 1–39. — Estimates that removing housing restrictions in high-productivity US cities (New York, San Francisco, San Jose) would increase aggregate US GDP by 2–9%.
+
+### 5.3 Zoning as an Incomplete Contract
+
+From contract theory, zoning rules are an **incomplete contract** between the city and its residents and developers. Like any incomplete contract, it is impossible to specify in advance all future contingencies — what buildings may be built, at what density, for what use. The residual control rights (what happens in unspecified circumstances) are allocated politically. Existing homeowners and their representatives systematically use these residual rights to restrict supply, capturing **regulatory rent**.
+
+**Glaeser and Gyourko (2003)** documented this wedge empirically: in many US cities, housing prices far exceed the physical costs of construction. The gap — sometimes 50% or more of market price — represents the value of the regulatory permit, monopolised by the political process.
+
+### Evidence on zoning as regulatory rent extraction
+
+- **Glaeser, E. and Gyourko, J. (2003).** The impact of building restrictions on housing affordability. *Federal Reserve Bank of New York Economic Policy Review*, 9(2), 21–39.
+- **Cheshire, P. and Sheppard, S. (2002).** The welfare economics of land use planning. *Journal of Urban Economics*, 52(2), 242–269. — Estimates large welfare losses from UK land use restrictions.
+- **Cheshire, P. and Hilber, C. (2008).** Office space supply restrictions in Britain: the political economy of market revenge. *Economic Journal*, 118(529), 185–221. — Finds that UK office space is extraordinarily expensive because of planning restrictions driven by incumbent interests.
+
+---
+
+## 6. Bringing It Together
+
+The economics of local public goods is, at its core, a story about **information and incentives** — the same themes that run through mechanism design, auction theory, and contract theory. The Tiebout model is an ingenious market mechanism, but its assumptions crack under real-world pressure:
+
+- Mobility costs prevent the preference-revelation mechanism from working cleanly.
+- Fiscal externalities mean that jurisdiction-level rational behaviour is socially inefficient.
+- Tax competition is a prisoner's dilemma with documented, measurable consequences for EU public finance.
+- Local democracy produces median-voter outcomes systematically biased by homeowner political power.
+- Zoning is an incomplete contract whose residual rights get captured by incumbents.
+
+These are not abstract theoretical curiosities. They describe why housing is unaffordable in Lisbon and London, why Ireland built a tech cluster by undercutting its neighbours, and why OECD countries needed a multi-year negotiation to stop racing each other to the bottom on corporate taxes.
+
+---
+
+## Full Reference List
+
+**Foundational theory**
+
+- Samuelson, P. (1954). The pure theory of public expenditure. *Review of Economics and Statistics*, 36(4), 387–389.
+- Tiebout, C. (1956). A pure theory of local expenditures. *Journal of Political Economy*, 64(5), 416–424.
+- Clarke, E. (1971). Multipart pricing of public goods. *Public Choice*, 11, 17–33.
+- Groves, T. (1973). Incentives in teams. *Econometrica*, 41(4), 617–631.
+- Vickrey, W. (1961). Counterspeculation, auctions and competitive sealed tenders. *Journal of Finance*, 16(1), 8–37.
+- Hotelling, H. (1929). Stability in competition. *Economic Journal*, 39(153), 41–57.
+- Black, D. (1948). On the rationale of group decision-making. *Journal of Political Economy*, 56(1), 23–34.
+- Downs, A. (1957). *An Economic Theory of Democracy.* Harper and Row.
+
+**Tax competition**
+
+- Zodrow, G. and Mieszkowski, P. (1986). Pigou, Tiebout, property taxation, and the underprovision of local public goods. *Journal of Urban Economics*, 19(3), 356–370.
+- Wilson, J. (1986). A theory of interregional tax competition. *Journal of Urban Economics*, 19(3), 296–315.
+- Devereux, M., Lockwood, B. and Redoano, M. (2008). Do countries compete over corporate tax rates? *Journal of Public Economics*, 92(5–6), 1210–1235.
+- Slemrod, J. (2004). Are corporate tax rates, or countries, converging? *Journal of Public Economics*, 88(6), 1169–1186.
+- Clausing, K. (2007). Corporate tax revenues in OECD countries. *International Tax and Public Finance*, 14(2), 115–133.
+- Keen, M. and Konrad, K. (2013). The theory of international tax competition and coordination. *Handbook of Public Economics*, Vol. 5, 257–328.
+- European Commission (2016). State Aid Case SA.38373.
+- OECD/G20 Inclusive Framework (2021). Statement on a Two-Pillar Solution.
+
+**Tiebout sorting — evidence**
+
+- Oates, W. (1969). The effects of property taxes and local public spending on property values. *Journal of Political Economy*, 77(6), 957–971.
+- Epple, D. and Sieg, H. (1999). Estimating equilibrium models of local jurisdictions. *Journal of Political Economy*, 107(4), 645–681.
+- Epple, D. and Romer, T. (1991). Mobility and redistribution. *Journal of Political Economy*, 99(4), 828–860.
+- Rhode, P. and Strumpf, K. (2003). Assessing the importance of Tiebout sorting: local heterogeneity from 1850 to 1990. *American Economic Review*, 93(5), 1648–1677.
+- Banzhaf, H. and Walsh, R. (2008). Do people vote with their feet? An empirical test of Tiebout. *American Economic Review*, 98(3), 843–877.
+
+**Housing, political economy, and zoning**
+
+- Fischel, W. (2001). *The Homevoter Hypothesis.* Harvard University Press.
+- Glaeser, E. and Gyourko, J. (2003). The impact of building restrictions on housing affordability. *Federal Reserve Bank of New York Economic Policy Review*, 9(2), 21–39.
+- Hilber, C. and Vermeulen, W. (2016). The impact of supply constraints on house prices in England. *Economic Journal*, 126(591), 358–405.
+- Cheshire, P. and Sheppard, S. (2002). The welfare economics of land use planning. *Journal of Urban Economics*, 52(2), 242–269.
+- Cheshire, P. and Hilber, C. (2008). Office space supply restrictions in Britain. *Economic Journal*, 118(529), 185–221.
+- Hsieh, C. and Moretti, E. (2019). Housing constraints and spatial misallocation. *American Economic Journal: Macroeconomics*, 11(2), 1–39.
+- Gyourko, J., Hartley, J. and Krimmel, J. (2021). The local residential land use regulatory environment across US housing markets. *Journal of Urban Economics*, 124, 103337.
+- Reardon, S. and Bischoff, K. (2011). Income inequality and income segregation. *American Journal of Sociology*, 116(4), 1092–1153.
+- Chetty, R., Hendren, N. and Katz, L. (2016). The effects of exposure to better neighbourhoods on children. *American Economic Review*, 106(4), 855–902.
+
+---
+
+*Notes prepared for BIP "Planning and Economics of Cities", Prague, March 2026. Audience: mixed international bachelor students. Lecture duration: 35 minutes.*

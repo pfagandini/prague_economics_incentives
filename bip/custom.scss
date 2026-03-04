@@ -1,0 +1,195 @@
+/*-- scss:defaults --*/
+
+// BIP Prague 2026 | Custom RevealJS Theme
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Mono:wght@400;500&display=swap');
+
+/* ── Variables ───────────────────────────────────────────────── */
+:root {
+  --r-main-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --r-main-font-size: 28px;
+  --r-main-color: #1a1a2e;
+  --r-heading-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --r-heading-color: #1F4E79;
+  --r-heading-font-weight: 700;
+  --r-link-color: #2E75B6;
+  --r-background-color: #ffffff;
+  --c-accent: #1F4E79;
+  --c-mid:    #2E75B6;
+  --c-red:    #C00000;
+  --c-gray:   #595959;
+  --c-lgray:  #f0f4f8;
+}
+
+/* ── THE KEY FIX: force all content to stay inside the slide ─── */
+.reveal,
+.reveal .slides,
+.reveal .slides > section,
+.reveal .slides > section > section {
+  overflow: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  padding: 12px 36px !important;
+  box-sizing: border-box !important;
+}
+
+/* Every text-bearing element must wrap and not overflow */
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th,
+.reveal blockquote,
+.reveal .callout {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ── Columns ─────────────────────────────────────────────────── */
+.reveal .columns {
+  display: flex !important;
+  gap: 18px !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* min-width:0 is the critical property —
+   without it flex children can exceed their container */
+.reveal .column {
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  word-wrap: break-word !important;
+}
+
+/* ── Headings ────────────────────────────────────────────────── */
+.reveal h1 { font-size: 1.65em; line-height: 1.15; margin-bottom: 10px; }
+.reveal h2 {
+  font-size: 1.2em;
+  border-bottom: 3px solid var(--c-mid);
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+.reveal h3 { font-size: 1.0em; color: var(--c-mid); margin-bottom: 6px; }
+
+/* ── Body text ───────────────────────────────────────────────── */
+.reveal p  { margin: 5px 0; font-size: 0.88em; line-height: 1.5; }
+.reveal ul,
+.reveal ol  { font-size: 0.88em; margin: 5px 0 5px 1.1em; line-height: 1.5; }
+.reveal li  { margin-bottom: 3px; }
+
+/* ── Section slides ──────────────────────────────────────────── */
+.section-slide {
+  background: linear-gradient(135deg, var(--c-accent) 0%, var(--c-mid) 100%) !important;
+}
+.section-slide h1,
+.section-slide h2,
+.section-slide p { color: #ffffff !important; }
+
+/* ── Center / end ────────────────────────────────────────────── */
+.center {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.end-slide {
+  background: linear-gradient(135deg, #1a1a2e 0%, var(--c-accent) 100%) !important;
+}
+.end-slide h2, .end-slide h3, .end-slide p { color: #ffffff !important; }
+
+/* ── Callouts ────────────────────────────────────────────────── */
+.callout {
+  border-radius: 5px;
+  padding: 9px 13px;
+  margin: 6px 0;
+  font-size: 0.80em;
+  line-height: 1.45;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+.callout-note      { background: #EBF3FB; border-left: 4px solid var(--c-mid); }
+.callout-important { background: #FEF3F2; border-left: 4px solid var(--c-red); }
+.callout-tip       { background: #F0F7EE; border-left: 4px solid #375623; }
+.callout-title     { font-weight: 600; margin-bottom: 4px; }
+
+/* ── Tables ──────────────────────────────────────────────────── */
+.reveal table {
+  font-size: 0.76em;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  margin: 8px 0;
+}
+.reveal table th {
+  background: var(--c-accent);
+  color: #ffffff;
+  padding: 6px 8px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.reveal table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #dce6f0;
+  word-wrap: break-word;
+}
+.reveal table tr:nth-child(even) td { background: var(--c-lgray); }
+
+/* ── Blockquotes ─────────────────────────────────────────────── */
+.reveal blockquote {
+  background: var(--c-lgray);
+  border-left: 4px solid var(--c-mid);
+  border-radius: 0 5px 5px 0;
+  padding: 9px 14px;
+  margin: 8px 0;
+  font-style: italic;
+  color: var(--c-gray);
+  font-size: 0.84em;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Code ────────────────────────────────────────────────────── */
+.reveal code {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.82em;
+  background: var(--c-lgray);
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: var(--c-accent);
+}
+
+/* ── MathJax ─────────────────────────────────────────────────── */
+.reveal .MathJax { font-size: 1.0em !important; }
+
+/* ── UI chrome ───────────────────────────────────────────────── */
+.reveal .slide-number {
+  background: var(--c-accent);
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.reveal .footer  { font-size: 11px; color: var(--c-gray); opacity: 0.8; }
+.reveal .progress { background: rgba(0,0,0,0.12); height: 4px; }
+.reveal .progress span { background: var(--c-mid); }
+.reveal .fragment { transition: opacity 0.3s ease; }
+
+/* ── Utilities ───────────────────────────────────────────────── */
+.small  { font-size: 0.76em; }
+.tiny   { font-size: 0.66em; }
+.muted  { color: var(--c-gray); }
+.accent { color: var(--c-accent); font-weight: 600; }
