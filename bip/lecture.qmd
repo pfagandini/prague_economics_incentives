@@ -151,6 +151,45 @@ Same structure in the pivotal mechanism for public goods.
 :::
 :::
 
+## Clarke Mechanism — Numerical Example {.smaller}
+
+<div style="font-size: 75%;">
+
+Three individuals (A, B, C) decide whether to build a **bridge** costing **300**.
+
+| Person | Declared Value |
+|--------|---------------|
+| A      | 150           |
+| B      | 120           |
+| C      | 80            |
+
+Total declared benefit = **350 > 300** $\Rightarrow$ Bridge is built.
+
+</div>
+
+. . .
+
+<div style="font-size: 75%;">
+
+**Clarke tax:** each person pays the "damage" they impose on others.
+
+| Person | Without them | Others' total | Pivotal? | Tax = $300 - \sum_{j \neq i} v_j$ |
+|--------|-------------|---------------|----------|-------------------------------------|
+| A      | B + C       | 200           | Yes      | $300 - 200 = 100$                  |
+| B      | A + C       | 230           | Yes      | $300 - 230 = 70$                   |
+| C      | A + B       | 270           | Yes      | $300 - 270 = 30$                   |
+
+</div>
+
+. . .
+
+<div style="font-size: 75%;">
+
+**Why is honesty optimal?** Your tax depends on *others'* reports, not yours. Your report only affects the **decision** — and the only way to get the right decision *for you* is to tell the truth. $\Rightarrow$ **Dominant strategy: truthful revelation.**
+
+</div>
+
+
 
 ---
 

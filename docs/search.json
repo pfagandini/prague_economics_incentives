@@ -4128,5 +4128,12 @@
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "Questions to take home and reflect upon",
     "text": "Questions to take home and reflect upon\n\nThe Tiebout model assumes no economies of scale in public good provision. How does this assumption interact with city size? Can a city be “too small” for efficient Tiebout sorting?\nThe median voter theorem predicts that homeowners dominate suburban zoning decisions. In the Czech Republic and Portugal, where homeownership rates are high (above 70%), what does this predict for housing supply over the next decade? What extra role would public housing play in this context?\nThe VCG mechanism solves the public goods revelation problem in theory. Why is it almost never used in practice? What implementation problems arise?"
+  },
+  {
+    "objectID": "bip/lecture.html#clarke-mechanism-numerical-example",
+    "href": "bip/lecture.html#clarke-mechanism-numerical-example",
+    "title": "Public Goods, Local Finance & the Political Economy of Cities",
+    "section": "Clarke Mechanism — Numerical Example",
+    "text": "Clarke Mechanism — Numerical Example\n\nThree individuals (A, B, C) decide whether to build a bridge costing 300.\n\n\n\nPerson\nDeclared Value\n\n\n\n\nA\n150\n\n\nB\n120\n\n\nC\n80\n\n\n\nTotal declared benefit = 350 &gt; 300 \\(\\Rightarrow\\) Bridge is built.\n\n\n\nClarke tax: each person pays the “damage” they impose on others.\n\n\n\n\n\n\n\n\n\n\nPerson\nWithout them\nOthers’ total\nPivotal?\nTax = \\(300 - \\sum_{j \\neq i} v_j\\)\n\n\n\n\nA\nB + C\n200\nYes\n\\(300 - 200 = 100\\)\n\n\nB\nA + C\n230\nYes\n\\(300 - 230 = 70\\)\n\n\nC\nA + B\n270\nYes\n\\(300 - 270 = 30\\)\n\n\n\n\n\n\n\nWhy is honesty optimal? Your tax depends on others’ reports, not yours. Your report only affects the decision — and the only way to get the right decision for you is to tell the truth. \\(\\Rightarrow\\) Dominant strategy: truthful revelation."
   }
 ]

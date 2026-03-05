@@ -248,6 +248,86 @@ BIP Planning and Economics of Cities | Prague, March 2026
 </div>
 </div></div>
 </section>
+<section id="clarke-mechanism-numerical-example" class="slide level2 smaller">
+<h2>Clarke Mechanism — Numerical Example</h2>
+<div style="font-size: 75%;">
+<p>Three individuals (A, B, C) decide whether to build a <strong>bridge</strong> costing <strong>300</strong>.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Person</th>
+<th>Declared Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>150</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>120</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+<p>Total declared benefit = <strong>350 &gt; 300</strong> <span class="math inline">\(\Rightarrow\)</span> Bridge is built.</p>
+</div>
+<div class="fragment">
+<div style="font-size: 75%;">
+<p><strong>Clarke tax:</strong> each person pays the “damage” they impose on others.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 12%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Person</th>
+<th>Without them</th>
+<th>Others’ total</th>
+<th>Pivotal?</th>
+<th>Tax = <span class="math inline">\(300 - \sum_{j \neq i} v_j\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>B + C</td>
+<td>200</td>
+<td>Yes</td>
+<td><span class="math inline">\(300 - 200 = 100\)</span></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>A + C</td>
+<td>230</td>
+<td>Yes</td>
+<td><span class="math inline">\(300 - 230 = 70\)</span></td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>A + B</td>
+<td>270</td>
+<td>Yes</td>
+<td><span class="math inline">\(300 - 270 = 30\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: 75%;">
+<p><strong>Why is honesty optimal?</strong> Your tax depends on <em>others’</em> reports, not yours. Your report only affects the <strong>decision</strong> — and the only way to get the right decision <em>for you</em> is to tell the truth. <span class="math inline">\(\Rightarrow\)</span> <strong>Dominant strategy: truthful revelation.</strong></p>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 </section></section>
