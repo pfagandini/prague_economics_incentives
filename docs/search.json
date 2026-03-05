@@ -3952,7 +3952,7 @@
     "href": "bip/lecture.html#roadmap",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "Roadmap",
-    "text": "Roadmap\n\n\n\nThe public goods problem\nTiebout’s elegant answer\nWhere it breaks down\nReal evidence: the EU tax competition laboratory\nPolitical economy: who actually decides?\n\n\n\n\n\n\n\n\nThe city is not just geography — it is a strategic game played by households, firms, and governments."
+    "text": "Roadmap\n\n\n\nThe public goods problem\nTiebout’s elegant answer\nWhere it breaks down\nReal evidence: the EU tax competition laboratory\nPolitical economy: who actually decides?\n\n\n\n\n\n\n\n\nThe city is not just geography , it is a strategic game played by households, firms, and governments."
   },
   {
     "objectID": "bip/lecture.html#why-cant-cities-just-ask-what-people-want",
@@ -3966,21 +3966,21 @@
     "href": "bip/lecture.html#the-free-rider-problem",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "The Free-Rider Problem",
-    "text": "The Free-Rider Problem\n\n\nThe scenario\nA city council wants to build a park. They ask residents:\n\n“How much would you pay for this park?”\n\nThe problem: since the park is free for everyone once built, a rational resident has every incentive to understate their true willingness to pay.\n“Let someone else pay, I’ll enjoy it anyway.”\nThis is the free-rider problem — the central obstacle in the economics of public goods.\n\n\n\n\nWhat makes a good “public”?\nNon-excludable — once provided, you cannot stop anyone from using it\nNon-rival — your use does not reduce mine\nExamples: street lighting, national defence, clean air, a park"
+    "text": "The Free-Rider Problem\n\n\nThe scenario\nA city council wants to build a park. They ask residents:\n\n“How much would you pay for this park?”\n\nThe problem: since the park is free for everyone once built, a rational resident has every incentive to understate their true willingness to pay.\n“Let someone else pay, I’ll enjoy it anyway.”\nThis is the free-rider problem , the central obstacle in the economics of public goods.\n\n\n\n\nWhat makes a good “public”?\nNon-excludable , once provided, you cannot stop anyone from using it\nNon-rival , your use does not reduce mine\nExamples: street lighting, national defence, clean air, a park"
   },
   {
     "objectID": "bip/lecture.html#the-samuelson-condition",
     "href": "bip/lecture.html#the-samuelson-condition",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "The Samuelson Condition",
-    "text": "The Samuelson Condition\n\n\nPaul Samuelson (1954) proved the efficiency condition:\n\\[\\sum_{i=1}^{n} MRS_i = MRT\\]\nIn plain English: the sum of all individuals’ marginal willingness to pay must equal the marginal cost of providing the good.\n\nThe catch: the government does not know individual \\(MRS_i\\).\nAsking people to report them is a game they will systematically lose — the dominant strategy is to underreport.\n\n\n\n\n\n\n\n\nSamuelson (1954)\n“The pure theory of public expenditure”\nReview of Economics and Statistics\nNo decentralised pricing system can achieve efficient provision of pure public goods."
+    "text": "The Samuelson Condition\n\n\nPaul Samuelson (1954) proved the efficiency condition:\n\\[\\sum_{i=1}^{n} MRS_i = MRT\\]\nIn plain English: the sum of all individuals’ marginal willingness to pay must equal the marginal cost of providing the good.\n\nThe catch: the government does not know individual \\(MRS_i\\).\nAsking people to report them is a game they will systematically lose , the dominant strategy is to underreport.\n\n\n\n\n\n\n\n\nSamuelson (1954)\n“The pure theory of public expenditure”\nReview of Economics and Statistics\nNo decentralised pricing system can achieve efficient provision of pure public goods."
   },
   {
     "objectID": "bip/lecture.html#the-mechanism-design-solution",
     "href": "bip/lecture.html#the-mechanism-design-solution",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "The Mechanism Design Solution",
-    "text": "The Mechanism Design Solution\n\n\nClarke (1971) and Groves (1973) developed the pivotal mechanism:\nEach agent pays a “tax” equal to the harm they impose on others by their vote.\n→ Truth-telling becomes a dominant strategy\n\nDoes this sound familiar?\nIt should — the Clarke–Groves–Vickrey (VCG) mechanism is the same logic as the second-price (Vickrey) auction, generalised to public goods.\nThe city public goods problem is an auction design problem.\n\n\n\n\n\n\n\n\nThe VCG connection\nIn a second-price auction, you pay the second-highest bid = the externality you impose on others.\nTruth-telling is dominant because your payment does not depend on your own report.\nSame structure in the pivotal mechanism for public goods."
+    "text": "The Mechanism Design Solution\n\n\nClarke (1971) and Groves (1973) developed the pivotal mechanism:\nEach agent pays a “tax” equal to the harm they impose on others by their vote.\n→ Truth-telling becomes a dominant strategy\n\nDoes this sound familiar?\nIt should , the Clarke–Groves–Vickrey (VCG) mechanism is the same logic as the second-price (Vickrey) auction, generalised to public goods.\nThe city public goods problem is an auction design problem.\n\n\n\n\n\n\n\n\nThe VCG connection\nIn a second-price auction, you pay the second-highest bid = the externality you impose on others.\nTruth-telling is dominant because your payment does not depend on your own report.\nSame structure in the pivotal mechanism for public goods."
   },
   {
     "objectID": "bip/lecture.html#tiebouts-elegant-answer-vote-with-your-feet",
@@ -3994,7 +3994,7 @@
     "href": "bip/lecture.html#tiebout-1956-the-core-insight",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "Tiebout (1956): The Core Insight",
-    "text": "Tiebout (1956): The Core Insight\n\n\nCharles Tiebout’s 1956 paper proposed a beautiful solution that bypasses the preference revelation problem entirely.\nThe insight: if there are many local governments, each offering a different bundle of taxes and public services, households will naturally sort themselves by choosing where to live.\nLocation choice reveals preferences — no asking required.\n\n\n\n\n\n\nTiebout, C. (1956). A pure theory of local expenditures. Journal of Political Economy, 64(5), 416–424.\n\n\n\n\n\n\n\nThe apple-and-orange analogy 🍎🍊\nImagine two market stalls side by side: one sells apples, one sells oranges.\nApple-lovers go to the apple stall. Orange-lovers go to the orange stall. Nobody is forced to buy what they do not want.\nTiebout says local governments are like these stalls. If there are enough of them, households self-sort into their preferred “stall”."
+    "text": "Tiebout (1956): The Core Insight\n\n\nCharles Tiebout’s 1956 paper proposed a beautiful solution that bypasses the preference revelation problem entirely.\nThe insight: if there are many local governments, each offering a different bundle of taxes and public services, households will naturally sort themselves by choosing where to live.\nLocation choice reveals preferences , no asking required.\n\n\n\n\n\n\nTiebout, C. (1956). A pure theory of local expenditures. Journal of Political Economy, 64(5), 416–424.\n\n\n\n\n\n\n\nThe apple-and-orange analogy 🍎🍊\nImagine two market stalls side by side: one sells apples, one sells oranges.\nApple-lovers go to the apple stall. Orange-lovers go to the orange stall. Nobody is forced to buy what they do not want.\nTiebout says local governments are like these stalls. If there are enough of them, households self-sort into their preferred “stall”."
   },
   {
     "objectID": "bip/lecture.html#tiebout-as-a-mechanism-design-result",
@@ -4021,8 +4021,8 @@
     "objectID": "bip/lecture.html#the-race-to-the-bottom-a-prisoners-dilemma",
     "href": "bip/lecture.html#the-race-to-the-bottom-a-prisoners-dilemma",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
-    "section": "The Race to the Bottom — A Prisoner’s Dilemma",
-    "text": "The Race to the Bottom — A Prisoner’s Dilemma\n\n\nWhen capital is mobile, jurisdictions compete for it by cutting taxes.\n\n\n\n\nB: High tax\nB: Low tax\n\n\n\n\nA: High tax\nBoth fund good services\nB gains firms; A loses\n\n\nA: Low tax\nA gains firms; B loses\nBoth lose revenue\n\n\n\n\nThis is a classic Prisoner’s Dilemma:\n\nDominant strategy for each jurisdiction: cut taxes\nNash equilibrium: both cut\nEquilibrium is Pareto inferior to full cooperation\n\nZodrow & Mieszkowski (1986): formalised this — tax competition leads to underprovision of local public goods.\n\n\n\n\n\n\nThe fourth failure: stratification\nTiebout sorting is not just inefficient — it is inequitable.\nRich jurisdictions → high tax base → good schools\nPoor jurisdictions → low tax base → poor services\nEpple & Romer (1991): income stratification across jurisdictions is an equilibrium outcome of Tiebout sorting.\nChetty, Hendren & Katz (2016): moving to a higher-income neighbourhood has large positive causal effects on children’s long-run earnings."
+    "section": "The Race to the Bottom , A Prisoner’s Dilemma",
+    "text": "The Race to the Bottom , A Prisoner’s Dilemma\n\n\nWhen capital is mobile, jurisdictions compete for it by cutting taxes.\n\n\n\n\nB: High tax\nB: Low tax\n\n\n\n\nA: High tax\nBoth fund good services\nB gains firms; A loses\n\n\nA: Low tax\nA gains firms; B loses\nBoth lose revenue\n\n\n\n\nThis is a classic Prisoner’s Dilemma:\n\nDominant strategy for each jurisdiction: cut taxes\nNash equilibrium: both cut\nEquilibrium is Pareto inferior to full cooperation\n\nZodrow & Mieszkowski (1986): formalised this , tax competition leads to underprovision of local public goods.\n\n\n\n\n\n\nThe fourth failure: stratification\nTiebout sorting is not just inefficient , it is inequitable.\nRich jurisdictions → high tax base → good schools\nPoor jurisdictions → low tax base → poor services\nEpple & Romer (1991): income stratification across jurisdictions is an equilibrium outcome of Tiebout sorting.\nChetty, Hendren & Katz (2016): moving to a higher-income neighbourhood has large positive causal effects on children’s long-run earnings."
   },
   {
     "objectID": "bip/lecture.html#real-evidence-the-eu-as-a-natural-laboratory",
@@ -4035,8 +4035,8 @@
     "objectID": "bip/lecture.html#the-race-to-the-bottom-it-actually-happened",
     "href": "bip/lecture.html#the-race-to-the-bottom-it-actually-happened",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
-    "section": "The Race to the Bottom — It Actually Happened",
-    "text": "The Race to the Bottom — It Actually Happened\n\n  \n\n\nSource: OECD Table II.1 / Tax Foundation Worldwide Corporate Tax Rates dataset. All statutory rates."
+    "section": "The Race to the Bottom , It Actually Happened",
+    "text": "The Race to the Bottom , It Actually Happened\n\n  \n\n\nSource: OECD Table II.1 / Tax Foundation Worldwide Corporate Tax Rates dataset. All statutory rates."
   },
   {
     "objectID": "bip/lecture.html#ireland-defecting-from-the-cooperative-equilibrium",
@@ -4077,15 +4077,15 @@
     "objectID": "bip/lecture.html#homeowners-as-median-voters-and-the-exclusion-problem",
     "href": "bip/lecture.html#homeowners-as-median-voters-and-the-exclusion-problem",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
-    "section": "Homeowners as Median Voters — and the Exclusion Problem",
-    "text": "Homeowners as Median Voters — and the Exclusion Problem\n\n\nFischel’s Homevoter Hypothesis (2001)\nIn suburban US municipalities, homeowners are the decisive median voters. Their primary asset is their house.\n→ They vote to protect property values\n→ They systematically oppose zoning that allows apartments, social housing, or higher density\n→ Result: exclusionary zoning\n\nHilber & Vermeulen (2016):\nRegulatory constraints, driven by existing homeowner political influence, are the primary driver of housing undersupply in England, more important than physical geography.\n“South East house prices would have been ~25% lower in 2008 if planning regulations had been as permissive as in the North East.”\n\n\n\n  \n\n\nSource: ONS Housing Affordability in England and Wales, annual bulletin"
+    "section": "Homeowners as Median Voters , and the Exclusion Problem",
+    "text": "Homeowners as Median Voters , and the Exclusion Problem\n\n\nFischel’s Homevoter Hypothesis (2001)\nIn suburban US municipalities, homeowners are the decisive median voters. Their primary asset is their house.\n→ They vote to protect property values\n→ They systematically oppose zoning that allows apartments, social housing, or higher density\n→ Result: exclusionary zoning\n\nHilber & Vermeulen (2016):\nRegulatory constraints, driven by existing homeowner political influence, are the primary driver of housing undersupply in England, more important than physical geography.\n“South East house prices would have been ~25% lower in 2008 if planning regulations had been as permissive as in the North East.”\n\n\n\n  \n\n\nSource: ONS Housing Affordability in England and Wales, annual bulletin"
   },
   {
     "objectID": "bip/lecture.html#people-actually-vote-with-their-feet",
     "href": "bip/lecture.html#people-actually-vote-with-their-feet",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "People Actually Vote With Their Feet",
-    "text": "People Actually Vote With Their Feet\n\n  \n\n\nBanzhaf & Walsh (2008) — TRI toxic release facility openings/closures across US communities. Tiebout’s mechanism confirmed: households exit areas with deteriorating public goods, enter areas with improving ones."
+    "text": "People Actually Vote With Their Feet\n\n  \n\n\nBanzhaf & Walsh (2008) , TRI toxic release facility openings/closures across US communities. Tiebout’s mechanism confirmed: households exit areas with deteriorating public goods, enter areas with improving ones."
   },
   {
     "objectID": "bip/lecture.html#zoning-as-an-incomplete-contract",
@@ -4099,7 +4099,7 @@
     "href": "bip/lecture.html#bringing-it-all-together",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "Bringing It All Together",
-    "text": "Bringing It All Together\n\n\nWhat we covered\nThe economics of local public goods is a story about information and incentives — the same themes running through mechanism design, auction theory, and contract theory.\n\n\n\nProblem\nFramework\n\n\n\n\nPreference revelation\nVCG / mechanism design\n\n\nTiebout sorting\nMarket mechanism\n\n\nTax competition\nPrisoner’s dilemma\n\n\nMedian voter bias\nPolitical economy\n\n\nZoning restrictions\nIncomplete contracts\n\n\n\n\nWhy it matters beyond theory\n\nHousing is unaffordable in Prague, Lisbon, and London because (at least partially) existing homeowners control zoning a political economy failure\nIreland built a tech cluster by defecting from high-tax cooperation a prisoner’s dilemma in action\n140+ countries needed a multi-year negotiation to stop racing each other to the bottom escaping Nash through coordination\nFamilies in poor neighbourhoods face compounding disadvantage — Tiebout sorting entrenches inequality"
+    "text": "Bringing It All Together\n\n\nWhat we covered\nThe economics of local public goods is a story about information and incentives , the same themes running through mechanism design, auction theory, and contract theory.\n\n\n\nProblem\nFramework\n\n\n\n\nPreference revelation\nVCG / mechanism design\n\n\nTiebout sorting\nMarket mechanism\n\n\nTax competition\nPrisoner’s dilemma\n\n\nMedian voter bias\nPolitical economy\n\n\nZoning restrictions\nIncomplete contracts\n\n\n\n\nWhy it matters beyond theory\n\nHousing is unaffordable in Prague, Lisbon, and London because (at least partially) existing homeowners control zoning: a political economy failure\nIreland built a tech cluster by defecting from high-tax cooperation a prisoner’s dilemma in action\n140+ countries needed a multi-year negotiation to stop racing each other to the bottom escaping Nash through coordination\nFamilies in poor neighbourhoods face compounding disadvantage , Tiebout sorting entrenches inequality"
   },
   {
     "objectID": "bip/lecture.html#discussion-questions",
@@ -4113,7 +4113,7 @@
     "href": "bip/lecture.html#section",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
     "section": "",
-    "text": "Thank you\nBIP Planning and Economics of Cities\nPrague University of Economics and Business | March 2026\n\n“The city is not just geography — it is a strategic game played by households, firms, and governments.”"
+    "text": "Thank you\nBIP Planning and Economics of Cities\nPrague University of Economics and Business | March 2026\n\n“The city is not just geography , it is a strategic game played by households, firms, and governments.”"
   },
   {
     "objectID": "bip/lecture.html#four-failures-of-the-tiebout-model-1",
@@ -4133,7 +4133,7 @@
     "objectID": "bip/lecture.html#clarke-mechanism-numerical-example",
     "href": "bip/lecture.html#clarke-mechanism-numerical-example",
     "title": "Public Goods, Local Finance & the Political Economy of Cities",
-    "section": "Clarke Mechanism — Numerical Example",
-    "text": "Clarke Mechanism — Numerical Example\nThree individuals (A, B, C) decide whether to build a bridge costing 300.\n\n\n\nPerson\nPersonal Value\n\n\n\n\nA\n150\n\n\nB\n120\n\n\nC\n80\n\n\n\nTotal declared benefit = 350 &gt; 300 \\(\\Rightarrow\\) Bridge is built.\n\n\n\nClarke tax: each pays the “damage” imposed on others.\n\n\n\nPerson\nOthers’ total\nPivotal?\nTax\n\n\n\n\nA\n200\nYes\n100\n\n\nB\n230\nYes\n70\n\n\nC\n270\nYes\n30\n\n\n\nA’s surplus: \\(150 - 100 = 50 &gt; 0\\) ✓\n\nWhat if A lies? (true value = 150)\n\nUnderstates (\\(v_A = 50\\)):\n\nTotal = \\(250 &lt; 300\\) → bridge not built\nA gets 0, lost a surplus of 50 ✗\n\nOverstates (\\(v_A = 200\\)):\n\nBridge built, tax still = 100\nBut if true value were 80: surplus = \\(80 - 100 = -20\\) ✗\n\n\n\n\n\nWhy is honesty optimal? Your tax depends on others’ reports, not yours. Your report only affects the decision: the only way to get the right decision for you is to tell the truth. \\(\\Rightarrow\\) Dominant strategy: truthful revelation."
+    "section": "Clarke Mechanism , Numerical Example",
+    "text": "Clarke Mechanism , Numerical Example\nThree individuals (A, B, C) decide whether to build a bridge costing 300.\n\n\n\nPerson\nPersonal Value\n\n\n\n\nA\n150\n\n\nB\n120\n\n\nC\n80\n\n\n\nTotal declared benefit = 350 &gt; 300 \\(\\Rightarrow\\) Bridge is built.\n\n\n\nClarke tax: each pays the “damage” imposed on others.\n\n\n\nPerson\nOthers’ total\nPivotal?\nTax\n\n\n\n\nA\n200\nYes\n100\n\n\nB\n230\nYes\n70\n\n\nC\n270\nYes\n30\n\n\n\nA’s surplus: \\(150 - 100 = 50 &gt; 0\\) ✓\n\nWhat if A lies? (true value = 150)\n\nUnderstates (\\(v_A = 50\\)):\n\nTotal = \\(250 &lt; 300\\) → bridge not built\nA gets 0, lost a surplus of 50 ✗\n\nOverstates (\\(v_A = 200\\)):\n\nBridge built, tax still = 100\nBut if true value were 80: surplus = \\(80 - 100 = -20\\) ✗\n\n\n\n\n\nWhy is honesty optimal? Your tax depends on others’ reports, not yours. Your report only affects the decision: the only way to get the right decision for you is to tell the truth. \\(\\Rightarrow\\) Dominant strategy: truthful revelation."
   }
 ]

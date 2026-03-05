@@ -40,7 +40,7 @@ execute:
 
 ::: {.callout-note appearance="simple"}
 
-The city is not just geography — it is a strategic game played by households, firms, and governments.
+The city is not just geography , it is a strategic game played by households, firms, and governments.
 :::
 
 :::
@@ -63,7 +63,7 @@ A city council wants to build a park. They ask residents:
 
 *"Let someone else pay, I'll enjoy it anyway."*
 
-This is the **free-rider problem** — the central obstacle in the economics of public goods.
+This is the **free-rider problem** , the central obstacle in the economics of public goods.
 
 :::
 ::: {.column width="45%"}
@@ -71,9 +71,9 @@ This is the **free-rider problem** — the central obstacle in the economics of 
 ::: {.callout-important appearance="minimal"}
 **What makes a good "public"?**
 
-**Non-excludable** — once provided, you cannot stop anyone from using it
+**Non-excludable** , once provided, you cannot stop anyone from using it
 
-**Non-rival** — your use does not reduce mine
+**Non-rival** , your use does not reduce mine
 
 Examples: street lighting, national defence, clean air, a park
 :::
@@ -96,7 +96,7 @@ $$\sum_{i=1}^{n} MRS_i = MRT$$
 ::: {.fragment}
 **The catch:** the government does not know individual $MRS_i$.
 
-Asking people to report them is a game they will **systematically lose** — the dominant strategy is to underreport.
+Asking people to report them is a game they will **systematically lose** , the dominant strategy is to underreport.
 :::
 
 :::
@@ -130,7 +130,7 @@ Each agent pays a "tax" equal to the **harm they impose on others** by their vot
 ::: {.fragment}
 **Does this sound familiar?**
 
-It should — the **Clarke–Groves–Vickrey (VCG) mechanism** is the same logic as the **second-price (Vickrey) auction**, generalised to public goods.
+It should , the **Clarke–Groves–Vickrey (VCG) mechanism** is the same logic as the **second-price (Vickrey) auction**, generalised to public goods.
 
 The city public goods problem *is* an auction design problem.
 :::
@@ -150,7 +150,7 @@ Same structure in the pivotal mechanism for public goods.
 
 :::
 :::
-## Clarke Mechanism — Numerical Example
+## Clarke Mechanism , Numerical Example
 
 Three individuals (A, B, C) decide whether to build a **bridge** costing **300**.
 
@@ -218,7 +218,7 @@ Charles [Tiebout's 1956](https://www.jstor.org/stable/1826343) paper proposed a 
 
 **The insight:** if there are many local governments, each offering a different bundle of taxes and public services, households will naturally sort themselves by **choosing where to live**.
 
-Location choice *reveals* preferences — no asking required.
+Location choice *reveals* preferences , no asking required.
 
 ::: {.callout-tip appearance="simple"}
 Tiebout, C. (1956). A pure theory of local expenditures. *Journal of Political Economy*, 64(5), 416–424.
@@ -312,7 +312,7 @@ Town A accepts a polluting factory → Town B bears the pollution costs. Town A 
 :::
 
 
-## The Race to the Bottom — A Prisoner's Dilemma
+## The Race to the Bottom , A Prisoner's Dilemma
 
 ::: {.columns}
 ::: {.column width="55%"}
@@ -331,7 +331,7 @@ This is a classic **Prisoner's Dilemma**:
 - Nash equilibrium: both cut
 - Equilibrium is **Pareto inferior** to full cooperation
 
-**[Zodrow & Mieszkowski (1986)](https://www.sciencedirect.com/science/article/abs/pii/0094119086900483):** formalised this — tax competition leads to **underprovision of local public goods**.
+**[Zodrow & Mieszkowski (1986)](https://www.sciencedirect.com/science/article/abs/pii/0094119086900483):** formalised this , tax competition leads to **underprovision of local public goods**.
 :::
 
 :::
@@ -340,7 +340,7 @@ This is a classic **Prisoner's Dilemma**:
 ::: {.callout-important appearance="minimal" .fragment}
 **The fourth failure: stratification**
 
-Tiebout sorting is not just inefficient — it is **inequitable**.
+Tiebout sorting is not just inefficient , it is **inequitable**.
 
 Rich jurisdictions → high tax base → good schools
 
@@ -356,7 +356,7 @@ Poor jurisdictions → low tax base → poor services
 
 # Part 4: How to Steal a Tax Base (:unamused: :ireland:) {.section-slide}
 
-## The Race to the Bottom — It Actually Happened
+## The Race to the Bottom , It Actually Happened
 
 ```{=html}
 <div style="text-align:center;">
@@ -494,7 +494,7 @@ Works cleanly in one dimension. Breaks down with multi-dimensional policy spaces
 :::
 
 
-## Homeowners as Median Voters — and the Exclusion Problem
+## Homeowners as Median Voters , and the Exclusion Problem
 
 ::: {.columns}
 ::: {.column width="55%"}
@@ -545,7 +545,7 @@ Source: ONS Housing Affordability in England and Wales, annual bulletin
 ```
 
 ::: {style="font-size:0.72em; color:#595959; text-align:center; margin-top:4px;"}
-[Banzhaf & Walsh (2008)](https://www.aeaweb.org/articles?id=10.1257/aer.98.3.843) — TRI toxic release facility openings/closures across US communities.
+[Banzhaf & Walsh (2008)](https://www.aeaweb.org/articles?id=10.1257/aer.98.3.843) , TRI toxic release facility openings/closures across US communities.
 Tiebout's mechanism confirmed: households exit areas with deteriorating public goods, enter areas with improving ones.
 :::
 
@@ -601,7 +601,7 @@ Like all incomplete contracts: impossible to specify all future contingencies in
 
 **What we covered**
 
-The economics of local public goods is a story about **information and incentives** — the same themes running through mechanism design, auction theory, and contract theory.
+The economics of local public goods is a story about **information and incentives** , the same themes running through mechanism design, auction theory, and contract theory.
 
 | Problem | Framework |
 |---|---|
@@ -620,7 +620,7 @@ The economics of local public goods is a story about **information and incentive
 - Housing is unaffordable in **Prague, Lisbon, and London** because (at least partially) existing homeowners control zoning: a political economy failure
 - **Ireland** built a tech cluster by defecting from high-tax cooperation a prisoner's dilemma in action
 - **140+ countries** needed a multi-year negotiation to stop racing each other to the bottom escaping Nash through coordination
-- **Families in poor neighbourhoods** face compounding disadvantage — Tiebout sorting entrenches inequality
+- **Families in poor neighbourhoods** face compounding disadvantage , Tiebout sorting entrenches inequality
 :::
 
 :::
@@ -646,7 +646,7 @@ The economics of local public goods is a story about **information and incentive
 Prague University of Economics and Business | March 2026
 
 ::: {style="margin-top:30px; font-size:0.85em; color:#595959;"}
-*"The city is not just geography — it is a strategic game played by households, firms, and governments."*
+*"The city is not just geography , it is a strategic game played by households, firms, and governments."*
 :::
 
 :::
