@@ -125,7 +125,7 @@ No decentralised pricing system can achieve efficient provision of pure public g
 
 Each agent pays a "tax" equal to the **harm they impose on others** by their vote.
 
-→ Truth-telling becomes a **dominant strategy**
+$\rightarrow$ Truth-telling becomes a **dominant strategy**
 
 ::: {.fragment}
 **Does this sound familiar?**
@@ -186,7 +186,7 @@ A's surplus: $150 - 100 = 50 > 0$ ✓
 
 *Understates* ($v_A = 50$):
 
-- Total = $250 < 300$ → bridge **not built**
+- Total = $250 < 300$ $\rightarrow$ bridge **not built**
 - A gets 0, lost a surplus of 50 ✗
 
 *Overstates* ($v_A = 200$):
@@ -256,7 +256,7 @@ Under Tiebout's assumptions, **mobility substitutes for costly truth-telling**:
 | Centralised optimum hard to find | Decentralised sorting achieves it |
 
 ::: {.fragment}
-**Under full assumptions** (perfect mobility, full information, many jurisdictions, no spillovers, no economies of scale) → **Pareto-efficient** provision of local public goods.
+**Under full assumptions** (perfect mobility, full information, many jurisdictions, no spillovers, no economies of scale) $\rightarrow$ **Pareto-efficient** provision of local public goods.
 :::
 
 :::
@@ -304,9 +304,9 @@ What Town A does affects Town B.
 
 *Like an apple vendor whose fermented apples smell up the entire market.*
 
-Town A accepts a polluting factory → Town B bears the pollution costs. Town A does not count these when deciding.
+Town A accepts a polluting factory $\rightarrow$ Town B bears the pollution costs. Town A does not count these when deciding.
 
-→ Individually rational decisions are **collectively inefficient**
+$\rightarrow$ Individually rational decisions are **collectively inefficient**
 
 :::
 :::
@@ -342,9 +342,9 @@ This is a classic **Prisoner's Dilemma**:
 
 Tiebout sorting is not just inefficient , it is **inequitable**.
 
-Rich jurisdictions → high tax base → good schools
+Rich jurisdictions $\rightarrow$ high tax base $\rightarrow$ good schools
 
-Poor jurisdictions → low tax base → poor services
+Poor jurisdictions $\rightarrow$ low tax base $\rightarrow$ poor services
 
 **[Epple & Romer (1991)](https://www.jstor.org/stable/2937782):** income stratification across jurisdictions is an *equilibrium outcome* of Tiebout sorting.
 
@@ -378,7 +378,7 @@ Source: OECD Table II.1 / Tax Foundation *Worldwide Corporate Tax Rates* dataset
 **The strategy:** Ireland cut its corporate tax rate to **12.5%** while EU partners maintained 25–40%.
 
 **The payoff:**
-- Apple, Google, Facebook, LinkedIn → European HQs in Dublin
+- Apple, Google, Facebook, LinkedIn $\rightarrow$ European HQs in Dublin
 - Ireland's GDP per capita grew from ~70% of EU average in 1990 to ~200% by 2019
 
 **The externality:**
@@ -387,7 +387,7 @@ Source: OECD Table II.1 / Tax Foundation *Worldwide Corporate Tax Rates* dataset
 
 ::: {.fragment}
 **The legal response:**
-European Commission (2016), State Aid Case SA.38373 → ruled Apple's Irish arrangements illegal state aid, ordered **€13 billion** in back taxes.
+European Commission (2016), State Aid Case SA.38373 $\rightarrow$ ruled Apple's Irish arrangements illegal state aid, ordered **€13 billion** in back taxes.
 :::
 
 :::
@@ -402,7 +402,7 @@ Studied OECD countries over several decades.
 
 **Finding:** a country is significantly more likely to cut its statutory corporate rate in response to **rate cuts by neighbours**.
 
-→ Countries are playing a **repeated game** and the equilibrium involves rates below what a global social planner would choose.
+$\rightarrow$ Countries are playing a **repeated game** and the equilibrium involves rates below what a global social planner would choose.
 :::
 
 :::
@@ -485,7 +485,7 @@ Applied to local public goods: the level of school spending, park maintenance, o
 \end{tikzpicture}
 ```
 
-Single-peaked preferences + majority voting → median voter's ideal point is the Condorcet winner.
+Single-peaked preferences + majority voting $\rightarrow$ median voter's ideal point is the Condorcet winner.
 
 Works cleanly in one dimension. Breaks down with multi-dimensional policy spaces (Arrow's impossibility theorem lurks nearby).
 :::
@@ -503,11 +503,11 @@ Works cleanly in one dimension. Breaks down with multi-dimensional policy spaces
 
 In suburban US municipalities, homeowners are the decisive median voters. Their primary asset is their house.
 
-→ They vote to **protect property values**
+$\rightarrow$ They vote to **protect property values**
 
-→ They systematically oppose zoning that allows apartments, social housing, or higher density
+$\rightarrow$ They systematically oppose zoning that allows apartments, social housing, or higher density
 
-→ Result: **exclusionary zoning**
+$\rightarrow$ Result: **exclusionary zoning**
 
 ::: {.fragment}
 **[Hilber & Vermeulen (2016)](https://www.jstor.org/stable/24738168):**
@@ -563,9 +563,9 @@ Like all incomplete contracts: impossible to specify all future contingencies in
 
 **Residual control rights** (what happens in unspecified circumstances) are allocated **politically**.
 
-→ Existing homeowners use political power to write residual rights in their favour
+$\rightarrow$ Existing homeowners use political power to write residual rights in their favour
 
-→ They capture **regulatory rent**
+$\rightarrow$ They capture **regulatory rent**
 
 :::
 ::: {.column width="42%"}
