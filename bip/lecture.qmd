@@ -151,8 +151,7 @@ Same structure in the pivotal mechanism for public goods.
 :::
 :::
 
-## Clarke Mechanism — Numerical Example {.smaller}
-
+## Clarke Mechanism — Numerical Example 
 <div style="font-size: 75%;">
 
 Three individuals (A, B, C) decide whether to build a **bridge** costing **300**.
