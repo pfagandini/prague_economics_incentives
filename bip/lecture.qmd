@@ -617,7 +617,7 @@ The economics of local public goods is a story about **information and incentive
 **Why it matters beyond theory**
 
 ::: {.incremental}
-- Housing is unaffordable in **Prague, Lisbon, and London** because (at least partially) existing homeowners control zoning a political economy failure
+- Housing is unaffordable in **Prague, Lisbon, and London** because (at least partially) existing homeowners control zoning: a political economy failure
 - **Ireland** built a tech cluster by defecting from high-tax cooperation a prisoner's dilemma in action
 - **140+ countries** needed a multi-year negotiation to stop racing each other to the bottom escaping Nash through coordination
 - **Families in poor neighbourhoods** face compounding disadvantage — Tiebout sorting entrenches inequality
